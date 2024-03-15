@@ -1,4 +1,4 @@
-# 📎 운동하러 갈래?(팀명: FitNeeds)
+# 📎 운동하러 갈래? 네..좋아요 ㅎ(팀명: FitNeeds)
 ![imgae](https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Ffitness-logo_565520-393.jpg&type=sc960_832)
 
 
