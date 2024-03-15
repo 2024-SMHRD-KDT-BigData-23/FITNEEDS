@@ -1,5 +1,5 @@
-# 📎 꽃 보러 갈래?(팀명: 아름답조)
-![image](https://user-images.githubusercontent.com/25995055/178401309-2a2ffc86-ef45-439b-bfd8-6978312100bc.png)
+# 📎 운동하러 갈래?(팀명: FitNeeds)
+![imgae](https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Ffitness-logo_565520-393.jpg&type=sc960_832)
 
 
 ## 👀 서비스 소개
