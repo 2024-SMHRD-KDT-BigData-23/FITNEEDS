@@ -5,7 +5,6 @@ public class test {
 
 		System.out.println("첫번째 테스트 입니다.");
 		
-		
 	}
 
 }
