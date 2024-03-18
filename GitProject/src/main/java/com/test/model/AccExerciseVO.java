@@ -15,8 +15,19 @@ public class AccExerciseVO {
 	private int ex_reps;
 	// 소요 시간
 	private int ex_time;
+
+	private int ex_calories;
+
 	// 등록 일자
 	private String created_at;
+
+	public int getEx_calories() {
+		return ex_calories;
+	}
+
+	public void setEx_calories(int ex_calories) {
+		this.ex_calories = ex_calories;
+	}
 
 	public AccExerciseVO() {
 	}
@@ -41,8 +52,8 @@ public class AccExerciseVO {
 		return ex_name;
 	}
 
-	public void setEx_idx(String ex_idx) {
-		this.ex_name = ex_idx;
+	public void setEx_idx(String ex_name) {
+		this.ex_name = ex_name;
 	}
 
 	public String getEx_date() {
@@ -86,7 +97,7 @@ public class AccExerciseVO {
 	}
 
 	public AccExerciseVO(int acc_idx, String mem_id, String ex_name, String ex_date, String ex_done, int ex_reps,
-			int ex_time, String created_at) {
+			int ex_time, int ex_calories, String created_at) {
 		this.acc_idx = acc_idx;
 		this.mem_id = mem_id;
 		this.ex_name = ex_name;
@@ -94,6 +105,7 @@ public class AccExerciseVO {
 		this.ex_done = ex_done;
 		this.ex_reps = ex_reps;
 		this.ex_time = ex_time;
+		this.ex_calories = ex_calories;
 		this.created_at = created_at;
 	}
 }

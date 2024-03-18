@@ -15,8 +15,19 @@ public class AccChangesVO {
 	private int muscle;
 	// 체지방률
 	private int fat_per;
+
+	private int ex_calories;
+
 	// 기록 날짜
 	private String created_at;
+
+	public int getEx_calories() {
+		return ex_calories;
+	}
+
+	public void setEx_calories(int ex_calories) {
+		this.ex_calories = ex_calories;
+	}
 
 	public int getChange_idx() {
 		return change_idx;
@@ -82,7 +93,7 @@ public class AccChangesVO {
 		this.created_at = created_at;
 	}
 
-	public AccChangesVO(int change_idx, String mem_id, int height, int weight, int bmi, int muscle, int fat_per,
+	public AccChangesVO(int change_idx, String mem_id, int height, int weight, int bmi, int muscle, int fat_per, int ex_calories,
 			String created_at) {
 		this.change_idx = change_idx;
 		this.mem_id = mem_id;
@@ -91,6 +102,7 @@ public class AccChangesVO {
 		this.bmi = bmi;
 		this.muscle = muscle;
 		this.fat_per = fat_per;
+		this.ex_calories = ex_calories;
 		this.created_at = created_at;
 	}
 
