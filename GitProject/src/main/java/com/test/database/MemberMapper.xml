@@ -25,9 +25,9 @@
     </insert>
 
     <select id="salt_login" parameterType="com.test.model.SaltVO" resultType="com.test.model.SaltVO">
-        SELECT mem_salt
-        FROM tb_salt
-        WHERE mem_id = #{mem_id}
+        select mem_salt
+        from tb_salt
+        where mem_id = #{mem_id}
     </select>
     
 	<!-- resultType의 동작원리 1. MemberVO vo = new MemberVO() 2. vo.setEmail(email) 
