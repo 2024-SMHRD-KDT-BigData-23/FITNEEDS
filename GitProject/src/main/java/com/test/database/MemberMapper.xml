@@ -30,10 +30,13 @@
         where mem_id = #{mem_id}
     </select>
     
-	<!-- resultType의 동작원리 1. MemberVO vo = new MemberVO() 2. vo.setEmail(email) 
-		3. vo.setTel(tel) 4. vo.setAddress(address) * 만약 조회한 column과 이름이 일치하는 필드명이 
-		객체안에 존재하지 않는다면, 동작하지 않고, 에러가 발생!!! >> 해결할 수 있는 방법은 (1) 객체 필드명 바꾸기 (2) sql구문에서 
-		alias부여하기 -->
+    <select id="get_mem_height" resultType="com.test.model.MemberVO" parameterType="com.test.model.MemberVO">
+        select height from tb_member where mem_id = #{mem_id}
+    </select>
+    
+    
+    
+    <!-- 안쓰는 코드 -->
 	<update id="update" parameterType="com.test.model.MemberVO"> update b_member set pw =
 		#{pw}, tel = #{tel}, address = #{address} where email = #{email}
 	</update>

@@ -7,4 +7,10 @@
         insert into tb_accumulated_exercise(mem_id, ex_idx, ex_date, ex_done, ex_reps, ex_time)
         values (#{mem_id}, #{ex_idx}, #{ex_date}, #{ex_done}, #{ex_reps}, #{ex_time})
     </insert>
+    
+    <select id="get_acex_data" parameterType="com.test.model.AccExerciseVO" resultType="com.test.model.AccExerciseVO">
+    	select ex_date, ex_calories
+    	from tb_accumulated_exercise
+    	where mem_id = #{mem_id}
+    </select>
 </mapper>

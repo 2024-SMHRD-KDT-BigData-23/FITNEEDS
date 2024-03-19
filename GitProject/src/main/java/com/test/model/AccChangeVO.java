@@ -1,24 +1,34 @@
 package com.test.model;
 
-public class AccChangesVO {
+public class AccChangeVO {
 	// 변화 식별자
 	private int change_idx;
 	// 회원 아이디
 	private String mem_id;
 	// 키
-	private int height;
+	private double height;
 	// 체중
-	private int weight;
+	private double weight;
+	// 기록 날짜
+	private String ch_date;
 	// 체질량지수(BMI)
-	private int bmi;
+	private double bmi;
 	// 근육량
-	private int muscle;
+	private double muscle;
 	// 체지방률
-	private int fat_per;
+	private double fat_per;
 
 	private int ex_calories;
 
-	// 기록 날짜
+	public String getAc_date() {
+		return ch_date;
+	}
+
+	public void setAc_date(String ac_date) {
+		this.ch_date = ac_date;
+	}
+
+	// 기록 등록
 	private String created_at;
 
 	public int getEx_calories() {
@@ -45,43 +55,43 @@ public class AccChangesVO {
 		this.mem_id = mem_id;
 	}
 
-	public int getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
-	public int getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
-	public int getBmi() {
+	public double getBmi() {
 		return bmi;
 	}
 
-	public void setBmi(int bmi) {
+	public void setBmi(double bmi) {
 		this.bmi = bmi;
 	}
 
-	public int getMuscle() {
+	public double getMuscle() {
 		return muscle;
 	}
 
-	public void setMuscle(int muscle) {
+	public void setMuscle(double muscle) {
 		this.muscle = muscle;
 	}
 
-	public int getFat_per() {
+	public double getFat_per() {
 		return fat_per;
 	}
 
-	public void setFat_per(int fat_per) {
+	public void setFat_per(double fat_per) {
 		this.fat_per = fat_per;
 	}
 
@@ -93,12 +103,13 @@ public class AccChangesVO {
 		this.created_at = created_at;
 	}
 
-	public AccChangesVO(int change_idx, String mem_id, int height, int weight, int bmi, int muscle, int fat_per, int ex_calories,
-			String created_at) {
+	public AccChangeVO(int change_idx, String mem_id, double height, double weight, String ch_date, double bmi, double muscle, double fat_per,
+			int ex_calories, String created_at) {
 		this.change_idx = change_idx;
 		this.mem_id = mem_id;
 		this.height = height;
 		this.weight = weight;
+		this.ch_date = ch_date;
 		this.bmi = bmi;
 		this.muscle = muscle;
 		this.fat_per = fat_per;
@@ -106,6 +117,14 @@ public class AccChangesVO {
 		this.created_at = created_at;
 	}
 
-	public AccChangesVO() {
+	public AccChangeVO(String mem_id, double height, double weight, String ch_date, int ex_calories) {
+		this.mem_id = mem_id;
+		this.height = height;
+		this.weight = weight;
+		this.ch_date = ch_date;
+		this.ex_calories = ex_calories;
+	}
+
+	public AccChangeVO() {
 	}
 }
