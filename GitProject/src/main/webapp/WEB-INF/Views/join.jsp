@@ -62,12 +62,12 @@ body {
 
 form {
 	height: 700px;
-	padding: 50px;
+	padding: 30px;
 }
 
 .panel-switch {
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 0px;
 }
 
 .panel-switch button {
@@ -172,7 +172,7 @@ fieldset input {
 	background: rgba(255, 255, 255, 0.2);
 	border: none;
 	border-radius: 5em;
-	height: 20px;
+	height: 15px;
 	width: 80%;
 	margin: 10px 0;
 	padding: 5px;
@@ -251,7 +251,7 @@ form {
 }
 
 .panel-switch {
-	margin-top: 30px;
+	margin-top: 0px;
 }
 
 .panel-switch button {
@@ -268,14 +268,19 @@ form {
 		<div class="panel shadow1">
 			<form class="login-form" action="Join.do" method="post">
 				<div class="panel-switch animated fadeIn">
-					<button type="button" id="sign_up" class="active-button">Sign
-						Up</button>
-					<button type="button" id="log_in" class="" disabled>Log in</button>
+					<button type="button" id="sign_up" class="active-button"
+						onclick="location.href='http://localhost:8080/GitProject/fitlogin.do'">
+						Sign Up
+						</button>
+					<button type="button" id="log_in" class="" disabled
+						onclick="location.href='http://localhost:8080/GitProject/fitjoin.do'">
+						Log in
+					</button>
 				</div>
-				<h1 class="animated fadeInUp animate1" id="title-login">FITNEEDS
-					회원가입</h1>
-				<h1 class="animated fadeInUp animate1 hidden" id="title-signup">FITNEEDS
-					회원가입</h1>
+				<h1 class="animated fadeInUp animate1" id="title-login">
+					FITNEEDS회원가입</h1>
+				<h1 class="animated fadeInUp animate1 hidden" id="title-signup">
+					FITNEEDS회원가입</h1>
 				<fieldset id="login-fieldset">
 					<input class="login animated fadeInUp animate2" class="loginfont"
 						name="mem_id" type="text" required placeholder="아이디" value="">
