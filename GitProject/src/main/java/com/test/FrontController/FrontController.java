@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.test.controller.Command;
+import com.test.controller.InputEx;
 import com.test.controller.Join;
 import com.test.controller.Login;
 
@@ -24,6 +25,7 @@ public class FrontController extends HttpServlet {
 	public void init() throws ServletException{
 		map.put("Join.do", new Join());
 		map.put("Login.do", new Login());
+		map.put("InputEx.do", new InputEx());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
