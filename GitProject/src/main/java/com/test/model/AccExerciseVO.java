@@ -6,6 +6,8 @@ public class AccExerciseVO {
 	// 회원 아이디
 	private String mem_id;
 	// 운동 식별자
+	private int ex_idx;
+
 	private String ex_name; // 원래 ex_idx인데 운동명을 받아와야해서 Strig ex_name으로 바꿔놈
 	// 운동 날짜
 	private String ex_date;
@@ -17,20 +19,8 @@ public class AccExerciseVO {
 	private int ex_time;
 
 	private int ex_calories;
-
 	// 등록 일자
 	private String created_at;
-
-	public int getEx_calories() {
-		return ex_calories;
-	}
-
-	public void setEx_calories(int ex_calories) {
-		this.ex_calories = ex_calories;
-	}
-
-	public AccExerciseVO() {
-	}
 
 	public int getAcc_idx() {
 		return acc_idx;
@@ -48,11 +38,19 @@ public class AccExerciseVO {
 		this.mem_id = mem_id;
 	}
 
-	public String getEx_idx() {
+	public int getEx_idx() {
+		return ex_idx;
+	}
+
+	public void setEx_idx(int ex_idx) {
+		this.ex_idx = ex_idx;
+	}
+
+	public String getEx_name() {
 		return ex_name;
 	}
 
-	public void setEx_idx(String ex_name) {
+	public void setEx_name(String ex_name) {
 		this.ex_name = ex_name;
 	}
 
@@ -88,6 +86,14 @@ public class AccExerciseVO {
 		this.ex_time = ex_time;
 	}
 
+	public int getEx_calories() {
+		return ex_calories;
+	}
+
+	public void setEx_calories(int ex_calories) {
+		this.ex_calories = ex_calories;
+	}
+
 	public String getCreated_at() {
 		return created_at;
 	}
@@ -96,16 +102,25 @@ public class AccExerciseVO {
 		this.created_at = created_at;
 	}
 
-	public AccExerciseVO(int acc_idx, String mem_id, String ex_name, String ex_date, String ex_done, int ex_reps,
+	public AccExerciseVO(int acc_idx, String mem_id, int ex_idx, String ex_date, String ex_done, int ex_reps,
 			int ex_time, int ex_calories, String created_at) {
 		this.acc_idx = acc_idx;
 		this.mem_id = mem_id;
-		this.ex_name = ex_name;
+		this.ex_idx = ex_idx;
 		this.ex_date = ex_date;
 		this.ex_done = ex_done;
 		this.ex_reps = ex_reps;
 		this.ex_time = ex_time;
 		this.ex_calories = ex_calories;
 		this.created_at = created_at;
+	}
+
+	public AccExerciseVO(String mem_id, int ex_idx, String ex_date, String ex_done, int ex_reps, int ex_time) {
+		this.mem_id = mem_id;
+		this.ex_idx = ex_idx;
+		this.ex_date = ex_date;
+		this.ex_done = ex_done;
+		this.ex_reps = ex_reps;
+		this.ex_time = ex_time;
 	}
 }
