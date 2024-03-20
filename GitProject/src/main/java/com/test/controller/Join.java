@@ -38,7 +38,7 @@ public class Join implements Command {
 		int saltrow = dao.saltJoin(saltvo);
 
 		if (row > 0 & saltrow > 0) {
-			request.setAttribute("join", dao);
+			request.setAttribute("join", mem_nick);
 			return "join_success";
 		} else {
 			return "redirect:/fitjoin.do";
