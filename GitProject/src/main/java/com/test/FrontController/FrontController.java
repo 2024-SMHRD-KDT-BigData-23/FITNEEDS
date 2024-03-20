@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.test.controller.Command;
+import com.test.controller.InputCh;
 import com.test.controller.InputEx;
 import com.test.controller.Join;
 import com.test.controller.Login;
+import com.test.controller.Logout;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -26,6 +28,8 @@ public class FrontController extends HttpServlet {
 		map.put("Join.do", new Join());
 		map.put("Login.do", new Login());
 		map.put("InputEx.do", new InputEx());
+		map.put("Logout.do", new Logout());
+		map.put("InputCh.do", new InputCh());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

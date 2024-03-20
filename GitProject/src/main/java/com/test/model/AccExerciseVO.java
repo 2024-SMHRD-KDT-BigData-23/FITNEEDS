@@ -123,4 +123,9 @@ public class AccExerciseVO {
 		this.ex_reps = ex_reps;
 		this.ex_time = ex_time;
 	}
+	
+	public AccExerciseVO(String ex_date, int ex_calories) {
+        this.ex_date = ex_date;
+        this.ex_calories = ex_calories;
+    }
 }
