@@ -138,10 +138,17 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
+								
+								
+								
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
-							<div class="dropdown-menu center navbar-dropdown"
-								aria-labelledby="profileDropdown">
+							
+							
+							
+							
+							
+							<div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="UpdatePage.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
@@ -154,7 +161,10 @@
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
+								</div>
 						</li>
+						
+						
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="MainPage.do"> <i
 								class="mdi mdi-home-circle"></i>

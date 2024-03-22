@@ -169,10 +169,7 @@
 							data-bs-toggle="dropdown" aria-expanded="false">
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
-							<div class="dropdown-menu center navbar-dropdown"
-								aria-labelledby="profileDropdown">
-								<a class="dropdown-item" href="#"> <i
-=======
+
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 				<!--*** side nar > nav >  사용자 Menu start ***-->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
