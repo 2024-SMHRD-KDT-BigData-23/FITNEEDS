@@ -56,8 +56,7 @@
 
 
 
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!--*** side nar > nav >  사용자 Menu start ***-->
+				<!-- /// side nar > nav >  사용자 Menu start /// -->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
 						class="menu-title">나의운동정보</span>
@@ -77,8 +76,8 @@
 						<i class="mdi mdi-comment-account-outline menu-icon"></i> <span
 						class="menu-title">나의운동예약</span>
 				</a></li>
-				<!--*** 사용자 Menu end ***-->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+				<!-- /// side nar > nav >  사용자 Menu start /// -->
+
 
 			</ul>
 		</nav>
