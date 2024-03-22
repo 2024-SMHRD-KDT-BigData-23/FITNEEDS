@@ -5,18 +5,16 @@ $(function() {
 	 */
 	// 차트에 띄울 데이터 ajax로 가져오기
 	let doughnutPieData = {};
-    let doughnutPieOptions = {};
-    
+	let doughnutPieOptions = {};
+
 	$("#date_check").on("click", function() {
-		let start_date = { "start_date": $("start_date").val() };
-		let end_date = { "end_date": $("end_date").val() };
-		console.log(start_date);
-		console.log(end_date);
+		let start_date = $("#dateFrom").val();
+		let end_date = $("#dateTo").val();
 
 		$.ajax({
 			url: "SelectDate",
-			data: { start_date: start_date, end_date: end_date },
-			type: '',
+			data: { "start_date": start_date, "end_date": end_date },
+			type: 'POST',
 			dataType: 'json',
 			success: (res) => {
 				console.log("성공");
@@ -49,6 +47,23 @@ $(function() {
 
 					labels: labels
 				};
+				if ($("#doughnutChart").length) {
+					var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
+					var doughnutChart = new Chart(doughnutChartCanvas, {
+						type: 'doughnut',
+						data: doughnutPieData,
+						options: doughnutPieOptions
+					});
+				}
+
+				if ($("#pieChart").length) {
+					var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
+					var pieChart = new Chart(pieChartCanvas, {
+						type: 'pie',
+						data: doughnutPieData,
+						options: doughnutPieOptions
+					});
+				}
 				doughnutPieOptions = {
 					responsive: true,
 					animation: {
@@ -533,24 +548,6 @@ $(function() {
 			type: 'line',
 			data: multiAreaData,
 			options: multiAreaOptions
-		});
-	}
-
-	if ($("#doughnutChart").length) {
-		var doughnutChartCanvas = $("#doughnutChart").get(0).getContext("2d");
-		var doughnutChart = new Chart(doughnutChartCanvas, {
-			type: 'doughnut',
-			data: doughnutPieData,
-			options: doughnutPieOptions
-		});
-	}
-
-	if ($("#pieChart").length) {
-		var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
-		var pieChart = new Chart(pieChartCanvas, {
-			type: 'pie',
-			data: doughnutPieData,
-			options: doughnutPieOptions
 		});
 	}
 

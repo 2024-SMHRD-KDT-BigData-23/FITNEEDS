@@ -25,6 +25,27 @@ public class AccExerciseVO {
 	private String ex_category;
 	// 운동 횟수 카운트
 	private int ex_count;
+	// 시작 날짜
+	private String start_date;
+	// 종료 날짜
+	private String end_date;
+	
+
+	public String getStart_date() {
+		return start_date;
+	}
+
+	public void setStart_date(String start_date) {
+		this.start_date = start_date;
+	}
+
+	public String getEnd_date() {
+		return end_date;
+	}
+
+	public void setEnd_date(String end_date) {
+		this.end_date = end_date;
+	}
 
 	public int getEx_count() {
 		return ex_count;
@@ -151,7 +172,7 @@ public class AccExerciseVO {
 
 	public AccExerciseVO(String mem_id, String start_date, String end_date) {
 		this.mem_id = mem_id;
-		start_date = ex_date;
-		end_date = ex_date;
+		this.start_date = start_date;
+		this.end_date = end_date;
 	}
 }
