@@ -25,12 +25,12 @@
 <!-- End layout styles -->
 <link rel="shortcut icon" href="assets/images/favicon.png" />
 <body>
-		<div class="container-scroller">
+	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
-				<li class="nav-item nav-profile border-bottom">
-					<a href="#" class="nav-link flex-column">
+				<li class="nav-item nav-profile border-bottom"><a href="#"
+					class="nav-link flex-column">
 						<div class="nav-profile-image">
 							<img src="assets/images/faces/face1.jpg" alt="profile" />
 							<!--change to offline or busy as needed-->
@@ -45,9 +45,8 @@
 						src="assets/images/logo.png" alt="" /> <img
 						class="sidebar-brand-logomini" src="assets/images/logo-mini.png"
 						alt="" />
-						<div class="small font-weight-light pt-1">
-						fitness responsive web design
-						</div>
+						<div class="small font-weight-light pt-1">fitness responsive
+							web design</div>
 				</a>
 					<form class="d-flex align-items-center" action="#"></form></li>
 				<li class="pt-2 pb-1"><span class="nav-item-head">MENU
@@ -83,12 +82,12 @@
 			</ul>
 		</nav>
 
-<!-- ** SIDE BAR SECTION END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- ** SIDE BAR SECTION END ** -->
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** TOP BAR SECTION ** -->
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- ** TOP BAR SECTION ** -->
 
 		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
@@ -138,17 +137,18 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
-								
-								
-								
+
+
+
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
-							
-							
-							
-							
-							
-							<div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
+
+
+
+
+
+							<div class="dropdown-menu center navbar-dropdown"
+								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="UpdatePage.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
@@ -161,10 +161,10 @@
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
-								</div>
+							</div>
 						</li>
-						
-						
+
+
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="MainPage.do"> <i
 								class="mdi mdi-home-circle"></i>
@@ -178,157 +178,138 @@
 				</div>
 			</nav>
 
-<!-- ** TOP BAR SECTION END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<!-- ** TOP BAR SECTION END ** -->
+			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
 
-			
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->			
-<!-- ** Main Area Start ** -->			
-			
+
+			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<!-- ** Main Area Start ** -->
+
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<div class="page-header">
-						<h3 class="page-title">Chart-js</h3>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#">Charts</a></li>
-								<li class="breadcrumb-item active" aria-current="page">
-									Chart-js</li>
-							</ol>
-						</nav>
+					<div class="page-header flex-wrap">
+						<div class="header-left">
+							<button class="btn btn-primary mb-2 mb-md-0 me-2">
+								Create new document</button>
+							<button class="btn btn-outline-primary bg-white mb-2 mb-md-0">
+								Import documents</button>
+						</div>
 					</div>
+
+
+
+					<div>
+						<input type="text" id="dateFrom" name="start_date"
+							placeholder="yyyy-mm-dd"> ~ <input type="text"
+							id="dateTo" name="end_date" placeholder="yyyy-mm-dd"> <input
+							type="submit" id="date_check" value="검색">
+					</div>
+
+
 					<div class="row">
 						<div class="col-lg-6 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<div>
-										<input type="text" id="dateFrom" name="start_date"
-											placeholder="yyyy-mm-dd"> ~ <input type="text"
-											id="dateTo" name="end_date" placeholder="yyyy-mm-dd">
-										<input type="submit" id="date_check" value="검색">
-									</div>
+
 									<h4 class="card-title">Line chart</h4>
-									<canvas id="lineChart" style="height: 250px;"></canvas>
+									<canvas id="lineChart"></canvas>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Bar chart</h4>
-									<canvas id="barChart" style="height: 230px;"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Area chart</h4>
-									<canvas id="areaChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Doughnut chart</h4>
-									<canvas id="doughnutChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
 						<div class="col-lg-6 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Pie chart</h4>
-									<canvas id="pieChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Scatter chart</h4>
-									<canvas id="scatterChart" style="height: 250px;"></canvas>
+									<canvas id="barChart"></canvas>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-lg-4 grid-margin stretch-card">
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
+							</div>
+						</div>
+						<div class="col-lg-4 grid-margin stretch-card">
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
+							</div>
+						</div>
+						<div class="col-lg-4 grid-margin stretch-card">
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
-<!-- ** Main Area END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				
-				
-				
-	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** Footer Area START ** -->			
-				
-				
-				
+				<!-- ** Main Area END ** -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+				<!-- ** Footer Area START ** -->
+
+
+
 				<!-- partial:partials/_footer.html -->
-				<footer class="footer">
-					<div
-						class="d-sm-flex justify-content-center justify-content-sm-between">
-						<span
-							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2021 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
-							All rights reserved.
-						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
-							& made with <i class="mdi mdi-heart text-danger"></i>
-						</span>
-					</div>
-				</footer>
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
+                target="_blank">Fitneeds</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Fitneeds team & smhrd <i
+                class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
 				<!-- partial -->
-				
-				
-	
-<!-- ** Footer Area END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				
-				
-				
-				
-				
-				
-				
-				
+
+
+
+				<!-- ** Footer Area END ** -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
 			</div>
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-<!-- ** All AREA END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	
-	
 
 
 
-	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	
-<!-- ** JS AREA START ** -->
-	
+
+
+
+
+
+
+
+
+
+	<!-- ** All AREA END ** -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- ** JS AREA START ** -->
+
 	<!-- container-scroller -->
 	<!-- plugins:js -->
 	<script src="assets/vendors/js/vendor.bundle.base.js"></script>
@@ -347,8 +328,8 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/chart.js"></script>
 	<!-- End custom js for this page -->
-	
-<!-- ** JS AREA START ** -->	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	
+
+	<!-- ** JS AREA START ** -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </body>
 </html>
