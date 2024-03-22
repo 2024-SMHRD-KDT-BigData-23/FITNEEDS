@@ -31,9 +31,9 @@
 				<!-- 로그인 또는 회원가입 이동 -->
 				<div class="panel-switch animated fadeIn">
 					<button type="button" id="sign_up" class="active-button"
-						onclick='location.href="fitlogin2.do"'>Log in</button>
+						onclick='location.href="fitlogint.do"'>Log in</button>
 					<button type="button" id="log_in" class="active-button"
-						onclick='location.href="fitjoin.do"'>Sign Up</button>
+						onclick='location.href="fitjoint.do"'>Sign Up</button>
 				</div>
 
 				<!-- 이름칸 -->
