@@ -29,7 +29,7 @@
 							name="mem_id" type="text" required placeholder="아이디" value="">
 						<input class="login animated fadeInUp animate3" class="loginfont"
 							name="mem_pw" type="password" required placeholder="비밀번호"
-							value=""> <input class="login animated fadeInUp animate3"
+							value=""> <input class="login animated fadeInUp animate3"	
 							class="loginfont" name="mem_name" type="text" required
 							placeholder="이름" value=""> <input
 							class="login animated fadeInUp animate3" class="loginfont"
