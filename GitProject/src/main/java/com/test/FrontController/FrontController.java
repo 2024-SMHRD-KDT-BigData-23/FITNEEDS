@@ -14,6 +14,7 @@ import com.test.controller.Command;
 import com.test.controller.ComparePage;
 import com.test.controller.MainPage;
 import com.test.controller.ReservePage;
+import com.test.controller.UpdatePage;
 import com.test.controller.InputCh;
 import com.test.controller.InputEx;
 import com.test.controller.InputPage;
@@ -38,6 +39,8 @@ public class FrontController extends HttpServlet {
 		map.put("ComparePage.do", new ComparePage()); // 비교
 		map.put("InputPage.do", new InputPage()); // 운동입력
 		map.put("ReservePage.do", new ReservePage()); // 예약
+		map.put("UpdatePage.do", new UpdatePage()); // 회원정보수정
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

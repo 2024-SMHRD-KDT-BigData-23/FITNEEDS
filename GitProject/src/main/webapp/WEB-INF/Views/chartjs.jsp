@@ -9,6 +9,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Plus Admin</title>
 <!-- plugins:css -->
+<!-- plugins:css -->
 <link rel="stylesheet"
 	href="assets/vendors/mdi/css/materialdesignicons.min.css">
 <link rel="stylesheet"
@@ -23,10 +24,8 @@
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <!-- End layout styles -->
 <link rel="shortcut icon" href="assets/images/favicon.png" />
-</head>
 <body>
 	<div class="container-scroller">
-		<!-- partial:partials/_sidebar.html -->
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
@@ -83,40 +82,12 @@
 			</ul>
 		</nav>
 
-		<!-- partial -->
-		<div class="container-fluid page-body-wrapper">
-			<!-- partial:partials/_settings-panel.html -->
-			<div id="settings-trigger">
-				<i class="mdi mdi-settings"></i>
-			</div>
-			<div id="theme-settings" class="settings-panel">
-				<i class="settings-close mdi mdi-close"></i>
-				<p class="settings-heading">SIDEBAR SKINS</p>
-				<div class="sidebar-bg-options selected" id="sidebar-default-theme">
-					<div class="img-ss rounded-circle bg-light border me-3"></div>
-					Default
-				</div>
-				<div class="sidebar-bg-options" id="sidebar-dark-theme">
-					<div class="img-ss rounded-circle bg-dark border me-3"></div>
-					Dark
-				</div>
-				<p class="settings-heading mt-2">HEADER SKINS</p>
-				<div class="color-tiles mx-0 px-4">
-					<div class="tiles default primary"></div>
-					<div class="tiles success"></div>
-					<div class="tiles warning"></div>
-					<div class="tiles danger"></div>
-					<div class="tiles info"></div>
-					<div class="tiles dark"></div>
-					<div class="tiles light"></div>
-				</div>
-			</div>
-<!-- ** SIDE BAR SECTION END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- ** SIDE BAR SECTION END ** -->
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** TOP BAR SECTION ** -->
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- ** TOP BAR SECTION ** -->
 
 		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
@@ -166,11 +137,19 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
+
+
+
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
+
+
+
+
+
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
-								<a class="dropdown-item" href="#"> <i
+								<a class="dropdown-item" href="UpdatePage.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
 								<div class="dropdown-divider"></div>
@@ -182,7 +161,10 @@
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
+							</div>
 						</li>
+
+
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="MainPage.do"> <i
 								class="mdi mdi-home-circle"></i>
@@ -196,135 +178,138 @@
 				</div>
 			</nav>
 
-<!-- ** TOP BAR SECTION END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			
-			
+			<!-- ** TOP BAR SECTION END ** -->
+			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<!-- ** Main Area Start ** -->
+
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<div class="page-header">
-						<h3 class="page-title">Chart-js</h3>
-						<nav aria-label="breadcrumb">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#">Charts</a></li>
-								<li class="breadcrumb-item active" aria-current="page">
-									Chart-js</li>
-							</ol>
-						</nav>
+					<div class="page-header flex-wrap">
+						<div class="header-left">
+							<button class="btn btn-primary mb-2 mb-md-0 me-2">
+								Create new document</button>
+							<button class="btn btn-outline-primary bg-white mb-2 mb-md-0">
+								Import documents</button>
+						</div>
 					</div>
+
+
+
+					<div>
+						<input type="text" id="dateFrom" name="start_date"
+							placeholder="yyyy-mm-dd"> ~ <input type="text"
+							id="dateTo" name="end_date" placeholder="yyyy-mm-dd"> <input
+							type="submit" id="date_check" value="검색">
+					</div>
+
+
 					<div class="row">
 						<div class="col-lg-6 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<div>
-										<input type="text" id="dateFrom" name="start_date"
-											placeholder="yyyy-mm-dd"> ~ <input type="text"
-											id="dateTo" name="end_date" placeholder="yyyy-mm-dd">
-										<input type="submit" id="date_check" value="검색">
-									</div>
+
 									<h4 class="card-title">Line chart</h4>
-									<canvas id="lineChart" style="height: 250px;"></canvas>
+									<canvas id="lineChart"></canvas>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Bar chart</h4>
-									<canvas id="barChart" style="height: 230px;"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Area chart</h4>
-									<canvas id="areaChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Doughnut chart</h4>
-									<canvas id="doughnutChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
 						<div class="col-lg-6 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
 									<h4 class="card-title">Pie chart</h4>
-									<canvas id="pieChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">Scatter chart</h4>
-									<canvas id="scatterChart" style="height: 250px;"></canvas>
+									<canvas id="barChart"></canvas>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-lg-4 grid-margin stretch-card">
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
+							</div>
+						</div>
+						<div class="col-lg-4 grid-margin stretch-card">
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
+							</div>
+						</div>
+						<div class="col-lg-4 grid-margin stretch-card">
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
-<!-- ** Main Area END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				
-				
-	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** Footer Area START ** -->			
-				
-				
-				
+				<!-- ** Main Area END ** -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+				<!-- ** Footer Area START ** -->
+
+
+
 				<!-- partial:partials/_footer.html -->
-				<footer class="footer">
-					<div
-						class="d-sm-flex justify-content-center justify-content-sm-between">
-						<span
-							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2021 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
-							All rights reserved.
-						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
-							& made with <i class="mdi mdi-heart text-danger"></i>
-						</span>
-					</div>
-				</footer>
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
+                target="_blank">Fitneeds</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Fitneeds team & smhrd <i
+                class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
 				<!-- partial -->
-				
-				
-	
-<!-- ** Footer Area END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+				<!-- ** Footer Area END ** -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
 			</div>
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
 	</div>
-	
-	
-	
-	
-	
-<!-- ** All AREA END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	
-	
 
 
 
-	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	
-<!-- ** JS AREA START ** -->
-	
+
+
+
+
+
+
+
+
+
+	<!-- ** All AREA END ** -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- ** JS AREA START ** -->
+
 	<!-- container-scroller -->
 	<!-- plugins:js -->
 	<script src="assets/vendors/js/vendor.bundle.base.js"></script>
@@ -343,12 +328,8 @@
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/chart.js"></script>
 	<!-- End custom js for this page -->
-	
-<!-- ** JS AREA START ** -->	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	
-	
-	
-	
-	
+
+	<!-- ** JS AREA START ** -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </body>
 </html>

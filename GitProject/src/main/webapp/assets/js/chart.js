@@ -6,13 +6,16 @@ $(function() {
 	// 차트에 띄울 데이터 ajax로 가져오기
 	let doughnutPieData = {};
 	let doughnutPieOptions = {};
-
+	let data={};
+	let options={};
 	$("#date_check").on("click", function() {
 		let start_date = $("#dateFrom").val();
 		let end_date = $("#dateTo").val();
+		console.log(start_date);
+		console.log(end_date);
 
 		$.ajax({
-			url: "SelectDate",
+			url: "SelectDate",			
 			data: { "start_date": start_date, "end_date": end_date },
 			type: 'POST',
 			dataType: 'json',
@@ -76,15 +79,34 @@ $(function() {
 				console.log("실패")
 			}
 		})
+					
+	});
 
-	})
 
-	'use strict';
-	var data = {
-		labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
+
+
+
+
+$("#date_check").on("click", function() {
+		let start_date = $("#dateFrom").val();
+		let end_date = $("#dateTo").val();
+		console.log(start_date);
+		console.log(end_date);
+
+	$.ajax({
+			url: "Acc_Ch",
+			data: { "start_date": start_date, "end_date": end_date },
+			type: 'POST',
+			dataType: 'json',
+			success:(res) => {
+				let labels = res.map(item=>item.ch_date);
+				let exCounts = res.map(item => item.ex_calories);
+				
+				var data = {
+		
 		datasets: [{
-			label: '# of Votes',
-			data: [10, 19, 3, 5, 2, 3],
+			
+			data: exCounts,
 			backgroundColor: [
 				'rgba(255, 99, 132, 0.2)',
 				'rgba(54, 162, 235, 0.2)',
@@ -103,8 +125,66 @@ $(function() {
 			],
 			borderWidth: 1,
 			fill: false
-		}]
+		}],
+		    labels: labels
 	};
+				if ($("#barChart").length) {
+		var barChartCanvas = $("#barChart").get(0).getContext("2d");
+		// This will get the first returned node in the jQuery collection.
+		var barChart = new Chart(barChartCanvas, {
+			type: 'bar',
+			data: data,
+			options: options
+		});
+		
+	}
+	if ($("#lineChart").length) {
+		var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
+		var lineChart = new Chart(lineChartCanvas, {
+			type: 'line',
+			data: data,
+			options: options
+		});
+	}
+	var options = {
+		scales: {
+			yAxes: [{
+				ticks: {
+					beginAtZero: true
+				}
+			}]
+		},
+		legend: {
+			display: false
+		},
+		elements: {
+			point: {
+				radius: 0
+			}
+		}
+
+	};
+			},			
+			error:() => {
+				console.log("실패")
+			}
+		})
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+	'use strict';
+	
 	var dataDark = {
 		labels: ["2013", "2014", "2014", "2015", "2016", "2017"],
 		datasets: [{
@@ -161,24 +241,7 @@ $(function() {
 		}
 		]
 	};
-	var options = {
-		scales: {
-			yAxes: [{
-				ticks: {
-					beginAtZero: true
-				}
-			}]
-		},
-		legend: {
-			display: false
-		},
-		elements: {
-			point: {
-				radius: 0
-			}
-		}
-
-	};
+	
 	var optionsDark = {
 		scales: {
 			yAxes: [{
@@ -495,15 +558,7 @@ $(function() {
 		}
 	}
 	// Get context with jQuery - using jQuery's .get() method.
-	if ($("#barChart").length) {
-		var barChartCanvas = $("#barChart").get(0).getContext("2d");
-		// This will get the first returned node in the jQuery collection.
-		var barChart = new Chart(barChartCanvas, {
-			type: 'bar',
-			data: data,
-			options: options
-		});
-	}
+	
 
 	if ($("#barChartDark").length) {
 		var barChartCanvasDark = $("#barChartDark").get(0).getContext("2d");
@@ -515,14 +570,7 @@ $(function() {
 		});
 	}
 
-	if ($("#lineChart").length) {
-		var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
-		var lineChart = new Chart(lineChartCanvas, {
-			type: 'line',
-			data: data,
-			options: options
-		});
-	}
+	
 
 	if ($("#lineChartDark").length) {
 		var lineChartCanvasDark = $("#lineChartDark").get(0).getContext("2d");
