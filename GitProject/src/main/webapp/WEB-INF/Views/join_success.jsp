@@ -20,7 +20,7 @@
 				<!-- 이름칸 -->
 				<h1 class="animated fadeInUp animate1" id="title-login">회원가입
 					성공!</h1>
-				<img src="../img/success.jpg" alt="없음" class="img-large">
+				<img src="assets/img/success.jpg" alt="없음" class="img-large">
 				<fieldset id="login-fieldset">
 					<h1>${join}님<br>회원가입을축하드립니다!
 					</h1>

@@ -39,17 +39,17 @@ public class InputEx implements Command {
 
 			if (row > 0) {
 				// 성공할 경우
-				return "input";
+				return "redirect:/fitmyhealth.do";
 				// 맞게 입력할 경우 다시 입력?
 				// 지금 session (mem_id)값을 유지하기 위해 forward 방식으로 하고 있는데
 				// 이렇게 하게 된다면 주소창에 fitinput.do가 아닌 inputEx.jsp로 뜨게됨
 				// 이것을 어떻게 해결해야할지 고민해야함
 			} else {
 				// 잘못 입력해서 실패할 경우 어딘가로 이동?
-				return "input"; 
+				return "redirect:/fitmyhealth.do"; 
 			}
 		} else {
-			return null;
+			return "redirect:/fitmyhealth.do";
 		}
 	}
 

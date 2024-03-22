@@ -17,10 +17,30 @@ public class AccExerciseVO {
 	private int ex_reps;
 	// 소요 시간
 	private int ex_time;
-
+	// 소모 칼로리
 	private int ex_calories;
 	// 등록 일자
 	private String created_at;
+	// 운동 카테고리
+	private String ex_category;
+	// 운동 횟수 카운트
+	private int ex_count;
+
+	public int getEx_count() {
+		return ex_count;
+	}
+
+	public void setEx_count(int ex_count) {
+		this.ex_count = ex_count;
+	}
+
+	public String getEx_category() {
+		return ex_category;
+	}
+
+	public void setEx_category(String ex_category) {
+		this.ex_category = ex_category;
+	}
 
 	public int getAcc_idx() {
 		return acc_idx;
@@ -123,9 +143,15 @@ public class AccExerciseVO {
 		this.ex_reps = ex_reps;
 		this.ex_time = ex_time;
 	}
-	
+
 	public AccExerciseVO(String ex_date, int ex_calories) {
-        this.ex_date = ex_date;
-        this.ex_calories = ex_calories;
-    }
+		this.ex_date = ex_date;
+		this.ex_calories = ex_calories;
+	}
+
+	public AccExerciseVO(String mem_id, String start_date, String end_date) {
+		this.mem_id = mem_id;
+		start_date = ex_date;
+		end_date = ex_date;
+	}
 }
