@@ -20,6 +20,27 @@ public class AccChangeVO {
 
 	private int ex_calories;
 
+	// 시작 날짜
+	private String start_date;
+	// 종료 날짜
+	private String end_date;
+
+	public String getStart_date() {
+		return start_date;
+	}
+
+	public void setStart_date(String start_date) {
+		this.start_date = start_date;
+	}
+
+	public String getEnd_date() {
+		return end_date;
+	}
+
+	public void setEnd_date(String end_date) {
+		this.end_date = end_date;
+	}
+
 	public String getAc_date() {
 		return ch_date;
 	}
@@ -103,8 +124,8 @@ public class AccChangeVO {
 		this.created_at = created_at;
 	}
 
-	public AccChangeVO(int change_idx, String mem_id, double height, double weight, String ch_date, double bmi, double muscle, double fat_per,
-			int ex_calories, String created_at) {
+	public AccChangeVO(int change_idx, String mem_id, double height, double weight, String ch_date, double bmi,
+			double muscle, double fat_per, int ex_calories, String created_at) {
 		this.change_idx = change_idx;
 		this.mem_id = mem_id;
 		this.height = height;
@@ -126,5 +147,11 @@ public class AccChangeVO {
 	}
 
 	public AccChangeVO() {
+	}
+	
+	public AccChangeVO(String mem_id, String start_date, String end_date) {
+		this.mem_id = mem_id;
+		this.start_date = start_date;
+		this.end_date = end_date;
 	}
 }
