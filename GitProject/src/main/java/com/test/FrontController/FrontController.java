@@ -38,6 +38,8 @@ public class FrontController extends HttpServlet {
 		map.put("ComparePage.do", new ComparePage()); // 비교
 		map.put("InputPage.do", new InputPage()); // 운동입력
 		map.put("ReservePage.do", new ReservePage()); // 예약
+		map.put("Update.do", new Update()); // 회원정보수정
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
