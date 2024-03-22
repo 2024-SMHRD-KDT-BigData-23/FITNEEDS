@@ -138,11 +138,18 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
+								
+								
+								
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
-							<div class="dropdown-menu center navbar-dropdown"
-								aria-labelledby="profileDropdown">
-								<a class="dropdown-item" href="#"> <i
+							
+							
+							
+							
+							
+							<div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
+								<a class="dropdown-item" href="UpdatePage.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
 								<div class="dropdown-divider"></div>
@@ -154,7 +161,10 @@
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
+								</div>
 						</li>
+						
+						
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="MainPage.do"> <i
 								class="mdi mdi-home-circle"></i>
@@ -817,19 +827,14 @@
 				
 				
 				<!-- partial:partials/_footer.html -->
-				<footer class="footer">
-					<div
-						class="d-sm-flex justify-content-center justify-content-sm-between">
-						<span
-							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2021 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
-							All rights reserved.
-						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
-							& made with <i class="mdi mdi-heart text-danger"></i>
-						</span>
-					</div>
-				</footer>
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
+                target="_blank">Fitneeds</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Fitneeds team & smhrd <i
+                class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
 				<!-- partial -->
 				
 				
