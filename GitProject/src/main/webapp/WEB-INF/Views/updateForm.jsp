@@ -56,6 +56,7 @@
 
 
 
+<<<<<<< HEAD
 				<!-- /// side nar > nav >  사용자 Menu start /// -->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
@@ -171,6 +172,124 @@
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="#"> <i
+=======
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+				<!--*** side nar > nav >  사용자 Menu start ***-->
+				<li class="nav-item"><a class="nav-link" href="MainPage.do">
+						<i class="mdi mdi-compass-outline menu-icon"></i> <span
+						class="menu-title">나의운동정보</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="ComparePage.do">
+						<i class="mdi mdi-chart-bar menu-icon"></i> <span
+						class="menu-title">나의운동비교</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="InputPage.do">
+						<i class="mdi mdi-check-circle menu-icon"></i> <span
+						class="menu-title">나의운동입력</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="ReservePage.do">
+						<i class="mdi mdi-comment-account-outline menu-icon"></i> <span
+						class="menu-title">나의운동예약</span>
+				</a></li>
+				<!--*** 사용자 Menu end ***-->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+			</ul>
+		</nav>
+
+		<!-- partial -->
+		<div class="container-fluid page-body-wrapper">
+			<!-- partial:partials/_settings-panel.html -->
+			<div id="settings-trigger">
+				<i class="mdi mdi-settings"></i>
+			</div>
+			<div id="theme-settings" class="settings-panel">
+				<i class="settings-close mdi mdi-close"></i>
+				<p class="settings-heading">SIDEBAR SKINS</p>
+				<div class="sidebar-bg-options selected" id="sidebar-default-theme">
+					<div class="img-ss rounded-circle bg-light border me-3"></div>
+					Default
+				</div>
+				<div class="sidebar-bg-options" id="sidebar-dark-theme">
+					<div class="img-ss rounded-circle bg-dark border me-3"></div>
+					Dark
+				</div>
+				<p class="settings-heading mt-2">HEADER SKINS</p>
+				<div class="color-tiles mx-0 px-4">
+					<div class="tiles default primary"></div>
+					<div class="tiles success"></div>
+					<div class="tiles warning"></div>
+					<div class="tiles danger"></div>
+					<div class="tiles info"></div>
+					<div class="tiles dark"></div>
+					<div class="tiles light"></div>
+				</div>
+			</div>
+			</div>
+<!-- ** SIDE BAR SECTION END ** -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ** TOP BAR SECTION ** -->
+
+		<!-- partial -->
+		<div class="container-fluid page-body-wrapper">
+			<!-- partial:partials/_settings-panel.html -->
+			<div id="settings-trigger">
+				<i class="mdi mdi-settings"></i>
+			</div>
+			<div id="theme-settings" class="settings-panel">
+				<i class="settings-close mdi mdi-close"></i>
+				<p class="settings-heading">SIDEBAR SKINS</p>
+				<div class="sidebar-bg-options selected" id="sidebar-default-theme">
+					<div class="img-ss rounded-circle bg-light border me-3"></div>
+					Default
+				</div>
+				<div class="sidebar-bg-options" id="sidebar-dark-theme">
+					<div class="img-ss rounded-circle bg-dark border me-3"></div>
+					Dark
+				</div>
+				<p class="settings-heading mt-2">HEADER SKINS</p>
+				<div class="color-tiles mx-0 px-4">
+					<div class="tiles default primary"></div>
+					<div class="tiles success"></div>
+					<div class="tiles warning"></div>
+					<div class="tiles danger"></div>
+					<div class="tiles info"></div>
+					<div class="tiles dark"></div>
+					<div class="tiles light"></div>
+				</div>
+			</div>
+			<!-- partial -->
+			<!-- partial:partials/_navbar.html -->
+			<nav
+				class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+				<div class="navbar-menu-wrapper d-flex align-items-stretch">
+					<button class="navbar-toggler navbar-toggler align-self-center"
+						type="button" data-toggle="minimize">
+						<span class="mdi mdi-chevron-double-left"></span>
+					</button>
+					<div
+						class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+						<a class="navbar-brand brand-logo-mini" href="MainPage.do"><img
+							src="assets/images/logo-mini.png" alt="logo" /></a>
+					</div>
+
+					<ul class="navbar-nav navbar-nav-right">
+
+						<li class="nav-item nav-profile dropdown d-none d-md-block">
+							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
+							data-bs-toggle="dropdown" aria-expanded="false">
+								<div class="nav-profile-text">MYPAGE</div>
+						</a>
+							<div class="dropdown-menu center navbar-dropdown"
+								aria-labelledby="profileDropdown">
+								<a class="dropdown-item" href="Update.do"> <i
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
 								<div class="dropdown-divider"></div>
