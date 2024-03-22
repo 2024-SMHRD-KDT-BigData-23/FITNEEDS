@@ -57,6 +57,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 				<!-- /// side nar > nav >  사용자 Menu start /// -->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
@@ -286,7 +287,6 @@
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="Update.do"> <i
->>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
 								<div class="dropdown-divider"></div>
