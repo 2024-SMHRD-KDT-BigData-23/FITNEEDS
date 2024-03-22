@@ -95,4 +95,12 @@ public class DAO {
 		session.close();
 		return list;
 	}
+	// DAO.java 파일에 추가
+	// mem_id와 시작일부터 종료일까지의 신체 변화 데이터 가져오기
+	public ArrayList<AccChangeVO> getAccChangeData(AccChangeVO vo) {
+	    SqlSession session = factory.openSession();
+	    ArrayList<AccChangeVO> list = new ArrayList<>(session.selectList("getAccChangeData", vo));
+	    session.close();
+	    return list;
+	}
 }
