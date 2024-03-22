@@ -55,9 +55,6 @@
 				</span></li>
 
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<!-- /// side nar > nav >  사용자 Menu start /// -->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
