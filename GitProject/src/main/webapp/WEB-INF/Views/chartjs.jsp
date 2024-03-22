@@ -171,7 +171,7 @@
 						</a>
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
-								<a class="dropdown-item" href="#"> <i
+								<a class="dropdown-item" href="Update.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
 								<div class="dropdown-divider"></div>
@@ -200,6 +200,11 @@
 <!-- ** TOP BAR SECTION END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			
+			
+			
+			
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->			
+<!-- ** Main Area Start ** -->			
 			
 			<!-- partial -->
 			<div class="main-panel">

@@ -1,25 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Plus Admin</title>
-  
-<!-- ** Basic CSS Area start ** -->
-<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+<!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Plus Admin</title>
+<!-- plugins:css -->
+<link rel="stylesheet"
+	href="assets/vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet"
+	href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+<!-- endinject -->
+<!-- Plugin css for this page -->
+<!-- End Plugin css for this page -->
+<!-- inject:css -->
+<!-- endinject -->
+<!-- Layout styles -->
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
+<!-- End layout styles -->
 <link rel="shortcut icon" href="assets/images/favicon.png" />
-<!-- ** Basic CSS Area end ** -->
-
 </head>
-
 <body>
- <div class="container-scroller">
+	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -51,27 +57,27 @@
 
 
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!--*** side nar > nav >  ì¬ì©ì Menu start ***-->
+				<!--*** side nar > nav >  사용자 Menu start ***-->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
-						class="menu-title">ëìì´ëì ë³´</span>
+						class="menu-title">나의운동정보</span>
 				</a></li>
 
 				<li class="nav-item"><a class="nav-link" href="ComparePage.do">
 						<i class="mdi mdi-chart-bar menu-icon"></i> <span
-						class="menu-title">ëìì´ëë¹êµ</span>
+						class="menu-title">나의운동비교</span>
 				</a></li>
 
 				<li class="nav-item"><a class="nav-link" href="InputPage.do">
 						<i class="mdi mdi-check-circle menu-icon"></i> <span
-						class="menu-title">ëìì´ëìë ¥</span>
+						class="menu-title">나의운동입력</span>
 				</a></li>
 
 				<li class="nav-item"><a class="nav-link" href="ReservePage.do">
 						<i class="mdi mdi-comment-account-outline menu-icon"></i> <span
-						class="menu-title">ëìì´ëìì½</span>
+						class="menu-title">나의운동예약</span>
 				</a></li>
-				<!--*** ì¬ì©ì Menu end ***-->
+				<!--*** 사용자 Menu end ***-->
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 			</ul>
@@ -104,6 +110,7 @@
 					<div class="tiles dark"></div>
 					<div class="tiles light"></div>
 				</div>
+			</div>
 			</div>
 <!-- ** SIDE BAR SECTION END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -165,15 +172,15 @@
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="#"> <i
-									class="mdi mdi-account-circle me-3"></i> íìì ë³´ìì 
+									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="InputPage.do"> <i
-									class="mdi mdi-check-circle me-3"></i> ëìì´ëìë ¥
+									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
-									class="mdi mdi-logout-variant me-3"></i> ë¡ê·¸ìì
+									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
 						</li>
@@ -192,296 +199,142 @@
 
 <!-- ** TOP BAR SECTION END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-
-<!-- ** BODY Enter area START ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-      <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-        <div class="navbar-menu-wrapper d-flex align-items-stretch">
-          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-            <span class="mdi mdi-chevron-double-left"></span>
-          </button>
-          <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="../../index.html"><img
-                src="../../../assets/images/logo-mini.svg" alt="logo" /></a>
-          </div>
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <a class="nav-link" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="mdi mdi-email-outline"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-left navbar-dropdown preview-list"
-                aria-labelledby="messageDropdown">
-                <h6 class="p-3 mb-0 font-weight-semibold">Messages</h6>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="../../../assets/images/faces/face1.jpg" alt="image" class="profile-pic">
-                  </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
-                    <p class="text-gray mb-0"> 1 Minutes ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="../../../assets/images/faces/face6.jpg" alt="image" class="profile-pic">
-                  </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
-                    <p class="text-gray mb-0"> 15 Minutes ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <img src="../../../assets/images/faces/face7.jpg" alt="image" class="profile-pic">
-                  </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
-                    <p class="text-gray mb-0"> 18 Minutes ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <h6 class="p-3 mb-0 text-center text-primary font-13">4 new messages</h6>
-              </div>
-            </li>
-            <li class="nav-item dropdown ms-3">
-              <a class="nav-link" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                <i class="mdi mdi-bell-outline"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-left navbar-dropdown preview-list"
-                aria-labelledby="notificationDropdown">
-                <h6 class="px-3 py-3 font-weight-semibold mb-0">Notifications</h6>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-success">
-                      <i class="mdi mdi-calendar"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject font-weight-normal mb-0">New order recieved</h6>
-                    <p class="text-gray ellipsis mb-0"> 45 sec ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-warning">
-                      <i class="mdi mdi-settings"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject font-weight-normal mb-0">Server limit reached</h6>
-                    <p class="text-gray ellipsis mb-0"> 55 sec ago </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-info">
-                      <i class="mdi mdi-link-variant"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
-                    <h6 class="preview-subject font-weight-normal mb-0">Kevin karvelle</h6>
-                    <p class="text-gray ellipsis mb-0"> 11:09 PM </p>
-                  </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <h6 class="p-3 font-13 mb-0 text-primary text-center">View all notifications</h6>
-              </div>
-            </li>
-          </ul>
-          <ul class="navbar-nav navbar-nav-right">
-            <li class="nav-item nav-logout d-none d-md-block me-3">
-              <a class="nav-link" href="#">Status</a>
-            </li>
-            <li class="nav-item nav-logout d-none d-md-block">
-              <button class="btn btn-sm btn-danger">Trailing</button>
-            </li>
-            <li class="nav-item nav-profile dropdown d-none d-md-block">
-              <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <div class="nav-profile-text">English </div>
-              </a>
-              <div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#">
-                  <i class="flag-icon flag-icon-bl me-3"></i> French </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <i class="flag-icon flag-icon-cn me-3"></i> Chinese </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <i class="flag-icon flag-icon-de me-3"></i> German </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                  <i class="flag-icon flag-icon-ru me-3"></i>Russian </a>
-              </div>
-            </li>
-            <li class="nav-item nav-logout d-none d-lg-block">
-              <a class="nav-link" href="../../index.html">
-                <i class="mdi mdi-home-circle"></i>
-              </a>
-            </li>
-          </ul>
-          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
-            data-toggle="offcanvas">
-            <span class="mdi mdi-menu"></span>
-          </button>
-        </div>
-      </nav>
-      <!-- partial -->
-      <div class="main-panel">
-        <div class="content-wrapper ">
-          <div class="page-header">
-            <h2 class="page-title">ê°ì¸ì ë³´ ìì </h2>
-            <nav aria-label="breadcrumb">
-              <!--
-                  <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                  <li class="breadcrumb-item active" aria-current="page"> Form elements </li>
-                </ol>
-              -->
-            </nav>
-          </div>
+			
+			
+			
+			
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->			
+<!-- ** Main Area Start ** -->			
+          
+          
           <div class="row">
-            <!--íë¡í ìì ì ëí ì ë³´-->
+            <!--프로필 수정에 대한 정보-->
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">íë¡í ìì </h4>
-                  <p class="card-description">íìëì ëíí  ì´ë¯¸ì§ì ë³ëª </p>
+                  <h4 class="card-title">프로필 수정</h4>
+                  <p class="card-description">회원님을 대표할 이미지와 별명 </p>
                   <form class="forms-sample">
 
-                    <!-- ì ì  ì´ë¯¸ì§ -->
+                    <!-- 유저 이미지 -->
                     <div class="form-group">
-                      <label>íë¡í ì¬ì§</label>
+                      <label>프로필 사진</label>
                       <input type="file" name="img[]" class="file-upload-default" />
                       <div class="col-xs-12 mt-2">
                         <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image" />
                         <br>
                         <div class="input-group-append">
-                          <button class="file-upload-browse btn btn-primary" type="button"> ì¬ì§ë³ê²½ </button>
+                          <button class="file-upload-browse btn btn-primary" type="button"> 사진변경 </button>
                         </div>
                       </div>
                     </div>
-                    <!--============================ì´ë¯¸ì§ ìì ===========================-->
+                    <!--============================이미지 수정===========================-->
 
-                    <!-- ì ì  ë³ëª -->
+                    <!-- 유저 별명 -->
                     <div class="form-group">
-                      <label for="exampleNikname">ë³ëª</label>
-                      <input type="email" class="form-control" id="exampleNikname" placeholder="ë³ëªì ë§ë¤ì´ì£¼ì¸ì" />
+                      <label for="exampleNikname">별명</label>
+                      <input type="email" class="form-control" id="exampleNikname" placeholder="별명을 만들어주세요" />
                     </div>
-                    <!--==============================ë³ëª===============================-->
+                    <!--==============================별명===============================-->
 
-                    <button type="submit" class="btn btn-primary me-2"> ìì íê¸° </button>
-                    <button class="btn btn-light">ì·¨ì</button>
+                    <button type="submit" class="btn btn-primary me-2"> 수정하기 </button>
+                    <button class="btn btn-light">취소</button>
                   </form>
                 </div>
               </div>
             </div>
-            <!--===================================íë¡í ìì ============================-->
+            <!--===================================프로필 수정============================-->
 
-            <!--ê°ì¸ì ë³´ ìì ì ëí ì ë³´-->
+            <!--개인정보 수정에 대한 정보-->
             <div class="col-md-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">ê°ì¸ì ë³´ ìì </h4>
-                  <!--<p class="card-description">ë¹ë°ë²í¸ ìì </p>-->
+                  <h4 class="card-title">개인정보 수정</h4>
+                  <!--<p class="card-description">비밀번호 수정</p>-->
                   <form class="forms-sample">
 
-                    <!-- ë¹ë°ë²í¸-->
+                    <!-- 비밀번호-->
                     <div class="form-group row">
-                      <label for="exampleInputPassword2" class="col-sm-3 col-form-label">ë¹ë°ë²í¸</label>
+                      <label for="exampleInputPassword2" class="col-sm-3 col-form-label">비밀번호</label>
                       <div class="col-sm-9">
                         <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" />
                       </div>
                     </div>
-                    <!--================================ë¹ë°ë²í¸===========================-->
+                    <!--================================비밀번호===========================-->
 
-                    <!-- ë¹ë°ë²í¸ ì¬ì¤ì -->
+                    <!-- 비밀번호 재설정-->
                     <div class="form-group row">
-                      <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">ë¹ë°ë²í¸ ì¬ì¤ì </label>
+                      <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">비밀번호 재설정</label>
                       <div class="col-sm-9">
                         <input type="password" class="form-control" id="exampleInputConfirmPassword2"
                           placeholder="Re Password" />
                       </div>
                     </div>
-                    <!--=============================ë¹ë°ë²í¸ ì¬ì¤ì =======================-->
-                    <!--ì£¼ì ë³ê²½-->
+                    <!--=============================비밀번호 재설정=======================-->
+                    <!--주소 변경-->
                     <div class="form-group row">
-                      <label for="exampleChangeAddress" class="col-sm-3 col-form-label">ë³ê²½í  ì£¼ì</label>
+                      <label for="exampleChangeAddress" class="col-sm-3 col-form-label">변경할 주소</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="exampleChangeAddress"
                           placeholder="Change address" />
                       </div>
                     </div>
-                    <!-- ===========================ì£¼ìë³ê²½=========================-->
+                    <!-- ===========================주소변경=========================-->
 
-                    <!--ì´ë©ì¼ ë³ê²½-->
+                    <!--이메일 변경-->
                     <div class="form-group row">
-                      <label for="exampleChangeEmail" class="col-sm-3 col-form-label">ë³ê²½í  ì´ë©ì¼</label>
+                      <label for="exampleChangeEmail" class="col-sm-3 col-form-label">변경할 이메일</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="exampleChangeEmail" placeholder="Change email" />
                       </div>
                     </div>
-                    <!-- ===========================ì´ë©ì¼ ë³ê²½=========================-->
+                    <!-- ===========================이메일 변경=========================-->
 
-                    <!-- ì±ë³ ë³ê²½-->
+                    <!-- 성별 변경-->
                     <div class="form-group row">
-                      <label for="exampleChangGender" class="col-sm-3 col-form-label">ì±ë³</label>
+                      <label for="exampleChangGender" class="col-sm-3 col-form-label">성별</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" id="exampleChangGender" placeholder="Chang gender" />
                       </div>
                     </div>
-                    <!-- ===========================ì±ë³ë³ê²½=========================-->
+                    <!-- ===========================성별변경=========================-->
 
                     <div class="form-check form-check-flat form-check-primary">
                       <label class="form-check-label">
                         <input type="checkbox" class="form-check-input" /> Remember me </label>
                     </div>
-                    <button type="submit" class="btn btn-primary me-2"> ìì  </button>
-                    <button class="btn btn-light">ì·¨ì</button>
+                    <button type="submit" class="btn btn-primary me-2"> 수정 </button>
+                    <button class="btn btn-light">취소</button>
                   </form>
                 </div>
               </div>
             </div>
-            <!--=============================ë¹ë°ë²í¸ ìì ì ëí ì ë³´========================-->
+            <!--=============================비밀번호 수정에 대한 정보========================-->
 
-            <!--íìíí´ ëí ì ë³´-->
+            <!--회원탈퇴 대한 정보-->
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">íìíí´</h4>
+                  <h4 class="card-title">회원탈퇴</h4>
                   <form class="forms-sample">
-                    <!-- íìíí´ -->
+                    <!-- 회원탈퇴 -->
                     <div class="form-group">
-                      <label for="exampleUnregister">íí´ì¬ì </label>
+                      <label for="exampleUnregister">탈퇴사유</label>
                       <select class="form-control" id="exampleUnregister">
-                        <option>ìë¹ì¤ë§ì¡±ë</option>
-                        <option>ë³´ì ë¬¸ì </option>
-                        <option>ê°ë³ ì¬ì </option>
-                        <option>ì´ì©ë ë¶ì¡±</option>
+                        <option>서비스만족도</option>
+                        <option>보안 문제</option>
+                        <option>개별 사유</option>
+                        <option>이용도 부족</option>
                       </select>
                     </div>
-                    <!--============================íìíí´=================================-->
+                    <!--============================회원탈퇴=================================-->
 
-                    <!-- íê³ ì¶ì ë§-->
+                    <!-- 하고싶은 말-->
                     <div class="form-group">
-                      <label for="exampleTextarea1">ë¨ê¸°ì¤ë§</label>
+                      <label for="exampleTextarea1">남기실말</label>
                       <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
                     </div>
-                    <!--===========================íê³ ì¶ì ë§================================-->
+                    <!--===========================하고싶은 말================================-->
                     <button type="submit" class="btn btn-primary me-2"> Submit </button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
@@ -492,25 +345,38 @@
         </div>
         <!-- content-wrapper ends -->
 
-        <!-- partial:../../partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">FitNeeds<a
-                href="https://www.bootstrapdash.com/" target="_blank">ìì½íì´ì§</a>.ê°ìë,ê°ì°ì</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">ê°ìë,ê°ì°ì <i
-                class="mdi mdi-heart text-danger"></i></span>
-          </div>
-        </footer>
-        <!-- partial -->
-      </div>
-      <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  
+				<!-- partial:partials/_footer.html -->
+				<footer class="footer">
+					<div
+						class="d-sm-flex justify-content-center justify-content-sm-between">
+						<span
+							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
+							© 2021 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
+							All rights reserved.
+						</span> <span
+							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
+							& made with <i class="mdi mdi-heart text-danger"></i>
+						</span>
+					</div>
+				</footer>
+				<!-- partial -->
+				
+				
+				
+	
+<!-- ** Footer Area END ** -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			</div>
+			<!-- main-panel ends -->
+		</div>
+		<!-- page-body-wrapper ends -->
+	</div>
 	
 	
-<!-- ** BODY ìììì­ END ** -->
+	
+	
+	
+<!-- ** BODY END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	
 	
@@ -547,5 +413,4 @@
 	
 	
 </body>
-
 </html>
