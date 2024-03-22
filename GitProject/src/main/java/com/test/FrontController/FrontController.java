@@ -11,8 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.test.controller.Command;
+import com.test.controller.ComparePage;
+import com.test.controller.MainPage;
+import com.test.controller.ReservePage;
 import com.test.controller.InputCh;
 import com.test.controller.InputEx;
+import com.test.controller.InputPage;
 import com.test.controller.Join;
 import com.test.controller.Login;
 import com.test.controller.Logout;
@@ -27,9 +31,13 @@ public class FrontController extends HttpServlet {
 	public void init() throws ServletException{
 		map.put("Join.do", new Join());
 		map.put("Login.do", new Login());
-		map.put("InputEx.do", new InputEx());
-		map.put("Logout.do", new Logout());
-		map.put("InputCh.do", new InputCh());
+		map.put("InputEx.do", new InputEx()); // 누적 운동 기입
+		map.put("Logout.do", new Logout()); // 로그아웃
+		map.put("InputCh.do", new InputCh()); // 누적 신체변화량 입력
+		map.put("MainPage.do", new MainPage()); // 메인
+		map.put("ComparePage.do", new ComparePage()); // 비교
+		map.put("InputPage.do", new InputPage()); // 운동입력
+		map.put("ReservePage.do", new ReservePage()); // 예약
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -44,7 +52,6 @@ public class FrontController extends HttpServlet {
 
 		String finalPath = null;
 		Command com = map.get(path);
-				
 		// 우리의 화면페이지를 fit~~로 설정
 		if(path.startsWith("fit")) {
 			finalPath = path.replace("fit", "").replace(".do", "");
@@ -55,7 +62,8 @@ public class FrontController extends HttpServlet {
 		if(finalPath == null) {
 			
 		}else if(finalPath.contains("redirect:/")) {
-			response.sendRedirect(finalPath.split("/")[1]);
+			String redirectPath = finalPath.substring("redirect:/".length());
+		    response.sendRedirect(redirectPath);
 		}else {
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/Views/" + finalPath + ".jsp");
 			rd.forward(request, response);

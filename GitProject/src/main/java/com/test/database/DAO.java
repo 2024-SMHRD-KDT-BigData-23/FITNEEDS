@@ -2,6 +2,7 @@ package com.test.database;
 
 import java.util.ArrayList;
 
+import org.apache.ibatis.jdbc.SQL;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -86,5 +87,12 @@ public class DAO {
 		int row = session.insert("acc_ch_input",vo);
 		session.close();
 		return row;
+	}
+	
+	public ArrayList<AccExerciseVO> getAcExCate(AccExerciseVO vo){
+		SqlSession session = factory.openSession();
+		ArrayList<AccExerciseVO> list = new ArrayList<>(session.selectList("get_acex_cate", vo));
+		session.close();
+		return list;
 	}
 }

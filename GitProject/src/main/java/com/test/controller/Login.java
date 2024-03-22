@@ -36,7 +36,7 @@ public class Login implements Command{
 			if (result != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("member", result);
-				return "redirect:/fitinput.do"; // 로그인 성공 후 다음 화면으로 이동
+				return "redirect:/fitindex.do"; // 로그인 성공 후 다음 화면으로 이동
 			} else {
 				return "redirect:/fitjoin.do"; // 로그인 실패 시 첫 화면으로 이동
 			}
