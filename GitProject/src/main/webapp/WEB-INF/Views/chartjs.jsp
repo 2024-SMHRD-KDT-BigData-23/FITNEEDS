@@ -9,6 +9,7 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Plus Admin</title>
 <!-- plugins:css -->
+<!-- plugins:css -->
 <link rel="stylesheet"
 	href="assets/vendors/mdi/css/materialdesignicons.min.css">
 <link rel="stylesheet"
@@ -23,15 +24,13 @@
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <!-- End layout styles -->
 <link rel="shortcut icon" href="assets/images/favicon.png" />
-</head>
 <body>
-	<div class="container-scroller">
-		<!-- partial:partials/_sidebar.html -->
+		<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
-				<li class="nav-item nav-profile border-bottom"><a href="#"
-					class="nav-link flex-column">
+				<li class="nav-item nav-profile border-bottom">
+					<a href="#" class="nav-link flex-column">
 						<div class="nav-profile-image">
 							<img src="assets/images/faces/face1.jpg" alt="profile" />
 							<!--change to offline or busy as needed-->
@@ -46,8 +45,9 @@
 						src="assets/images/logo.png" alt="" /> <img
 						class="sidebar-brand-logomini" src="assets/images/logo-mini.png"
 						alt="" />
-						<div class="small font-weight-light pt-1">fitness responsive
-							web design</div>
+						<div class="small font-weight-light pt-1">
+						fitness responsive web design
+						</div>
 				</a>
 					<form class="d-flex align-items-center" action="#"></form></li>
 				<li class="pt-2 pb-1"><span class="nav-item-head">MENU
@@ -83,35 +83,6 @@
 			</ul>
 		</nav>
 
-		<!-- partial -->
-		<div class="container-fluid page-body-wrapper">
-			<!-- partial:partials/_settings-panel.html -->
-			<div id="settings-trigger">
-				<i class="mdi mdi-settings"></i>
-			</div>
-			<div id="theme-settings" class="settings-panel">
-				<i class="settings-close mdi mdi-close"></i>
-				<p class="settings-heading">SIDEBAR SKINS</p>
-				<div class="sidebar-bg-options selected" id="sidebar-default-theme">
-					<div class="img-ss rounded-circle bg-light border me-3"></div>
-					Default
-				</div>
-				<div class="sidebar-bg-options" id="sidebar-dark-theme">
-					<div class="img-ss rounded-circle bg-dark border me-3"></div>
-					Dark
-				</div>
-				<p class="settings-heading mt-2">HEADER SKINS</p>
-				<div class="color-tiles mx-0 px-4">
-					<div class="tiles default primary"></div>
-					<div class="tiles success"></div>
-					<div class="tiles warning"></div>
-					<div class="tiles danger"></div>
-					<div class="tiles info"></div>
-					<div class="tiles dark"></div>
-					<div class="tiles light"></div>
-				</div>
-			</div>
-			</div>
 <!-- ** SIDE BAR SECTION END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -167,10 +138,17 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
+								
+								
+								
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
-							<div class="dropdown-menu center navbar-dropdown"
-								aria-labelledby="profileDropdown">
+							
+							
+							
+							
+							
+							<div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="UpdatePage.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
@@ -183,7 +161,10 @@
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
+								</div>
 						</li>
+						
+						
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="MainPage.do"> <i
 								class="mdi mdi-home-circle"></i>
@@ -199,9 +180,10 @@
 
 <!-- ** TOP BAR SECTION END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			
-			
-			
+
+
+
+
 			
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->			
 <!-- ** Main Area Start ** -->			
@@ -284,6 +266,7 @@
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 				
 				
+				
 	
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ** Footer Area START ** -->			
@@ -310,11 +293,26 @@
 	
 <!-- ** Footer Area END ** -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+				
+				
+				
+				
+				
+				
+				
+				
 			</div>
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
 	</div>
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -352,9 +350,5 @@
 	
 <!-- ** JS AREA START ** -->	
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	
-	
-	
-	
-	
 </body>
 </html>
