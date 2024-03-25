@@ -35,11 +35,9 @@
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <style>
-
 .update_btn {
-	justify-content : center;
+	justify-content: center;
 }
-
 
 input[type="text"] {
 	width: calc(100%);
@@ -57,7 +55,6 @@ input[type="text"]:focus {
 	border-color: #333333;
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
 }
-
 
 .ui-datepicker {
 	width: 300px;
@@ -312,15 +309,15 @@ input[type="text"]:focus {
 					</div>
 					<div class="row">
 						<!--프로필 수정에 대한 정보-->
-						<div class="col-md-12 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">프로필 수정</h4>
-									
-									
-									<!--  * 이미지 사진부분 주석 *
+						<form class="forms-sample" action="Update.do" method="post">
+							<div class="col-md-12 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="card-title">프로필 수정</h4>
+
+
+										<!--  * 이미지 사진부분 주석 *
 									<p class="card-description">회원님을 대표할 이미지와 별명</p>
-									<form class="forms-sample">
 										<div class="form-group">
 						                      <label>프로필 사진</label>
 						                      <input type="file" name="img[]" class="file-upload-default" />
@@ -333,32 +330,27 @@ input[type="text"]:focus {
 						                      </div>
 						                    </div>  
 						                  * 이미지 사진 주석 END * -->
-						                     
+
 										<!--============================이미지 수정===========================-->
 
 										<!-- 유저 별명 -->
 										<div class="form-group">
-											<label for="exampleNikname">별명</label> <input type="email"
-												class="form-control" id="exampleNikname"
+											<label for="exampleNikname">별명</label> <input type="text"
+												class="form-control" id="exampleNikname" name="mem_nick"
 												placeholder="별명을 만들어주세요" />
 										</div>
 										<!--==============================별명===============================-->
-
-										<button type="submit" class="btn btn-primary me-2">수정</button>
-										<button class="btn btn-light">취소</button>
-									</form>
+									</div>
 								</div>
 							</div>
-						</div>
-						<!--===================================프로필 수정============================-->
+							<!--===================================프로필 수정============================-->
 
-						<!--개인정보 수정에 대한 정보-->
-						<div class="col-md-12 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">개인정보 수정</h4>
-									<!--<p class="card-description">비밀번호 수정</p>-->
-									<form class="forms-sample">
+							<!--개인정보 수정에 대한 정보-->
+							<div class="col-md-12 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="card-title">개인정보 수정</h4>
+										<!--<p class="card-description">비밀번호 수정</p>-->
 
 										<!-- 비밀번호-->
 										<div class="form-group row">
@@ -366,7 +358,8 @@ input[type="text"]:focus {
 												class="col-sm-3 col-form-label">비밀번호</label>
 											<div class="col-sm-9">
 												<input type="password" class="form-control"
-													id="exampleInputPassword2" placeholder="Password" />
+													id="exampleInputPassword2" placeholder="Password"
+													name="mem_pw" />
 											</div>
 										</div>
 										<!--================================비밀번호===========================-->
@@ -376,7 +369,7 @@ input[type="text"]:focus {
 											<label for="exampleInputConfirmPassword2"
 												class="col-sm-3 col-form-label">비밀번호 재설정</label>
 											<div class="col-sm-9">
-												<input type="password" class="form-control"
+												<input type="password" class="form-control" name="mem_newpw"
 													id="exampleInputConfirmPassword2" placeholder="Re Password" />
 											</div>
 										</div>
@@ -386,7 +379,7 @@ input[type="text"]:focus {
 											<label for="exampleChangeAddress"
 												class="col-sm-3 col-form-label">변경할 주소</label>
 											<div class="col-sm-9">
-												<input type="text" class="form-control"
+												<input type="text" class="form-control" name="mem_addr"
 													id="exampleChangeAddress" placeholder="Change address" />
 											</div>
 										</div>
@@ -397,38 +390,39 @@ input[type="text"]:focus {
 											<label for="exampleChangeEmail"
 												class="col-sm-3 col-form-label">변경할 이메일</label>
 											<div class="col-sm-9">
-												<input type="text" class="form-control"
+												<input type="email" class="form-control" name="mem_email"
 													id="exampleChangeEmail" placeholder="Change email" />
 											</div>
 										</div>
 										<!-- ===========================이메일 변경=========================-->
 
-										
-                      <div class="comp">
-                      <button type="submit" class="btn btn-primary me-2">수정</button>
-                      <button type="reset" class="btn btn-light">취소</button>
-                    </div>
-										
-									</form>
+
+										<div class="comp">
+											<button type="submit" class="btn btn-primary me-2">수정</button>
+											<button type="reset" class="btn btn-light">취소</button>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</form>
 
 
 						<!-- 회원탈퇴 영역-->
-            <div class="col-12 grid-margin stretch-card">
-              <div class="card">
-                  <div class="card-body bye-body">
-                      <div class="d-flex justify-content-between align-items-center w-100">
-                          <h4 class="card-title bye-card">회원탈퇴</h4>
-                          <button type="submit" class="btn btn-primary bye-btn">탈퇴하기</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-						
-						
-						
+						<form action="Unregister.do" method="post">
+							<div class="col-12 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body bye-body">
+										<div
+											class="d-flex justify-content-between align-items-center w-100">
+											<h4 class="card-title bye-card">회원탈퇴</h4>
+											<button type="submit" class="btn btn-primary bye-btn">탈퇴하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+
+
 					</div>
 				</div>
 				<!-- content-wrapper ends -->
