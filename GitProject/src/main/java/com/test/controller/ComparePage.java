@@ -14,6 +14,7 @@ public class ComparePage implements Command {
 		MemberVO membervo = (MemberVO) request.getSession().getAttribute("member");
 		String mem_id = membervo.getMem_id();
 
+		// 비교페이지로 이동
 		return "redirect:/fitchartjs.do";
 	}
 }

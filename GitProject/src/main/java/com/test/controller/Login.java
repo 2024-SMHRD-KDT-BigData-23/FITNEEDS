@@ -36,11 +36,16 @@ public class Login implements Command{
 			if (result != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("member", result);
-				return "redirect:/fitindex.do"; // 로그인 성공 후 다음 화면으로 이동
+				
+				// 로그인 성공 후 나의운동페이지(메인페이지로 이동)
+				return "redirect:/fitindex.do"; 
 			} else {
-				return "redirect:/fitjoin.do"; // 로그인 실패 시 첫 화면으로 이동
+				// 로그인 실패 시 첫 화면으로 이동
+				return "redirect:/fitjoin.do";
 			}
 		} else {
+			
+			// salt값이 존재하지 않는다면(로그인 실패 시) 첫 화면으로 이동
 			return "redirect:/fitjoin.do";
 		}
 	}
