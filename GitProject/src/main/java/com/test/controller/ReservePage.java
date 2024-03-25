@@ -14,6 +14,7 @@ public class ReservePage implements Command {
 		MemberVO membervo = (MemberVO) request.getSession().getAttribute("member");
 		String mem_id = membervo.getMem_id();
 		
+		// 예약페이지로 이동
 		return "redirect:/fitex_rsv.do";
 	}
 }

@@ -39,8 +39,12 @@ public class Join implements Command {
 
 		if (row > 0 & saltrow > 0) {
 			request.setAttribute("join", mem_nick);
+			
+			// 회원가입 성공 시 회원가입 성공 화면으로 이동
 			return "join_success";
 		} else {
+			
+			// 회원가입 실패시 회원가입 화면으로 이동
 			return "redirect:/fitjoin.do";
 		}
 
