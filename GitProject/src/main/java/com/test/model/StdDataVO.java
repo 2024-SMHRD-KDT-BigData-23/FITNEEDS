@@ -5,6 +5,8 @@ public class StdDataVO {
 	private int std_idx;
 	// 성별
 	private String gender;
+	// 나이	
+	private int age;
 	// 키
 	private int height;
 	// 체중
@@ -16,14 +18,23 @@ public class StdDataVO {
 	// 체지방률
 	private int fat_per;
 
-	public StdDataVO(int std_idx, String gender, int height, int weight, int bmi, int muscle, int fat_per) {
+	public StdDataVO(int std_idx, String gender, int age, int height, int weight, int bmi, int muscle, int fat_per) {
 		this.std_idx = std_idx;
 		this.gender = gender;
+		this.age = age;
 		this.height = height;
 		this.weight = weight;
 		this.bmi = bmi;
 		this.muscle = muscle;
 		this.fat_per = fat_per;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 
 	public int getStd_idx() {
@@ -84,4 +95,10 @@ public class StdDataVO {
 
 	public StdDataVO() {
 	}
+
+	public StdDataVO(String gender, int age) {
+		this.gender = gender;
+		this.age = age;
+	}
+
 }

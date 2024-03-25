@@ -19,7 +19,6 @@ public class AccChangeVO {
 	private double fat_per;
 
 	private int ex_calories;
-
 	// 시작 날짜
 	private String start_date;
 	// 종료 날짜
@@ -153,5 +152,9 @@ public class AccChangeVO {
 		this.mem_id = mem_id;
 		this.start_date = start_date;
 		this.end_date = end_date;
+	}
+	
+	public AccChangeVO(String mem_id) {
+		this.mem_id = mem_id;
 	}
 }

@@ -38,17 +38,14 @@ public class InputEx implements Command {
 			int row = dao.accExInput(vo);
 
 			if (row > 0) {
-				// 성공할 경우
+				// 성공할 경우 운동 입력 페이지로 이동
 				return "redirect:/fitmyhealth.do";
-				// 맞게 입력할 경우 다시 입력?
-				// 지금 session (mem_id)값을 유지하기 위해 forward 방식으로 하고 있는데
-				// 이렇게 하게 된다면 주소창에 fitinput.do가 아닌 inputEx.jsp로 뜨게됨
-				// 이것을 어떻게 해결해야할지 고민해야함
 			} else {
-				// 잘못 입력해서 실패할 경우 어딘가로 이동?
+				// 잘못 입력할 경우 입력 페이지로 다시 이동
 				return "redirect:/fitmyhealth.do"; 
 			}
 		} else {
+			
 			return "redirect:/fitmyhealth.do";
 		}
 	}
