@@ -376,11 +376,6 @@ $(function() {
 			pieChart.destroy();
 		}
 
-		if (barChart != undefined) {
-			barChart.destroy();
-		}
-
-
 		fetchStartExChart(start_date, end_date);
 		fetchStartChChart(start_date, end_date);
 
