@@ -354,7 +354,7 @@ $(function() {
 			}
 		});
 	};
-
+ 
 	// 차트 업데이트
 	$("#date_check").on("click", function() {
 		let start_date = $("#dateFrom").val();
