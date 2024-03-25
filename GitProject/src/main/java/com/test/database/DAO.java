@@ -1,16 +1,19 @@
 package com.test.database;
 
+import java.lang.reflect.Member;
 import java.util.ArrayList;
 
 import org.apache.ibatis.jdbc.SQL;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.test.FrontController.AccCh;
 import com.test.model.AccChangeVO;
 import com.test.model.AccExerciseVO;
 import com.test.model.ExerciseVO;
 import com.test.model.MemberVO;
 import com.test.model.SaltVO;
+import com.test.model.StdDataVO;
 
 public class DAO {
 
@@ -47,6 +50,25 @@ public class DAO {
 		MemberVO result = session.selectOne("mem_login", vo);
 		session.close();
 		return result;
+	}
+	
+	// 개인정보수정
+	public void updateMem(MemberVO vo) {
+		SqlSession session = factory.openSession(true);
+		session.update("mem_update", vo);
+		session.close();
+	}
+	// salt값 수정
+	public void updateSalt(SaltVO vo) {
+		SqlSession session = factory.openSession(true);
+		session.update("salt_update", vo);
+		session.close();
+	}
+	// 회원 탈퇴
+	public void unregister(MemberVO vo) {
+		SqlSession session = factory.openSession(true);
+		session.delete("mem_unregister", vo);
+		session.close();
 	}
 	
 	// 누적 운동 입력
@@ -89,9 +111,10 @@ public class DAO {
 		return row;
 	}
 	
+	// 운동의 카테고리 가져오기
 	public ArrayList<AccExerciseVO> getAcExCate(AccExerciseVO vo){
 		SqlSession session = factory.openSession();
-		ArrayList<AccExerciseVO> list = new ArrayList<>(session.selectList("get_acex_cate", vo));
+		ArrayList<AccExerciseVO> list = new ArrayList<>(session.selectList("get_acex_date", vo));
 		session.close();
 		return list;
 	}
@@ -99,8 +122,32 @@ public class DAO {
 	// mem_id와 시작일부터 종료일까지의 신체 변화 데이터 가져오기
 	public ArrayList<AccChangeVO> getAccChangeData(AccChangeVO vo) {
 	    SqlSession session = factory.openSession();
-	    ArrayList<AccChangeVO> list = new ArrayList<>(session.selectList("getAccChangeData", vo));
+	    ArrayList<AccChangeVO> list = new ArrayList<>(session.selectList("get_acch_date", vo));
 	    session.close();
 	    return list;
+	}
+	
+	// 오늘 날짜의 해당월의 1일부터 오늘날짜까지의 값 가져오기
+	public ArrayList<AccChangeVO> getCountDate(AccChangeVO vo){
+		SqlSession session = factory.openSession();
+		ArrayList<AccChangeVO> list = new ArrayList<>(session.selectList("get_count_date",vo));
+		session.close();
+		return list;
+	}
+	
+	// 비교페이지에 들어갈 유저의 최신 데이터 가져오기
+	public MemberVO MemPhysicalData(String mem_id) {
+		SqlSession session = factory.openSession();
+		MemberVO result = session.selectOne("get_mem_data", mem_id);
+		session.close();
+		return result;
+	}
+	
+	// 비교페이지에 들어갈 표준데이터 가져오기
+	public StdDataVO StdPhysicalData(StdDataVO vo) {
+		SqlSession session = factory.openSession();
+		StdDataVO result = session.selectOne("get_std_data", vo);
+		session.close();
+		return result;
 	}
 }

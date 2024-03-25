@@ -40,9 +40,9 @@ public class InputCh implements Command {
 		int row = dao.accChInput(vo);
 		
 		if (row > 0) {
-			return "input";
+			return "input"; // 체중입력페이지만들면 연동해야함
 		} else {
-			return "input"; 
+			return "input"; // 체중입력페이지만들면 연동해야함
 		}
 		
 	}

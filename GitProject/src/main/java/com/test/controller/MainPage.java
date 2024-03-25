@@ -14,6 +14,7 @@ public class MainPage implements Command {
 		MemberVO membervo = (MemberVO) request.getSession().getAttribute("member");
 		String mem_id = membervo.getMem_id();
 
+		// 나의운동페이지(메인페이지)로 이동
 		return "redirect:/fitindex.do";
 	}
 }
