@@ -107,18 +107,6 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 
-.bye-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bye-card {
-  margin-right: auto;
-}
-
-
-
 body{
   background-color: #f8f9fb !important;
 }

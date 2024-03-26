@@ -18349,6 +18349,7 @@ code {
 /* Buttons */
 .btn,
 .ajax-upload-dragdrop .ajax-file-upload {
+  margin: 0.1rem;
   font-size: 12px;
   line-height: 1;
   font-family: "Open Sans", sans-serif;
@@ -18839,7 +18840,7 @@ code {
 .btn-outline-primary:focus,
 .btn-outline-primary:active {
   background: theme-color(primary);
-  color: #000000;
+  color: #ffffff;
 }
 
 .btn-inverse-secondary {
@@ -23927,6 +23928,7 @@ dl li {
   width: 100%;
   
   min-height: calc(100vh - 60px);
+  padding-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
