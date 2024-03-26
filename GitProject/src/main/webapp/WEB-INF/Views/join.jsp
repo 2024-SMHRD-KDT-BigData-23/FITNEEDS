@@ -1,5 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page import="java.security.SecureRandom"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<<<<<<< HEAD
    pageEncoding="UTF-8"%>
+=======
+	pageEncoding="UTF-8"%>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.math.BigInteger" %>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +21,7 @@
 
 <!-- 보이는화면 -->
 <body>
+<<<<<<< HEAD
 <<<<<<< HEAD
    <div>
       <div id="change_main">
@@ -62,6 +70,20 @@
       </div>
    </div>
 =======
+=======
+<%
+	String clientId = "gbLrG9lQfNuwCCfz4nge";//애플리케이션 클라이언트 아이디값";
+	String redirectURI = URLEncoder.encode("http://localhost:8080/GitPlus/fitcallback.do", "UTF-8");
+	SecureRandom random = new SecureRandom();
+	String state = new BigInteger(130, random).toString();
+	String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code"
+			+ "&client_id=" + clientId
+			+ "&redirect_uri=" + redirectURI
+			+ "&state=" + state;
+	session.setAttribute("state", state);
+%>
+
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 	<div>
 		<div id="change_main">
 			<div class="panel shadow1">
@@ -79,7 +101,7 @@
 							name="mem_pw" type="password" required placeholder="비밀번호"
 							value=""> <input class="login animated fadeInUp animate3"	
 							class="loginfont" name="mem_name" type="text" required
-							placeholder="이름" value=""> <input
+							placeholder="이름" value="${name}"> <input
 							class="login animated fadeInUp animate3" class="loginfont"
 							name="mem_phone" type="text" required placeholder="000-0000-0000"
 							value=""> <input
@@ -89,7 +111,7 @@
 							class="login animated fadeInUp animate3" class="loginfont"
 							name="mem_addr" type="text" required placeholder="주소" value="">
 						<input class="login animated fadeInUp animate3" class="loginfont"
-							name="mem_email" type="text" required placeholder="이메일" value="">
+							name="mem_email" type="text" required placeholder="이메일" value="${email}">
 						<input class="login animated fadeInUp animate3" class="loginfont"
 							name="mem_nick" type="text" required placeholder="닉네임" value="">
 						<!--  옵셥을 통해서 성별 변경하기 -->
@@ -110,6 +132,9 @@
 	</div>
 >>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 </body>
+<script>
+	let apiURL = "<%=apiURL%>";
+</script>
 <script type="text/javascript" src="assets/js/join_login.js"></script>
 <script type="text/javascript" src="assets/js/change_join_login.js"></script>
 </html>

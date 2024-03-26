@@ -150,4 +150,16 @@ public class DAO {
 		session.close();
 		return result;
 	}
+	// 네이버 회원가입 시 이메일가져오기
+
+	public MemberVO getMemberByEmail(String email) {
+
+	SqlSession session = factory.openSession();
+
+	MemberVO result = session.selectOne("get_member_by_email", email);
+
+	session.close();
+
+	return result;
+	}
 }
