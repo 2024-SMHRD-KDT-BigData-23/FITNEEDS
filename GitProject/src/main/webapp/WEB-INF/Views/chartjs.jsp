@@ -191,21 +191,6 @@
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<div class="page-header flex-wrap">
-						<div class="header-left">
-							<button class="btn btn-primary mb-2 mb-md-0 me-2">
-								Create new document</button>
-							<button class="btn btn-outline-primary bg-white mb-2 mb-md-0">
-								Import documents</button>
-						</div>
-					</div>
-
-					<div>
-						<input type="text" id="dateFrom" name="start_date"
-							placeholder="yyyy-mm-dd"> ~ <input type="text"
-							id="dateTo" name="end_date" placeholder="yyyy-mm-dd"> <input
-							type="submit" id="date_check" value="검색">
-					</div>
 
 					<div class="row">
 						<div class="col-lg-6 grid-margin stretch-card">
@@ -283,48 +268,24 @@
 							</div>
 						</div>
 					</div>
-					<!-- 사용자 다이어트,뉴스,루틴 추천 -->
-					<!-- 5행 1열 -->
 					<div class="row">
 						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body" id="diet">
-									<h2>Diet</h2>
-									<a href="#" id="dietLink">
-										<h4 class="card-title" id="dietTitle">Title</h4> <img src="" alt="Diet Image" id="dietImage">
-									</a>
-									<canvas id="barChart" style="height: 250px;"></canvas>
-								</div>
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
 							</div>
 						</div>
-
-						<!-- 5행  2열 -->
 						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body" id="news">
-									<h2>News</h2>
-									<a href="#" id="newsLink">
-										<h4 class="card-title" id="newsTitle">Title</h4> <img src="" alt="News Image" id="newsImage">
-									</a>
-									<canvas id="barChart" style="height: 250px;"></canvas>
-								</div>
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
 							</div>
 						</div>
-
-						<!-- 5행 3열 -->
 						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body" id="routine">
-									<h2>Routine</h2>
-									<a href="#" id="routineLink">
-										<h4 class="card-title" id="routineTitle">Title</h4> <img src="" alt="Routine Image" id="routineImage">
-									</a>
-									<canvas id="barChart" style="height: 250px;"></canvas>
-								</div>
+							<div class="card" style="height: 220px;">
+								<div class="card-body">contents area</div>
 							</div>
 						</div>
 					</div>
-					<!-- 사용자 다이어트,뉴스,루틴 추천 끝-->
+
 				</div>
 				<!-- ** Main Area END ** -->
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -409,38 +370,5 @@
 
 	<!-- ** JS AREA START ** -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- flask에서 url받아오기-->
-		<script type="text/javascript">
-      // diet 정보 요청
-      fetch('http://127.0.0.1:5000/diet')
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-          document.getElementById('dietLink').href = data.url;
-          document.getElementById('dietImage').src = data.thumb_url;
-          document.getElementById('dietTitle').textContent = data.title;
-        });
-
-      // news 정보 요청
-      fetch('http://127.0.0.1:5000/news')
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-          document.getElementById('newsLink').href = data.url;
-          document.getElementById('newsImage').src = data.thumb_url;
-          document.getElementById('newsTitle').textContent = data.title;
-        });
-
-      // routine 정보 요청
-      fetch('http://127.0.0.1:5000/routine')
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
-          document.getElementById('routineLink').href = data.url;
-          document.getElementById('routineImage').src = data.thumb_url;
-          document.getElementById('routineTitle').textContent = data.title;
-        });
-    </script>
-
 </body>
 </html>

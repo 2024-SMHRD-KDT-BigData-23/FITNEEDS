@@ -9,23 +9,25 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Plus Admin</title>
 
-
-
-<!-- BASIC CSS START -->
-<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
-<link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!--*** BASIC CSS START ***-->
+<link rel="stylesheet"
+	href="assets/vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet"
+	href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <link rel="shortcut icon" href="assets/images/favicon.png" />
-<!-- BASIC CSS END-->
+<!--*** BASIC CSS END ***-->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
-<!-- ** 달력CSS START-->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!--*** calendar CSS START ***-->
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
-<!-- ** 달력CSS END-->
-
-
+<!--*** calendar CSS END ***-->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
@@ -34,7 +36,7 @@
 				<li class="nav-item nav-profile border-bottom"><a href="#"
 					class="nav-link flex-column">
 						<div class="nav-profile-image">
-							<img src="${member.mem_img}" alt="profile" />
+							<img src="assets/images/faces/face1.jpg" alt="profile" />
 							<!--change to offline or busy as needed-->
 						</div>
 						<div class="nav-profile-text d-flex ms-0 mb-3 flex-column">
@@ -188,12 +190,13 @@
 
 
 			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			<!-- ** Main Area START ** -->
+			<!-- ** Main Area Start ** -->
 
-
-
+			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
+
+
 					<div class="data-input">
 						<input type="text" class="btn btn-outline-dark bg-white"
 							id="exampleInputDate" placeholder="조회시작일" /> <input type="text"
@@ -209,9 +212,25 @@
 								<div class="card-body">
 									<h4 class="card-title">신체 데이터 변화량</h4>
 									<canvas id="lineChart"></canvas>
-									<p id="averageBMI"></p>
-									<p id="averageMuscle"></p>
-									<p id="averageFatPercentage"></p>
+
+
+									<div class="card stretch-card mb-3">
+										<div class="card-body d-flex flex-wrap justify-content-between">
+											<div>
+												<h4 class="font-weight-semibold mb-1 text-black">
+													Member Profit</h4>
+												<h6 class="text-muted">Average Weekly Profit</h6>
+											</div>
+											<h3 class="text-success font-weight-bold"> <p id="averageBMI"></p>  </h3>
+											<h3 class="text-success font-weight-bold">  <p id="averageMuscle"></p> </h3>
+											<h3 class="text-success font-weight-bold"> <p id="averageFatPercentage"></p> </h3>
+										</div>
+										
+										
+										
+										
+										
+									</div>
 								</div>
 							</div>
 						</div>
@@ -246,53 +265,10 @@
 							</div>
 						</div>
 
+
+
 					</div>
 				</div>
-				
-				<div class="row">
-            <div class="col-sm-6 stretch-card grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <div class="card-title"> Customers <small class="d-block text-muted">August 01 - August 31</small>
-                    </div>
-                    <div class="d-flex text-muted font-20">
-                      <i class="mdi mdi-printer mouse-pointer"></i>
-                      <i class="mdi mdi-help-circle-outline ms-2 mouse-pointer"></i>
-                    </div>
-                  </div>
-                  <h3 class="font-weight-bold mb-0"> 2,409 <span class="text-success h5">4,5%<i
-                        class="mdi mdi-arrow-up"></i></span>
-                  </h3>
-                  <span class="text-muted font-13">Avg customers/Day</span>
-                  <div class="line-chart-wrapper">
-                    <canvas id="linechart" height="80"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 stretch-card grid-margin">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between">
-                    <div class="card-title"> Conversions <small class="d-block text-muted">August 01 - August 31</small>
-                    </div>
-                    <div class="d-flex text-muted font-20">
-                      <i class="mdi mdi-printer mouse-pointer"></i>
-                      <i class="mdi mdi-help-circle-outline ms-2 mouse-pointer"></i>
-                    </div>
-                  </div>
-                  <h3 class="font-weight-bold mb-0"> 0.40% <span class="text-success h5">0.20%<i
-                        class="mdi mdi-arrow-up"></i></span>
-                  </h3>
-                  <span class="text-muted font-13">Avg customers/Day</span>
-                  <div class="bar-chart-wrapper">
-                    <canvas id="barchart" height="80"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 				<!-- ** Main Area END ** -->
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -332,74 +308,9 @@
 
 
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<!-- ** Main Area END ** -->
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			<!-- ** Footer Area START ** -->
-
-
-
-			<!-- partial:partials/_footer.html -->
-			<footer class="footer">
-				<div
-					class="d-sm-flex justify-content-center justify-content-sm-between">
-					<span
-						class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-						© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
-					</span> <span
-						class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-						Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
-					</span>
-				</div>
-			</footer>
-			<!-- partial -->
-
-
-
-			<!-- ** Footer Area END ** -->
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-
+			<!-- main-panel ends -->
 		</div>
-		<!-- main-panel ends -->
-	</div>
-	<!-- page-body-wrapper ends -->
+		<!-- page-body-wrapper ends -->
 	</div>
 
 
@@ -441,20 +352,14 @@
 	<!-- Custom js for this page -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/chart.js"></script>
+	<!-- End custom js for this page -->
 
-
-	<!-- calendar JS START  -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- ** calendar JS START ** -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="assets/js/calendar.js"></script>
-		<script>
-
-
-	</script>
-
-
-
-
-
+	<!-- ** calendar JS START ** -->
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 </body>
 </html>
