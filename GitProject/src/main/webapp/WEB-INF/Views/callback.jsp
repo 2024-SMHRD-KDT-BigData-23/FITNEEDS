@@ -16,8 +16,8 @@
 </head>
 <body>
 	<%
-	String clientId = "3cHHT3ENZQN8a3IIh2WU";//애플리케이션 클라이언트 아이디값";
-	String clientSecret = "PVJGEkUnxR";//애플리케이션 클라이언트 시크릿값";
+	String clientId = "gbLrG9lQfNuwCCfz4nge";//애플리케이션 클라이언트 아이디값";
+	String clientSecret = "UXZwOBztuj";//애플리케이션 클라이언트 시크릿값";
 	String code = request.getParameter("code");
 	String state = request.getParameter("state");
 	String redirectURI = URLEncoder.encode("http://localhost:8080/GitProject/fitcallback.do", "UTF-8");

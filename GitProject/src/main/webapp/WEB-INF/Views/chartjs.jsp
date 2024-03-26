@@ -191,21 +191,6 @@
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-					<div class="page-header flex-wrap">
-						<div class="header-left">
-							<button class="btn btn-primary mb-2 mb-md-0 me-2">
-								Create new document</button>
-							<button class="btn btn-outline-primary bg-white mb-2 mb-md-0">
-								Import documents</button>
-						</div>
-					</div>
-
-					<div>
-						<input type="text" id="dateFrom" name="start_date"
-							placeholder="yyyy-mm-dd"> ~ <input type="text"
-							id="dateTo" name="end_date" placeholder="yyyy-mm-dd"> <input
-							type="submit" id="date_check" value="검색">
-					</div>
 
 					<div class="row">
 						<div class="col-lg-6 grid-margin stretch-card">
