@@ -33,10 +33,9 @@ public class MemberVO {
 	private String joined_at;
 	// 회원 구분
 	private String mem_role;
+	// 회원 이미지
+	private String mem_img;
 
-	public MemberVO() {
-	}
-	
 	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_birthdate,
 			String mem_addr, String mem_email, String mem_nick, String mem_gender, double height, double weight) {
 		this.mem_id = mem_id;
@@ -53,8 +52,24 @@ public class MemberVO {
 	}
 	
 	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_birthdate,
+			String mem_addr, String mem_email, String mem_nick, String mem_gender, double height, double weight, String mem_img) {
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_name = mem_name;
+		this.mem_phone = mem_phone;
+		this.mem_birthdate = mem_birthdate;
+		this.mem_addr = mem_addr;
+		this.mem_email = mem_email;
+		this.mem_nick = mem_nick;
+		this.mem_gender = mem_gender;
+		this.height = height;
+		this.weight = weight;
+		this.mem_img = mem_img;
+	}
+
+	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_phone, String mem_birthdate,
 			String mem_addr, String mem_email, String mem_nick, String mem_gender, double height, double weight,
-			double bmi, double muscle, double fat_per, String joined_at, String mem_role) {
+			double bmi, double muscle, double fat_per, String joined_at, String mem_role, String mem_img) {
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_name = mem_name;
@@ -71,6 +86,18 @@ public class MemberVO {
 		this.fat_per = fat_per;
 		this.joined_at = joined_at;
 		this.mem_role = mem_role;
+		this.mem_img = mem_img;
+	}
+
+	public String getMem_img() {
+		return mem_img;
+	}
+
+	public void setMem_img(String mem_img) {
+		this.mem_img = mem_img;
+	}
+
+	public MemberVO() {
 	}
 
 	public String getMem_id() {

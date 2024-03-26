@@ -17,7 +17,7 @@
 	<!-- 회원 로그인 -->
 	<select id="mem_login" parameterType="com.test.model.MemberVO"
 		resultType="com.test.model.MemberVO">
-		select mem_id, mem_pw, mem_name, mem_gender, mem_phone, mem_birthdate, mem_addr, mem_email, mem_nick, height, weight from tb_member
+		select mem_id, mem_pw, mem_name, mem_gender, mem_phone, mem_birthdate, mem_addr, mem_email, mem_nick, height, weight, mem_img from tb_member
 		where mem_id = #{mem_id} and mem_pw = #{mem_pw}
 	</select>
 	
@@ -70,5 +70,12 @@
     <!-- 안쓰는 코드 -->
 	<select id="selectall" resultType="com.test.model.MemberVO"> select email, tel, address
 		from b_member
+	</select>
+	
+	<!-- 회원체크 by email -->
+	<select id="get_member_by_email" parameterType="string"
+			resultType="com.test.model.MemberVO">
+		select mem_id, mem_pw, mem_name, mem_phone, mem_addr, mem_email, mem_nick, height, weight from tb_member
+		where mem_email = #{mem_email}
 	</select>
 </mapper>

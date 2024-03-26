@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.test.controller.Command;
 import com.test.controller.ComparePage;
 import com.test.controller.MainPage;
+import com.test.controller.NaverJoinController;
 import com.test.controller.ReservePage;
 import com.test.controller.Unregister;
 import com.test.controller.Update;
@@ -44,6 +45,7 @@ public class FrontController extends HttpServlet {
 		map.put("UpdatePage.do", new UpdatePage()); // 회원정보수정페이지 이동
 		map.put("Update.do", new Update()); // 회원정보수정
 		map.put("Unregister.do", new Unregister());
+		map.put("NaverJoin.do", new NaverJoinController()); //네이버 회원정보
 		
 	}
 

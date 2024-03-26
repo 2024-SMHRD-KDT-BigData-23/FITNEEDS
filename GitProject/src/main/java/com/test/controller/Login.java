@@ -32,7 +32,7 @@ public class Login implements Command{
 			vo.setMem_pw(encry);
 
 			MemberVO result = dao.login(vo);
-
+			
 			if (result != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("member", result);
