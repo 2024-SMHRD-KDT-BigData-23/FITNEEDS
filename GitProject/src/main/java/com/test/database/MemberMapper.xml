@@ -17,7 +17,7 @@
 	<!-- 회원 로그인 -->
 	<select id="mem_login" parameterType="com.test.model.MemberVO"
 		resultType="com.test.model.MemberVO">
-		select mem_id, mem_pw, mem_name, mem_gender, mem_phone, mem_birthdate, mem_addr, mem_email, mem_nick, height, weight from tb_member
+		select mem_id, mem_pw, mem_name, mem_gender, mem_phone, mem_birthdate, mem_addr, mem_email, mem_nick, height, weight, mem_img from tb_member
 		where mem_id = #{mem_id} and mem_pw = #{mem_pw}
 	</select>
 	
