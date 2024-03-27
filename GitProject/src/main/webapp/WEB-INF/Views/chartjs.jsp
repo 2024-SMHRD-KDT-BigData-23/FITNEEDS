@@ -23,7 +23,6 @@
 <!-- Layout styles -->
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <!-- End layout styles -->
-<link rel="shortcut icon" href="assets/images/favicon.png" />
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->

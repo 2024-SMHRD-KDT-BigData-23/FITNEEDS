@@ -26,8 +26,8 @@ $(function() {
 		let todayFormatted = formatDate(today);
 		let oneWeekAgoFormatted = formatDate(oneWeekAgo);
 
-		$("#dateFrom").val(oneWeekAgoFormatted);
-		$("#dateTo").val(todayFormatted);
+		$("#exampleInputDate").val(oneWeekAgoFormatted);
+		$("#exampleInputDate1").val(todayFormatted);
 
 		fetchStartExChart(oneWeekAgoFormatted, todayFormatted);
 		fetchStartChChart(oneWeekAgoFormatted, todayFormatted);
@@ -357,8 +357,8 @@ $(function() {
  
 	// 차트 업데이트
 	$("#date_check").on("click", function() {
-		let start_date = $("#dateFrom").val();
-		let end_date = $("#dateTo").val();
+		let start_date = $("#exampleInputDate").val();
+		let end_date = $("#exampleInputDate1").val();
 
 		// 기존 차트 데이터 삭제
 		if (doughnutChart != undefined) {

@@ -17,7 +17,6 @@
 	href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
-<link rel="shortcut icon" href="assets/images/favicon.png" />
 <!--*** BASIC CSS END ***-->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -198,11 +197,11 @@
 
 
 					<div class="data-input">
-						<input type="text" class="btn btn-outline-dark bg-white"
+						<input type="text" class="btn btn-outline-dark bg-white" name="start_date"
 							id="exampleInputDate" placeholder="조회시작일" /> <input type="text"
-							class="btn btn-outline-dark bg-white" id="exampleInputDate1"
+							class="btn btn-outline-dark bg-white" id="exampleInputDate1" name="end_date"
 							placeholder="조회종료일" />
-						<button type="submit" class="btn btn-dark me-2 btn-bg">
+						<button type="submit" id="date_check" class="btn btn-dark me-2 btn-bg">
 							적용</button>
 					</div>
 
