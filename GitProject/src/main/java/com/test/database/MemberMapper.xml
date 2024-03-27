@@ -42,7 +42,7 @@
     <!-- 개인정보 수정 -->
 	<update id="mem_update" parameterType="com.test.model.MemberVO">
 		update tb_member
-		set mem_pw = #{mem_pw}, mem_addr = #{mem_addr}, mem_nick = #{mem_nick}, mem_email = #{mem_email}
+		set mem_pw = #{mem_pw}, mem_addr = #{mem_addr}, mem_nick = #{mem_nick}, mem_email = #{mem_email}, mem_img=#{mem_img}
 		where mem_id = #{mem_id}
 	</update>
 	
