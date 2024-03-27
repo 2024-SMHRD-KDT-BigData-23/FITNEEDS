@@ -389,11 +389,11 @@ $(function() {
 			labels: ['키', '체중', 'BMI', '근육량', '체지방률'],
 			datasets: [{
 				label: '나의데이터',
-				backgroundColor: 'blue',
+				backgroundColor:'rgba(255, 99, 132, 0.6)',
 				data: [mem_height, mem_weight, mem_bmi, mem_muscle, mem_fat_per]
 			}, {
 				label: '표준데이터',
-				backgroundColor: 'green',
+				backgroundColor:'rgba(54, 162, 235, 0.6)',
 				data: [std_height, std_weight, std_bmi, std_muscle, std_fat_per]
 			}]
 		};
@@ -403,11 +403,11 @@ $(function() {
 			labels: ['키', '체중', 'BMI', '근육량', '체지방률'],
 			datasets: [{
 				label: '나의데이터',
-				backgroundColor: 'blue',
+				backgroundColor: 'rgba(255, 99, 132, 0.5)',
 				data: [mem_height, mem_weight, mem_bmi, mem_muscle, mem_fat_per]
 			}, {
 				label: '표준데이터',
-				backgroundColor: 'green',
+				backgroundColor: 'rgba(54, 162, 235, 0.5)',
 				data: [std_height, std_weight, std_bmi, std_muscle, std_fat_per]
 			}]
 		};

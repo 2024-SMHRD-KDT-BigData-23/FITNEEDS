@@ -190,52 +190,89 @@
 			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper">
-
+					<!--  1행 시작 -->
 					<div class="row">
-						
-						<div class="col-lg-6 grid-margin stretch-card">
+						<!-- 1행 1열 -->
+						<div class="col-lg-8 grid-margin stretch-card">
 							<div class="card">
+								<!-- 카드 바디 시작 -->
 								<div class="card-body">
-								<!--  수정사항   2: 1(text): 1-->
-									<h4 class="card-title">표준데이터 비교</h4>
-									
-									<div>
-								<!--  	<h4 class="card-title">개인 데이터와 표준 데이터</h4>
-									<p id="mem_height"></p>
-									<p id="mem_weight"></p>
-									<p id="mem_bmi"></p>
-									<p id="mem_muscle"></p>
-									<p id="mem_fat_per"></p>
-									<p id="std_height"></p>
-									<p id="std_weight"></p>
-									<p id="std_bmi"></p>
-									<p id="std_muscle"></p>
-									<p id="std_fat_per"></p> 
-									-->
-									</div> 
-									<canvas id="barChart"></canvas>
+									<!-- 플렉스 컨테이너 시작 -->
+									<div class="d-flex flex-row justify-content-between">
+										<!-- 플렉스 항목 1 시작 -->
+										<div class="flex-item-grow">
+											<h4 class="card-title">표준데이터 비교</h4>
+											<canvas id="barChart"></canvas>
+										</div>
+										<!-- 플렉스 항목 1 끝 -->
+										
+										<!-- 플렉스 항목 2 시작 -->
+										<table class="table">
+											<thead>
+												<tr>
+													<th scope="col"><strong>개인 데이터</strong></th>
+													<th scope="col"><strong>표준 데이터</strong></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td id="mem_height"></td>
+													<td id="std_height"></td>
+												</tr>
+												<tr>
+													<td id="mem_weight"></td>
+													<td id="std_weight"></td>
+												</tr>
+												<tr>
+													<td id="mem_bmi"></td>
+													<td id="std_bmi"></td>
+												</tr>
+												<tr>
+													<td id="mem_muscle"></td>
+													<td id="std_muscle"></td>
+												</tr>
+												<tr>
+													<td id="mem_fat_per"></td>
+													<td id="std_fat_per"></td>
+												</tr>
+											</tbody>
+										</table>
+										<!-- 플렉스 항목 2 끝 -->
+									</div>
+									<!-- 플렉스 컨테이너 끝 -->
 								</div>
+								<!-- 카드 바디 끝 -->
+
+
 							</div>
 						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
+
+						<!-- 1행 2열 -->
+						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
+								<canvas id="radarChart">
 									<h4 class="card-title">radar 차트로 비교</h4>
-									<canvas id="radarChart"></canvas>
+									</canvas>
 								</div>
 							</div>
 						</div>
-						
 					</div>
+					<!--  1행 끝 -->
+					
+					
 					<!-- 사용자 다이어트,뉴스,루틴 추천 -->
 					<!-- 2행 1열 -->
 					<div class="row">
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body" id="diet">
+								
 									<h2>Diet</h2>
+									
 									<a href="#" id="dietLink">
-										<h4 class="card-title" id="dietTitle">Title</h4> <img src="" alt="Diet Image" id="dietImage">
+										<h4 class="card-title" id="dietTitle">Title</h4> 
+										<img src="" alt="Diet Image" id="dietImage">
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
@@ -248,7 +285,8 @@
 								<div class="card-body" id="news">
 									<h2>News</h2>
 									<a href="#" id="newsLink">
-										<h4 class="card-title" id="newsTitle">Title</h4> <img src="" alt="News Image" id="newsImage">
+										<h4 class="card-title" id="newsTitle">Title</h4> <img src=""
+										alt="News Image" id="newsImage">
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
@@ -261,7 +299,8 @@
 								<div class="card-body" id="routine">
 									<h2>Routine</h2>
 									<a href="#" id="routineLink">
-										<h4 class="card-title" id="routineTitle">Title</h4> <img src="" alt="Routine Image" id="routineImage">
+										<h4 class="card-title" id="routineTitle">Title</h4> <img
+										src="" alt="Routine Image" id="routineImage">
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
@@ -283,14 +322,18 @@
 
 
 				<!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
-                target="_blank">Fitneeds</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Fitneeds team & smhrd <i
-                class="mdi mdi-heart text-danger"></i></span>
-          </div>
-        </footer>
+				<footer class="footer">
+					<div
+						class="d-sm-flex justify-content-center justify-content-sm-between">
+						<span
+							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
+							© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
+						</span> <span
+							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+							Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
+						</span>
+					</div>
+				</footer>
 				<!-- partial -->
 
 
@@ -355,7 +398,7 @@
 	<!-- ** JS AREA START ** -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- flask에서 url받아오기-->
-		<script type="text/javascript">
+	<script type="text/javascript">
       // diet 정보 요청
       fetch('http://127.0.0.1:5000/diet')
         .then(response => response.json())
@@ -385,7 +428,10 @@
           document.getElementById('routineImage').src = data.thumb_url;
           document.getElementById('routineTitle').textContent = data.title;
         });
+      
+      
     </script>
+
 
 
 
