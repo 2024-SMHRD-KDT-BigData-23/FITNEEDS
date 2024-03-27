@@ -93,9 +93,15 @@
 			// Extract email and name from the response node
 			String email = responseNode.path("email").asText();
 			String name = responseNode.path("name").asText();
+			String mobile = responseNode.path("mobile").asText();
+			String birthyear = responseNode.path("birthyear").asText();
+			String birthday = responseNode.path("birthday").asText();
 	
 			System.out.println("Email: " + email);
 			System.out.println("Name: " + name);
+			System.out.println("Mobile: " + mobile);
+			System.out.println("Birthyear: " + birthyear);
+			System.out.println("Birthday: " + birthday);
 	
 			////////////////////////////////////
 			// 회원 가입여부 판단 by email. check if already joined by email.
@@ -105,12 +111,19 @@
 				// 회원가입
 		
 			try {
-				// Encode the string using UTF-8 encoding
-				String encodedString = URLEncoder.encode(name, "UTF-8");
-				System.out.println("Encoded String: " + encodedString);
+			    String encodedEmail = URLEncoder.encode(email, "UTF-8");
+			    String encodedName = URLEncoder.encode(name, "UTF-8");
+			    String encodedMobile = URLEncoder.encode(mobile, "UTF-8");
+			    String encodedBirthyear = URLEncoder.encode(birthyear, "UTF-8");
+			    String encodedBirthday = URLEncoder.encode(birthday, "UTF-8");
 
-				response.sendRedirect("NaverJoin.do?email=" + email + "&name=" + encodedString);
+			    String redirectUrl = "NaverJoin.do?email=" + encodedEmail 
+			                         + "&name=" + encodedName 
+			                         + "&mobile=" + encodedMobile 
+			                         + "&birthyear=" + encodedBirthyear 
+			                         + "&birthday=" + encodedBirthday;
 
+			    response.sendRedirect(redirectUrl);
 			} catch (UnsupportedEncodingException e) {
 				System.err.println("Unsupported Encoding Exception: " + e.getMessage());
 			}

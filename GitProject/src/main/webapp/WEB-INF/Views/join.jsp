@@ -1,6 +1,6 @@
-<%@page import="java.security.SecureRandom"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.security.SecureRandom"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.net.URLEncoder" %>
 <%@ page import="java.math.BigInteger" %>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@
 <body>
 <%
    String clientId = "gbLrG9lQfNuwCCfz4nge";//애플리케이션 클라이언트 아이디값";
-   String redirectURI = URLEncoder.encode("http://localhost:8080/GitPlus/fitcallback.do", "UTF-8");
+   String redirectURI = URLEncoder.encode("http://localhost:8080/GitProject/fitcallback.do", "UTF-8");
    SecureRandom random = new SecureRandom();
    String state = new BigInteger(130, random).toString();
    String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code"
@@ -49,10 +49,10 @@
                      placeholder="이름" value="${name}"> <input
                      class="login animated fadeInUp animate3" class="loginfont"
                      name="mem_phone" type="text" required placeholder="000-0000-0000"
-                     value=""> <input
+                     value="${mobile}"> <input
                      class="login animated fadeInUp animate3 loginfont"
                      name="mem_birthdate" type="text" id="birthdate" required
-                     placeholder="생년월일" value=""> <input
+                     placeholder="생년월일" value="${birthyear}-${birthday}"> <input
                      class="login animated fadeInUp animate3" class="loginfont"
                      name="mem_addr" type="text" required placeholder="주소" value="">
                   <input class="login animated fadeInUp animate3" class="loginfont"
