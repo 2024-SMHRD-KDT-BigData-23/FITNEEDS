@@ -193,51 +193,27 @@
 				<div class="content-wrapper">
 
 					<div class="row">
+						
 						<div class="col-lg-6 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<h4 class="card-title">신체 데이터 변화량</h4>
-									<canvas id="lineChart"></canvas>
-									<p id="averageBMI"></p>
-									<p id="averageMuscle"></p>
-									<p id="averageFatPercentage"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">소모 칼로리 변화량</h4>
-									<canvas id="lineChartCalories"></canvas>
-									<p id="maxCalories"></p>
-									<p id="averageCalories"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">운동비율</h4>
-									<canvas id="pieChart"></canvas>
-									<p id="aerobicCount"></p>
-									<p id="upperBodyCount"></p>
-									<p id="lowerBodyCount"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">출석률</h4>
-									<canvas id="countDateChart"></canvas>
-									<p id="attendanceRate"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
+								<!--  수정사항   2: 1(text): 1-->
 									<h4 class="card-title">표준데이터 비교</h4>
+									
+									<div>
+								<!--  	<h4 class="card-title">개인 데이터와 표준 데이터</h4>
+									<p id="mem_height"></p>
+									<p id="mem_weight"></p>
+									<p id="mem_bmi"></p>
+									<p id="mem_muscle"></p>
+									<p id="mem_fat_per"></p>
+									<p id="std_height"></p>
+									<p id="std_weight"></p>
+									<p id="std_bmi"></p>
+									<p id="std_muscle"></p>
+									<p id="std_fat_per"></p> 
+									-->
+									</div> 
 									<canvas id="barChart"></canvas>
 								</div>
 							</div>
@@ -250,23 +226,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">개인 데이터와 표준 데이터</h4>
-									<p id="mem_height"></p>
-									<p id="mem_weight"></p>
-									<p id="mem_bmi"></p>
-									<p id="mem_muscle"></p>
-									<p id="mem_fat_per"></p>
-									<p id="std_height"></p>
-									<p id="std_weight"></p>
-									<p id="std_bmi"></p>
-									<p id="std_muscle"></p>
-									<p id="std_fat_per"></p>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 					<!-- 사용자 다이어트,뉴스,루틴 추천 -->
 					<!-- 2행 1열 -->
