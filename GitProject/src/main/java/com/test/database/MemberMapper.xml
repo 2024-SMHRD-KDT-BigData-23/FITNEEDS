@@ -65,12 +65,6 @@
     	from tb_member
     	where mem_id = #{mem_id}
     </select>
-    
-    
-    <!-- 안쓰는 코드 -->
-	<select id="selectall" resultType="com.test.model.MemberVO"> select email, tel, address
-		from b_member
-	</select>
 	
 	<!-- 회원체크 by email -->
 	<select id="get_member_by_email" parameterType="string"

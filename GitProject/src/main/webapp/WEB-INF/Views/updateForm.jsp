@@ -126,6 +126,26 @@ input[type="text"]:focus {
 .ui-datepicker-close:hover {
 	background-color: #0056b3;
 }
+
+.mem_img_size{
+	width: 100px; 
+    height: auto; 
+}
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .image-item {
+        margin-right: 10px; /* 이미지 간 간격 조정 */
+        margin-bottom: 20px; /* 이미지 아래 여백 조정 */
+    }
+
+    .image-item img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
 </style>
 
 </head>
@@ -284,11 +304,6 @@ input[type="text"]:focus {
 
 
 
-
-
-
-
-
 			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			<!-- ** Main Area START ** -->
 
@@ -315,21 +330,41 @@ input[type="text"]:focus {
 									<div class="card-body">
 										<h4 class="card-title">프로필 수정</h4>
 
-
-										<!--  * 이미지 사진부분 주석 *
-									<p class="card-description">회원님을 대표할 이미지와 별명</p>
 										<div class="form-group">
 						                      <label>프로필 사진</label>
-						                      <input type="file" name="img[]" class="file-upload-default" />
-						                      <div class="col-xs-12 mt-2">
-						                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image" />
-						                        <br>
-						                        <div class="input-group-append">
-						                          <button class="file-upload-browse btn btn-primary" type="button"> 사진변경 </button>
-						                        </div>
-						                      </div>
-						                    </div>  
-						                  * 이미지 사진 주석 END * -->
+						                      <div class="col-xs-12 mt-2 image-container">
+												    <div class="image-item">
+												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img1.jpg">
+												        <input type="radio" name="mem_img" value="assets/images/mem_img/img1.jpg" id="img1">
+												        <label for="img1">기본</label>
+												    </div>
+												    <div class="image-item">
+												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img2.jpg">
+												        <input type="radio" name="mem_img" value="assets/images/mem_img/img2.jpg" id="img2">
+												        <label for="img2">냥인간</label>
+												    </div>
+												    <div class="image-item">
+												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img3.jpg">
+												        <input type="radio" name="mem_img" value="assets/images/mem_img/img3.jpg" id="img3">
+												        <label for="img3">수컷</label>
+												    </div>
+												    <div class="image-item">
+												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img4.jpg">
+												        <input type="radio" name="mem_img" value="assets/images/mem_img/img4.jpg" id="img4">
+												        <label for="img4">암컷</label>
+												    </div>
+												    <div class="image-item">
+												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img5.jpg">
+												        <input type="radio" name="mem_img" value="assets/images/mem_img/img5.jpg" id="img5">
+												        <label for="img5">몸짱</label>
+												    </div>
+												    <div class="image-item">
+												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img6.jpg">
+												        <input type="radio" name="mem_img" value="assets/images/mem_img/img6.jpg" id="img6">
+												        <label for="img6">기본몸짱</label>
+												    </div>
+												</div>
+						                    </div><br>
 
 										<!--============================이미지 수정===========================-->
 

@@ -13,11 +13,10 @@ public class Update implements Command{
 		
 		String mem_pw = request.getParameter("mem_pw");
 		String mem_newpw = request.getParameter("mem_newpw");
-		// String mem_name = request.getParameter("mem_name");
-		// String mem_phone = request.getParameter("mem_phone");
 		String mem_addr = request.getParameter("mem_addr");
 		String mem_email = request.getParameter("mem_email");
 		String mem_nick = request.getParameter("mem_nick");
+		String mem_img = request.getParameter("mem_img");
 		
 		MemberVO membervo = (MemberVO) request.getSession().getAttribute("member");
 		String mem_id = membervo.getMem_id();
@@ -47,10 +46,11 @@ public class Update implements Command{
 			if(mem_addr != "") {
 				membervo.setMem_addr(mem_addr);
 			}
-			// membervo.setMem_name(mem_name);
-			// membervo.setMem_phone(mem_phone);
 			if(mem_email != "") {
 				membervo.setMem_email(mem_email);
+			}
+			if(mem_img != "") {
+				membervo.setMem_img(mem_img);
 			}
 		}
 		dao.updateMem(membervo);
