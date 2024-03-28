@@ -1,5 +1,5 @@
 $(function() {
-	
+
 	var doughnutChart;
 	var lineChart;
 	var lineChartCalories;
@@ -45,10 +45,10 @@ $(function() {
 				var count_date = res.count_date;
 
 				// 배열로 변환
-				var exCounts = [count_date, nocount_date]; 
+				var exCounts = [count_date, nocount_date];
 				// 소수점 이하를 반올림하여 정수로 변환
-				var attendanceRate = Math.round((count_date / (nocount_date + count_date)) * 100); 
-				
+				var attendanceRate = Math.round((count_date / (nocount_date + count_date)) * 100);
+
 				// 출석률 데이터 셋
 				var countDateData = {
 					datasets: [{
@@ -80,7 +80,7 @@ $(function() {
 						animateScale: true,
 						animateRotate: true
 					},
-					
+
 					// 도넛형 차트를 반으로 자르기 위한 조건
 					rotation: 1 * Math.PI,
 					circumference: 1 * Math.PI
@@ -93,6 +93,12 @@ $(function() {
 						type: 'doughnut',
 						data: countDateData,
 						options: countDateOptions
+					});
+
+					// 캔버스 요소에 동적으로 크기를 지정하여 반응형으로 만듭니다.
+					$("#countDateChart").css({
+						'max-width': '100%',
+						'height': 'auto'
 					});
 				}
 				$("#attendanceRate").text(attendanceRate + "%");
@@ -162,7 +168,7 @@ $(function() {
 
 					labels: labels
 				};
-				
+
 				// pieChart 그리기
 				if ($("#pieChart").length) {
 					var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
@@ -255,7 +261,7 @@ $(function() {
 					}],
 					labels: labels
 				}
-				
+
 				// 칼로리를 제외한 나머지 데이터 셋
 				var data = {
 					datasets: [{
@@ -315,7 +321,7 @@ $(function() {
 						options: options
 					});
 				}
-				
+
 				// 칼로리 변화량 차트 그리기
 				if ($("#lineChartCalories").length) {
 					var lineChartCaloriesCanvas = $("#lineChartCalories").get(0).getContext("2d");
@@ -354,7 +360,7 @@ $(function() {
 			}
 		});
 	};
- 
+
 	// 차트 업데이트
 	$("#date_check").on("click", function() {
 		let start_date = $("#exampleInputDate").val();
@@ -383,21 +389,21 @@ $(function() {
 
 	// barChart, radarChart 그리는 함수
 	function drawCompareChart() {
-		
+
 		// barChart 데이터 셋 
 		var barcomparedata = {
 			labels: ['키', '체중', 'BMI', '근육량', '체지방률'],
 			datasets: [{
 				label: '나의데이터',
-				backgroundColor:'rgba(255, 99, 132, 0.6)',
+				backgroundColor: 'rgba(255, 99, 132, 0.6)',
 				data: [mem_height, mem_weight, mem_bmi, mem_muscle, mem_fat_per]
 			}, {
 				label: '표준데이터',
-				backgroundColor:'rgba(54, 162, 235, 0.6)',
+				backgroundColor: 'rgba(54, 162, 235, 0.6)',
 				data: [std_height, std_weight, std_bmi, std_muscle, std_fat_per]
 			}]
 		};
-		
+
 		// radarChart 데이터 셋
 		var radarcomparedata = {
 			labels: ['키', '체중', 'BMI', '근육량', '체지방률'],
@@ -421,7 +427,7 @@ $(function() {
 				options: options
 			});
 		}
-		
+
 		// radar차트 그리기
 		if ($("#radarChart").length) {
 			var radarChartCanvas = $("#radarChart").get(0).getContext("2d");
@@ -431,7 +437,7 @@ $(function() {
 				options: options
 			});
 		}
-		
+
 		// 옵션 설정
 		var options = {
 			scales: {
@@ -454,7 +460,7 @@ $(function() {
 
 	// 개인 및 표준 데이터 비교 차트 그리기
 	function fetchCompareChart() {
-		
+
 		// 개인 데이터 가져오기
 		$.ajax({
 			url: "MyData",
@@ -466,7 +472,7 @@ $(function() {
 				mem_bmi = res.bmi;
 				mem_muscle = res.muscle;
 				mem_fat_per = res.fat_per;
-				
+
 				// success안에서만 값이 유지되기 때문에
 				// 중첩 ajax를 이용하여 차트를 그림
 				// 표준데이터 가져오기
@@ -480,21 +486,21 @@ $(function() {
 						std_bmi = res.bmi;
 						std_muscle = res.muscle;
 						std_fat_per = res.fat_per;
-						
+
 						// barChart와 radarChart 그리기
 						drawCompareChart();
 						$("#mem_height").text("나의 키 : " + mem_height.toFixed(2) + "cm");
 						$("#mem_weight").text("나의 체중 : " + mem_weight.toFixed(2) + "kg");
 						$("#mem_bmi").text("나의 BMI : " + mem_bmi.toFixed(2));
 						$("#mem_muscle").text("나의 근육량: " + mem_muscle.toFixed(2));
-						$("#mem_fat_per").text("나의 체지방률 : " + mem_fat_per.toFixed(2)+ "%");
+						$("#mem_fat_per").text("나의 체지방률 : " + mem_fat_per.toFixed(2) + "%");
 						$("#std_height").text("표준 키 : " + std_height.toFixed(2) + "cm");
 						$("#std_weight").text("표준 체중 : " + std_weight.toFixed(2) + "kg");
 						$("#std_bmi").text("표준 BMI : " + std_bmi.toFixed(2));
 						$("#std_muscle").text("표준 근육량 : " + std_muscle.toFixed(2));
 						$("#std_fat_per").text("표준 체지방률 : " + std_fat_per.toFixed(2) + "%");
-						
-						
+
+
 					},
 					error: () => {
 						console.log("실패");
