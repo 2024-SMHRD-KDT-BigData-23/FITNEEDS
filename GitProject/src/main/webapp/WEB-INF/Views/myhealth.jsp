@@ -146,11 +146,8 @@
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
 							
-							
-							
-							
-							
-							<div class="dropdown-menu center navbar-dropdown" aria-labelledby="profileDropdown">
+							<div class="dropdown-menu center navbar-dropdown"
+								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="UpdatePage.do"> <i
 									class="mdi mdi-account-circle me-3"></i> 회원정보수정
 								</a>
@@ -158,12 +155,22 @@
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
+								
+								<!-- 변경부분 -->
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="InputCh.do"> <i
+									class="mdi mdi-poll-box me-3"></i> 나의체중입력
+								</a>
+								<!-- 변경부분 -->
+								
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
-								</div>
+							</div>
+							
+							
 						</li>
 						
 						
