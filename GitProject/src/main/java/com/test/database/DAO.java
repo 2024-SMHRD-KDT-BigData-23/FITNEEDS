@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import com.test.FrontController.AccCh;
 import com.test.model.AccChangeVO;
 import com.test.model.AccExerciseVO;
+import com.test.model.CalendarEventVO;
 import com.test.model.ExerciseVO;
 import com.test.model.MemberVO;
 import com.test.model.SaltVO;
@@ -161,4 +162,19 @@ public class DAO {
 		session.close();
 		return result;
 	}
+	 // 캘린더 이벤트를 저장하는 메서드
+    public int saveCalendarEvent(CalendarEventVO eventVO) {
+        SqlSession session = factory.openSession(true);
+        int row = session.insert("insertCalendarEvent", eventVO);
+        session.close();
+        return row;
+    }
+    
+    // 캘린더에 저장된 값을 가져오는 메서드
+    public ArrayList<CalendarEventVO> fetchCalendarEvent(String mem_id){
+       SqlSession session = factory.openSession();
+       ArrayList<CalendarEventVO> list = new ArrayList<>(session.selectList("fetchCalendarEvent", mem_id));
+       session.close();
+       return list;
+    }
 }

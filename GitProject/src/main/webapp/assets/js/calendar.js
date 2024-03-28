@@ -17,9 +17,3 @@ $(document).ready(function() {
 
 
 // index calendar js
-
-$(document).ready(function() {
-	$("#exampleInputDate, #exampleInputDate1").datepicker({
-		dateFormat: 'yy-mm-dd',
-	});
-});

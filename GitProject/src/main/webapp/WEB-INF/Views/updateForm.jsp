@@ -278,6 +278,12 @@ input[type="text"]:focus {
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
+								<!-- 변경부분 -->
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="WeightPage.do"> <i
+									class="mdi mdi-poll-box me-3"></i> 나의체중입력
+								</a>
+								<!-- 변경부분 -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
