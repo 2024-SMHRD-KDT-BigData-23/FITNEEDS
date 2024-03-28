@@ -16,11 +16,8 @@
 	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.min.js'></script>
 <!-- fullcalendar axios라이브러리 -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	
-	
 	</head>
 <title>Plus Admin</title>
- 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--*** BASIC CSS START ***-->
 <link rel="stylesheet"
@@ -31,7 +28,6 @@
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <!--*** BASIC CSS END ***-->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--*** calendar CSS START ***-->
 <link rel="stylesheet"

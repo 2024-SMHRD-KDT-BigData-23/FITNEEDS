@@ -76,9 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <input type="submit" id="login-form-submit" class="login_form button animated fadeInUp animate4" value="로그인">
                         </form>
                         
-                        <a href="#" onclick="goNaver()">
-                            <img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/>
-                         </a>
+                       
 
                     </div>`;
 		// chg_join 함수 연결
