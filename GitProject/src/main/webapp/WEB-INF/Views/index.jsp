@@ -281,7 +281,7 @@
 						<div class="col-xl-5 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<p class="m-0 survey-head">캘린더캘린더캘린더</p>
+									<p class="m-0 survey-head">캘린더</p>
 									<div id='calendar-container'>
 										<div id='calendar'></div>
 									</div>
@@ -318,7 +318,6 @@
 											</div>
 										</div>
 									</div>
-									
 
 								</div>
 							</div>
@@ -549,7 +548,6 @@
 	                end: $("#end").val(),
 	                color: $("#color").val(),
 	            };
-	            console.log("값 : ", eventData);
 	            //빈값입력시 오류
 	            if (
 	                eventData.title == "" ||

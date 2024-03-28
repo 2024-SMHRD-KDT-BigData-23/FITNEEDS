@@ -15,6 +15,7 @@ import com.test.controller.ComparePage;
 import com.test.controller.MainPage;
 import com.test.controller.NaverJoinController;
 import com.test.controller.ReservePage;
+import com.test.controller.SaveCalendarEvent;
 import com.test.controller.Unregister;
 import com.test.controller.Update;
 import com.test.controller.UpdatePage;
@@ -48,6 +49,7 @@ public class FrontController extends HttpServlet {
 		map.put("Unregister.do", new Unregister());
 		map.put("NaverJoin.do", new NaverJoinController()); //네이버 회원정보
 		map.put("WeightPage.do", new WeightPage()); //체중 입력페이지 이동
+		map.put("CalendarSave.do", new SaveCalendarEvent()); //일정추가하기
 		
 	}
 
