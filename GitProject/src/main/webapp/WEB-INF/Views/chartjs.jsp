@@ -254,8 +254,8 @@
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-								<canvas id="radarChart">
 									<h4 class="card-title">radar 차트로 비교</h4>
+										<canvas id="radarChart">
 									</canvas>
 								</div>
 							</div>

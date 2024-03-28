@@ -238,7 +238,7 @@
 											<div class="d-flex justify-content-between align-items-start">
 												<div class="card-body">
 												<p class="m-0 survey-head">출석률</p>
-													<canvas id="myChart"></canvas>
+													<canvas id="countDateChart"></canvas>
 													<p id="attendanceRate"></p>
 												</div>
 											</div>
@@ -253,7 +253,7 @@
 											<div class="d-flex justify-content-between align-items-start">
 												<div class="card-body">
 													<h4 class="card-title">회원권 출석률</h4>
-													<canvas id="countDateChart"></canvas>
+													<canvas id="myChart"></canvas>
 													<p id="attendanceRate"></p>
 												</div>
 											</div>
@@ -455,7 +455,7 @@
 	                    myCustomButton: {
 	                        text: "운동 기록!",
 	                        click: function() {
-	                            window.location.href = "http://localhost:8080/Project/fitmyhealth.do";
+	                            window.location.href = "http://localhost:8080/GitProject/fitmyhealth.do";
 	                        }
 	                    },
 	                    mySaveButton: {
@@ -578,7 +578,6 @@
 	                    }
 	                });
 
-	                // db에서 불러오기
 	            }
 	        });
 	    });
