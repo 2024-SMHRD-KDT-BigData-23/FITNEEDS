@@ -22,6 +22,7 @@
 <!-- endinject -->
 <!-- Layout styles -->
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
+<link rel="stylesheet" href="assets/css/demo_1/chartjs.css" />
 <!-- End layout styles -->
 <body>
 	<div class="container-scroller">
@@ -200,61 +201,55 @@
 				<div class="content-wrapper">
 					<!--  1행 시작 -->
 					<div class="row">
+							<!--  1행 시작 -->
+					<div class="row">
 						<!-- 1행 1열 -->
-						<div class="col-lg-8 grid-margin stretch-card">
-							<div class="card">
-								<!-- 카드 바디 시작 -->
-								<div class="card-body">
-									<!-- 플렉스 컨테이너 시작 -->
-									<div class="d-flex flex-row justify-content-between">
-										<!-- 플렉스 항목 1 시작 -->
-										<div class="flex-item-grow">
-											<h4 class="card-title">표준데이터 비교</h4>
-											<canvas id="barChart"></canvas>
-										</div>
-										<!-- 플렉스 항목 1 끝 -->
-										
-										<!-- 플렉스 항목 2 시작 -->
-										<table class="table">
-											<thead>
-												<tr>
-													<th scope="col"><strong>개인 데이터</strong></th>
-													<th scope="col"><strong>표준 데이터</strong></th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td id="mem_height"></td>
-													<td id="std_height"></td>
-												</tr>
-												<tr>
-													<td id="mem_weight"></td>
-													<td id="std_weight"></td>
-												</tr>
-												<tr>
-													<td id="mem_bmi"></td>
-													<td id="std_bmi"></td>
-												</tr>
-												<tr>
-													<td id="mem_muscle"></td>
-													<td id="std_muscle"></td>
-												</tr>
-												<tr>
-													<td id="mem_fat_per"></td>
-													<td id="std_fat_per"></td>
-												</tr>
-											</tbody>
-										</table>
-										<!-- 플렉스 항목 2 끝 -->
-									</div>
-									<!-- 플렉스 컨테이너 끝 -->
-								</div>
-								<!-- 카드 바디 끝 -->
-
-
-							</div>
-						</div>
-
+                  <div class="col-lg-8 grid-margin stretch-card">
+                     <div class="card">
+                        <div class="card-body">
+                           <div class="row">
+                              <!-- 왼쪽에 차트 배치 -->
+                              <div class="col-md-7">
+                                 <h4 class="card-title">표준데이터 비교</h4>
+                                 <canvas id="barChart"></canvas>
+                              </div>
+                              <!-- 오른쪽에 표 배치 -->
+                              <div class="col-md-4 d-flex flex-column">
+                                 <table class="table">
+                                    <thead>
+                                       <tr>
+                                          <th scope="col"><strong>개인 데이터</strong></th>
+                                          <th scope="col"><strong>표준 데이터</strong></th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td id="mem_height"></td>
+                                          <td id="std_height"></td>
+                                       </tr>
+                                       <tr>
+                                          <td id="mem_weight"></td>
+                                          <td id="std_weight"></td>
+                                       </tr>
+                                       <tr>
+                                          <td id="mem_bmi"></td>
+                                          <td id="std_bmi"></td>
+                                       </tr>
+                                       <tr>
+                                          <td id="mem_muscle"></td>
+                                          <td id="std_muscle"></td>
+                                       </tr>
+                                       <tr>
+                                          <td id="mem_fat_per"></td>
+                                          <td id="std_fat_per"></td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 						<!-- 1행 2열 -->
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
