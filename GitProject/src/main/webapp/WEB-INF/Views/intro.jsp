@@ -30,7 +30,7 @@
         <div class="shape">
             <div class="home1Img">
                  <!-- 텍스트 이미지 교체 구간-->
-                <img src="images/home1.png" alt="대한민국 1등 건강관리 앱">
+                <img href="assets/images/intro/home.png" alt="대한민국 1등 건강관리 앱">
                  <!-- 텍스트 이미지 교체 구간-->
             </div>
             <h3 class="hometest">우리의 건강이야기 지금 시작합니다</h3>
