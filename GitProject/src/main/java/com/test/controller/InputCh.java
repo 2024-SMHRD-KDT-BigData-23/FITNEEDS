@@ -13,7 +13,7 @@ import com.test.model.MemberVO;
 public class InputCh implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-		double weight = Integer.parseInt(request.getParameter("weight"));
+		double weight = (double)Integer.parseInt(request.getParameter("weight"));
 		String ch_date = request.getParameter("ch_date");
 		int ex_calories_sum = 0;
 		
@@ -40,9 +40,9 @@ public class InputCh implements Command {
 		int row = dao.accChInput(vo);
 		
 		if (row > 0) {
-			return "input"; // 체중입력페이지만들면 연동해야함
+			return "redirect:/fitindex.do"; // 체중입력페이지만들면 연동해야함
 		} else {
-			return "input"; // 체중입력페이지만들면 연동해야함
+			return "redirect:/fitindex.do"; // 체중입력페이지만들면 연동해야함
 		}
 		
 	}

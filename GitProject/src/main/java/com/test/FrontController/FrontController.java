@@ -18,6 +18,7 @@ import com.test.controller.ReservePage;
 import com.test.controller.Unregister;
 import com.test.controller.Update;
 import com.test.controller.UpdatePage;
+import com.test.controller.WeightPage;
 import com.test.controller.InputCh;
 import com.test.controller.InputEx;
 import com.test.controller.InputPage;
@@ -46,6 +47,7 @@ public class FrontController extends HttpServlet {
 		map.put("Update.do", new Update()); // 회원정보수정
 		map.put("Unregister.do", new Unregister());
 		map.put("NaverJoin.do", new NaverJoinController()); //네이버 회원정보
+		map.put("WeightPage.do", new WeightPage()); //체중 입력페이지 이동
 		
 	}
 

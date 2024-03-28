@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>Plus Admin</title>
- 
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--*** BASIC CSS START ***-->
 <link rel="stylesheet"
@@ -21,14 +19,26 @@
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!--*** calendar CSS START ***-->
+
+<!--weight CSS (체중입력화면)-->
+<link rel="stylesheet" href="assets/css/demo_1/weight.css" />
+<link rel="stylesheet" href="assets/css/demo_1/cssplus.css" />
+
+
+<!-- ** 달력CSS START-->
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
-<!--*** calendar CSS END ***-->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- ** 달력CSS END-->
+
+
+</head>
 <body>
+
+
+
 	<div class="container-scroller">
+
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
@@ -44,7 +54,7 @@
 						</div>
 				</a></li>
 				<li class="nav-item pt-3"><a class="nav-link d-block"
-					href="MainPage.do"> <img class="sidebar-brand-logo"
+					href="fitindex.do"> <img class="sidebar-brand-logo"
 						src="assets/images/logo.png" alt="" /> <img
 						class="sidebar-brand-logomini" src="assets/images/logo-mini.png"
 						alt="" />
@@ -55,10 +65,9 @@
 				<li class="pt-2 pb-1"><span class="nav-item-head">MENU
 						</MENU>
 				</span></li>
-
-
-
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+				
+				
+					<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 				<!--*** side nar > nav >  사용자 Menu start ***-->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
@@ -80,18 +89,9 @@
 						class="menu-title">나의운동예약</span>
 				</a></li>
 				<!--*** 사용자 Menu end ***-->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 			</ul>
 		</nav>
-
-		<!-- ** SIDE BAR SECTION END ** -->
-		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-		<!-- ** TOP BAR SECTION ** -->
-
 		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
 			<!-- partial:partials/_settings-panel.html -->
@@ -131,7 +131,7 @@
 					</button>
 					<div
 						class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-						<a class="navbar-brand brand-logo-mini" href="MainPage.do"><img
+						<a class="navbar-brand brand-logo-mini" href="fitindex.do"><img
 							src="assets/images/logo-mini.png" alt="logo" /></a>
 					</div>
 
@@ -140,16 +140,11 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
-
-
-
 								<div class="nav-profile-text">MYPAGE</div>
+								
+								
+								
 						</a>
-
-
-
-
-
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="UpdatePage.do"> <i
@@ -160,7 +155,6 @@
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
 								
-								
 								<!-- 변경부분 -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="WeightPage.do"> <i
@@ -168,21 +162,22 @@
 								</a>
 								<!-- 변경부분 -->
 								
-								
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
 							</div>
+								
+								
 						</li>
-
-
 						<li class="nav-item nav-logout d-none d-lg-block"><a
-							class="nav-link" href="MainPage.do"> <i
+							class="nav-link" href="fitindex.do"> <i
 								class="mdi mdi-home-circle"></i>
 						</a></li>
 					</ul>
+					
+					
 					<button
 						class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
 						type="button" data-toggle="offcanvas">
@@ -190,166 +185,93 @@
 					</button>
 				</div>
 			</nav>
-
-			<!-- ** TOP BAR SECTION END ** -->
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			<!-- ** Main Area Start ** -->
-
 			<!-- partial -->
-			<div class="main-panel">
+			<!--
+        
+
+      -->
+			<!-- partial -->
+			<div class="main-panel flower-panel">
 				<div class="content-wrapper">
-
-
-					<div class="data-input">
-						<input type="text" class="btn btn-outline-dark bg-white" name="start_date"
-							id="exampleInputDate" placeholder="조회시작일" /> <input type="text"
-							class="btn btn-outline-dark bg-white" id="exampleInputDate1" name="end_date"
-							placeholder="조회종료일" />
-						<button type="submit" id="date_check" class="btn btn-dark me-2 btn-bg">
-							적용</button>
-					</div>
-
 					<div class="row">
-						<div class="col-lg-6 grid-margin stretch-card">
+						<div class="col-3 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<h4 class="card-title">신체 데이터 변화량</h4>
-									<canvas id="lineChart"></canvas>
-
-
-									<div class="card stretch-card mb-3">
-										<div class="card-body d-flex flex-wrap justify-content-between">
-											<div>
-												<h4 class="font-weight-semibold mb-1 text-black">
-													Member Profit</h4>
-												<h6 class="text-muted">Average Weekly Profit</h6>
+									<div class="card card-stat  mb-3">
+										<div class="card-body">
+											<div class="text-color">
+												<div class="flot-bar-wrapper">
+													<h6>WEIGHT CHANGE</h6>
+													<h3 class="font-weight-bold">
+														이지은님,<br> <a>벚꽃</a>과 함께<br> <a>운동</a>하러 가요!
+													</h3>
+													<!-- 사진위치 -->
+													<div class="nav-profile-image">
+														<img src="assets/images/faces/flower.jpg" alt="flower" />
+														<!--change to offline or busy as needed-->
+													</div>
+													<!-- 사진위치 -->
+												</div>
 											</div>
-											<h3 class="text-success font-weight-bold"> <p id="averageBMI"></p>  </h3>
-											<h3 class="text-success font-weight-bold">  <p id="averageMuscle"></p> </h3>
-											<h3 class="text-success font-weight-bold"> <p id="averageFatPercentage"></p> </h3>
 										</div>
-										
-										
-										
-										
-										
 									</div>
+									
+									<form action="InputCh.do" method="post">
+									<div class="login-form-flower">
+										<label class="text-talk">체중을 언제 측정하셨나요? </i></label>
+										<input type="text" class="form-control" id="exampleInputDate"
+											placeholder="YYYY-MM-DD" name="ch_date"/>
+										<label class="text-talk">측정한 체중을 입력해주세요
+										<i class="mdi mdi-heart text-danger"></i>
+										</label>
+										<input type="text" name="weight" class="form-control"
+											id="exampleInputConfirmPassword2" placeholder="체중(kg)" />
+									</div>
+									<div class="flower-submit">
+										<button type="submit" class="badge badge-danger"
+											style="display: block; margin: 0 auto;">운동완료</button>
+									</div>
+									</form>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">소모 칼로리 변화량</h4>
-									<canvas id="lineChartCalories"></canvas>
-									<p id="maxCalories"></p>
-									<p id="averageCalories"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">운동비율</h4>
-									<canvas id="pieChart"></canvas>
-									<p id="aerobicCount"></p>
-									<p id="upperBodyCount"></p>
-									<p id="lowerBodyCount"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">출석률</h4>
-									<canvas id="countDateChart"></canvas>
-									<p id="attendanceRate"></p>
-								</div>
-							</div>
-						</div>
-
-
-
 					</div>
 				</div>
-				<!-- ** Main Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!-- ** Footer Area START ** -->
-
-
-
-				<!-- partial:partials/_footer.html -->
+				<!-- content-wrapper ends -->
+				<!-- partial:../../partials/_footer.html -->
 				<footer class="footer">
 					<div
 						class="d-sm-flex justify-content-center justify-content-sm-between">
 						<span
 							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
+							© 2021 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
+							All rights reserved.
 						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-							Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
+							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
+							& made with <i class="mdi mdi-heart text-danger"></i>
 						</span>
 					</div>
 				</footer>
 				<!-- partial -->
-
-
-
-				<!-- ** Footer Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-
 			</div>
+			<!-- main-panel ends -->
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- ** All AREA END ** -->
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- ** JS AREA START ** -->
-
 	<!-- container-scroller -->
 	<!-- plugins:js -->
 	<script src="assets/vendors/js/vendor.bundle.base.js"></script>
 	<!-- endinject -->
 	<!-- Plugin js for this page -->
+	<script src="assets/vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
 	<script src="assets/vendors/chart.js/Chart.min.js"></script>
+	<script src="assets/vendors/flot/jquery.flot.js"></script>
+	<script src="assets/vendors/flot/jquery.flot.resize.js"></script>
+	<script src="assets/vendors/flot/jquery.flot.categories.js"></script>
+	<script src="assets/vendors/flot/jquery.flot.fillbetween.js"></script>
+	<script src="assets/vendors/flot/jquery.flot.stack.js"></script>
+	<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
 	<!-- End plugin js for this page -->
 	<!-- inject:js -->
 	<script src="assets/js/off-canvas.js"></script>
@@ -359,16 +281,26 @@
 	<script src="assets/js/todolist.js"></script>
 	<!-- endinject -->
 	<!-- Custom js for this page -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/chart.js"></script>
+	<script src="assets/js/dashboard.js"></script>
 	<!-- End custom js for this page -->
 
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- ** calendar JS START ** -->
+	<!-- 달력 연습 스크립트 -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-	<script src="assets/js/calendar.js"></script>
-	<!-- ** calendar JS START ** -->
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<script>
+		$(function() {
+			$("#exampleInputDate").datepicker({
+				dateFormat : "yy-mm-dd"
+			});
+		});
+	</script>
+
+
+
+
+
+
+
+
 </body>
 </html>
