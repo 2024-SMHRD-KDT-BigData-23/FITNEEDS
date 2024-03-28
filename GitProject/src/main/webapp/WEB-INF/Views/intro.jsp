@@ -19,8 +19,8 @@
     <header id="header">
         <nav class="menu">
             <ul>
-                <li><img role="button" src="./images/rogo.png" alt="FitNeeds" class="headerfitImg"></li>
-                <li><a href="http://localhost:8080/GitProject/fitjoin.do"><img role="button" class="headerImg"><h3>로그인!</h3></a></li>
+                <li><img role="button" src="assets/images/intro/rogo.png" alt="FitNeeds" class="headerfitImg"></li>
+                <li><a href="http://localhost:8080/GitProject/fitjoin.do"><img role="button" class="headerImg"><h3>서비스이용해보세요!</h3></a></li>
             </ul>
         </nav>
     </header>
@@ -30,14 +30,14 @@
         <div class="shape">
             <div class="home1Img">
                  <!-- 텍스트 이미지 교체 구간-->
-                <img href="assets/images/intro/home.png" alt="대한민국 1등 건강관리 앱">
+                <img src="assets/images/intro/home1.png" alt="대한민국 1등 건강관리 앱">
                  <!-- 텍스트 이미지 교체 구간-->
             </div>
             <h3 class="hometest">우리의 건강이야기 지금 시작합니다</h3>
             <div class="home"></div>
             <div class="home2Img">
                  <!-- 이미지 교체 구간-->
-                <img src="./images/home2.png" alt="우리의 마스코트">
+                <img src="assets/images/intro/home2.png" alt="우리의 마스코트">
                  <!-- 이미지 교체 구간-->
             </div>
         </div>
@@ -48,14 +48,14 @@
         <div class="shape">
             <div class="panel21Img">
                  <!-- 텍스트 이미지 교체 구간-->
-                <img src="images/panel21.png" alt="문구">
+                <img src="assets/images/intro/panel21.png" alt="문구">
                  <!-- 텍스트 이미지 교체 구간-->
             </div>
             <h3 class="panel2test"></h3>
             <div class="home"></div>
             <div class="panel22Img">
                  <!--  이미지 교체 구간-->
-                <img src="./images/hell.png" alt="자기관리 이미지">
+                <img src="assets/images/intro/hell.png" alt="자기관리 이미지">
                 <!--  이미지 교체 구간-->
             </div>
         </div>
@@ -66,11 +66,11 @@
         <div class="shape">
             <div class="swiper-container" style="width: 100%; height: 70%;">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide active"><img src="images/s1.png" alt="1번"></div>
-                    <div class="swiper-slide"><img src="images/s2.png" alt="test"></div>
-                    <div class="swiper-slide"><img src="images/s3.png" alt="test"></div>
-                    <div class="swiper-slide"><img src="images/s4.png" alt="test"></div>
-                    <div class="swiper-slide"><img src="images/rogo.png" alt="test"></div>
+                    <div class="swiper-slide active"><img src="assets/images/intro/s1.png" alt="1번"></div>
+                    <div class="swiper-slide"><img src="assets/images/intro/s2.png" alt="test"></div>
+                    <div class="swiper-slide"><img src="assets/images/intro/s3.png" alt="test"></div>
+                    <div class="swiper-slide"><img src="assets/images/intro/s4.png" alt="test"></div>
+                    <div class="swiper-slide"><img src="assets/images/intro/rogo.png" alt="test"></div>
                 </div>
 
                 <div class="swiper-pagination"></div> <!--자동이동-->
@@ -84,12 +84,12 @@
     <div class="panel panel3" data-section-name="예약페이지기능">
         <div class="shape">
             <div class="panel31Img">
-                <img src="images/sulmung.png" alt="대한민국 1등 건강관리 앱">
+                <img src="assets/images/intro/sulmung.png" alt="대한민국 1등 건강관리 앱">
             </div>
             <div class="home"></div>
             <div class="imgzip">
                 <div class="panel32Img">
-                    <img src="./images/eximg.png" alt="우리의 마스코트">
+                    <img src="assets/images/intro/eximg.png" alt="우리의 마스코트">
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
     <div class="panel panel4" data-section-name="개요">
         <div class="shape">
             <div class="panel41Img">
-                <img src="images/final.png" alt="대한민국 1등 건강관리 앱">
+                <img src="assets/images/intro/final.png" alt="대한민국 1등 건강관리 앱">
             </div>
             <h5 class="panel4test">
                 (주)FitNeeds<br>
