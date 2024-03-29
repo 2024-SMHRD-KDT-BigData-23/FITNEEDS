@@ -212,8 +212,8 @@
               <div class="col-md-6 grid-margin stretch-card">
                 <div class="card card-exinput">
                   <div class="card-body">
-                    <form action="InputEx.do" class="forms-sample" method="post"> <!-- form action ìë ¥ -->
-              
+                    <form action="InputEx.do" class="forms-sample" method="post" onsubmit="return validateForm();">
+
                       <div class="login-form">
                         <label for="exampleInputDate">운동일자</label>
                         <input type="text" name = "ex_date" class="form-control" id="exampleInputDate" placeholder="YYYY-MM-DD" />
@@ -407,6 +407,7 @@
 	<!-- Custom js for this page -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/chart.js"></script>
+	<script src="assets/js/check_ex.js"></script>
 	<!-- End custom js for this page -->
 	
 <!-- ** JS AREA START ** -->	

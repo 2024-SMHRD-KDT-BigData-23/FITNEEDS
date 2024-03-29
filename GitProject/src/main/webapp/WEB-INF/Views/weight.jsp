@@ -216,7 +216,7 @@
 										</div>
 									</div>
 									
-									<form action="InputCh.do" method="post">
+									<form action="InputCh.do" method="post" onsubmit="return validateForm();">
 									<div class="login-form-flower">
 										<label class="text-talk">체중을 언제 측정하셨나요? </i></label>
 										<input type="text" class="form-control" id="exampleInputDate"
@@ -287,6 +287,7 @@
 	<!-- 달력 연습 스크립트 -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="assets/js/check_ch.js"></script>
 	<script>
 		$(function() {
 			$("#exampleInputDate").datepicker({
