@@ -15,7 +15,6 @@ public class DeleteCalendarEvent implements Command{
 		
         DAO dao = new DAO();
         dao.deleteCalendarEvent(calIdx);
-        System.out.println("성공");
 		return null;
 	}
 }

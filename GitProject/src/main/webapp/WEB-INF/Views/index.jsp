@@ -281,41 +281,6 @@
 									<div id='calendar-container'>
 										<div id='calendar'></div>
 									</div>
-									<!-- 모달창 시작 -->
-									<div class="modal fade" id="exampleModal" tabindex="-1"
-										aria-labelledby="exampleModalLabel" aria-hidden="true">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel">일정 추가하기</h5>
-													<button type="button" class="btn-close"
-														data-bs-dismiss="modal" aria-label="Close"></button>
-												</div>
-												<div class="modal-body">
-													일정이름 : <input type="text" id="title" /><br /> 시작시간 : <input
-														type="datetime-local" id="start" /><br /> 종료시간 : <input
-														type="datetime-local" id="end" /><br /> 배경색상 : <select
-														id="color">
-														<option value="red">빨강색</option>
-														<option value="orange">주황색</option>
-														<option value="yellow">노랑색</option>
-														<option value="green">초록색</option>
-														<option value="blue">파랑색</option>
-														<option value="indigo">남색</option>
-														<option value="purple">보라색</option>
-													</select>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary"
-														data-bs-dismiss="modal">취소</button>
-													<button type="button" class="btn btn-primary"
-														id="saveChanges">추가</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 모달창 끝-->
-
 									<!-- 수정용 모달창 시작 -->
 									<div class="modal fade" id="editModal" tabindex="-1"
 										aria-labelledby="editModalLabel" aria-hidden="true">
@@ -364,6 +329,54 @@
 										</div>
 									</div>
 									<!-- 수정용 모달창 끝 -->
+
+									<!-- 추가용 모달창 시작 -->
+									<div class="modal fade" id="exampleModal" tabindex="-1"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">일정 추가하기</h5>
+													<button type="button" class="btn-close"
+														data-bs-dismiss="modal" aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="mb-3">
+														<label for="title" class="form-label">일정 이름</label> <input
+															type="text" class="form-control" id="title" />
+													</div>
+													<div class="mb-3">
+														<label for="start" class="form-label">시작 시간</label> <input
+															type="datetime-local" class="form-control" id="start" />
+													</div>
+													<div class="mb-3">
+														<label for="end" class="form-label">종료 시간</label> <input
+															type="datetime-local" class="form-control" id="end" />
+													</div>
+													<div class="mb-3">
+														<label for="color" class="form-label">배경 색상</label> <select
+															class="form-select" id="color">
+															<option value="red">빨강색</option>
+															<option value="orange">주황색</option>
+															<option value="yellow">노랑색</option>
+															<option value="green">초록색</option>
+															<option value="blue">파랑색</option>
+															<option value="indigo">남색</option>
+															<option value="purple">보라색</option>
+														</select>
+													</div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-bs-dismiss="modal">취소</button>
+													<button type="button" class="btn btn-primary"
+														id="saveChanges">추가</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- 추가용 모달창 끝 -->
+
 
 								</div>
 							</div>
