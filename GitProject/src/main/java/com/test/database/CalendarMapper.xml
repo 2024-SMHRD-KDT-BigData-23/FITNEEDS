@@ -12,17 +12,16 @@
 	<!-- 일정 가져오기 -->
 	<select id="fetchCalendarEvent"
 		parameterType="com.test.model.CalendarEventVO"
-		resultType="com.test.model.CalendarEventVO"> SELECT title, start, end, backgroundColor FROM tb_calendar
-		where mem_id = #{mem_id} </select>
+		resultType="com.test.model.CalendarEventVO"> SELECT * FROM tb_calendar where mem_id = #{mem_id}
+	</select>
 	<!-- 일정 수정하기 -->
 	<update id="updateCalendarEvent"
 		parameterType="com.test.model.CalendarEventVO"> update tb_calendar set title = #{title}, start =
 		#{start}, end = #{end}, backgroundColor = #{backgroundColor} where
-		mem_id = #{mem_id} AND start=#{startDate} AND end=#{endDate} </update>
+		cal_idx = #{cal_idx} </update>
 	<!-- 일정 삭제하기 -->
-	<delete id="deleteCalendarEvent"> delete from tb_calendar where mem_id = #{mem_id} AND
-		title = #{title} AND start=#{startDate} AND end=#{endDate} AND
-		backgroundColor = #{backgroundColor} </delete>
+	<delete id="deleteCalendarEvent"> delete from tb_calendar where cal_idx = #{cal_idx}
+	</delete>
 </mapper>
 
 

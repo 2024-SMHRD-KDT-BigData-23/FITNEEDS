@@ -2,30 +2,12 @@ package com.test.model;
 
 public class CalendarEventVO {
 
-	private int calIdx;
+	private int cal_idx;
 	private String mem_id;
 	private String title;
 	private String start;
 	private String end;
 	private String backgroundColor;
-	private String startDate;
-	private String endDate;
-
-	public String getStartDate() {
-		return startDate;
-	}
-
-	public void setStartDate(String startDate) {
-		this.startDate = startDate;
-	}
-
-	public String getEndDate() {
-		return endDate;
-	}
-
-	public void setEndDate(String endDate) {
-		this.endDate = endDate;
-	}
 
 	public String getMem_id() {
 		return mem_id;
@@ -35,12 +17,12 @@ public class CalendarEventVO {
 		this.mem_id = mem_id;
 	}
 
-	public int getCalIdx() {
-		return calIdx;
+	public int getcal_idx() {
+		return cal_idx;
 	}
 
-	public void setCalIdx(int calIdx) {
-		this.calIdx = calIdx;
+	public void setcal_idx(int cal_idx) {
+		this.cal_idx = cal_idx;
 	}
 
 	public String getTitle() {
@@ -78,8 +60,8 @@ public class CalendarEventVO {
 	public CalendarEventVO() {
 	}
 
-	public CalendarEventVO(int calIdx, String mem_id, String title, String start, String end, String backgroundColor) {
-		this.calIdx = calIdx;
+	public CalendarEventVO(int cal_idx, String mem_id, String title, String start, String end, String backgroundColor) {
+		this.cal_idx = cal_idx;
 		this.mem_id = mem_id;
 		this.title = title;
 		this.start = start;
@@ -87,17 +69,7 @@ public class CalendarEventVO {
 		this.backgroundColor = backgroundColor;
 	}
 
-	public CalendarEventVO(String mem_id, String title, String start, String end, String backgroundColor,
-			String startDate, String endDate) {
-		this.mem_id = mem_id;
-		this.title = title;
-		this.start = start;
-		this.end = end;
-		this.backgroundColor = backgroundColor;
-		this.startDate = startDate;
-		this.endDate = endDate;
-	}
-	
+	// 일정 추가
 	public CalendarEventVO(String mem_id, String title, String start, String end, String backgroundColor) {
 		this.mem_id = mem_id;
 		this.title = title;
@@ -105,5 +77,15 @@ public class CalendarEventVO {
 		this.end = end;
 		this.backgroundColor = backgroundColor;
 	}
+	
+	// 일정 수정
+	public CalendarEventVO(int cal_idx, String title, String start, String end, String backgroundColor) {
+		this.cal_idx = cal_idx;
+		this.title = title;
+		this.start = start;
+		this.end = end;
+		this.backgroundColor = backgroundColor;
+	}
+	
 
 }

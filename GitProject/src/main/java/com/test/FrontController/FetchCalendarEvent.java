@@ -41,6 +41,7 @@ public class FetchCalendarEvent extends HttpServlet {
         JsonArray jsonArray = new JsonArray();
         for (CalendarEventVO event : list) {
             JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("id", event.getcal_idx());
             jsonObject.addProperty("title", event.getTitle());
             jsonObject.addProperty("start", event.getStart().formatted(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm")));
             jsonObject.addProperty("end", event.getEnd().formatted(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm")));

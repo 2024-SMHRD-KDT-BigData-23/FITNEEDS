@@ -7,8 +7,8 @@
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	
-	<!-- fullcalendar CDN -->
+
+<!-- fullcalendar CDN -->
 <script
 	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
 <!-- fullcalendar 언어 CDN -->
@@ -16,7 +16,7 @@
 	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.min.js'></script>
 <!-- fullcalendar axios라이브러리 -->
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	</head>
+</head>
 <title>Plus Admin</title>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!--*** BASIC CSS START ***-->
@@ -167,16 +167,16 @@
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
-								
-								
+
+
 								<!-- 변경부분 -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="WeightPage.do"> <i
 									class="mdi mdi-poll-box me-3"></i> 나의체중입력
 								</a>
 								<!-- 변경부분 -->
-								
-								
+
+
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
@@ -215,15 +215,15 @@
 
 
 					<div class="data-input">
-						<input type="text" class="btn btn-outline-dark bg-white" name="start_date"
-							id="exampleInputDate" placeholder="조회시작일" /> <input type="text"
-							class="btn btn-outline-dark bg-white" id="exampleInputDate1" name="end_date"
-							placeholder="조회종료일" />
-						<button type="submit" id="date_check" class="btn btn-dark me-2 btn-bg">
-							적용</button>
+						<input type="text" class="btn btn-outline-dark bg-white"
+							name="start_date" id="exampleInputDate" placeholder="조회시작일" /> <input
+							type="text" class="btn btn-outline-dark bg-white"
+							id="exampleInputDate1" name="end_date" placeholder="조회종료일" />
+						<button type="submit" id="date_check"
+							class="btn btn-dark me-2 btn-bg">적용</button>
 					</div>
 
-	
+
 					<div class="row">
 						<div class="col-xl-3 col-lg-12 stretch-card grid-margin">
 							<div class="row">
@@ -233,7 +233,7 @@
 										<div class="card-body px-3 py-4">
 											<div class="d-flex justify-content-between align-items-start">
 												<div class="card-body">
-												<p class="m-0 survey-head">출석률</p>
+													<p class="m-0 survey-head">출석률</p>
 													<canvas id="countDateChart"></canvas>
 													<p id="attendanceRate"></p>
 												</div>
@@ -270,7 +270,7 @@
 									<p id="aerobicCount"></p>
 									<p id="upperBodyCount"></p>
 									<p id="lowerBodyCount"></p>
-							
+
 								</div>
 							</div>
 						</div>
@@ -281,7 +281,7 @@
 									<div id='calendar-container'>
 										<div id='calendar'></div>
 									</div>
-										<!-- 모달창 시작 -->
+									<!-- 모달창 시작 -->
 									<div class="modal fade" id="exampleModal" tabindex="-1"
 										aria-labelledby="exampleModalLabel" aria-hidden="true">
 										<div class="modal-dialog">
@@ -390,7 +390,8 @@
 							</div>
 						</div>
 
-					</div><!-- END -->
+					</div>
+					<!-- END -->
 				</div>
 				<!-- ** Main Area END ** -->
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -484,218 +485,185 @@
 	<!-- ** calendar JS START ** -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-<script>
-var calendar;
-var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 변수
-(function() {
-	$(function() {
-		// calendar element 취득
-		var calendarEl = $('#calendar')[0];
-		// full-calendar 생성하기
-		var calendar = new FullCalendar.Calendar(
-				calendarEl,
-				{
-					height : '700px', // calendar 높이 설정
-					expandRows : true, // 화면에 맞게 높이 재설정
-					slotMinTime : '08:00', // Day 캘린더에서 시작 시간
-					slotMaxTime : '20:00', // Day 캘린더에서 종료 시간
-					customButtons : {
-						myCustomButton : {
-							text : "운동기록",
-							click : function() {
-								window.location.href = "http://localhost:8080/GitProject/fitmyhealth.do";
-							}
-						},
+	<script>
+		var calendar;
+		var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 변수
+		(function() {
+			$(function() {
+				// calendar element 취득
+				var calendarEl = $('#calendar')[0];
+				// full-calendar 생성하기
+				var calendar = new FullCalendar.Calendar(
+						calendarEl,
+						{
+							height : '700px', // calendar 높이 설정
+							expandRows : true, // 화면에 맞게 높이 재설정
+							slotMinTime : '08:00', // Day 캘린더에서 시작 시간
+							slotMaxTime : '20:00', // Day 캘린더에서 종료 시간
+							customButtons : {
+								myCustomButton : {
+									text : "운동기록",
+									click : function() {
+										window.location.href = "http://localhost:8080/GitProject/fitmyhealth.do";
+									}
+								},
 
-						myPlusButton : {
-							text : "일정추가",
-							click : function() {
-								//부트스트랩 모달 열기
-								$("#exampleModal").modal("show");
-							}
-						}
-					},
-					// 해더에 표시할 툴바
-					headerToolbar : {
-						left : 'prev,today,myPlusButton,myCustomButton',
-						center : 'title',
-						right : 'dayGridMonth,timeGridWeek,timeGridDay,listWeek,next'
-					},
-					initialView : 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
-					// initialDate: '2024-04-02', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
-					navLinks : true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
-					editable : true, // 수정 가능?
-					selectable : true, // 달력 일자 드래그 설정가능
-					nowIndicator : true, // 현재 시간 마크
-					dayMaxEvents : true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
-					locale : 'ko', // 한국어 설정
-					eventAdd : function(obj) { // 이벤트가 추가되면 발생하는 이벤트
-					},
-					eventChange : function(obj) { // 이벤트가 수정되면 발생하는 이벤트
-					},
-					eventRemove : function(obj) { // 이벤트가 삭제되면 발생하는 이벤트
-					},
-					// 이벤트클릭을 이용한 데이터 수정
-					eventClick : function(info) {
-						// 클릭한 이벤트의 정보 가져오기
-						clickedEvent = info.event;
-						// 모달 폼에 이벤트 정보 채우기
-						$("#editTitle").val(clickedEvent.title);
-						$("#editStart").val(clickedEvent.startStr);
-						$("#editEnd").val(clickedEvent.endStr);
-						$("#editColor").val(
-								clickedEvent.backgroundColor);
-						// 수정 모달 열기
-						$("#editModal").modal("show");
-					},
-					select : function(arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
-						var title = prompt('Event Title:');
-						if (title) {
-							calendar.addEvent({
-								title : title,
-								start : arg.start,
-								end : arg.end,
-								allDay : arg.allDay
-							})
-						}
-						calendar.unselect()
-					},
-
-				});
-		// 캘린더 랜더링
-		calendar.render();
-
-		// 문서가 로드될 때 자동으로 이벤트 불러오기
-		fetchAndAddEvents();
-
-		// DB에 저장된 일정 가져오기
-		function fetchAndAddEvents() {
-			$.ajax({
-				url : 'FetchCalendarEvent',
-				method : 'POST',
-				success : function(res) {
-					// 받아온 이벤트들을 events 배열에 추가
-					res.forEach(function(event) {
-						calendar.addEvent(event);
-					});
-				},
-				error : function() {
-					console.log("이벤트 불러오기 실패");
-				}
-			});
-		}
-
-		// 모달창 이벤트 // 일정 추가해서 화면에 띄워주기
-		$("#saveChanges").on(
-				"click",
-				function() {
-					var eventData = {
-						title : $("#title").val(),
-						start : $("#start").val(),
-						end : $("#end").val(),
-						color : $("#color").val(),
-					};
-					//빈값입력시 오류
-					if (eventData.title == "" || eventData.start == ""
-							|| eventData.end == "") {
-						alert("입력하지 않은 값이 있습니다.");
-
-						//끝나는 날짜가 시작하는 날짜보다 값이 크면 안됨
-					} else if ($("#start").val() > $("#end").val()) {
-						alert("시간을 잘못입력 하셨습니다.");
-					} else {
-						// 이벤트 추가
-						$("#exampleModal").modal("hide");
-						$("#title").val("");
-						$("#start").val("");
-						$("#end").val("");
-						$("#color").val("");
-						// db에 저장
-						$.ajax({
-							url : 'CalendarSave.do',
-							method : 'POST',
-							data : eventData,
-							success : function(response) {
-								console.log("성공");
-								calendar.addEvent(eventData);
+								myPlusButton : {
+									text : "일정추가",
+									click : function() {
+										//부트스트랩 모달 열기
+										$("#exampleModal").modal("show");
+									}
+								}
 							},
-							error : function(xhr, status, error) {
+							// 해더에 표시할 툴바
+							headerToolbar : {
+								left : 'prev,today,myPlusButton,myCustomButton',
+								center : 'title',
+								right : 'dayGridMonth,timeGridWeek,timeGridDay,listWeek,next'
+							},
+							initialView : 'dayGridMonth', // 초기 로드 될때 보이는 캘린더 화면(기본 설정: 달)
+							// initialDate: '2024-04-02', // 초기 날짜 설정 (설정하지 않으면 오늘 날짜가 보인다.)
+							navLinks : true, // 날짜를 선택하면 Day 캘린더나 Week 캘린더로 링크
+							editable : true, // 수정 가능?
+							selectable : true, // 달력 일자 드래그 설정가능
+							nowIndicator : true, // 현재 시간 마크
+							dayMaxEvents : true, // 이벤트가 오버되면 높이 제한 (+ 몇 개식으로 표현)
+							locale : 'ko', // 한국어 설정
+							eventAdd : function(obj) { // 이벤트가 추가되면 발생하는 이벤트
+							},
+							eventChange : function(obj) { // 이벤트가 수정되면 발생하는 이벤트
+							},
+							eventRemove : function(obj) { // 이벤트가 삭제되면 발생하는 이벤트
+							},
+							// 이벤트클릭을 이용한 데이터 수정
+							eventClick : function(info) {
+								// 클릭한 이벤트의 정보 가져오기
+								clickedEvent = info.event;
+								// 모달 폼에 이벤트 정보 채우기
+								$("#editTitle").val(clickedEvent.title);
+								$("#editStart").val(clickedEvent.startStr);
+								$("#editEnd").val(clickedEvent.endStr);
+								$("#editColor").val(
+										clickedEvent.backgroundColor);
+								// 수정 모달 열기
+								$("#editModal").modal("show");
+							},
+							select : function(arg) { // 캘린더에서 드래그로 이벤트를 생성할 수 있다.
+								var title = prompt('Event Title:');
+								if (title) {
+									calendar.addEvent({
+										title : title,
+										start : arg.start,
+										end : arg.end,
+										allDay : arg.allDay
+									})
+								}
+								calendar.unselect()
+							},
+
+						});
+				// 캘린더 랜더링
+				calendar.render();
+
+				// 문서가 로드될 때 자동으로 이벤트 불러오기
+				fetchAndAddEvents();
+
+				// DB에 저장된 일정 가져오기
+				function fetchAndAddEvents() {
+					$.ajax({
+						url : 'FetchCalendarEvent',
+						method : 'POST',
+						success : function(res) {
+							// 받아온 이벤트들을 events 배열에 추가
+							res.forEach(function(event) {
+								calendar.addEvent(event);
+							});
+						},
+						error : function() {
+							console.log("이벤트 불러오기 실패");
+						}
+					});
+				}
+
+				// 모달창 이벤트 // 일정 추가해서 화면에 띄워주기
+				$("#saveChanges").on(
+						"click",
+						function() {
+							var eventData = {
+								title : $("#title").val(),
+								start : $("#start").val(),
+								end : $("#end").val(),
+								color : $("#color").val(),
+							};
+							//빈값입력시 오류
+							if (eventData.title == "" || eventData.start == ""
+									|| eventData.end == "") {
+								alert("입력하지 않은 값이 있습니다.");
+
+								//끝나는 날짜가 시작하는 날짜보다 값이 크면 안됨
+							} else if ($("#start").val() > $("#end").val()) {
+								alert("시간을 잘못입력 하셨습니다.");
+							} else {
+								// 이벤트 추가
+								$("#exampleModal").modal("hide");
+								$("#title").val("");
+								$("#start").val("");
+								$("#end").val("");
+								$("#color").val("");
+								// db에 저장
+								$.ajax({
+									url : 'CalendarSave.do',
+									method : 'POST',
+									data : eventData,
+									success : function(response) {
+										console.log("성공");
+										calendar.addEvent(eventData);
+									},
+									error : function(xhr, status, error) {
+									}
+								});
+
 							}
 						});
 
-					}
-				});
-		// 수정 모달 저장 버튼 클릭 시 수정된 정보 전송
-		$("#saveEditChanges").on(
-				"click",
-				function() {
+				// 수정 모달 저장 버튼 클릭 시 수정된 정보 전송
+				$("#saveEditChanges").on(
+						"click",
+						function() {
+							var eventData = {
+								title : $("#editTitle").val(),
+								start : $("#editStart").val(),
+								end : $("#editEnd").val(),
+								color : $("#editColor").val(),
+								cal_idx : clickedEvent.id, // clickedEvent 변수 사용
+							};
+
+							$.ajax({
+								url : "CalendarUpdate.do",
+								method : 'POST',
+								data : eventData,
+								success : function(response) {
+									clickedEvent.setProp('title',
+											eventData.title);
+									clickedEvent.setStart(eventData.start);
+									clickedEvent.setEnd(eventData.end);
+									clickedEvent.setProp('backgroundColor',
+											eventData.color);
+									calendar.refetchEvents();
+									$("#editModal").modal("hide");
+								},
+								error : function(xhr, status, error) {
+									console.error("이벤트 업데이트 실패:", error);
+								}
+							});
+						});
+
+				// 삭제 기능
+				$("#deleteEvent").on("click", function() {
 					// 선택한 이벤트의 시작 날짜와 종료 날짜 가져오기
-					var startDate = clickedEvent.start;
-					var endDate = clickedEvent.end;
-
-					// 시간 조정 (한국시간 +9)해줘야함
-					startDate.setHours(startDate.getHours() + 9);
-					endDate.setHours(endDate.getHours() + 9);
-
-					// ISO 8601 형식의 문자열로 변환
-					var isoStartDate = startDate.toISOString().slice(0,
-							16).replace('T', ' ');
-					var isoEndDate = endDate.toISOString().slice(0, 16)
-							.replace('T', ' ');
-
 					var eventData = {
-						title : $("#editTitle").val(),
-						start : $("#editStart").val(),
-						end : $("#editEnd").val(),
-						color : $("#editColor").val(),
-						startDate : isoStartDate,
-						endDate : isoEndDate,
-					};
-
-					$.ajax({
-						url : "CalendarUpdate.do",
-						method : 'POST',
-						data : eventData,
-						success : function(response) {
-							clickedEvent.setProp('title',
-									eventData.title);
-							clickedEvent.setStart(eventData.start);
-							clickedEvent.setEnd(eventData.end);
-							clickedEvent.setProp('backgroundColor',
-									eventData.color);
-							calendar.refetchEvents();
-							$("#editModal").modal("hide");
-						},
-						error : function(xhr, status, error) {
-							console.error("이벤트 업데이트 실패:", error);
-						}
-					});
-				});
-		// 삭제 기능
-		$("#deleteEvent").on(
-				"click",
-				function() {
-					// 선택한 이벤트의 시작 날짜와 종료 날짜 가져오기
-					var title = clickedEvent.title;
-					var startDate = clickedEvent.start;
-					var endDate = clickedEvent.end;
-					var color = clickedEvent.backgroundColor;
-
-					// 시간 조정 (한국시간 +9)해줘야함
-					startDate.setHours(startDate.getHours() + 9);
-					endDate.setHours(endDate.getHours() + 9);
-
-					// ISO 8601 형식의 문자열로 변환
-					var isoStartDate = startDate.toISOString().slice(0,
-							16).replace('T', ' ') + ":00";
-					var isoEndDate = endDate.toISOString().slice(0, 16)
-							.replace('T', ' ') + ":00";
-
-					var eventData = {
-						title : title,
-						color : color,
-						startDate : isoStartDate,
-						endDate : isoEndDate,
+						cal_idx : clickedEvent.id
 					};
 
 					$.ajax({
@@ -703,6 +671,7 @@ var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 �
 						method : 'POST',
 						data : eventData,
 						success : function(response) {
+							clickedEvent.remove();
 							$("#editModal").modal("hide");
 						},
 						error : function(xhr, status, error) {
@@ -710,8 +679,9 @@ var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 �
 						}
 					});
 				});
-	});
-})();
+			});
+		})();
+	</script>
 
 
 	</script>

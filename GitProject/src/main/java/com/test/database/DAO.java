@@ -187,9 +187,9 @@ public class DAO {
 	}
 	
 	// 캘린더에 저장된 값을 삭제하는 메서드
-	public void deleteCalendarEvent(CalendarEventVO vo) {
+	public void deleteCalendarEvent(int calIdx) {
 		SqlSession session = factory.openSession(true);
-		session.delete("deleteCalendarEvent", vo);
+		session.delete("deleteCalendarEvent", calIdx);
 		session.close();
 	}
 }
