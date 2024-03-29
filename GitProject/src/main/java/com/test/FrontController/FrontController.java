@@ -65,11 +65,11 @@ public class FrontController extends HttpServlet {
 		map.put("MonthImg.do", new MonthImg()); // 월별 사진 가져오기
 		map.put("GetSentence.do", new GetSentence()); //메인페이지 문장 가져오기
 		map.put("FetchCalendarEvent.do", new FetchCalendarEvent()); // 달력에 일정 출력하기
-		map.put("AccCh.do", new AccCh());
-		map.put("AccEx.do", new AccEx());
-		map.put("CountDate.do", new CountDate());
-		map.put("MyData.do", new MyData());
-		map.put("StdData.do", new StdData());
+		map.put("AccCh.do", new AccCh()); // 누적 변화량
+		map.put("AccEx.do", new AccEx()); // 누적 운동
+		map.put("CountDate.do", new CountDate()); // 출석률
+		map.put("MyData.do", new MyData()); // 개인 데이터
+		map.put("StdData.do", new StdData()); // 표준 데이터
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
