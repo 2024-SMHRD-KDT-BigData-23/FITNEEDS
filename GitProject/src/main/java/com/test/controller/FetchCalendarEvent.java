@@ -1,14 +1,10 @@
-package com.test.FrontController;
-
+package com.test.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -19,14 +15,9 @@ import com.test.database.DAO;
 import com.test.model.CalendarEventVO;
 import com.test.model.MemberVO;
 
-@WebServlet("/FetchCalendarEvent")
-public class FetchCalendarEvent extends HttpServlet {
-    private static final long serialVersionUID = 1L;
-
-    protected void service(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        response.setContentType("application/json; charset=utf-8"); // JSON 형식으로 응답하기 위해 content type 변경
+public class FetchCalendarEvent implements Command {
+	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		response.setContentType("application/json; charset=utf-8"); // JSON 형식으로 응답하기 위해 content type 변경
 
         MemberVO membervo = (MemberVO) request.getSession().getAttribute("member");
         String mem_id = membervo.getMem_id();
@@ -53,8 +44,15 @@ public class FetchCalendarEvent extends HttpServlet {
         String json = gson.toJson(jsonArray);
 
         // 응답으로 JSON 문자열을 클라이언트에게 전송합니다.
-        PrintWriter out = response.getWriter();
-        out.print(json);
-    }
+        PrintWriter out;
+		try {
+			out = response.getWriter();
+			out.print(json);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
 }
-

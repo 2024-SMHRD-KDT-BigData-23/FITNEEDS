@@ -545,7 +545,7 @@
 				// DB에 저장된 일정 가져오기
 				function fetchAndAddEvents() {
 					$.ajax({
-						url : 'FetchCalendarEvent',
+						url : 'FetchCalendarEvent.do',
 						method : 'POST',
 						success : function(res) {
 							// 받아온 이벤트들을 events 배열에 추가
