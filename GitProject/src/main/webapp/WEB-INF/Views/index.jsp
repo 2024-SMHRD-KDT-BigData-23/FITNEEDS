@@ -248,9 +248,8 @@
 										<div class="card-body px-3 py-4">
 											<div class="d-flex justify-content-between align-items-start">
 												<div class="card-body">
-													<h4 class="card-title">회원권 출석률</h4>
-													<canvas id="myChart"></canvas>
-													<p id="attendanceRate"></p>
+													<h4 class="card-title">오늘의 문구</h4>
+													<p id="change_sentence">여기다 문장 넣을거에요 동희씨</p>
 												</div>
 											</div>
 
@@ -495,6 +494,7 @@
 	<!-- ** calendar JS START ** -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="assets/js/change_sentence.js"></script>
 	<!-- ** calendar JS START ** -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -695,9 +695,5 @@
 			});
 		})();
 	</script>
-
-
-	</script>
-
 </body>
 </html>

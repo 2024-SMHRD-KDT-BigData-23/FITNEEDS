@@ -1,19 +1,17 @@
 package com.test.database;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 
-import org.apache.ibatis.jdbc.SQL;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import com.test.FrontController.AccCh;
 import com.test.model.AccChangeVO;
 import com.test.model.AccExerciseVO;
 import com.test.model.CalendarEventVO;
 import com.test.model.ExerciseVO;
 import com.test.model.MemberVO;
 import com.test.model.SaltVO;
+import com.test.model.SentenceVO;
 import com.test.model.StdDataVO;
 
 public class DAO {
@@ -191,5 +189,13 @@ public class DAO {
 		SqlSession session = factory.openSession(true);
 		session.delete("deleteCalendarEvent", calIdx);
 		session.close();
+	}
+	
+	// 문구 가져오기
+	public SentenceVO getSentence(int idx) {
+		SqlSession session = factory.openSession();
+		SentenceVO result = session.selectOne("get_sentence_data", idx);
+		session.close();
+		return result;
 	}
 }

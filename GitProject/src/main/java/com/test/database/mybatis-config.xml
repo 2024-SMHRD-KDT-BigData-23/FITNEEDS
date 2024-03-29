@@ -10,6 +10,7 @@
 		<typeAlias type="com.test.model.AccChangeVO" alias="chvo" />
 		<typeAlias type="com.test.model.StdDataVO" alias="stdvo" />
 		<typeAlias type="com.test.model.CalendarEventVO" alias="cevo"/>
+		<typeAlias type="com.test.model.SentenceVO" alias="stvo"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -30,7 +31,6 @@
 		<mapper resource="com/test/database/AccChangeMapper.xml" />
 		<mapper resource="com/test/database/StdMapper.xml" />
 		<mapper resource="com/test/database/CalendarMapper.xml"/>
-		
-		
+		<mapper resource="com/test/database/SentenceMapper.xml"/>
 	</mappers>
 </configuration>
