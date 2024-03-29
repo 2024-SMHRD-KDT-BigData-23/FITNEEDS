@@ -1,6 +1,5 @@
 package com.test.model;
 
-
 public class CalendarEventVO {
 
 	private int calIdx;
@@ -9,11 +8,28 @@ public class CalendarEventVO {
 	private String start;
 	private String end;
 	private String backgroundColor;
+	private String startDate;
+	private String endDate;
+
+	public String getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
+	}
+
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
 
 	public String getMem_id() {
 		return mem_id;
 	}
-
 
 	public void setMem_id(String mem_id) {
 		this.mem_id = mem_id;
@@ -71,6 +87,17 @@ public class CalendarEventVO {
 		this.backgroundColor = backgroundColor;
 	}
 
+	public CalendarEventVO(String mem_id, String title, String start, String end, String backgroundColor,
+			String startDate, String endDate) {
+		this.mem_id = mem_id;
+		this.title = title;
+		this.start = start;
+		this.end = end;
+		this.backgroundColor = backgroundColor;
+		this.startDate = startDate;
+		this.endDate = endDate;
+	}
+	
 	public CalendarEventVO(String mem_id, String title, String start, String end, String backgroundColor) {
 		this.mem_id = mem_id;
 		this.title = title;

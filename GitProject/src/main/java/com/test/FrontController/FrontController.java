@@ -12,12 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.test.controller.Command;
 import com.test.controller.ComparePage;
+import com.test.controller.DeleteCalendarEvent;
 import com.test.controller.MainPage;
 import com.test.controller.NaverJoinController;
 import com.test.controller.ReservePage;
 import com.test.controller.SaveCalendarEvent;
 import com.test.controller.Unregister;
 import com.test.controller.Update;
+import com.test.controller.UpdateCalendarEvent;
 import com.test.controller.UpdatePage;
 import com.test.controller.WeightPage;
 import com.test.controller.InputCh;
@@ -50,7 +52,8 @@ public class FrontController extends HttpServlet {
 		map.put("NaverJoin.do", new NaverJoinController()); //네이버 회원정보
 		map.put("WeightPage.do", new WeightPage()); //체중 입력페이지 이동
 		map.put("CalendarSave.do", new SaveCalendarEvent()); //일정추가하기
-		
+		map.put("CalendarUpdate.do", new UpdateCalendarEvent()); //일정 수정하기
+		map.put("CalendarDelete.do", new DeleteCalendarEvent()); //일정 삭제하기
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

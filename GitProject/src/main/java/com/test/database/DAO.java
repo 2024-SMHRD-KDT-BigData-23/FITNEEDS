@@ -154,15 +154,16 @@ public class DAO {
 		session.close();
 		return result;
 	}
+	
 	// 네이버 회원가입 시 이메일가져오기
-
 	public MemberVO getMemberByEmail(String email) {
 		SqlSession session = factory.openSession();
 		MemberVO result = session.selectOne("get_member_by_email", email);
 		session.close();
 		return result;
 	}
-	 // 캘린더 이벤트를 저장하는 메서드
+	
+	// 캘린더 이벤트를 저장하는 메서드
     public int saveCalendarEvent(CalendarEventVO eventVO) {
         SqlSession session = factory.openSession(true);
         int row = session.insert("insertCalendarEvent", eventVO);
@@ -177,4 +178,18 @@ public class DAO {
        session.close();
        return list;
     }
+    
+	// 캘린더에 저장된 값을 수정하는 메서드
+	public void updateCalendarEvent(CalendarEventVO vo) {
+		SqlSession session = factory.openSession(true);
+		session.update("updateCalendarEvent", vo);
+		session.close();
+	}
+	
+	// 캘린더에 저장된 값을 삭제하는 메서드
+	public void deleteCalendarEvent(CalendarEventVO vo) {
+		SqlSession session = factory.openSession(true);
+		session.delete("deleteCalendarEvent", vo);
+		session.close();
+	}
 }

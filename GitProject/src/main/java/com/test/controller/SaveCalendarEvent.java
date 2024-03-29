@@ -30,29 +30,20 @@ public class SaveCalendarEvent implements Command {
         String mysqlStart = start.format(mysqlFormatter);
         String mysqlEnd = end.format(mysqlFormatter);
 
-        System.out.println(title);
-        System.out.println(mysqlStart);
-        System.out.println(mysqlEnd);
-        System.out.println(color);
 
         // JSON 데이터 처리
-
         MemberVO membervo = (MemberVO) request.getSession().getAttribute("member");
         String mem_id = membervo.getMem_id();
-        System.out.println("성공");
 
         CalendarEventVO vo = new CalendarEventVO(mem_id, title, mysqlStart, mysqlEnd, color);
-        System.out.println("성공2");
 
         DAO dao = new DAO();
         int row = dao.saveCalendarEvent(vo);
         // 성공 메시지를 포함한 응답
         if (row > 0) {
             result = "success";
-            System.out.println("성공3");
         } else {
             result = "failure";
-            System.out.println("실패");
             // 예외 처리 및 에러 응답
         }
         return null;
