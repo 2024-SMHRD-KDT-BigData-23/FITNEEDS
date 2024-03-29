@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.test.controller.Command;
 import com.test.controller.ComparePage;
 import com.test.controller.DeleteCalendarEvent;
+import com.test.controller.GetSentence;
 import com.test.controller.MainPage;
 import com.test.controller.MonthImg;
 import com.test.controller.NaverJoinController;
@@ -56,6 +57,7 @@ public class FrontController extends HttpServlet {
 		map.put("CalendarUpdate.do", new UpdateCalendarEvent()); //일정 수정하기
 		map.put("CalendarDelete.do", new DeleteCalendarEvent()); //일정 삭제하기
 		map.put("MonthImg.do", new MonthImg()); // 월별 사진 가져오기
+		map.put("GetSentence.do", new GetSentence()); //메인페이지 문장 가져오기
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
