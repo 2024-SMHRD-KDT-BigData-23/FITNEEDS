@@ -24,6 +24,13 @@
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <!-- End layout styles -->
 <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+<!-- ** 달력CSS START-->
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
+<!-- ** 달력CSS END-->
+
 <body>
 
 
@@ -200,7 +207,7 @@
 
 
 
-  <!-- partial -->
+  <!-- partial 복사시작 복사시작 -->
       <div class="main-panel">
         <div class="content-wrapper pb-0">
 
@@ -364,7 +371,7 @@
 				
 				
 				
-			</div> <!-- main-panel ends -->
+			</div> <!-- main-panel ends --> 
 		</div><!-- page-body-wrapper ends -->
 	</div><!-- container-scroller -->
 	
@@ -409,6 +416,19 @@
 	<script src="assets/js/chart.js"></script>
 	<script src="assets/js/check_ex.js"></script>
 	<!-- End custom js for this page -->
+	
+		<!-- 달력 스크립트 START -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$("#exampleInputDate").datepicker({
+				dateFormat : "yy-mm-dd"
+			});
+		});
+	</script>
+	<!-- 달력 스크립트 END -->
+	
 	
 <!-- ** JS AREA START ** -->	
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->	

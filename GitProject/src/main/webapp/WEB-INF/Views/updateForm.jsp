@@ -34,119 +34,48 @@
 
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+
 <style>
-.update_btn {
+.content-wrapper .row {
+	margin-bottom: 10px;
+}
+
+.comp {
+	margin-top: 20px;
 	justify-content: center;
+	display: flex;
 }
 
-input[type="text"] {
-	width: calc(100%);
-	padding: 0.94rem 1.375rem;
-	margin-top: 5px;
-	border: 1px solid #ced4da;
-	border-radius: 4px;
-	font-size: 14px;
-	outline: none;
-	transition: border-color 0.15s ease;
+.image-col {
+	display: flex;
+}
+
+.mem_img_size {
+	width: 100px;
+	height: auto;
+}
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image-item {
+	margin-right: 10px; /* 이미지 간 간격 조정 */
+	margin-bottom: 20px; /* 이미지 아래 여백 조정 */
+}
+
+.image-item img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
-
-input[type="text"]:focus {
-	border-color: #333333;
-	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-}
-
-.ui-datepicker {
-	width: 300px;
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.ui-datepicker-header {
-	background-color: #333333;
-	color: #fff;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	padding: 10px;
-	text-align: center;
-}
-
-.ui-datepicker-title {
-	font-size: 16px;
-}
-
-.ui-datepicker-prev, .ui-datepicker-next {
-	cursor: pointer;
-	position: relative;
-	top: 2px;
-}
-
-.ui-datepicker-prev:hover, .ui-datepicker-next:hover {
-	opacity: 0.8;
-}
-
-.ui-state-default, .ui-widget-content .ui-state-default,
-	.ui-widget-header .ui-state-default {
-	border: none;
-	background-color: transparent;
-	color: #333;
-}
-
-.ui-state-default:hover, .ui-widget-content .ui-state-default:hover,
-	.ui-widget-header .ui-state-default:hover {
-	background-color: #f0f0f0;
-}
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active
-	{
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-}
-
-.ui-datepicker-buttonpane {
-	text-align: center;
-	border-top: 1px solid #ccc;
-	padding-top: 10px;
-	margin-top: 10px;
-}
-
-.ui-datepicker-close {
-	cursor: pointer;
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	padding: 5px 10px;
-	border-radius: 3px;
-	transition: background-color 0.3s ease;
-}
-
-.ui-datepicker-close:hover {
-	background-color: #0056b3;
-}
-
-.mem_img_size{
-	width: 100px; 
-    height: auto; 
-}
-    .image-container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .image-item {
-        margin-right: 10px; /* 이미지 간 간격 조정 */
-        margin-bottom: 20px; /* 이미지 아래 여백 조정 */
-    }
-
-    .image-item img {
-        display: block;
-        max-width: 100%;
-        height: auto;
-    }
 </style>
+
+
+
 
 </head>
 
@@ -314,197 +243,191 @@ input[type="text"]:focus {
 			<!-- ** Main Area START ** -->
 
 
-			<!-- partial -->
-			<div class="main-panel">
-				<div class="content-wrapper ">
-					<div class="page-header">
-						<h2 class="page-title">개인정보 수정</h2>
-						<nav aria-label="breadcrumb">
-							<!--
-                  <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                  <li class="breadcrumb-item active" aria-current="page"> Form elements </li>
-                </ol>
-              -->
-						</nav>
-					</div>
-					<div class="row">
-						<!--프로필 수정에 대한 정보-->
-						<form class="forms-sample" action="Update.do" method="post">
-							<div class="col-md-12 grid-margin stretch-card">
-								<div class="card">
-									<div class="card-body">
-										<h4 class="card-title">프로필 수정</h4>
-
-										<div class="form-group">
-						                      <label>프로필 사진</label>
-						                      <div class="col-xs-12 mt-2 image-container">
-												    <div class="image-item">
-												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img1.jpg">
-												        <input type="radio" name="mem_img" value="assets/images/mem_img/img1.jpg" id="img1">
-												        <label for="img1">기본</label>
-												    </div>
-												    <div class="image-item">
-												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img2.jpg">
-												        <input type="radio" name="mem_img" value="assets/images/mem_img/img2.jpg" id="img2">
-												        <label for="img2">냥인간</label>
-												    </div>
-												    <div class="image-item">
-												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img3.jpg">
-												        <input type="radio" name="mem_img" value="assets/images/mem_img/img3.jpg" id="img3">
-												        <label for="img3">수컷</label>
-												    </div>
-												    <div class="image-item">
-												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img4.jpg">
-												        <input type="radio" name="mem_img" value="assets/images/mem_img/img4.jpg" id="img4">
-												        <label for="img4">암컷</label>
-												    </div>
-												    <div class="image-item">
-												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img5.jpg">
-												        <input type="radio" name="mem_img" value="assets/images/mem_img/img5.jpg" id="img5">
-												        <label for="img5">몸짱</label>
-												    </div>
-												    <div class="image-item">
-												        <img class="mem_img_size" alt="" src="assets/images/mem_img/img6.jpg">
-												        <input type="radio" name="mem_img" value="assets/images/mem_img/img6.jpg" id="img6">
-												        <label for="img6">기본몸짱</label>
-												    </div>
-												</div>
-						                    </div><br>
-
-										<!--============================이미지 수정===========================-->
-
-										<!-- 유저 별명 -->
-										<div class="form-group">
-											<label for="exampleNikname">별명</label> <input type="text"
-												class="form-control" id="exampleNikname" name="mem_nick"
-												placeholder="별명을 만들어주세요" />
-										</div>
-										<!--==============================별명===============================-->
-									</div>
-								</div>
-							</div>
-							<!--===================================프로필 수정============================-->
-
-							<!--개인정보 수정에 대한 정보-->
-							<div class="col-md-12 grid-margin stretch-card">
-								<div class="card">
-									<div class="card-body">
-										<h4 class="card-title">개인정보 수정</h4>
-										<!--<p class="card-description">비밀번호 수정</p>-->
-
-										<!-- 비밀번호-->
-										<div class="form-group row">
-											<label for="exampleInputPassword2"
-												class="col-sm-3 col-form-label">비밀번호</label>
-											<div class="col-sm-9">
-												<input type="password" class="form-control"
-													id="exampleInputPassword2" placeholder="Password"
-													name="mem_pw" />
-											</div>
-										</div>
-										<!--================================비밀번호===========================-->
-
-										<!-- 비밀번호 재설정-->
-										<div class="form-group row">
-											<label for="exampleInputConfirmPassword2"
-												class="col-sm-3 col-form-label">비밀번호 재설정</label>
-											<div class="col-sm-9">
-												<input type="password" class="form-control" name="mem_newpw"
-													id="exampleInputConfirmPassword2" placeholder="Re Password" />
-											</div>
-										</div>
-										<!--=============================비밀번호 재설정=======================-->
-										<!--주소 변경-->
-										<div class="form-group row">
-											<label for="exampleChangeAddress"
-												class="col-sm-3 col-form-label">변경할 주소</label>
-											<div class="col-sm-9">
-												<input type="text" class="form-control" name="mem_addr"
-													id="exampleChangeAddress" placeholder="Change address" />
-											</div>
-										</div>
-										<!-- ===========================주소변경=========================-->
-
-										<!--이메일 변경-->
-										<div class="form-group row">
-											<label for="exampleChangeEmail"
-												class="col-sm-3 col-form-label">변경할 이메일</label>
-											<div class="col-sm-9">
-												<input type="email" class="form-control" name="mem_email"
-													id="exampleChangeEmail" placeholder="Change email" />
-											</div>
-										</div>
-										<!-- ===========================이메일 변경=========================-->
+   <!-- main-panel partial  복사시작 복사시작 -->
+      <div class="main-panel">
+        <div class="content-wrapper ">
+          <div class="page-header">
+            <h2 class="page-title">개인정보 수정</h2>
+            <nav aria-label="breadcrumb">
+              <!--
+              <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Forms</a></li>
+              <li class="breadcrumb-item active" aria-current="page"> Form elements </li>
+            </ol>
+          -->
+            </nav>
+          </div>
+          <div class="row">
+            <!--프로필 수정에 대한 정보-->
+            <form class="forms-sample" action="Update.do" method="post">
+              <!--개인정보 수정에 대한 정보-->
+              <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
 
 
-										<div class="comp">
-											<button type="submit" class="btn btn-primary me-2">수정</button>
-											<button type="reset" class="btn btn-light">취소</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-
-
-						<!-- 회원탈퇴 영역-->
-						<form action="Unregister.do" method="post">
-							<div class="col-12 grid-margin stretch-card">
-								<div class="card">
-									<div class="card-body bye-body">
-										<div
-											class="d-flex justify-content-between align-items-center w-100">
-											<h4 class="card-title bye-card">회원탈퇴</h4>
-											<button type="submit" class="btn btn-primary bye-btn">탈퇴하기</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-
-
-					</div>
-				</div>
-				<!-- content-wrapper ends -->
+                    <div class="form-group row">
+                      <label for="exampleNikname" class="col-sm-3 col-form-label">프로필사진</label>
+                      <div class="col-sm-9 image-col">
+                        <div class="image-item">
+                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img1.jpg">
+                          <input type="radio" name="mem_img" value="assets/images/mem_img/img1.jpg" id="img1">
+                          <label for="img1">기본</label>
+                        </div>
+                        <div class="image-item">
+                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img2.jpg">
+                          <input type="radio" name="mem_img" value="assets/images/mem_img/img2.jpg" id="img2">
+                          <label for="img2">냥인간</label>
+                        </div>
+                        <div class="image-item">
+                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img3.jpg">
+                          <input type="radio" name="mem_img" value="assets/images/mem_img/img3.jpg" id="img3">
+                          <label for="img3">수컷</label>
+                        </div>
+                        <div class="image-item">
+                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img4.jpg">
+                          <input type="radio" name="mem_img" value="assets/images/mem_img/img4.jpg" id="img4">
+                          <label for="img4">암컷</label>
+                        </div>
+                        <div class="image-item">
+                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img5.jpg">
+                          <input type="radio" name="mem_img" value="assets/images/mem_img/img5.jpg" id="img5">
+                          <label for="img5">몸짱</label>
+                        </div>
+                        <div class="image-item">
+                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img6.jpg">
+                          <input type="radio" name="mem_img" value="assets/images/mem_img/img6.jpg" id="img6">
+                          <label for="img6">기본몸짱</label>
+                        </div>
+                        </div>
+                    </div>
 
 
 
 
 
-				<!-- ** Main Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!-- ** Footer Area START ** -->
 
 
 
-				<!-- partial:partials/_footer.html -->
-				<footer class="footer">
-					<div
-						class="d-sm-flex justify-content-center justify-content-sm-between">
-						<span
-							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
-						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-							Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
-						</span>
-					</div>
-				</footer>
-				<!-- partial -->
+
+
+                    <!-- 닉네임 변경 -->
+
+                    <div class="form-group row">
+                      <label for="exampleNikname" class="col-sm-3 col-form-label">별명</label>
+                      <div class="col-sm-9">
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="변경할 별명을 입력해 주세요."
+                          name="mem_nick" />
+                      </div>
+                    </div>
+
+                    <!-- 비밀번호-->
+                    <div class="form-group row">
+                      <label for="exampleInputPassword2" class="col-sm-3 col-form-label">비밀번호</label>
+                      <div class="col-sm-9">
+                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="현재 비밀번호를 입력해 주세요."
+                          name="mem_pw" />
+                      </div>
+                    </div>
+                    <!--================================비밀번호===========================-->
+
+                    <!-- 비밀번호 재설정-->
+                    <div class="form-group row">
+                      <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">비밀번호 변경</label>
+                      <div class="col-sm-9">
+                        <input type="password" class="form-control" name="mem_newpw" id="exampleInputConfirmPassword2"
+                          placeholder="변경할 비밀번호를 입력해 주세요." />
+                      </div>
+                    </div>
+                    <!--=============================비밀번호 재설정=======================-->
+                    <!--주소 변경-->
+                    <div class="form-group row">
+                      <label for="exampleChangeAddress" class="col-sm-3 col-form-label">주소 변경</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" name="mem_addr" id="exampleChangeAddress"
+                          placeholder="변경할 주소를 입력해 주세요." />
+                      </div>
+                    </div>
+                    <!-- ===========================주소변경=========================-->
+
+                    <!--이메일 변경-->
+                    <div class="form-group row">
+                      <label for="exampleChangeEmail" class="col-sm-3 col-form-label">이메일 변경</label>
+                      <div class="col-sm-9">
+                        <input type="email" class="form-control" name="mem_email" id="exampleChangeEmail"
+                          placeholder="변경할 이메일을 입력해 주세요." />
+                      </div>
+                    </div>
+                    <!-- ===========================이메일 변경=========================-->
+
+
+                    <div class="comp">
+                      <button type="submit" class="btn btn-primary me-2">수정</button>
+                      <button type="reset" class="btn btn-light">취소</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+
+            <!-- 회원탈퇴 영역-->
+            <form action="Unregister.do" method="post">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body bye-body">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                      <h4 class="card-title bye-card">회원탈퇴</h4>
+                      <button type="submit" class="btn btn-primary bye-btn">탈퇴하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
 
 
 
-				<!-- ** Footer Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+        <!-- ** Main Area END ** -->
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
-			</div>
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- ** Footer Area START ** -->
+
+
+
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
+              © 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
+            </span> <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+              Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
+            </span>
+          </div>
+        </footer>
+        <!-- partial -->
+
+
+
+        <!-- ** Footer Area END ** -->
+        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+      </div>
+      <!-- 작업영역 : main-panel ends 복사끝복사끝 -->
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
@@ -536,15 +459,6 @@ input[type="text"]:focus {
 		<script src="assets/js/dashboard.js"></script>
 		<!-- End custom js for this page -->
 
-		<!-- ë¬ë ¥ ì°ìµ ì¤í¬ë¦½í¸ -->
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-		<script>
-			$(function() {
-				$("#exampleInputDate").datepicker({
-					dateFormat : "yy-mm-dd"
-				});
-			});
-		</script>
+
 </body>
 </html>

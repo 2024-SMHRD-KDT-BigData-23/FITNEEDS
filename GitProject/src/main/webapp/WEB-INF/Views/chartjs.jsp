@@ -22,7 +22,7 @@
 <!-- endinject -->
 <!-- Layout styles -->
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
-<link rel="stylesheet" href="assets/css/demo_1/chartjs.css" />
+<link rel="stylesheet" href="assets/css/demo_1/join/chartjs.css" />
 <!-- End layout styles -->
 <body>
 	<div class="container-scroller">

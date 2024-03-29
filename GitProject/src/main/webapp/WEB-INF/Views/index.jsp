@@ -29,11 +29,11 @@
 <!--*** BASIC CSS END ***-->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!--*** calendar CSS START ***-->
+<!-- ** 달력CSS START-->
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
-<!--*** calendar CSS END ***-->
+<!-- ** 달력CSS END-->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <body>
 	<div class="container-scroller">
@@ -209,200 +209,142 @@
 			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 			<!-- ** Main Area Start ** -->
 
-			<!-- partial -->
+			<!-- partial 여기부터-->
+			<!-- partial 여기부터-->
 			<div class="main-panel">
 				<div class="content-wrapper">
 
 
 					<div class="data-input">
 						<input type="text" class="btn btn-outline-dark bg-white"
-							name="start_date" id="exampleInputDate" placeholder="조회시작일" /> <input
-							type="text" class="btn btn-outline-dark bg-white"
-							id="exampleInputDate1" name="end_date" placeholder="조회종료일" />
+							name="start_date" id="exampleInputDate" placeholder="조회시작일" /> 
+							
+							
+							
+							<input type="text" class="btn btn-outline-dark bg-white"
+							name="end_date" id="exampleInputDate1"  placeholder="조회종료일" />
+						
+						
+						
 						<button type="submit" id="date_check"
 							class="btn btn-dark me-2 btn-bg">적용</button>
 					</div>
 
 
 					<div class="row">
-						<div class="col-xl-3 col-lg-12 stretch-card grid-margin">
-							<div class="row">
-								<div
-									class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
-									<div class="card bg-warning">
-										<div class="card-body px-3 py-4">
-											<div class="d-flex justify-content-between align-items-start">
-												<div class="card-body">
-													<p class="m-0 survey-head">출석률</p>
-													<canvas id="countDateChart"></canvas>
-													<p id="attendanceRate"></p>
-												</div>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div
-									class="col-xl-12 col-md-6 stretch-card grid-margin grid-margin-sm-0 pb-sm-3">
-									<div class="card" style="background-color: #00cccd;">
-										<div class="card-body px-3 py-4">
-											<div class="d-flex justify-content-between align-items-start">
-												<div class="card-body">
-													<h4 class="card-title">오늘의 문구</h4>
-													<p id="change_sentence">여기다 문장 넣을거에요 동희씨</p>
-												</div>
-											</div>
+                  <div class="row">
+                     <div class="col-xl-8 grid-margin stretch-card" >
+                        <div class="card card-calender"style="background-image: url('assets/images/intro/flower2.jpg'); background-size: cover;" >
+                           <div class="card-body">
+                              <div class="row pt-4">
+                                 <div class="col-sm-6 text-sm-right pt-3 pt-sm-0">
+                                    <h3 class="text-white">Clear Sky</h3>
+                                    <h1 class="text-white m-0">이지은님, 산뜻한 봄과 함께 ~ 운동하러 가볼까요?</h1>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 grid-margin stretch-card">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="d-flex justify-content-between align-items-start">
+                                 <div class="card-body">
+                                    <p class="m-0 survey-head">출석률</p>
+                                    <canvas id="countDateChart"></canvas>
+                                    <p id="attendanceRate"></p>
+                                 </div>
+                              </div>
 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 
+                  <div class="row">
+                     <div class="col-lg-6 grid-margin stretch-card">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">신체 데이터 변화량</h4>
+                              <canvas id="lineChart"></canvas>
+                              <p id="averageBMI"></p>
+                              <p id="averageMuscle"></p>
+                              <p id="averageFatPercentage"></p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 grid-margin stretch-card">
+                        <div class="card">
+                           <div class="card-body">
+                              <h4 class="card-title">소모 칼로리 변화량</h4>
+                              <canvas id="lineChartCalories"></canvas>
+                              <p id="maxCalories"></p>
+                              <p id="averageCalories"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 
-
-						<div class="col-xl-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<p class="m-0 survey-head">운동비율</p>
-									<canvas id="pieChart"></canvas>
-									<p id="aerobicCount"></p>
-									<p id="upperBodyCount"></p>
-									<p id="lowerBodyCount"></p>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-5 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<p class="m-0 survey-head">캘린더</p>
-									<div id='calendar-container'>
-										<div id='calendar'></div>
-									</div>
-									<!-- 수정용 모달창 시작 -->
-									<div class="modal fade" id="editModal" tabindex="-1"
-										aria-labelledby="editModalLabel" aria-hidden="true">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="editModalLabel">일정 수정하기</h5>
-													<button type="button" class="btn-close"
-														data-bs-dismiss="modal" aria-label="Close"></button>
-												</div>
-												<div class="modal-body">
-													<div class="mb-3">
-														<label for="editTitle" class="form-label">일정 이름</label> <input
-															type="text" class="form-control" id="editTitle" />
-													</div>
-													<div class="mb-3">
-														<label for="editStart" class="form-label">시작 시간</label> <input
-															type="datetime-local" class="form-control" id="editStart" />
-													</div>
-													<div class="mb-3">
-														<label for="editEnd" class="form-label">종료 시간</label> <input
-															type="datetime-local" class="form-control" id="editEnd" />
-													</div>
-													<div class="mb-3">
-														<label for="editColor" class="form-label">배경 색상</label> <select
-															class="form-select" id="editColor">
-															<option value="red">빨강색</option>
-															<option value="orange">주황색</option>
-															<option value="yellow">노랑색</option>
-															<option value="green">초록색</option>
-															<option value="blue">파랑색</option>
-															<option value="indigo">남색</option>
-															<option value="purple">보라색</option>
-														</select>
-													</div>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-danger"
-														id="deleteEvent">삭제</button>
-													<button type="button" class="btn btn-secondary"
-														data-bs-dismiss="modal">취소</button>
-													<button type="button" class="btn btn-primary"
-														id="saveEditChanges">저장</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 수정용 모달창 끝 -->
-
-									<!-- 추가용 모달창 시작 -->
-									<div class="modal fade" id="exampleModal" tabindex="-1"
-										aria-labelledby="exampleModalLabel" aria-hidden="true">
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLabel">일정 추가하기</h5>
-													<button type="button" class="btn-close"
-														data-bs-dismiss="modal" aria-label="Close"></button>
-												</div>
-												<div class="modal-body">
-													<div class="mb-3">
-														<label for="title" class="form-label">일정 이름</label> <input
-															type="text" class="form-control" id="title" />
-													</div>
-													<div class="mb-3">
-														<label for="start" class="form-label">시작 시간</label> <input
-															type="datetime-local" class="form-control" id="start" />
-													</div>
-													<div class="mb-3">
-														<label for="end" class="form-label">종료 시간</label> <input
-															type="datetime-local" class="form-control" id="end" />
-													</div>
-													<div class="mb-3">
-														<label for="color" class="form-label">배경 색상</label> <select
-															class="form-select" id="color">
-															<option value="red">빨강색</option>
-															<option value="orange">주황색</option>
-															<option value="yellow">노랑색</option>
-															<option value="green">초록색</option>
-															<option value="blue">파랑색</option>
-															<option value="indigo">남색</option>
-															<option value="purple">보라색</option>
-														</select>
-													</div>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-secondary"
-														data-bs-dismiss="modal">취소</button>
-													<button type="button" class="btn btn-primary"
-														id="saveChanges">추가</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- 추가용 모달창 끝 -->
-
-
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">신체 데이터 변화량</h4>
-									<canvas id="lineChart"></canvas>
-									<p id="averageBMI"></p>
-									<p id="averageMuscle"></p>
-									<p id="averageFatPercentage"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title">소모 칼로리 변화량</h4>
-									<canvas id="lineChartCalories"></canvas>
-									<p id="maxCalories"></p>
-									<p id="averageCalories"></p>
-								</div>
-							</div>
-						</div>
-
-					</div>
+                  <div class="row">
+                     <div class="col-xl-6 grid-margin stretch-card">
+                        <div class="card">
+                           <div class="card-body">
+                              <p class="m-0 survey-head">캘린더</p>
+                              <div id='calendar-container'>
+                                 <div id='calendar'></div>
+                              </div>
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                 <div class="modal-dialog">
+                                    <div class="modal-content">
+                                       <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLabel">일정
+                                             추가하기</h5>
+                                          <button type="button" class="btn-close"
+                                             data-bs-dismiss="modal" aria-label="Close"></button>
+                                       </div>
+                                       <div class="modal-body">
+                                          일정이름 : <input type="text" id="title" /><br /> 시작시간 : <input
+                                             type="datetime-local" id="start" /><br /> 종료시간 : <input
+                                             type="datetime-local" id="end" /><br /> 배경색상 : <select
+                                             id="color">
+                                             <option value="red">빨강색</option>
+                                             <option value="orange">주황색</option>
+                                             <option value="yellow">노랑색</option>
+                                             <option value="green">초록색</option>
+                                             <option value="blue">파랑색</option>
+                                             <option value="indigo">남색</option>
+                                             <option value="purple">보라색</option>
+                                          </select>
+                                       </div>
+                                       <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary"
+                                             data-bs-dismiss="modal">취소</button>
+                                          <button type="button" class="btn btn-primary"
+                                             id="saveChanges">추가</button>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 grid-margin stretch-card">
+                        <div class="card">
+                           <div class="card-body">
+                              <p class="m-0 survey-head">운동비율</p>
+                              <canvas id="pieChart"></canvas>
+                              <p id="aerobicCount"></p>
+                              <p id="upperBodyCount"></p>
+                              <p id="lowerBodyCount"></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  
+               </div>
 					<!-- END -->
 				</div>
 				<!-- ** Main Area END ** -->
@@ -443,7 +385,7 @@
 
 
 
-			</div>
+			</div> <!-- 여기까지~~~~~~ -->
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
@@ -496,8 +438,25 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="assets/js/change_sentence.js"></script>
 	<!-- ** calendar JS START ** -->
+	
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
+	<!-- 달력 자바 스크립트 -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$("#exampleInputDate").datepicker({
+				dateFormat : "yy-mm-dd"
+			});
+		});
+		
+		$(function() {
+			$("#exampleInputDate1").datepicker({
+				dateFormat : "yy-mm-dd"
+			});
+		});
+	</script>
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<script>
 		var calendar;
 		var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 변수

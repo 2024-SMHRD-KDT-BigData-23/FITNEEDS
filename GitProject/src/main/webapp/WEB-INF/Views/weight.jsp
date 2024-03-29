@@ -190,14 +190,20 @@
         
 
       -->
-			<!-- partial -->
+			<!-- partial 여기부터! -->
 			<div class="main-panel flower-panel">
 				<div class="content-wrapper">
 					<div class="row">
 						<div class="col-3 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<div class="card card-stat  mb-3">
+
+
+
+
+
+
+									<div class="card card-stat  mb-3" style="background-image: url('assets/images/banner/flower.jpg'); background-size: cover;">
 										<div class="card-body">
 											<div class="text-color">
 												<div class="flot-bar-wrapper">
@@ -205,33 +211,39 @@
 													<h3 class="font-weight-bold">
 														이지은님,<br> <a>벚꽃</a>과 함께<br> <a>운동</a>하러 가요!
 													</h3>
-													<!-- 사진위치 -->
-													<div class="nav-profile-image">
-														<img src="assets/images/faces/flower.jpg" alt="flower" />
-														<!--change to offline or busy as needed-->
-													</div>
-													<!-- 사진위치 -->
+
 												</div>
 											</div>
 										</div>
+
 									</div>
-									
-									<form action="InputCh.do" method="post" onsubmit="return validateForm();">
-									<div class="login-form-flower">
-										<label class="text-talk">체중을 언제 측정하셨나요? </i></label>
-										<input type="text" class="form-control" id="exampleInputDate"
-											placeholder="YYYY-MM-DD" name="ch_date"/>
-										<label class="text-talk">측정한 체중을 입력해주세요
-										<i class="mdi mdi-heart text-danger"></i>
-										</label>
-										<input type="text" name="weight" class="form-control"
+
+									<div class="login-form-flower" action="ExerciseInputServlet"
+										method="post">
+										<label class="text-talk">체중을 언제 측정하셨나요? </i></label> <input
+											type="text" class="form-control" id="exampleInputDate"
+											placeholder="YYYY-MM-DD" /> <label class="text-talk">측정한
+											체중을 입력해주세요 <i class="mdi mdi-heart text-danger"></i>
+										</label> <input type="text" name="exReps" class="form-control"
 											id="exampleInputConfirmPassword2" placeholder="체중(kg)" />
+
 									</div>
 									<div class="flower-submit">
 										<button type="submit" class="badge badge-danger"
 											style="display: block; margin: 0 auto;">운동완료</button>
 									</div>
-									</form>
+
+
+
+
+
+
+
+
+
+
+
+
 								</div>
 							</div>
 						</div>
@@ -244,18 +256,17 @@
 						class="d-sm-flex justify-content-center justify-content-sm-between">
 						<span
 							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2021 <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>.
-							All rights reserved.
+							© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
 						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted
-							& made with <i class="mdi mdi-heart text-danger"></i>
+							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+							Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
 						</span>
 					</div>
 				</footer>
 				<!-- partial -->
-			</div>
-			<!-- main-panel ends -->
-			<!-- main-panel ends -->
+			</div> <!-- 여기까지~ -->
+
+
 		</div>
 		<!-- page-body-wrapper ends -->
 	</div>

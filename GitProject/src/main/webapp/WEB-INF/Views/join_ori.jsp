@@ -1,9 +1,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page import="java.security.SecureRandom"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ page import="java.net.URLEncoder"%>
-<%@ page import="java.math.BigInteger"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.net.URLEncoder" %>
+<%@ page import="java.math.BigInteger" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,14 +35,11 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
 	rel="stylesheet">
 
-
 <!-- Libraries Stylesheet -->
 <link href="assets/lib/join/animate.min.css" rel="stylesheet">
 
-
 <!-- Customized Bootstrap Stylesheet -->
 <link href="assets/css/demo_1/join/bootstrap.min.css" rel="stylesheet">
-
 
 <!-- Template Stylesheet -->
 <link href="assets/css/demo_1/join/style.css" rel="stylesheet">
@@ -54,15 +50,17 @@
 </head>
 
 <body>
-	<%
-	String clientId = "gbLrG9lQfNuwCCfz4nge";//애플리케이션 클라이언트 아이디값";
-	String redirectURI = URLEncoder.encode("http://localhost:8080/GitProject/fitcallback.do", "UTF-8");
-	SecureRandom random = new SecureRandom();
-	String state = new BigInteger(130, random).toString();
-	String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code" + "&client_id=" + clientId
-			+ "&redirect_uri=" + redirectURI + "&state=" + state;
-	session.setAttribute("state", state);
-	%>
+<%
+   String clientId = "gbLrG9lQfNuwCCfz4nge";//애플리케이션 클라이언트 아이디값";
+   String redirectURI = URLEncoder.encode("http://localhost:8080/GitProject/fitcallback.do", "UTF-8");
+   SecureRandom random = new SecureRandom();
+   String state = new BigInteger(130, random).toString();
+   String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code"
+         + "&client_id=" + clientId
+         + "&redirect_uri=" + redirectURI
+         + "&state=" + state;
+   session.setAttribute("state", state);
+%>
 	<!-- Carousel Start -->
 	<div class="container-fluid p-0 mb-5">
 		<div id="header-carousel" class="carousel slide"
@@ -104,33 +102,12 @@
 										</div>
 
 										<!-- 로그인input END -->
-
-										<!-- #아람 : Naver버튼 START-->
 										
-										
-				
-										<a href="#" onclick="goNaver()" class="btn animated slideInDown"> 
-										
-										<img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG" /> </a>
-			
-										
-										<!-- #아람 : Naver버튼 END -->
-
-
-										<button id="login-form-submit"
-											class="btn1 animated slideInDown" href="#">
-										<a href="#" onclick="goNaver()" 
-
-
-class="btn animated slideInDown"> 
-<img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG" /> </a>
-										</button>
-
-
-
-
-
-
+										<!-- Naver버튼 -->
+						 <a href="#" onclick="goNaver()">
+                            <img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/>
+                         </a>
+                         <!-- Naver버튼 -->
 										<button type="submit" id="login-form-submit"
 											class="btn btn-primary py-2 px-3 animated slideInDown"
 											href="#">
@@ -155,11 +132,11 @@ class="btn animated slideInDown">
 				</div>
 			</div>
 		</div>
-
-
-
-
-
+		
+		
+		
+		
+		
 
 		<!-- ////////////////////////////////////////////////////// page1 start ////////////////////////////////////////////////////////////////////  -->
 
@@ -177,12 +154,12 @@ class="btn animated slideInDown">
 							<div>
 								<div class="row g-3">
 									<div class="col-12">
-										<form class="join-form" action="Join.do" method="post">
-											<div class="form-floating">
-												<input type="text" class="form-control bg-light border-0"
-													name="mem_id" placeholder="아이디를 입력해 주세요."> <label>아이디</label>
+									<form class="join-form" action="Join.do" method="post">
+										<div class="form-floating">
+											<input type="text" class="form-control bg-light border-0"
+												name="mem_id" placeholder="아이디를 입력해 주세요."> <label>아이디</label>
 
-											</div>
+										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-floating">
@@ -239,10 +216,10 @@ class="btn animated slideInDown">
 							<p class="fs-5 text-white-50 mb-5 animated slideInDown">회원가입에
 								필요한 기본정보입력 해주세요.</p>
 							<div>
-
+									
 								<div class="row g-3">
 									<div class="col-12">
-										<div class="form-floating">
+												<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
 												id="name" placeholder="" name="mem_name" required> <label
 												for="name" value="${name}">이름</label>
@@ -252,34 +229,33 @@ class="btn animated slideInDown">
 										<div class="form-floating" id="divBirthday">
 											<input type="text"
 												class="input form-control bg-light border-0"
-												id="birthdayInput" placeholder=""
-												value="${birthyear}-${birthday}" maxlength="10"
+												id="birthdayInput" placeholder="" value="${birthyear}-${birthday}" maxlength="10"
 												name="mem_birthdate" /> <label for="text">생년월일</label>
 										</div>
 									</div>
-
-									<div class="col-12">
+									
+										<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
 												placeholder="주소를 입력해 주세요" name="mem_addr" required>
 											<label>주소</label>
 										</div>
 									</div>
-
-
+									
+									
 									<div class="col-12">
 										<div class="form-floating" id="divBirthday">
 											<input type="text"
-												class="input form-control bg-light border-0" placeholder=""
-												value="${mobile}" name="mem_phone" /> <label for="text">핸드폰번호</label>
+												class="input form-control bg-light border-0"
+												 placeholder="" value="${mobile}" 
+												name="mem_phone" /> <label for="text">핸드폰번호</label>
 										</div>
 									</div>
-
+									
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
-												placeholder="이메일" name="mem_email" value="${email}">
-											<label>이메일</label>
+												placeholder="이메일" name="mem_email" value="${email}"> <label>이메일</label>
 										</div>
 									</div>
 								</div>
@@ -365,7 +341,7 @@ class="btn animated slideInDown">
 								<div
 									class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
 									<i class="fa fa-check"></i>
-
+									
 								</div>
 							</button>
 							</form>
@@ -376,18 +352,17 @@ class="btn animated slideInDown">
 		</div>
 		<!-- page3 end -->
 	</div>
-	</div>
-	</div>
+</div>
+</div>
 	<!-- Carousel End -->
 	<!-- JavaScript Libraries -->
 	<script src="assets/js/join/joinJs.js"></script>
 	<script src="assets/js/join/bootstrap.bundle.js"></script>
 </body>
 <script>
-   let apiURL = "<%=apiURL%>
-	";
-
-	function goNaver() {
+   let apiURL = "<%=apiURL%>";
+   
+   function goNaver() {
 		location.href = apiURL;
 	}
 </script>
