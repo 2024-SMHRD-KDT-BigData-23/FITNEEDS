@@ -11,6 +11,7 @@
 		<typeAlias type="com.test.model.StdDataVO" alias="stdvo" />
 		<typeAlias type="com.test.model.CalendarEventVO" alias="cevo"/>
 		<typeAlias type="com.test.model.SentenceVO" alias="stvo"/>
+		<typeAlias type="com.test.model.MonthImgVO" alias="mivo"/>
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
@@ -32,5 +33,6 @@
 		<mapper resource="com/test/database/StdMapper.xml" />
 		<mapper resource="com/test/database/CalendarMapper.xml"/>
 		<mapper resource="com/test/database/SentenceMapper.xml"/>
+		<mapper resource="com/test/database/MonthImgMapper.xml"/>
 	</mappers>
 </configuration>

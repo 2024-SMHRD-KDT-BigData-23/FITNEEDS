@@ -203,15 +203,16 @@
 
 
 
-									<div class="card card-stat  mb-3" style="background-image: url('assets/images/banner/flower.jpg'); background-size: cover;">
+									<div class="card card-stat mb-3" style="background-size: cover;">
 										<div class="card-body">
 											<div class="text-color">
 												<div class="flot-bar-wrapper">
 													<h6>WEIGHT CHANGE</h6>
 													<h3 class="font-weight-bold">
-														이지은님,<br> <a>벚꽃</a>과 함께<br> <a>운동</a>하러 가요!
+														${member.mem_nick}<br>
 													</h3>
-
+													<h3 class="font-weight-bold" id ="month_img_content">
+													</h3>
 												</div>
 											</div>
 										</div>
@@ -299,6 +300,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="assets/js/check_ch.js"></script>
+	<script src="assets/js/month_img.js"></script>
 	<script>
 		$(function() {
 			$("#exampleInputDate").datepicker({

@@ -240,7 +240,8 @@
                               <div class="row pt-4">
                                  <div class="col-sm-6 text-sm-right pt-3 pt-sm-0">
                                     <h3 class="text-white">Clear Sky</h3>
-                                    <h1 class="text-white m-0">이지은님, 산뜻한 봄과 함께 ~ 운동하러 가볼까요?</h1>
+                                    <h1 class="text-white m-0">${member.mem_nick}님</h1>
+                                    <h1 class="text-white m-0" id="change_sentence"></h1>
                                  </div>
                               </div>
                            </div>

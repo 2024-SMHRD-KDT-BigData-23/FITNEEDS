@@ -14,6 +14,7 @@ import com.test.controller.Command;
 import com.test.controller.ComparePage;
 import com.test.controller.DeleteCalendarEvent;
 import com.test.controller.MainPage;
+import com.test.controller.MonthImg;
 import com.test.controller.NaverJoinController;
 import com.test.controller.ReservePage;
 import com.test.controller.SaveCalendarEvent;
@@ -54,6 +55,7 @@ public class FrontController extends HttpServlet {
 		map.put("CalendarSave.do", new SaveCalendarEvent()); //일정추가하기
 		map.put("CalendarUpdate.do", new UpdateCalendarEvent()); //일정 수정하기
 		map.put("CalendarDelete.do", new DeleteCalendarEvent()); //일정 삭제하기
+		map.put("MonthImg.do", new MonthImg()); // 월별 사진 가져오기
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
