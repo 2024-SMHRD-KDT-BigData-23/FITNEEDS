@@ -75,8 +75,8 @@
 <style>
 #my_modal {
 	display: none;
-	width: 1000px;
-	height: 1000px;
+	width: 650px;
+	height: 650px;
 	padding: 20px 60px;
 	background-color: #fefefe;
 	border: 1px solid #888;
@@ -88,6 +88,23 @@
 	position: absolute;
 	top: 10px;
 	right: 10px;
+}
+
+.scrollable-section {
+	overflow: auto;
+	max-height: 200px; /* 필요한 경우 최대 높이 설정 */
+}
+
+#reservation_section {
+    border: 1px solid #ccc; /* 테두리 추가 */
+    padding: 10px; /* 내부 여백 설정 */
+    border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
+}
+
+#vc_border {
+    border: 1px solid #ccc; /* 테두리 추가 */
+    padding: 10px; /* 내부 여백 설정 */
+    border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
 }
 </style>
 
@@ -112,22 +129,25 @@
 
 	<!-- 모달 -->
 		<div id="my_modal">
+
+		<div id="vc_border">
 			<h2 id="modal"></h2>
 			<br>
 			<p id="vc_price_modal"></p>
-			<span id="total_price"></span><span id="buy"></span> 
-	
-			<br>
-			<h2>예약</h2>
-
-			<br> 
-			<button id="reserve_button" name='pt_commit'>예약하기</button>
-			<p id='rsv_date'></p> 
-			<p id='rsv_date_commit'></p> 		
-			<input type='hidden' id="pt_commit" name='pt_commit'>	
-			<input type='hidden' id="pt_status">	
-			<a class="modal_close_btn">닫기</a>
+			<span id="total_price"></span><span id="buy"></span> <br> <br>
 		</div>
+		<br> <br>
+		<div id="reservation_section" class="scrollable-section">
+			<h2>예약</h2>
+			<br>
+			<p id='rsv_date'></p>
+			<button id="reserve_button" name='pt_commit'>예약하기</button>
+			<p id='rsv_date_commit'></p>
+			<input type='hidden' id="pt_commit" name='pt_commit'> <input
+				type='hidden' id="pt_status"> <a class="modal_close_btn">닫기</a>
+		</div>
+
+	</div>
 
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ** SIDE BAR SECTION ** -->

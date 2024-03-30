@@ -25,9 +25,9 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
                 $('#vc_price').append("<p>짐이용권 " + res[i].vc_name + " => " + res[i].vc_price + "원</p>");
 
                 if (i == 0 || i == 1) {
-                    $('#vc_price_modal').append("<p><input type='radio' name='voucher' data-price='" + res[i].vc_price + "' data-vc-idx='" + res[i].vc_idx + "'>" + "짐 이용권 " + res[i].vc_name + " => " + res[i].vc_price + "원</p>");
+                    $('#vc_price_modal').append("<p><input type='radio' name='voucher' data-price='" + res[i].vc_price + "' data-vc-idx='" + res[i].vc_idx + "'>"+ " 짐 이용권 " + res[i].vc_name + " => " + res[i].vc_price + "원</p>");
                 } else {
-                    $('#vc_price_modal').append("<p><input type='radio' name='PT' data-price='" + res[i].vc_price + "' data-vc-idx='" + res[i].vc_idx + "'>" + "PT 이용권 " + res[i].vc_name + " => " + res[i].vc_price + "원</p>");
+                    $('#vc_price_modal').append("<p><input type='radio' name='PT' data-price='" + res[i].vc_price + "' data-vc-idx='" + res[i].vc_idx + "'>" + " PT 이용권 " + res[i].vc_name + " => " + res[i].vc_price + "원</p>");
                 }
             }
 
