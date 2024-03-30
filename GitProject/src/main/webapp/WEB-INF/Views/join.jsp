@@ -62,6 +62,7 @@
 	String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code" + "&client_id=" + clientId
 			+ "&redirect_uri=" + redirectURI + "&state=" + state;
 	session.setAttribute("state", state);
+	
 	%>
 	<!-- Carousel Start -->
 	<div class="container-fluid p-0 mb-5">
@@ -105,16 +106,18 @@
 
 										<!-- 로그인input END -->
 
-										<!-- #아람 : Naver버튼 START-->
+										<!-- #아람 : Naver버튼 START
 										<a href="#" onclick="goNaver()"
 											class="btn animated slideInDown"> 
 											<img height="50"
 											src="http://static.nid.naver.com/oauth/small_g_in.PNG" />
 										</a>
-										<!-- #아람 : Naver버튼 END -->
+										 #아람 : Naver버튼 END -->
 
 
-
+											<!-- naverButton -->
+											<a href="<%=apiURL%>"	class="btn animated slideInDown">
+											<img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
 
 
 
@@ -371,12 +374,5 @@
 	<script src="assets/js/join/joinJs.js"></script>
 	<script src="assets/js/join/bootstrap.bundle.js"></script>
 </body>
-<script>
-   let apiURL = "<%=apiURL%>
-	";
 
-	function goNaver() {
-		location.href = apiURL;
-	}
-</script>
 </html>

@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let $buttonMemberJoinPro = document.querySelector("#button-memberJoinPro");
     $buttonMemberJoinPro.addEventListener("click", validateMemberJoin);
+    
+    /* 네이버 로그인 버튼클릭시 이동 */
+	function goNaver() {
+	location.href = apiURL;
+	}
 
     /* 아이디 유효성 검사 */
     function validateMemberIdInput() {
