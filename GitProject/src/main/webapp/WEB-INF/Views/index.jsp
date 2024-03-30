@@ -289,7 +289,6 @@
 							<div class="col-xl-6 grid-margin stretch-card">
 								<div class="card">
 									<div class="card-body">
-										<p class="m-0 survey-head">캘린더</p>
 										<div id='calendar-container'>
 											<div id='calendar'></div>
 										</div>
@@ -396,7 +395,7 @@
 							<div class="col-xl-6 grid-margin stretch-card">
 								<div class="card">
 									<div class="card-body">
-										<p class="m-0 survey-head">운동비율</p>
+										<h4 class="card-title">운동비율</h4>
 										<canvas id="pieChart"></canvas>
 										<p id="aerobicCount"></p>
 										<p id="upperBodyCount"></p>
