@@ -17,6 +17,7 @@ import com.test.controller.ComparePage;
 import com.test.controller.CountDate;
 import com.test.controller.DeleteCalendarEvent;
 import com.test.controller.FetchCalendarEvent;
+import com.test.controller.FitCenterInfo;
 import com.test.controller.GetSentence;
 import com.test.controller.MainPage;
 import com.test.controller.MonthImg;
@@ -70,6 +71,7 @@ public class FrontController extends HttpServlet {
 		map.put("CountDate.do", new CountDate()); // 출석률
 		map.put("MyData.do", new MyData()); // 개인 데이터
 		map.put("StdData.do", new StdData()); // 표준 데이터
+		map.put("FitCenterInfo.do", new FitCenterInfo()); // 센터정보 가져오기
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
