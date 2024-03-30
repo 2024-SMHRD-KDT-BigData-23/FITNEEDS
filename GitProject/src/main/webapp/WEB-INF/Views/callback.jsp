@@ -96,12 +96,14 @@
 			String mobile = responseNode.path("mobile").asText();
 			String birthyear = responseNode.path("birthyear").asText();
 			String birthday = responseNode.path("birthday").asText();
+			String nickName = responseNode.path("nickName").asText();
 	
 			System.out.println("Email: " + email);
 			System.out.println("Name: " + name);
 			System.out.println("Mobile: " + mobile);
 			System.out.println("Birthyear: " + birthyear);
 			System.out.println("Birthday: " + birthday);
+			System.out.println("nickName: " + nickName);
 	
 			////////////////////////////////////
 			// 회원 가입여부 판단 by email. check if already joined by email.
@@ -116,12 +118,14 @@
 			    String encodedMobile = URLEncoder.encode(mobile, "UTF-8");
 			    String encodedBirthyear = URLEncoder.encode(birthyear, "UTF-8");
 			    String encodedBirthday = URLEncoder.encode(birthday, "UTF-8");
+			    String encodednickName = URLEncoder.encode(nickName, "UTF-8");
 
 			    String redirectUrl = "NaverJoin.do?email=" + encodedEmail 
 			                         + "&name=" + encodedName 
 			                         + "&mobile=" + encodedMobile 
 			                         + "&birthyear=" + encodedBirthyear 
-			                         + "&birthday=" + encodedBirthday;
+			                         + "&birthday=" + encodedBirthday
+			                         + "&nickName=" + encodednickName;
 
 			    response.sendRedirect(redirectUrl);
 			} catch (UnsupportedEncodingException e) {

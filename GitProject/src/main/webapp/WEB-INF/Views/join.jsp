@@ -106,15 +106,7 @@
 
 										<!-- 로그인input END -->
 
-										<!-- #아람 : Naver버튼 START
-										<a href="#" onclick="goNaver()"
-											class="btn animated slideInDown"> 
-											<img height="50"
-											src="http://static.nid.naver.com/oauth/small_g_in.PNG" />
-										</a>
-										 #아람 : Naver버튼 END -->
-
-
+									
 											<!-- naverButton -->
 											<a href="<%=apiURL%>"	class="btn animated slideInDown">
 											<img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG"/></a>
@@ -186,7 +178,7 @@
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
-												id="mem_nick" name="mem_nick" placeholder="Your Email">
+												id="mem_nick" name="mem_nick" placeholder="Your Email" value="${nickName}">
 											<label for="email">닉네임</label>
 										</div>
 									</div>
@@ -235,17 +227,17 @@
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
-												id="name" placeholder="" name="mem_name" required> <label
-												for="name" value="${name}">이름</label>
+												id="name" placeholder="" name="mem_name" value="${name}" required > <label
+												for="name" >이름</label>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-floating" id="divBirthday">
 											<input type="text"
 												class="input form-control bg-light border-0"
-												id="birthdayInput" placeholder=""
-												value="${birthyear}-${birthday}" maxlength="10"
-												name="mem_birthdate" /> <label for="text">생년월일</label>
+												id="birthdayInput" placeholder="생년월일"
+												 maxlength="10"
+												name="mem_birthdate"  value="${birthyear}-${birthday}"> <label for="text">생년월일</label>
 										</div>
 									</div>
 
@@ -259,10 +251,10 @@
 
 
 									<div class="col-12">
-										<div class="form-floating" id="divBirthday">
-											<input type="text"
-												class="input form-control bg-light border-0" placeholder=""
-												value="${mobile}" name="mem_phone" /> <label for="text">핸드폰번호</label>
+										<div class="form-floating" >
+											<input type="text" class="form-control bg-light border-0"
+											 placeholder="핸드폰번호" name="mem_phone" value="${mobile}"> 
+											 <label for="text">핸드폰번호</label>
 										</div>
 									</div>
 

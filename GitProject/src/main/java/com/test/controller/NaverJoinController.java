@@ -13,10 +13,17 @@ public class NaverJoinController implements Command {
 
 		String email = request.getParameter("email");
 		String name = request.getParameter("name");
-		System.out.println("email: " + email + " name: " + name);
+		String mobile = request.getParameter("mobile");
+		String birthday = request.getParameter("birthday");
+		String birthyear = request.getParameter("birthyear");
+		String nickName = request.getParameter("nickName");
 
 		request.setAttribute("email", email);
 		request.setAttribute("name", name);
+		request.setAttribute("mobile", mobile);
+		request.setAttribute("birthday", birthday);
+		request.setAttribute("birthyear", birthyear);
+		request.setAttribute("nickName", nickName);
 		return "join";
 
 	}
