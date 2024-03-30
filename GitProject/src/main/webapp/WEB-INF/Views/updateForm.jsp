@@ -302,18 +302,6 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
                     <!-- 닉네임 변경 -->
 
                     <div class="form-group row">
