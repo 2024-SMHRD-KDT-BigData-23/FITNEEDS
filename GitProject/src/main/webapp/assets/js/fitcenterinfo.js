@@ -9,7 +9,7 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
     // 클릭한 트레이너의 이름을 서버에 전송하여 트레이너가 속한 센터 정보 가져오기
     $.ajax({
         type: 'POST',
-        url: 'FitCenterInfo', // 서버의 URL을 지정해야 합니다.
+        url: 'FitCenterInfo.do', // 서버의 URL을 지정해야 합니다.
         data: trnData,
         dataType: "JSON",
         success: function(response) {

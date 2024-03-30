@@ -8,7 +8,7 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 
 	$.ajax({
 		type: 'POST',
-		url: 'RsvInfo',
+		url: 'RsvInfo.do',
 		data: trnData,
 		dataType: "JSON",
 		success: function(res) {
@@ -26,7 +26,7 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 			};
 			$.ajax({
 				type: 'POST',
-				url: 'Rsv_Date',
+				url: 'Rsv_Date.do',
 				data: get_trn_idx,
 				success: function(res) {
 					console.log('Rsv_Date 요청 성공:', res);
@@ -77,7 +77,7 @@ $('#reserve_button').on('click', function() {
 
 	$.ajax({
 		type: 'POST',
-		url: 'RsvCommit', // 예약 처리를 담당하는 서블릿 URL
+		url: 'RsvCommit.do', // 예약 처리를 담당하는 서블릿 URL
 		contentType: 'application/json',
 		data: jsonData, // JSON 형식의 데이터 전송
 		success: function(res) {

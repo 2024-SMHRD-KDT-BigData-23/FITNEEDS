@@ -8,7 +8,7 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 
     $.ajax({
         type: 'POST',
-        url: 'Voucher',
+        url: 'Voucher.do',
         data: trnData,
         dataType: "JSON",
         success: function(res) {
@@ -80,7 +80,7 @@ $('#buy').off('click').on('click',function() {
     // AJAX를 사용하여 Purchase 서블릿으로 데이터 전송
     $.ajax({
         type: 'POST',
-        url: 'Purchase',
+        url: 'Purchase.do',
         data: { "get_vc_idx": resvc_idxs },
         success: function(response) {
             console.log('구매 요청 성공:', response);

@@ -17,18 +17,24 @@ import com.test.controller.ComparePage;
 import com.test.controller.CountDate;
 import com.test.controller.DeleteCalendarEvent;
 import com.test.controller.FetchCalendarEvent;
+import com.test.controller.FitCenterInfo;
 import com.test.controller.GetSentence;
 import com.test.controller.MainPage;
 import com.test.controller.MonthImg;
 import com.test.controller.MyData;
 import com.test.controller.NaverJoinController;
+import com.test.controller.Purchase;
 import com.test.controller.ReservePage;
+import com.test.controller.RsvCommit;
+import com.test.controller.RsvInfo;
+import com.test.controller.Rsv_Date;
 import com.test.controller.SaveCalendarEvent;
 import com.test.controller.StdData;
 import com.test.controller.Unregister;
 import com.test.controller.Update;
 import com.test.controller.UpdateCalendarEvent;
 import com.test.controller.UpdatePage;
+import com.test.controller.Voucher;
 import com.test.controller.WeightPage;
 import com.test.controller.InputCh;
 import com.test.controller.InputEx;
@@ -70,6 +76,13 @@ public class FrontController extends HttpServlet {
 		map.put("CountDate.do", new CountDate()); // 출석률
 		map.put("MyData.do", new MyData()); // 개인 데이터
 		map.put("StdData.do", new StdData()); // 표준 데이터
+		map.put("FitCenterInfo.do", new FitCenterInfo()); // 센터정보 가져오기
+		map.put("Purchase.do", new Purchase()); // 클릭된 이용권 정보 넘겨주기
+		map.put("Voucher.do", new Voucher()); // 이용권 정보 모달창에 띄우기
+		map.put("RsvInfo.do", new RsvInfo()); // 예약 정보 가져오기
+		map.put("Rsv_Date.do", new Rsv_Date()); // 예약 날짜 가져오기
+		map.put("RsvCommit.do", new RsvCommit()); 
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
