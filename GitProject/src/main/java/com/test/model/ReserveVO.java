@@ -17,6 +17,16 @@ public class ReserveVO {
 	private String cancel_yn;
 	// 취소 사유
 	private String cancel_reason;
+	
+	private String endTime;
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
 
 	public int getRes_idx() {
 		return res_idx;

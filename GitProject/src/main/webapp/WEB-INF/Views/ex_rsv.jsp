@@ -121,8 +121,8 @@
 			<h2>예약</h2>
 
 			<br> 
-			<p id='rsv_date'></p> 
 			<button id="reserve_button" name='pt_commit'>예약하기</button>
+			<p id='rsv_date'></p> 
 			<p id='rsv_date_commit'></p> 		
 			<input type='hidden' id="pt_commit" name='pt_commit'>	
 			<input type='hidden' id="pt_status">	

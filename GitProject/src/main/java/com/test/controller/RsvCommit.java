@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.database.DAO;
+import com.test.model.CalendarEventVO;
 import com.test.model.MemberVO;
 import com.test.model.ReserveVO;
 
@@ -43,13 +44,17 @@ public class RsvCommit implements Command {
             // JSON 데이터 파싱
             ObjectMapper mapper = new ObjectMapper();
             ReserveVO[] reservations = mapper.readValue(jsonData.toString(), ReserveVO[].class);
-
+            String title = "PT";
+            String backgroundColor = "red";
+            
             // 예약 정보 처리
             if (reservations != null && reservations.length > 0) {
                 DAO dao = new DAO();
                 for (ReserveVO reservation : reservations) {
                     dao.RsvCommit(mem_id, reservation.getPt_idx(), reservation.getCreated_at(),
                             reservation.getRes_status());
+                    CalendarEventVO calvo = new CalendarEventVO(mem_id, title, reservation.getCreated_at(), reservation.getEndTime(), backgroundColor);
+                    dao.saveCalendarEvent(calvo);
                 }
                 response.getWriter().println("예약이 완료되었습니다.");
             } else {
