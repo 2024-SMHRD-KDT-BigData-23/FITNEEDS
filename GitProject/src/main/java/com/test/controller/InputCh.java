@@ -13,7 +13,7 @@ import com.test.model.MemberVO;
 public class InputCh implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 
-		double weight = (double)Integer.parseInt(request.getParameter("weight"));
+		double weight = Double.parseDouble(request.getParameter("weight"));
 		String ch_date = request.getParameter("ch_date");
 		int ex_calories_sum = 0;
 		

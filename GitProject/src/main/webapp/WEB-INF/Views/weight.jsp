@@ -65,9 +65,9 @@
 				<li class="pt-2 pb-1"><span class="nav-item-head">MENU
 						</MENU>
 				</span></li>
-				
-				
-					<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 				<!--*** side nar > nav >  사용자 Menu start ***-->
 				<li class="nav-item"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
@@ -141,9 +141,9 @@
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
 								<div class="nav-profile-text">MYPAGE</div>
-								
-								
-								
+
+
+
 						</a>
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
@@ -154,30 +154,30 @@
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
-								
+
 								<!-- 변경부분 -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="WeightPage.do"> <i
 									class="mdi mdi-poll-box me-3"></i> 나의체중입력
 								</a>
 								<!-- 변경부분 -->
-								
+
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
 								</a>
 								<div class="dropdown-divider"></div>
 							</div>
-								
-								
+
+
 						</li>
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="fitindex.do"> <i
 								class="mdi mdi-home-circle"></i>
 						</a></li>
 					</ul>
-					
-					
+
+
 					<button
 						class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
 						type="button" data-toggle="offcanvas">
@@ -201,9 +201,8 @@
 
 
 
-
-
-									<div class="card card-stat mb-3" style="background-size: cover;">
+									<div class="card card-stat mb-3"
+										style="background-size: cover;">
 										<div class="card-body">
 											<div class="text-color">
 												<div class="flot-bar-wrapper">
@@ -211,28 +210,29 @@
 													<h3 class="font-weight-bold">
 														${member.mem_nick}<br>
 													</h3>
-													<h3 class="font-weight-bold" id ="month_img_content">
-													</h3>
+													<h3 class="font-weight-bold" id="month_img_content"></h3>
 												</div>
 											</div>
 										</div>
 
 									</div>
+									<form action="InputCh.do" method="post"
+										onsubmit="return validateForm();">
+										<div class="login-form-flower">
+											<label class="text-talk">체중을 언제 측정하셨나요? </i></label> <input
+												type="text" class="form-control" id="exampleInputDate"
+												name="ch_date" placeholder="YYYY-MM-DD" /> <label
+												class="text-talk">측정한 체중을 입력해주세요 <i
+												class="mdi mdi-heart text-danger"></i>
+											</label> <input type="text" name="weight" class="form-control"
+												id="exampleInputConfirmPassword2" placeholder="체중(kg)" />
 
-									<div class="login-form-flower" action="ExerciseInputServlet"
-										method="post">
-										<label class="text-talk">체중을 언제 측정하셨나요? </i></label> <input
-											type="text" class="form-control" id="exampleInputDate"
-											placeholder="YYYY-MM-DD" /> <label class="text-talk">측정한
-											체중을 입력해주세요 <i class="mdi mdi-heart text-danger"></i>
-										</label> <input type="text" name="exReps" class="form-control"
-											id="exampleInputConfirmPassword2" placeholder="체중(kg)" />
-
-									</div>
-									<div class="flower-submit">
-										<button type="submit" class="badge badge-danger"
-											style="display: block; margin: 0 auto;">운동완료</button>
-									</div>
+										</div>
+										<div class="flower-submit">
+											<button type="submit" class="badge badge-danger"
+												style="display: block; margin: 0 auto;">운동완료</button>
+										</div>
+									</form>
 
 
 
@@ -265,7 +265,8 @@
 					</div>
 				</footer>
 				<!-- partial -->
-			</div> <!-- 여기까지~ -->
+			</div>
+			<!-- 여기까지~ -->
 
 
 		</div>
