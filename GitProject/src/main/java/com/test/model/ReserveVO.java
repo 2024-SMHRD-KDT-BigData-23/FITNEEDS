@@ -96,4 +96,16 @@ public class ReserveVO {
 
 	public ReserveVO() {
 	}
+	
+	public ReserveVO(String mem_id, String created_at) {
+	}
+	
+	public ReserveVO(String mem_id,int pt_idx,String created_at,String res_status) {
+		this.pt_idx = pt_idx;
+		this.mem_id = mem_id;
+		this.created_at = created_at;
+		this.res_status = res_status;
+	}
+	
+	
 }

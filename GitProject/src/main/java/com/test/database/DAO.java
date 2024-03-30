@@ -9,11 +9,17 @@ import com.test.model.AccChangeVO;
 import com.test.model.AccExerciseVO;
 import com.test.model.CalendarEventVO;
 import com.test.model.ExerciseVO;
+import com.test.model.FitnessCenterVO;
 import com.test.model.MemberVO;
 import com.test.model.MonthImgVO;
+import com.test.model.PersonalTrainingVO;
+import com.test.model.PurchaseVO;
+import com.test.model.ReserveVO;
 import com.test.model.SaltVO;
 import com.test.model.SentenceVO;
 import com.test.model.StdDataVO;
+import com.test.model.TrainerVO;
+import com.test.model.VoucherVO;
 
 public class DAO {
 
@@ -207,4 +213,55 @@ public class DAO {
 		session.close();
 		return result;
 	}
+	
+	// 트레이너 입력하면 트레이너 정보 가져오기
+	public TrainerVO selectTrainer(String trn_name) {
+	    SqlSession session = factory.openSession();
+	    TrainerVO result =  session.selectOne("selectTrainer",trn_name);
+	    session.close();
+	    return result;
+	}
+	
+	//  트레이너 이름에 해당하는 피트니스센터가져오기
+	public FitnessCenterVO fit_center(String trn_name) {
+        SqlSession session = factory.openSession();
+        FitnessCenterVO result =session.selectOne("fit_center", trn_name);
+        return result;
+        }
+	// 사용권 정보 불러오기
+	public ArrayList<VoucherVO> voucher(String trn_name) {
+        SqlSession session = factory.openSession();
+        ArrayList<VoucherVO> list =new ArrayList<>(session.selectList("voucher", trn_name));
+        return list;
+        }
+	// 트레이너들 불러오기
+	public ArrayList<TrainerVO> select_trn_list(){
+		SqlSession session = factory.openSession();
+		ArrayList<TrainerVO> list = new ArrayList<>(session.selectList("select_trn_list"));
+		return list;
+	}
+	
+	// DAO 클래스의 insert_Purchase 메서드
+	public int insert_Purchase(PurchaseVO vo) {
+	    SqlSession session = factory.openSession(true);
+	    int row = session.insert("insert_Purchase", vo); 
+	    session.close();
+	    return row;
+	}
+
+	public ArrayList<PersonalTrainingVO> PT(int trn_idx) {
+		SqlSession session = factory.openSession();
+        ArrayList<PersonalTrainingVO> list =new ArrayList<>(session.selectList("PT", trn_idx));
+        return list;
+		
+	}
+
+	public int RsvCommit(String mem_id, int pt_idx, String created_at, String res_status) {
+	    SqlSession session = factory.openSession(true);
+	    ReserveVO vo = new ReserveVO(mem_id,pt_idx, created_at, res_status);
+	    int row = session.insert("RsvCommit", vo); // 예약 정보 DB에 저장
+	    session.close();
+	    return row;
+	}
+
 }

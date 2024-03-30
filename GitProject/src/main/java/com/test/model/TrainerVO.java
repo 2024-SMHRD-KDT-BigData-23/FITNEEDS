@@ -10,25 +10,41 @@ public class TrainerVO {
 	// 트레이너 정보
 	private String trn_info;
 	// 트레이너 경력
-	private String trn_carrier;
+	private String trn_career;
 	// 센터 식별자
 	private int center_idx;
 	// 트레이너 사진
 	private String trn_img;
 	// 트레이너 입사일자
 	private String joined_at;
+	
+	private String selectTrainer;
 
-	public TrainerVO(int trn_idx, String trn_name, String trn_phone, String trn_info, String trn_carrier,
+	public TrainerVO(int trn_idx, String trn_name, String trn_phone, String trn_info, String trn_career,
 			int center_idx, String trn_img, String joined_at) {
 		this.trn_idx = trn_idx;
 		this.trn_name = trn_name;
 		this.trn_phone = trn_phone;
 		this.trn_info = trn_info;
-		this.trn_carrier = trn_carrier;
+		this.trn_career = trn_career;
 		this.center_idx = center_idx;
 		this.trn_img = trn_img;
 		this.joined_at = joined_at;
 	}
+	
+	
+
+	public String getSelectTrainer() {
+		return selectTrainer;
+	}
+
+
+
+	public void setSelectTrainer(String selectTrainer) {
+		this.selectTrainer = selectTrainer;
+	}
+
+
 
 	public int getTrn_idx() {
 		return trn_idx;
@@ -62,12 +78,12 @@ public class TrainerVO {
 		this.trn_info = trn_info;
 	}
 
-	public String getTrn_carrier() {
-		return trn_carrier;
+	public String gettrn_career() {
+		return trn_career;
 	}
 
-	public void setTrn_carrier(String trn_carrier) {
-		this.trn_carrier = trn_carrier;
+	public void settrn_career(String trn_career) {
+		this.trn_career = trn_career;
 	}
 
 	public int getCenter_idx() {
@@ -95,5 +111,8 @@ public class TrainerVO {
 	}
 
 	public TrainerVO() {
+		
 	}
+
+	
 }

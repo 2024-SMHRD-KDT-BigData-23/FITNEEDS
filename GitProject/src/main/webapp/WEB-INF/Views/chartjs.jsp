@@ -265,22 +265,21 @@
 					
 					
 					<!-- 사용자 다이어트,뉴스,루틴 추천 -->
-					<!-- 2행 1열 -->
-					<div class="row">
-						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body" id="diet">
-								
-									<h2>Diet</h2>
-									
-									<a href="#" id="dietLink">
-										<h4 class="card-title" id="dietTitle">Title</h4> 
-										<img src="" alt="Diet Image" id="dietImage">
-									</a>
-									<canvas id="barChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
+					 <!-- 2행 1열 -->
+               <div class="row">
+                  <div class="col-lg-4 grid-margin stretch-card">
+                     <div class="card">
+                        <div class="card-body" id="diet">
+                           <h2>Diet</h2>
+                           <a href="#" id="dietLink">
+                              <h4 class="card-title" id="dietTitle">Title</h4> 
+                              <img src="" alt="Diet Image" id="dietImage" class="charimg"  vertical-align: middle;
+   								height:100%; width: 100%;>
+                           </a>
+                           <canvas id="barChart" style="height: 250px;"></canvas>
+                        </div>
+                     </div>
+                  </div>
 
 						<!-- 2행  2열 -->
 						<div class="col-lg-4 grid-margin stretch-card">
@@ -289,7 +288,8 @@
 									<h2>News</h2>
 									<a href="#" id="newsLink">
 										<h4 class="card-title" id="newsTitle">Title</h4> <img src=""
-										alt="News Image" id="newsImage">
+										alt="News Image" id="newsImage" vertical-align: middle;
+   								 width: 100%;>
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
@@ -303,7 +303,8 @@
 									<h2>Routine</h2>
 									<a href="#" id="routineLink">
 										<h4 class="card-title" id="routineTitle">Title</h4> <img
-										src="" alt="Routine Image" id="routineImage">
+										src="" alt="Routine Image" id="routineImage" vertical-align: middle;
+   								 width: 100%;>
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
