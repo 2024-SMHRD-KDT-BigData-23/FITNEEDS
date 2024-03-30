@@ -319,7 +319,7 @@
                     <div class="form-group row">
                       <label for="exampleNikname" class="col-sm-3 col-form-label">별명</label>
                       <div class="col-sm-9">
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="변경할 별명을 입력해 주세요."
+                        <input type="text" class="form-control" id="exampleInputPassword2" placeholder="변경할 별명을 입력해 주세요."
                           name="mem_nick" />
                       </div>
                     </div>
