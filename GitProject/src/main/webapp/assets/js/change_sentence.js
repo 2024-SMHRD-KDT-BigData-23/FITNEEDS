@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$.ajax({
-		url: "GetSentence",
+		url: "GetSentence.do",
 		type: "POST", // GET 방식으로 요청
 		dataType: "json", // 응답 데이터의 타입이 JSON임을 명시
 		success: function(res) {

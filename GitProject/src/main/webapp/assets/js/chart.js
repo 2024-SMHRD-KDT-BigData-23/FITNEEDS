@@ -37,7 +37,7 @@ $(function() {
 	// 출석률 출력
 	function countDate() {
 		$.ajax({
-			url: "CountDate",
+			url: "CountDate.do",
 			type: 'POST',
 			dataType: 'json',
 			success: (res) => {
@@ -112,7 +112,7 @@ $(function() {
 	// 운동 종류 데이터 차트 출력
 	function fetchStartExChart(start_date, end_date) {
 		$.ajax({
-			url: "AccEx",
+			url: "AccEx.do",
 			data: { "start_date": start_date, "end_date": end_date },
 			type: 'POST',
 			dataType: 'json',
@@ -199,7 +199,7 @@ $(function() {
 	// 신체 변화량 데이터 차트 출력
 	function fetchStartChChart(start_date, end_date) {
 		$.ajax({
-			url: "AccCh",
+			url: "AccCh.do",
 			data: { "start_date": start_date, "end_date": end_date },
 			type: 'POST',
 			dataType: 'json',
@@ -463,7 +463,7 @@ $(function() {
 
 		// 개인 데이터 가져오기
 		$.ajax({
-			url: "MyData",
+			url: "MyData.do",
 			type: 'POST',
 			dataType: 'json',
 			success: (res) => {
@@ -477,7 +477,7 @@ $(function() {
 				// 중첩 ajax를 이용하여 차트를 그림
 				// 표준데이터 가져오기
 				$.ajax({
-					url: "StdData",
+					url: "StdData.do",
 					type: 'POST',
 					dataType: 'json',
 					success: (res) => {

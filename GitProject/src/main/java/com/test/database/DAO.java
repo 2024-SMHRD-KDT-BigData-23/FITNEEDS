@@ -11,6 +11,7 @@ import com.test.model.CalendarEventVO;
 import com.test.model.ExerciseVO;
 import com.test.model.FitnessCenterVO;
 import com.test.model.MemberVO;
+import com.test.model.MonthImgVO;
 import com.test.model.PersonalTrainingVO;
 import com.test.model.PurchaseVO;
 import com.test.model.ReserveVO;
@@ -158,7 +159,7 @@ public class DAO {
 		session.close();
 		return result;
 	}
-	
+
 	// 네이버 회원가입 시 이메일가져오기
 	public MemberVO getMemberByEmail(String email) {
 		SqlSession session = factory.openSession();
@@ -166,37 +167,37 @@ public class DAO {
 		session.close();
 		return result;
 	}
-	
+
 	// 캘린더 이벤트를 저장하는 메서드
-    public int saveCalendarEvent(CalendarEventVO eventVO) {
-        SqlSession session = factory.openSession(true);
-        int row = session.insert("insertCalendarEvent", eventVO);
-        session.close();
-        return row;
-    }
-    
-    // 캘린더에 저장된 값을 가져오는 메서드
-    public ArrayList<CalendarEventVO> fetchCalendarEvent(String mem_id){
-       SqlSession session = factory.openSession();
-       ArrayList<CalendarEventVO> list = new ArrayList<>(session.selectList("fetchCalendarEvent", mem_id));
-       session.close();
-       return list;
-    }
-    
+	public int saveCalendarEvent(CalendarEventVO eventVO) {
+		SqlSession session = factory.openSession(true);
+		int row = session.insert("insertCalendarEvent", eventVO);
+		session.close();
+		return row;
+	}
+
+	// 캘린더에 저장된 값을 가져오는 메서드
+	public ArrayList<CalendarEventVO> fetchCalendarEvent(String mem_id) {
+		SqlSession session = factory.openSession();
+		ArrayList<CalendarEventVO> list = new ArrayList<>(session.selectList("fetchCalendarEvent", mem_id));
+		session.close();
+		return list;
+	}
+
 	// 캘린더에 저장된 값을 수정하는 메서드
 	public void updateCalendarEvent(CalendarEventVO vo) {
 		SqlSession session = factory.openSession(true);
 		session.update("updateCalendarEvent", vo);
 		session.close();
 	}
-	
+
 	// 캘린더에 저장된 값을 삭제하는 메서드
 	public void deleteCalendarEvent(int calIdx) {
 		SqlSession session = factory.openSession(true);
 		session.delete("deleteCalendarEvent", calIdx);
 		session.close();
 	}
-	
+
 	// 문구 가져오기
 	public SentenceVO getSentence(int idx) {
 		SqlSession session = factory.openSession();
@@ -204,8 +205,15 @@ public class DAO {
 		session.close();
 		return result;
 	}
-	
 
+	// 해당월의 이미자와 문구 가져오기
+	public MonthImgVO getMonthImgSen(int month) {
+		SqlSession session = factory.openSession();
+		MonthImgVO result = session.selectOne("get_month_img", month);
+		session.close();
+		return result;
+	}
+	
 	// 트레이너 입력하면 트레이너 정보 가져오기
 	public TrainerVO selectTrainer(String trn_name) {
 	    SqlSession session = factory.openSession();
@@ -213,6 +221,7 @@ public class DAO {
 	    session.close();
 	    return result;
 	}
+	
 	//  트레이너 이름에 해당하는 피트니스센터가져오기
 	public FitnessCenterVO fit_center(String trn_name) {
         SqlSession session = factory.openSession();
@@ -232,7 +241,6 @@ public class DAO {
 		return list;
 	}
 	
-	
 	// DAO 클래스의 insert_Purchase 메서드
 	public int insert_Purchase(PurchaseVO vo) {
 	    SqlSession session = factory.openSession(true);
@@ -244,7 +252,6 @@ public class DAO {
 	public ArrayList<PersonalTrainingVO> PT(int trn_idx) {
 		SqlSession session = factory.openSession();
         ArrayList<PersonalTrainingVO> list =new ArrayList<>(session.selectList("PT", trn_idx));
-       
         return list;
 		
 	}
