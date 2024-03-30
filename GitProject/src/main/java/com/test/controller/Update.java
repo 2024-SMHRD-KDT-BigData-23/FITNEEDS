@@ -33,12 +33,13 @@ public class Update implements Command{
 		
 		// 세션에 저장된 비밀번호와 찾아낸 비밀번호가 같을 경우에 실행
 		if(membervo.getMem_pw().equals(encry)) {
+			if(mem_newpw != "") {
 			String salt = Encrypt.getSalt();
 			String newEncry = Encrypt.getEncrypt(mem_newpw, salt);
 			// 새로운 비밀번호 저장
 			saltvo.setMem_salt(salt);
 			membervo.setMem_pw(newEncry);
-			
+			}
 			// 수정된 정보 저장
 			if(mem_nick != "") {
 				membervo.setMem_nick(mem_nick);
@@ -49,9 +50,9 @@ public class Update implements Command{
 			if(mem_email != "") {
 				membervo.setMem_email(mem_email);
 			}
-			if(mem_img != "") {
-				membervo.setMem_img(mem_img);
-			}
+			if (mem_img != null && !mem_img.isEmpty()) {
+                membervo.setMem_img(mem_img);
+            }
 		}
 		dao.updateMem(membervo);
 		dao.updateSalt(saltvo);
