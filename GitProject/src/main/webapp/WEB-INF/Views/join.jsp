@@ -106,25 +106,12 @@
 										<!-- 로그인input END -->
 
 										<!-- #아람 : Naver버튼 START-->
-										
-										
-				
-										<a href="#" onclick="goNaver()" class="btn animated slideInDown"> 
-										
-										<img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG" /> </a>
-			
-										
+										<a href="#" onclick="goNaver()"
+											class="btn animated slideInDown"> <img height="50"
+											src="http://static.nid.naver.com/oauth/small_g_in.PNG" />
+										</a>
 										<!-- #아람 : Naver버튼 END -->
 
-
-										<button id="login-form-submit"
-											class="btn1 animated slideInDown" href="#">
-										<a href="#" onclick="goNaver()" 
-
-
-class="btn animated slideInDown"> 
-<img height="50" src="http://static.nid.naver.com/oauth/small_g_in.PNG" /> </a>
-										</button>
 
 
 
