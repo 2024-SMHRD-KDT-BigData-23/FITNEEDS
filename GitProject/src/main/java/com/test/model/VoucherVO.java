@@ -9,6 +9,7 @@ public class VoucherVO {
 	private String vc_price;
 	// 센터 식별자
 	private int center_idx;
+		 
 
 	public int getVc_idx() {
 		return vc_idx;
@@ -51,4 +52,10 @@ public class VoucherVO {
 
 	public VoucherVO() {
 	}
+	
+	public VoucherVO getVoucher(String vc_idx) {
+		return null;
+	    
+	}
+	
 }

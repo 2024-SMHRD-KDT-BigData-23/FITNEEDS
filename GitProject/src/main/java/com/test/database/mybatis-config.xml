@@ -32,5 +32,11 @@
 		<mapper resource="com/test/database/StdMapper.xml" />
 		<mapper resource="com/test/database/CalendarMapper.xml"/>
 		<mapper resource="com/test/database/SentenceMapper.xml"/>
+		<mapper resource="com/test/database/RsvInfoMapper.xml"/>
+		<mapper resource="com/test/database/FitnessCenterMapper.xml"/>
+		<mapper resource="com/test/database/VoucherMapper.xml"/>
+		<mapper resource="com/test/database/PurchaseMapper.xml"/>
+		<mapper resource="com/test/database/PtTimeMapper.xml"/>
+		<mapper resource="com/test/database/RsvCommitMapper.xml"/>
 	</mappers>
 </configuration>

@@ -51,4 +51,9 @@ public class PurchaseVO {
 
 	public PurchaseVO() {
 	}
+
+	public PurchaseVO(String mem_id, int vc_idx) {
+		this.mem_id = mem_id;
+		this.vc_idx = vc_idx;
+	}
 }

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +72,24 @@
 
 
 <!-- ********************  CSS 작업가능 영역 END *************************-->
+<style>
+#my_modal {
+	display: none;
+	width: 1000px;
+	height: 1000px;
+	padding: 20px 60px;
+	background-color: #fefefe;
+	border: 1px solid #888;
+	border-radius: 10px;
+	padding: 20px 60px;
+}
 
+#my_modal .modal_close_btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+</style>
 
 
 
@@ -92,16 +110,34 @@
 
 <body>
 
+	<!-- 모달 -->
+		<div id="my_modal">
+			<h2 id="modal"></h2>
+			<br>
+			<p id="vc_price_modal"></p>
+			<span id="total_price"></span><span id="buy"></span> 
+	
+			<br>
+			<h2>예약</h2>
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** SIDE BAR SECTION ** -->
+			<br> 
+			<p id='rsv_date'></p> 
+			<button id="reserve_button" name='pt_commit'>예약하기</button>
+			<p id='rsv_date_commit'></p> 		
+			<input type='hidden' id="pt_commit" name='pt_commit'>	
+			<input type='hidden' id="pt_status">	
+			<a class="modal_close_btn">닫기</a>
+		</div>
+
+	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<!-- ** SIDE BAR SECTION ** -->
 
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
-				<li class="nav-item nav-profile border-bottom">
-					<a href="#" class="nav-link flex-column">
+				<li class="nav-item nav-profile border-bottom"><a href="#"
+					class="nav-link flex-column">
 						<div class="nav-profile-image">
 							<img src="${member.mem_img}" alt="profile" />
 							<!--change to offline or busy as needed-->
@@ -116,9 +152,8 @@
 						src="assets/images/logo.png" alt="" /> <img
 						class="sidebar-brand-logomini" src="assets/images/logo-mini.png"
 						alt="" />
-						<div class="small font-weight-light pt-1">
-						fitness responsive web design
-						</div>
+						<div class="small font-weight-light pt-1">fitness responsive
+							web design</div>
 				</a>
 					<form class="d-flex align-items-center" action="#"></form></li>
 				<li class="pt-2 pb-1"><span class="nav-item-head">MENU
@@ -154,12 +189,12 @@
 			</ul>
 		</nav>
 
-<!-- ** SIDE BAR SECTION END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- ** SIDE BAR SECTION END ** -->
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** TOP BAR SECTION ** -->
+		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<!-- ** TOP BAR SECTION ** -->
 
 		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
@@ -220,13 +255,6 @@
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
-									<!-- 변경부분 -->
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="WeightPage.do"> <i
-									class="mdi mdi-poll-box me-3"></i> 나의체중입력
-								</a>
-								<!-- 변경부분 -->
-								
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
@@ -246,8 +274,8 @@
 				</div>
 			</nav>
 
-<!-- ** TOP BAR SECTION END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+			<!-- ** TOP BAR SECTION END ** -->
+			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
@@ -257,7 +285,6 @@
 
 
 
-					<!-- *********** my health form ******************* -->
 					<div class="content-wrapper">
 						<div class="row">
 
@@ -272,89 +299,40 @@
 
 													<div class="owl-carousel owl-theme">
 
-														<div class="owl-carousel-info-wrap item">
-															<img src="assets/images/reserv/pt_1.jpg"
-																class="owl-carousel-image img-fluid" alt="">
 
-															<div class="owl-carousel-info">
-																<h4 class="mb-2">Personal trainer | 권혁</h4>
-																<span class="btn btn-outline-primary btn-fw"> #헬스
-																</span> <span class="btn btn-outline-secondary btn-fw">
-																	#바디프로필 </span>
-															</div>
+														<c:forEach var="trainer" items="${trainer_info}">
+															<c:if test="${trainer.trn_name != null}">
 
-
-														</div>
-
-														<div class="owl-carousel-info-wrap item">
-															<img src="assets/images/reserv/pt_2.jpg"
-																class="owl-carousel-image img-fluid" alt="">
-
-															<div class="owl-carousel-info">
-																<h4 class="mb-2">Personal trainer | 설현</h4>
-																<span class="btn btn-outline-primary btn-fw"> #헬스
-																</span> <span class="btn btn-outline-danger btn-fw">
-																	#필라테스 </span>
-															</div>
-														</div>
-
-														<div class="owl-carousel-info-wrap item">
-															<img src="assets/images/reserv/pt_3.jpg"
-																class="owl-carousel-image img-fluid" alt="">
-
-															<div class="owl-carousel-info">
-																<h4 class="mb-2">Personal trainer | 고윤정</h4>
-																<span class="btn btn-outline-primary btn-fw"> #헬스
-																</span> <span class="btn btn-outline-info"> #재활의학과 </span>
-															</div>
-
-
-														</div>
-
-														<div class="owl-carousel-info-wrap item">
-															<img src="assets/images/reserv/pt_4.jpg"
-																class="owl-carousel-image img-fluid" alt="">
-
-															<div class="owl-carousel-info">
-																<h4 class="mb-2">Personal trainer | 마동석</h4>
-																<span class="btn btn-outline-primary btn-fw"> #헬스
-																</span> <span class="btn btn-outline-success  btn-fw">
-																	#벌크업 </span>
-															</div>
-
-
-														</div>
+																<div class="owl-carousel-info-wrap item"
+																	id="selectTrainer">
+																	<img src="assets/images/reserv/pt_4.jpg"
+																		class="owl-carousel-image img-fluid" alt="">
+																	<div class="owl-carousel-info">
+																		<h4>${trainer.trn_name}</h4>
+																		<span class="btn btn-outline-primary btn-fw">
+																			#헬스 </span> <span class="btn btn-outline-danger btn-fw">
+																			${trainer.trn_info} </span>
+																	</div>
+																</div>
+															</c:if>
+														</c:forEach>
 
 
 
 
 
-														<div class="owl-carousel-info-wrap item">
-															<img src="assets/images/reserv/pt_5.jpg"
-																class="owl-carousel-image img-fluid" alt="">
 
-															<div class="owl-carousel-info">
-																<h4 class="mb-2">Personal trainer | 추성훈</h4>
-																<span class="btn btn-outline-primary btn-fw"> #헬스</span> 
-																<span class="btn btn-outline-danger btn-fw"> #격투기 </span> 
-																<span class="btn btn-outline-success  btn-fw"> #수상경력 </span>
-															</div>
-														</div>
-														
-														
-														
-														
-														
-														
+
 													</div>
 												</div>
 											</div>
 										</div>
+									</section>
 								</div>
 							</div>
-							</section>
 
 							<!-- Slide end -->
+
 
 
 							<!-- 예약권 START -->
@@ -366,136 +344,88 @@
 
 										<div class="col-lg-12 col-12">
 											<div class="section-title-wrap mb-5">
-												<h4 class="section-title">회원권 선택</h4>
+												<h4 class="section-title">트레이너 상세정보</h4>
 											</div>
 										</div>
 
 										<div class="col-lg-6 col-12 mb-4 mb-lg-0">
 											<div class="custom-block d-flex">
-												<div class="">
+												<div>
 													<div class="custom-block-icon-wrap">
 														<div class="section-overlay"></div>
-														<a href="detail-page.jsp" class="custom-block-image-wrap">
-															<img src="images/podcast/11683425_4790593.jpg"
-															class="custom-block-image img-fluid" alt=""> <a
-															href="#" class="custom-block-icon"> <i
-																class="bi-play-fill"></i>
-														</a>
-														</a>
-													</div>
 
-													<div class="mt-2">
-														<a href="#" class="btn custom-btn"> Subscribe </a>
+
+
 													</div>
 												</div>
 
 												<div class="custom-block-info">
-													<div class="custom-block-top d-flex mb-1">
-														<small class="me-4"> <i
-															class="bi-clock-fill custom-icon"></i> 50 Minutes
-														</small> <small>Episode <span class="badge">15</span></small>
-													</div>
-
-													<h5 class="mb-2">
-														<a href="detail-page.jsp"> Modern Vintage </a>
-													</h5>
+													<h5 class="mb-2"></h5>
 
 													<div class="profile-block d-flex">
-														<img
-															src="images/profile/woman-posing-black-dress-medium-shot.jpg"
-															class="profile-block-image img-fluid" alt="">
 
-														<p>
-															Elsa <img src="images/verified.png"
-																class="verified-image img-fluid" alt=""> <strong>Influencer</strong>
-														</p>
+
+
+
+														<div>
+
+															<p id="get_trn"></p>
+															<p id="trn_phone"></p>
+															<p id="trn_info"></p>
+															<p id="trn_career"></p>
+															<input type='hidden' id="trn_idx">
+														</div>
 													</div>
 
-													<p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
 
-													<div
-														class="custom-block-bottom d-flex justify-content-between mt-3">
-														<a href="#" class="bi-headphones me-1"> <span>120k</span>
-														</a> <a href="#" class="bi-heart me-1"> <span>42.5k</span>
-														</a> <a href="#" class="bi-chat me-1"> <span>11k</span>
-														</a> <a href="#" class="bi-download"> <span>50k</span>
-														</a>
-													</div>
-												</div>
-
-												<div class="d-flex flex-column ms-auto">
-													<a href="#" class="badge ms-auto"> <i class="bi-heart"></i>
-													</a> <a href="#" class="badge ms-auto"> <i
-														class="bi-bookmark"></i>
-													</a>
 												</div>
 											</div>
 										</div>
 
-										<div class="col-lg-6 col-12">
+
+										<div class="col-lg-6 col-12 mb-4 mb-lg-0">
 											<div class="custom-block d-flex">
-												<div class="">
+												<div>
 													<div class="custom-block-icon-wrap">
 														<div class="section-overlay"></div>
-														<a href="detail-page.jsp" class="custom-block-image-wrap">
-															<img src="images/podcast/12577967_02.jpg"
-															class="custom-block-image img-fluid" alt=""> <a
-															href="#" class="custom-block-icon"> <i
-																class="bi-play-fill"></i>
-														</a>
-														</a>
-													</div>
 
-													<div class="mt-2">
-														<a href="#" class="btn custom-btn"> Subscribe </a>
+
+
 													</div>
 												</div>
 
 												<div class="custom-block-info">
-													<div class="custom-block-top d-flex mb-1">
-														<small class="me-4"> <i
-															class="bi-clock-fill custom-icon"></i> 15 Minutes
-														</small> <small>Episode <span class="badge">45</span></small>
-													</div>
-
-													<h5 class="mb-2">
-														<a href="detail-page.jsp"> Daily Talk </a>
-													</h5>
+													<h5 class="mb-2"></h5>
 
 													<div class="profile-block d-flex">
-														<img
-															src="images/profile/handsome-asian-man-listening-music-through-headphones.jpg"
-															class="profile-block-image img-fluid" alt="">
 
-														<p>
-															William <strong>Vlogger</strong>
-														</p>
+
+
+
+														<div>
+
+															<p id="center_name"></p>
+															<p id="center_tel"></p>
+															<p id="center_addr"></p>
+															<p id="vc_price"></p>
+															<button id="popup_open_btn">이용권 구매하기</button>
+
+														</div>
 													</div>
 
-													<p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
 
-													<div
-														class="custom-block-bottom d-flex justify-content-between mt-3">
-														<a href="#" class="bi-headphones me-1"> <span>140k</span>
-														</a> <a href="#" class="bi-heart me-1"> <span>22.4k</span>
-														</a> <a href="#" class="bi-chat me-1"> <span>16k</span>
-														</a> <a href="#" class="bi-download"> <span>62k</span>
-														</a>
-													</div>
-												</div>
-
-												<div class="d-flex flex-column ms-auto">
-													<a href="#" class="badge ms-auto"> <i class="bi-heart"></i>
-													</a> <a href="#" class="badge ms-auto"> <i
-														class="bi-bookmark"></i>
-													</a>
 												</div>
 											</div>
 										</div>
-
 									</div>
 								</div>
+
+
+
+
+
 							</section>
+
 
 
 
@@ -514,31 +444,38 @@
 
 						</div>
 					</div>
-<!-- ** Main Area END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				
-				
+					
+			<input type="hidden" name="get_vc_idx" id="get_vc_idx">
 	
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** Footer Area START ** -->			
-				
-				
-				
-				<!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2024 <a
-                target="_blank">Fitneeds</a>. All rights reserved.</span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Fitneeds team & smhrd <i
-                class="mdi mdi-heart text-danger"></i></span>
-          </div>
-        </footer>
-				<!-- partial -->
-				
-				
-	
-<!-- ** Footer Area END ** -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+					<!-- ** Main Area END ** -->
+					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+					<!-- ** Footer Area START ** -->
+
+
+
+					<!-- partial:partials/_footer.html -->
+					<footer class="footer">
+						<div
+							class="d-sm-flex justify-content-center justify-content-sm-between">
+							<span
+								class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
+								© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
+							</span> <span
+								class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+								Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
+							</span>
+						</div>
+					</footer>
+					<!-- partial -->
+
+
+
+					<!-- ** Footer Area END ** -->
+					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 					<!-- partial -->
 				</div>
 				<!-- main-panel ends -->
@@ -576,7 +513,66 @@
 		<script src="assets/js/reserv/jquery.min.js"></script>
 		<script src="assets/js/reserv/owl.carousel.min.js"></script>
 		<script src="assets/js/reserv/custom.js"></script>
+		<script src="assets/js/rsv.js"></script>
+		<script src="assets/js/fitcenterinfo.js"></script>
+		<script src="assets/js/voucher.js"></script>
+		<script>
+			function modal(id) {
+				var zIndex = 9999;
+				var modal = document.getElementById(id);
 
+				// 모달 div 뒤에 희끄무레한 레이어
+				var bg = document.createElement('div');
+				bg.setStyle({
+					position : 'fixed',
+					zIndex : zIndex,
+					left : '0px',
+					top : '0px',
+					width : '100%',
+					height : '100%',
+					overflow : 'auto',
+					// 레이어 색갈은 여기서 바꾸면 됨
+					backgroundColor : 'rgba(0,0,0,0.4)'
+				});
+				document.body.append(bg);
+
+				// 닫기 버튼 처리, 시꺼먼 레이어와 모달 div 지우기
+				modal.querySelector('.modal_close_btn').addEventListener(
+						'click', function() {
+							bg.remove();
+							modal.style.display = 'none';
+						});
+
+				modal.setStyle({
+					position : 'fixed',
+					display : 'block',
+					boxShadow : '0 2px 3px 0 rgba(34,36,38,0.15)',
+
+					// 시꺼먼 레이어 보다 한칸 위에 보이기
+					zIndex : zIndex + 1,
+
+					// div center 정렬
+					top : '50%',
+					left : '50%',
+					transform : 'translate(-50%, -50%)',
+					msTransform : 'translate(-50%, -50%)',
+					webkitTransform : 'translate(-50%, -50%)'
+				});
+			}
+
+			// Element 에 style 한번에 오브젝트로 설정하는 함수 추가
+			Element.prototype.setStyle = function(styles) {
+				for ( var k in styles)
+					this.style[k] = styles[k];
+				return this;
+			};
+
+			document.getElementById('popup_open_btn').addEventListener('click',
+					function() {
+						// 모달창 띄우기
+						modal('my_modal');
+					});
+		</script>
 
 
 		<!--  *******************************  JS작업영역 END *******************************  -->
