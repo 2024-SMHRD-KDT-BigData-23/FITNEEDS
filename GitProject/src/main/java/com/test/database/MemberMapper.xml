@@ -69,7 +69,7 @@
 	<!-- 회원체크 by email -->
 	<select id="get_member_by_email" parameterType="string"
 			resultType="com.test.model.MemberVO">
-		select mem_id, mem_pw, mem_name, mem_phone, mem_addr, mem_email, mem_nick, height, weight from tb_member
+		select mem_id, mem_pw, mem_name, mem_phone, mem_addr, mem_email, mem_nick, height, weight, mem_img from tb_member
 		where mem_email = #{mem_email}
 	</select>
 </mapper>

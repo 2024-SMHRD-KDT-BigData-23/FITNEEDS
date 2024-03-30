@@ -108,7 +108,7 @@
 			DAO dao = new DAO();
 			MemberVO result = dao.getMemberByEmail(email);
 			if (result == null) {
-				// 회원가입
+				//간편회원가입 input태그에 값 담기
 		
 			try {
 			    String encodedEmail = URLEncoder.encode(email, "UTF-8");
@@ -130,7 +130,7 @@
 	
 			} else {
 				// 로그인 // 사용자 정보를 세션에 저장
-				session.setAttribute("mem_login", result);
+				session.setAttribute("member", result);
 				response.sendRedirect("fitindex.do");
 			}
 			/////////////////////////////////
