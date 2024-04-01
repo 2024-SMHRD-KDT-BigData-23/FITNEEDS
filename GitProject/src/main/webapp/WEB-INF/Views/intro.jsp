@@ -20,7 +20,12 @@
         <nav class="menu">
             <ul>
                 <li><img role="button" src="assets/images/intro/rogo.png" alt="FitNeeds" class="headerfitImg"></li>
-                <li><a href="http://localhost:8080/GitProject/fitjoin.do"><img role="button" class="headerImg"><h3>서비스이용해보세요!</h3></a></li>
+                <li>
+                	<a href="http://localhost:8080/GitProject/fitjoin.do">
+                		<img role="button" src ="assets/images/intro/introbtn2.png" 
+                		class="headerImg">
+                	</a>
+                	</li>
             </ul>
         </nav>
     </header>

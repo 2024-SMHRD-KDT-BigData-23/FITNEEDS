@@ -247,7 +247,7 @@
 						<div class="row">
 							<div class="col-xl-8 grid-margin stretch-card">
 								<div class="card card-calender"
-									style="background-image: url('assets/images/intro/flower2.jpg'); background-size: cover;">
+									style="background-image: url('assets/images/intro/flower.gif'); background-size: cover;">
 									<div class="card-body">
 										<div class="row pt-4">
 											<div class="col-sm-6 text-sm-right pt-3 pt-sm-0">
