@@ -263,7 +263,7 @@
 
 
 									<div class="col-12">
-										<div class="form-floating">
+										<div class="form-floating"> 
 											<input type="text" class="form-control bg-light border-0"
 												id="mem_phone" placeholder="핸드폰번호" name="mem_phone">
 											<label for="text">핸드폰번호</label>
