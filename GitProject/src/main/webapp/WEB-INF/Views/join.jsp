@@ -160,9 +160,9 @@
 							<div>
 								<div class="row g-3">
 									<div class="col-12">
-										<form class="join-form" action="Join.do" method="post">
+										<form class="join-form" action="Join.do" method="post" onsubmit="return validateForm()">
 											<div class="form-floating">
-												<input type="text" class="form-control bg-light border-0"
+												<input type="text" class="form-control bg-light border-0" id="mem_id"
 													name="mem_id" placeholder="아이디를 입력해 주세요."> <label>아이디</label>
 
 											</div>
@@ -178,7 +178,7 @@
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
-												id="mem_nick" name="mem_nick" placeholder="Your Email" value="${nickName}">
+												id="mem_nick" name="mem_nick" placeholder="Your Email">
 											<label for="email">닉네임</label>
 										</div>
 									</div>
@@ -194,7 +194,7 @@
 								</div> 로그인
 							</a> <a
 								class="btn btn-primary py-2 px-3 animated slideInDown carousel-control-next"
-								type="button" data-bs-target="#header-carousel"
+								type="button" data-bs-target="#header-carousel" id="1st-next"
 								data-bs-slide="next" disabled> Next Step
 								<div
 									class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -227,7 +227,7 @@
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
-												id="name" placeholder="" name="mem_name" value="${name}" required > <label
+												id="mem_name" placeholder="" name="mem_name" required > <label
 												for="name" >이름</label>
 										</div>
 									</div>
@@ -235,15 +235,15 @@
 										<div class="form-floating" id="divBirthday">
 											<input type="text"
 												class="input form-control bg-light border-0"
-												id="birthdayInput" placeholder="생년월일"
+												id="mem_birthday" placeholder="생년월일"
 												 maxlength="10"
-												name="mem_birthdate"  value="${birthyear}-${birthday}"> <label for="text">생년월일</label>
+												name="mem_birthdate"> <label for="text">생년월일</label>
 										</div>
 									</div>
 
 									<div class="col-12">
 										<div class="form-floating">
-											<input type="text" class="form-control bg-light border-0"
+											<input type="text" class="form-control bg-light border-0" id="mem_addr"
 												placeholder="주소를 입력해 주세요" name="mem_addr" required>
 											<label>주소</label>
 										</div>
@@ -252,16 +252,16 @@
 
 									<div class="col-12">
 										<div class="form-floating" >
-											<input type="text" class="form-control bg-light border-0"
-											 placeholder="핸드폰번호" name="mem_phone" value="${mobile}"> 
+											<input type="text" class="form-control bg-light border-0" id="mem_phone"
+											 placeholder="핸드폰번호" name="mem_phone"> 
 											 <label for="text">핸드폰번호</label>
 										</div>
 									</div>
 
 									<div class="col-12">
 										<div class="form-floating">
-											<input type="text" class="form-control bg-light border-0"
-												placeholder="이메일" name="mem_email" value="${email}">
+											<input type="text" class="form-control bg-light border-0" id="mem_email"
+												placeholder="이메일" name="mem_email">
 											<label>이메일</label>
 										</div>
 									</div>
@@ -277,7 +277,7 @@
 								</div> Prev Step
 							</a> <a
 								class="btn btn-primary py-2 px-3 animated slideInDown carousel-control-next"
-								type="button" data-bs-target="#header-carousel"
+								type="button" data-bs-target="#header-carousel" id="2nd-next"
 								data-bs-slide="next"> Next Step
 								<div
 									class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -307,13 +307,13 @@
 								<div class="row g-3">
 									<div class="col-12">
 										<div class="form-floating">
-											<input type="text" class="form-control bg-light border-0"
+											<input type="text" class="form-control bg-light border-0" id="height"
 												name="height" placeholder="Your Name"> <label>키</label>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-floating">
-											<input type="text" class="form-control bg-light border-0"
+											<input type="text" class="form-control bg-light border-0" id="weight"
 												placeholder="몸무게" name="weight"> <label>몸무게</label>
 										</div>
 									</div>
