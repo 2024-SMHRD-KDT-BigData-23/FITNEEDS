@@ -41,7 +41,7 @@ public class Join implements Command {
 			request.setAttribute("join", mem_nick);
 			
 			// 회원가입 성공 시 회원가입 성공 화면으로 이동
-			return "redirect:/fitjoin_success.do";
+			return "redirect:/fitjoin.do";
 		} else {
 			
 			// 회원가입 실패시 회원가입 화면으로 이동
