@@ -366,6 +366,7 @@
 	<script src="assets/js/join/joinJs.js"></script>
 	<script src="assets/js/join/bootstrap.bundle.js"></script>
 	<script src="assets/js/join_success.js"></script>
+	<script src="assets/js/check_login.js"></script>
 </body>
 
 </html>
