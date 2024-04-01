@@ -17,7 +17,10 @@
     width: 70%;
     margin-left: 14%;
 }
-
+.chaname{
+	font-weight: 700;
+	font-size:1.0vw;
+}
 
 
 h2, .h2, .h2 {

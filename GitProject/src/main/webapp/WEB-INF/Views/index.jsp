@@ -26,6 +26,7 @@
 	href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
+<link rel="stylesheet" href="assets/css/demo_1/indexplus.css" />
 <!--*** BASIC CSS END ***-->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -263,9 +264,9 @@
 									<div class="card-body">
 										<div class="d-flex justify-content-between align-items-start">
 											<div class="card-body">
-												<p class="m-0 survey-head">출석률</p>
+												<p class="m-0 survey-head"><strong class="chaname">출석률</strong></p>
 												<canvas id="countDateChart"></canvas>
-												<p id="attendanceRate"></p>
+												<p id="attendanceRate" class ="indexDC"></p>
 											</div>
 										</div>
 
@@ -280,9 +281,9 @@
 									<div class="card-body">
 										<h4 class="card-title">신체 데이터 변화량</h4>
 										<canvas id="lineChart"></canvas>
-										<p id="averageBMI"></p>
-										<p id="averageMuscle"></p>
-										<p id="averageFatPercentage"></p>
+										<p id="averageBMI" class="indexfont"></p>
+										<p id="averageMuscle" class="indexfont"></p>
+										<p id="averageFatPercentage" class="indexfont"></p>
 									</div>
 								</div>
 							</div>
@@ -291,8 +292,8 @@
 									<div class="card-body">
 										<h4 class="card-title">소모 칼로리 변화량</h4>
 										<canvas id="lineChartCalories"></canvas>
-										<p id="maxCalories"></p>
-										<p id="averageCalories"></p>
+										<p id="maxCalories" class="indexfont"></p>
+										<p id="averageCalories" class="indexfont"></p>
 									</div>
 								</div>
 							</div>
@@ -410,9 +411,11 @@
 									<div class="card-body">
 										<h4 class="card-title">운동비율</h4>
 										<canvas id="pieChart"></canvas>
-										<p id="aerobicCount"></p>
-										<p id="upperBodyCount"></p>
-										<p id="lowerBodyCount"></p>
+										<div>
+										<p id="aerobicCount" class="indexfont"></p>
+										<p id="upperBodyCount" class="indexfont"></p>
+										<p id="lowerBodyCount" class="indexfont"></p>
+										</div>
 									</div>
 								</div>
 							</div>
