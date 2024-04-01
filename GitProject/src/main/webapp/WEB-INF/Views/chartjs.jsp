@@ -210,7 +210,7 @@
                            <div class="row">
                               <!-- 왼쪽에 차트 배치 -->
                               <div class="col-md-7">
-                                 <h4 class="card-title">표준데이터 비교</h4>
+                                 <h4 class="card-title"><strong class="chaname">표준데이터 비교</strong></h4>
                                  <canvas id="barChart"></canvas>
                               </div>
                               <!-- 오른쪽에 표 배치 -->
@@ -218,8 +218,8 @@
                                  <table class="table">
                                     <thead>
                                        <tr>
-                                          <th scope="col"><strong>개인 데이터</strong></th>
-                                          <th scope="col"><strong>표준 데이터</strong></th>
+                                          <th scope="col"><strong class="chaname">개인 데이터</strong></th>
+                                          <th scope="col"><strong class="chaname">표준 데이터</strong></th>
                                        </tr>
                                     </thead>
                                     <tbody>
@@ -254,7 +254,7 @@
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
 								<div class="card-body">
-									<h4 class="card-title">radar 차트로 비교</h4>
+									<h4 class="card-title"><strong class="chaname">radar 차트로 비교</strong></h4>
 										<canvas id="radarChart">
 									</canvas>
 								</div>
