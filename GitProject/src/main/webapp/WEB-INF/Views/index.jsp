@@ -35,6 +35,19 @@
 <link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
 <!-- ** 달력CSS END-->
 <!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+<style>
+  .fc-myCustomButton-button {
+    width: 80px;
+    height: 40px;
+    font-size : 0.5em;
+  }
+  .fc-myPlusButton-button {
+    /* 버튼의 크기 조절 */
+    width: 80px;
+    height: 40px;
+    font-size : 0.5em;
+  }
+</style>
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
