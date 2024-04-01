@@ -22,7 +22,7 @@
                 <li><img role="button" src="assets/images/intro/rogo.png" alt="FitNeeds" class="headerfitImg"></li>
                 <li>
                 	<a href="http://localhost:8080/GitProject/fitjoin.do">
-                		<img role="button" src ="assets/images/intro/introbtn2.png" 
+                		<img role="button" src ="assets/images/intro/introbtn3.png" 
                 		class="headerImg">
                 	</a>
                 	</li>
