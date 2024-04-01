@@ -83,11 +83,11 @@ $('#buy').off('click').on('click',function() {
         url: 'Purchase.do',
         data: { "get_vc_idx": resvc_idxs },
         success: function(response) {
-            console.log('구매 요청 성공:', response);
-            // 서버로부터 받은 응답에 대한 추가 처리 가능
+            alert('이용권 구매 성공');
+                        // 서버로부터 받은 응답에 대한 추가 처리 가능
         },
         error: function() {
-            console.log('구매 요청 실패');
+            alert('이용권을 다시 선택해주세요');
         }
     });
 });
