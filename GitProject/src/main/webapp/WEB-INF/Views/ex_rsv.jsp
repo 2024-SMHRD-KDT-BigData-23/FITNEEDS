@@ -624,36 +624,33 @@
 						modal('my_modal');
 					});
 		</script>
-		<script>
-			// 클릭 시 트레이너 섹션을 보여주는 함수
-			function toggleTrainerSection() {
-				var section = document.getElementById('section_2');
-				var placeholderDiv = document.getElementById('placeholder_div');
-				if (section.style.display === 'none') {
-					section.style.display = 'block';
-					placeholderDiv.style.display = 'none';
-				} else {
-					section.style.display = 'none';
-					placeholderDiv.style.display = 'block';
+				<script>
+				// 클릭 시 트레이너 섹션을 보여주는 함수
+				function showTrainerSection() {
+				    var section = document.getElementById('section_2');
+				    var placeholderDiv = document.getElementById('placeholder_div');
+				    section.style.display = 'block';
+				    placeholderDiv.style.display = 'none';
 				}
-			}
 
-			// 페이지 로드 시 기본적으로 트레이너를 선택해주세요 문구를 보여줌
-			window.onload = function() {
-				var section = document.getElementById('section_2');
-				var placeholderDiv = document.getElementById('placeholder_div');
-				section.style.display = 'none';
-				placeholderDiv.style.display = 'block';
-			};
-
-			// 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여줌
-			var trainerElements = document
-					.querySelectorAll('.owl-carousel-info-wrap.item');
-			trainerElements.forEach(function(element) {
-				element.addEventListener('click', function() {
-					toggleTrainerSection();
+				// 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여주고 기본 문구를 숨김
+				var trainerElements = document.querySelectorAll('.owl-carousel-info-wrap.item');
+				trainerElements.forEach(function(element) {
+				    element.addEventListener('click', function() {
+				        showTrainerSection();
+				        var placeholderDiv = document.getElementById('placeholder_div');
+				        placeholderDiv.style.display = 'none';
+				    });
 				});
-			});
+
+				// 페이지 로드 시 기본적으로 트레이너를 선택해주세요 문구를 보여줌
+				document.addEventListener('DOMContentLoaded', function() {
+				    var section = document.getElementById('section_2');
+				    var placeholderDiv = document.getElementById('placeholder_div');
+				    section.style.display = 'none';
+				    placeholderDiv.style.display = 'block';
+				});
+
 		</script>
 
 
