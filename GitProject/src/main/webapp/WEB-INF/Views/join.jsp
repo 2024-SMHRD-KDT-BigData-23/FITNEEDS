@@ -227,7 +227,7 @@
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0"
-												id="mem_name" placeholder="" name="mem_name" required > <label
+												id="mem_name" placeholder="" name="mem_name" required  value="${name}"> <label
 												for="name" >이름</label>
 										</div>
 									</div>
@@ -237,7 +237,7 @@
 												class="input form-control bg-light border-0"
 												id="mem_birthday" placeholder="생년월일"
 												 maxlength="10"
-												name="mem_birthdate"> <label for="text">생년월일</label>
+												name="mem_birthdate" value="${birthyear}-${birthday}"> <label for="text">생년월일</label>
 										</div>
 									</div>
 
@@ -253,7 +253,7 @@
 									<div class="col-12">
 										<div class="form-floating" >
 											<input type="text" class="form-control bg-light border-0" id="mem_phone"
-											 placeholder="핸드폰번호" name="mem_phone"> 
+											 placeholder="핸드폰번호" name="mem_phone" value="${mobile}"> 
 											 <label for="text">핸드폰번호</label>
 										</div>
 									</div>
@@ -261,7 +261,7 @@
 									<div class="col-12">
 										<div class="form-floating">
 											<input type="text" class="form-control bg-light border-0" id="mem_email"
-												placeholder="이메일" name="mem_email">
+												placeholder="이메일" name="mem_email" value="${email}">
 											<label>이메일</label>
 										</div>
 									</div>
