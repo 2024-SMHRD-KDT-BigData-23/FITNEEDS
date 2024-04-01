@@ -56,7 +56,11 @@
    rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+<<<<<<< HEAD
    rel="stylesheet">
+=======
+	rel="stylesheet">
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
 
 
@@ -76,6 +80,7 @@
 <!-- ********************  CSS 작업가능 영역 END *************************-->
 <style>
 #my_modal {
+<<<<<<< HEAD
    position: relative; /* 모달 내부의 상대적인 위치 설정 */
    display: none;
    width: 650px;
@@ -84,36 +89,76 @@
    background-color: #fefefe;
    border: 3px solid #333333;
    border-radius: 10px;
+=======
+	position: relative; /* 모달 내부의 상대적인 위치 설정 */
+	display: none;
+	width: 650px;
+	height: 900px;
+	padding: 20px 60px;
+	background-color: #fefefe;
+	border: 3px solid #333333;
+	border-radius: 10px;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 #my_modal .modal_close_btn {
+<<<<<<< HEAD
    position: absolute;
    top: 10px;
    right: 10px;
    color: #333333;
+=======
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #333333;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 .scrollable-section {
+<<<<<<< HEAD
    overflow: auto;
    max-height: 300px;
+=======
+	overflow: auto;
+	max-height: 300px;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 #reservation_section {
+<<<<<<< HEAD
    border: 3px solid #333333;
    padding: 10px;
    border-radius: 5px;
+=======
+	border: 3px solid #333333;
+	padding: 10px;
+	border-radius: 5px;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 #vc_border {
+<<<<<<< HEAD
    border: 3px solid #333333;
    padding: 10px;
    border-radius: 5px;
+=======
+	border: 3px solid #333333;
+	padding: 10px;
+	border-radius: 5px;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 #vc_price_modal, #rsv_date {
+<<<<<<< HEAD
    border: 3px solid #333333; /* 테두리 추가 */
    padding: 10px; /* 내부 여백 설정 */
    border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
+=======
+	border: 3px solid #333333; /* 테두리 추가 */
+	padding: 10px; /* 내부 여백 설정 */
+	border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 .custom-block {
@@ -121,12 +166,21 @@
 }
 
 #buy {
+<<<<<<< HEAD
    margin-left: 410px;
    background-color: #D6D6D6;
+=======
+	margin-left: 410px;
+	background-color: #D6D6D6;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 
 #reserve_button {
+<<<<<<< HEAD
    margin-left: 410px;
+=======
+	margin-left: 410px;
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 }
 </style>
 
@@ -151,6 +205,7 @@
 
    <div id="my_modal">
 
+<<<<<<< HEAD
       <div id="vc_border">
          <h2 id="modal"></h2>
          <br>
@@ -166,6 +221,25 @@
          <input type='hidden' id="pt_commit" name='pt_commit'> <input
             type='hidden' id="pt_status"> <a class="modal_close_btn">X</a>
       </div>
+=======
+		<div id="vc_border">
+			<h2 id="modal"></h2>
+			<br>
+			<p id="vc_price_modal"></p>
+			<br> <br> <span id="total_price">
+		</div>
+		</span><span id="buy"></span> <br> <br>
+		<div id="reservation_section" class="scrollable-section">
+			<h2>PT 예약</h2>
+			<br>
+			<p id='rsv_date'></p>
+			<p id='rsv_date_commit'></p>
+			<input type='hidden' id="pt_commit" name='pt_commit'> <input
+				type='hidden' id="pt_status"> <a class="modal_close_btn">X</a>
+		</div>
+
+		<button id="reserve_button" name='pt_commit' class="custom-btn btn-16">예약하기</button>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
       <button id="reserve_button" name='pt_commit' class="custom-btn btn-16">예약하기</button>
 
@@ -280,7 +354,51 @@
                      src="assets/images/logo-mini.png" alt="logo" /></a>
                </div>
 
+<<<<<<< HEAD
                <ul class="navbar-nav navbar-nav-right">
+=======
+						<li class="nav-item nav-profile dropdown d-none d-md-block">
+							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
+							data-bs-toggle="dropdown" aria-expanded="false">
+								<div class="nav-profile-text">MYPAGE</div>
+						</a>
+							<div class="dropdown-menu center navbar-dropdown"
+								aria-labelledby="profileDropdown">
+								<a class="dropdown-item" href="UpdatePage.do"> <i
+									class="mdi mdi-account-circle me-3"></i> 회원정보수정
+								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="InputPage.do"> <i
+									class="mdi mdi-check-circle me-3"></i> 나의운동입력
+								</a>
+
+								<!-- 변경부분 -->
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="WeightPage.do"> <i
+									class="mdi mdi-poll-box me-3"></i> 나의체중입력
+								</a>
+								<!-- 변경부분 -->
+
+
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="Logout.do"> <i
+									class="mdi mdi-logout-variant me-3"></i> 로그아웃
+								</a>
+								<div class="dropdown-divider"></div>
+						</li>
+						<li class="nav-item nav-logout d-none d-lg-block"><a
+							class="nav-link" href="MainPage.do"> <i
+								class="mdi mdi-home-circle"></i>
+						</a></li>
+					</ul>
+					<button
+						class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+						type="button" data-toggle="offcanvas">
+						<span class="mdi mdi-menu"></span>
+					</button>
+				</div>
+			</nav>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
                   <li class="nav-item nav-profile dropdown d-none d-md-block">
                      <a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
@@ -616,13 +734,31 @@
             });
          }
 
+<<<<<<< HEAD
          // Element 에 style 한번에 오브젝트로 설정하는 함수 추가
          Element.prototype.setStyle = function(styles) {
             for ( var k in styles)
                this.style[k] = styles[k];
             return this;
          };
+=======
+			document.getElementById('popup_open_btn').addEventListener('click',
+					function() {
+						// 모달창 띄우기
+						modal('my_modal');
+					});
+		</script>
+		<script>
+			// 클릭 시 트레이너 섹션을 보여주는 함수
+			function showTrainerSection() {
+				var section = document.getElementById('section_2');
+				var placeholderDiv = document.getElementById('placeholder_div');
+				section.style.display = 'block';
+				placeholderDiv.style.display = 'none';
+			}
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
+<<<<<<< HEAD
          document.getElementById('popup_open_btn').addEventListener('click',
                function() {
                   // 모달창 띄우기
@@ -637,7 +773,21 @@
             section.style.display = 'block';
             placeholderDiv.style.display = 'none';
          }
+=======
+			// 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여주고 기본 문구를 숨김
+			var trainerElements = document
+					.querySelectorAll('.owl-carousel-info-wrap.item');
+			trainerElements.forEach(function(element) {
+				element.addEventListener('click', function() {
+					showTrainerSection();
+					var placeholderDiv = document
+							.getElementById('placeholder_div');
+					placeholderDiv.style.display = 'none';
+				});
+			});
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
+<<<<<<< HEAD
          // 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여주고 기본 문구를 숨김
          var trainerElements = document
                .querySelectorAll('.owl-carousel-info-wrap.item');
@@ -660,6 +810,18 @@
                   placeholderDiv.style.display = 'block';
                });
       </script>
+=======
+			// 페이지 로드 시 기본적으로 트레이너를 선택해주세요 문구를 보여줌
+			document.addEventListener('DOMContentLoaded',
+					function() {
+						var section = document.getElementById('section_2');
+						var placeholderDiv = document
+								.getElementById('placeholder_div');
+						section.style.display = 'none';
+						placeholderDiv.style.display = 'block';
+					});
+		</script>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
 
 
