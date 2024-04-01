@@ -38,12 +38,14 @@
 <style>
   .fc-myCustomButton-button {
     width: 80px;
-    height: 50px;
+    height: 40px;
+    font-size : 0.5em;
   }
   .fc-myPlusButton-button {
     /* 버튼의 크기 조절 */
     width: 80px;
-    height: 50px;
+    height: 40px;
+    font-size : 0.5em;
   }
 </style>
 <body>
