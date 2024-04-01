@@ -160,7 +160,7 @@
 							<div>
 								<div class="row g-3">
 									<div class="col-12">
-										<form class="join-form" action="Join.do" method="post" onsubmit="return validateForm()">
+										<form class="join-form" action="Join.do" method="post" onsubmit="showSuccessAlert()">
 											<div class="form-floating">
 												<input type="text" class="form-control bg-light border-0" id="mem_id"
 													name="mem_id" placeholder="아이디를 입력해 주세요."> <label>아이디</label>
@@ -365,6 +365,7 @@
 	<!-- JavaScript Libraries -->
 	<script src="assets/js/join/joinJs.js"></script>
 	<script src="assets/js/join/bootstrap.bundle.js"></script>
+	<script src="assets/js/join_success.js"></script>
 </body>
 
 </html>
