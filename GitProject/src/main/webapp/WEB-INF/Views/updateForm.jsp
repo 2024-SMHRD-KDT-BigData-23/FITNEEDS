@@ -243,179 +243,204 @@
 			<!-- ** Main Area START ** -->
 
 
-   <!-- main-panel partial  복사시작 복사시작 -->
-      <div class="main-panel">
-        <div class="content-wrapper ">
-          <div class="page-header">
-            <h2 class="page-title">개인정보 수정</h2>
-            <nav aria-label="breadcrumb">
-              <!--
+			<!-- main-panel partial  복사시작 복사시작 -->
+			<div class="main-panel">
+				<div class="content-wrapper ">
+					<div class="page-header">
+						<h2 class="page-title">개인정보 수정</h2>
+						<nav aria-label="breadcrumb">
+							<!--
               <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">Forms</a></li>
               <li class="breadcrumb-item active" aria-current="page"> Form elements </li>
             </ol>
           -->
-            </nav>
-          </div>
-          <div class="row">
-            <!--프로필 수정에 대한 정보-->
-            <form class="forms-sample" action="Update.do" method="post" name="profileForm" onsubmit="return validateForm()">
-              <!--개인정보 수정에 대한 정보-->
-              <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
+						</nav>
+					</div>
+					<div class="row">
+						<!--프로필 수정에 대한 정보-->
+						<form class="forms-sample" action="Update.do" method="post"
+							name="profileForm" onsubmit="return validateForm()">
+							<!--개인정보 수정에 대한 정보-->
+							<div class="col-md-12 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
 
 
-                    <div class="form-group row">
-                      <label for="exampleNikname" class="col-sm-3 col-form-label">프로필사진</label>
-                      <div class="col-sm-9 image-col">
-                        <div class="image-item">
-                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img1.jpg">
-                          <input type="radio" name="mem_img" value="assets/images/mem_img/img1.jpg" id="img1">
-                          <label for="img1">기본</label>
-                        </div>
-                        <div class="image-item">
-                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img2.jpg">
-                          <input type="radio" name="mem_img" value="assets/images/mem_img/img2.jpg" id="img2">
-                          <label for="img2">냥인간</label>
-                        </div>
-                        <div class="image-item">
-                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img3.jpg">
-                          <input type="radio" name="mem_img" value="assets/images/mem_img/img3.jpg" id="img3">
-                          <label for="img3">수컷</label>
-                        </div>
-                        <div class="image-item">
-                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img4.jpg">
-                          <input type="radio" name="mem_img" value="assets/images/mem_img/img4.jpg" id="img4">
-                          <label for="img4">암컷</label>
-                        </div>
-                        <div class="image-item">
-                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img5.jpg">
-                          <input type="radio" name="mem_img" value="assets/images/mem_img/img5.jpg" id="img5">
-                          <label for="img5">몸짱</label>
-                        </div>
-                        <div class="image-item">
-                          <img class="mem_img_size" alt="" src="assets/images/mem_img/img6.jpg">
-                          <input type="radio" name="mem_img" value="assets/images/mem_img/img6.jpg" id="img6">
-                          <label for="img6">기본몸짱</label>
-                        </div>
-                        </div>
-                    </div>
+										<div class="form-group row">
+											<label for="exampleNikname" class="col-sm-3 col-form-label">프로필사진</label>
+											<div class="col-sm-9 image-col">
+												<div class="image-item">
+													<img class="mem_img_size" alt=""
+														src="assets/images/mem_img/img1.jpg"> <input
+														type="radio" name="mem_img"
+														value="assets/images/mem_img/img1.jpg" id="img1">
+													<label for="img1">기본</label>
+												</div>
+												<div class="image-item">
+													<img class="mem_img_size" alt=""
+														src="assets/images/mem_img/img2.jpg"> <input
+														type="radio" name="mem_img"
+														value="assets/images/mem_img/img2.jpg" id="img2">
+													<label for="img2">냥인간</label>
+												</div>
+												<div class="image-item">
+													<img class="mem_img_size" alt=""
+														src="assets/images/mem_img/img3.jpg"> <input
+														type="radio" name="mem_img"
+														value="assets/images/mem_img/img3.jpg" id="img3">
+													<label for="img3">수컷</label>
+												</div>
+												<div class="image-item">
+													<img class="mem_img_size" alt=""
+														src="assets/images/mem_img/img4.jpg"> <input
+														type="radio" name="mem_img"
+														value="assets/images/mem_img/img4.jpg" id="img4">
+													<label for="img4">암컷</label>
+												</div>
+												<div class="image-item">
+													<img class="mem_img_size" alt=""
+														src="assets/images/mem_img/img5.jpg"> <input
+														type="radio" name="mem_img"
+														value="assets/images/mem_img/img5.jpg" id="img5">
+													<label for="img5">몸짱</label>
+												</div>
+												<div class="image-item">
+													<img class="mem_img_size" alt=""
+														src="assets/images/mem_img/img6.jpg"> <input
+														type="radio" name="mem_img"
+														value="assets/images/mem_img/img6.jpg" id="img6">
+													<label for="img6">기본몸짱</label>
+												</div>
+											</div>
+										</div>
 
-                    <!-- 닉네임 변경 -->
+										<!-- 닉네임 변경 -->
 
-                    <div class="form-group row">
-                      <label for="exampleNikname" class="col-sm-3 col-form-label">별명</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" id="exampleInputPassword2" placeholder="변경할 별명을 입력해 주세요."
-                          name="mem_nick" />
-                      </div>
-                    </div>
+										<div class="form-group row">
+											<label for="exampleNikname" class="col-sm-3 col-form-label">별명</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control"
+													id="exampleInputPassword2" placeholder="변경할 별명을 입력해 주세요."
+													name="mem_nick" />
+											</div>
+										</div>
 
-                    <!-- 비밀번호-->
-                    <div class="form-group row">
-                      <label for="exampleInputPassword2" class="col-sm-3 col-form-label">비밀번호</label>
-                      <div class="col-sm-9">
-                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="현재 비밀번호를 입력해 주세요."
-                          name="mem_pw" />
-                      </div>
-                    </div>
-                    <!--================================비밀번호===========================-->
+										<!-- 비밀번호-->
+										<div class="form-group row">
+											<label for="exampleInputPassword2"
+												class="col-sm-3 col-form-label">비밀번호</label>
+											<div class="col-sm-9">
+												<input type="password" class="form-control"
+													id="exampleInputPassword2" placeholder="현재 비밀번호를 입력해 주세요."
+													name="mem_pw" />
+											</div>
+										</div>
+										<!--================================비밀번호===========================-->
 
-                    <!-- 비밀번호 재설정-->
-                    <div class="form-group row">
-                      <label for="exampleInputConfirmPassword2" class="col-sm-3 col-form-label">비밀번호 변경</label>
-                      <div class="col-sm-9">
-                        <input type="password" class="form-control" name="mem_newpw" id="exampleInputConfirmPassword2"
-                          placeholder="변경할 비밀번호를 입력해 주세요." />
-                      </div>
-                    </div>
-                    <!--=============================비밀번호 재설정=======================-->
-                    <!--주소 변경-->
-                    <div class="form-group row">
-                      <label for="exampleChangeAddress" class="col-sm-3 col-form-label">주소 변경</label>
-                      <div class="col-sm-9">
-                        <input type="text" class="form-control" name="mem_addr" id="exampleChangeAddress"
-                          placeholder="변경할 주소를 입력해 주세요." />
-                      </div>
-                    </div>
-                    <!-- ===========================주소변경=========================-->
+										<!-- 비밀번호 재설정-->
+										<div class="form-group row">
+											<label for="exampleInputConfirmPassword2"
+												class="col-sm-3 col-form-label">비밀번호 변경</label>
+											<div class="col-sm-9">
+												<input type="password" class="form-control" name="mem_newpw"
+													id="exampleInputConfirmPassword2"
+													placeholder="변경할 비밀번호를 입력해 주세요." />
+											</div>
+										</div>
+										<!--=============================비밀번호 재설정=======================-->
+										<!--주소 변경-->
+										<div class="form-group row">
+											<label for="exampleChangeAddress"
+												class="col-sm-3 col-form-label">주소 변경</label>
+											<div class="col-sm-9">
+												<input type="text" class="form-control" name="mem_addr"
+													id="exampleChangeAddress" placeholder="변경할 주소를 입력해 주세요." />
+											</div>
+										</div>
+										<!-- ===========================주소변경=========================-->
 
-                    <!--이메일 변경-->
-                    <div class="form-group row">
-                      <label for="exampleChangeEmail" class="col-sm-3 col-form-label">이메일 변경</label>
-                      <div class="col-sm-9">
-                        <input type="email" class="form-control" name="mem_email" id="exampleChangeEmail"
-                          placeholder="변경할 이메일을 입력해 주세요." />
-                      </div>
-                    </div>
-                    <!-- ===========================이메일 변경=========================-->
-
-
-                    <div class="comp">
-                      <button type="submit" class="btn btn-primary me-2">수정</button>
-                      <button type="reset" class="btn btn-light">취소</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-
-
-            <!-- 회원탈퇴 영역-->
-            <form action="Unregister.do" method="post">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body bye-body">
-                    <div class="d-flex justify-content-between align-items-center w-100">
-                      <h4 class="card-title bye-card">회원탈퇴</h4>
-                      <button type="submit" class="btn btn-primary bye-btn">탈퇴하기</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
+										<!--이메일 변경-->
+										<div class="form-group row">
+											<label for="exampleChangeEmail"
+												class="col-sm-3 col-form-label">이메일 변경</label>
+											<div class="col-sm-9">
+												<input type="email" class="form-control" name="mem_email"
+													id="exampleChangeEmail" placeholder="변경할 이메일을 입력해 주세요." />
+											</div>
+										</div>
+										<!-- ===========================이메일 변경=========================-->
 
 
-          </div>
-        </div>
-        <!-- content-wrapper ends -->
+										<div class="comp">
+											<button type="submit" class="btn btn-primary me-2">수정</button>
+											<button type="reset" class="btn btn-light">취소</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
 
 
+						<!-- 회원탈퇴 영역-->
+						<form id="unregisterForm" action="Unregister.do" method="post">
+							<div class="col-12 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body bye-body">
+										<div
+											class="d-flex justify-content-between align-items-center w-100">
+											<h4 class="card-title bye-card">회원탈퇴</h4>
+											<button id="confirmUnregister" type="button"
+												class="btn btn-primary bye-btn">탈퇴하기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
 
 
-
-        <!-- ** Main Area END ** -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ** Footer Area START ** -->
-
-
-
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-          <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-              © 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
-            </span> <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-              Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
-            </span>
-          </div>
-        </footer>
-        <!-- partial -->
+					</div>
+				</div>
+				<!-- content-wrapper ends -->
 
 
 
-        <!-- ** Footer Area END ** -->
-        <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+				<!-- ** Main Area END ** -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
 
 
-      </div>
-      <!-- 작업영역 : main-panel ends 복사끝복사끝 -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+				<!-- ** Footer Area START ** -->
+
+
+
+				<!-- partial:partials/_footer.html -->
+				<footer class="footer">
+					<div
+						class="d-sm-flex justify-content-center justify-content-sm-between">
+						<span
+							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
+							© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
+						</span> <span
+							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+							Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
+						</span>
+					</div>
+				</footer>
+				<!-- partial -->
+
+
+
+				<!-- ** Footer Area END ** -->
+				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+
+			</div>
+			<!-- 작업영역 : main-panel ends 복사끝복사끝 -->
 			<!-- main-panel ends -->
 		</div>
 		<!-- page-body-wrapper ends -->
@@ -446,8 +471,7 @@
 		<!-- Custom js for this page -->
 		<script src="assets/js/dashboard.js"></script>
 		<script src="assets/js/check_update.js"></script>
+		<script src="assets/js/check_delete.js"></script>
 		<!-- End custom js for this page -->
-
-
 </body>
 </html>
