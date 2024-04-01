@@ -4,6 +4,7 @@
    font-size: 0.6vw; /* 화면 크기에 따라 조절되는 글자 크기 */
    line-height: 3; /* 텍스트 줄 간격 설정 */
    white-space: nowrap; /* 텍스트가 넘칠 때 줄 바꿈을 방지하여 한 줄로 유지 */
+   font-weight: 600;
 }
 
 
@@ -21,6 +22,7 @@
 	font-weight: 700;
 	font-size:1.0vw;
 }
+
 
 
 h2, .h2, .h2 {
