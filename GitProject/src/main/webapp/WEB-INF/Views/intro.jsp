@@ -31,7 +31,7 @@
     </header>
 
     <!--page1-->
-    <div class="panel home active" data-section-name="우리의시작">
+    <div class="panel home active" data-section-name="">
         <div class="shape">
             <div class="home1Img">
                  <!-- 텍스트 이미지 교체 구간-->
@@ -49,7 +49,7 @@
     </div>
 
     <!--page2-->
-    <div class="panel panel2" data-section-name="비교페이지기능">
+    <div class="panel panel2" data-section-name="">
         <div class="shape">
             <div class="panel21Img">
                  <!-- 텍스트 이미지 교체 구간-->
@@ -67,7 +67,7 @@
     </div>
 
     <!--page3-->
-    <div class="panel panel1" data-section-name="메인페이지기능">
+    <div class="panel panel1" data-section-name="">
         <div class="shape">
             <div class="swiper-container" style="width: 100%; height: 70%;">
                 <div class="swiper-wrapper">
@@ -85,8 +85,31 @@
         </div>
     </div>
 
+
+
+    <div class="panel panel1" data-section-name="">
+        <div class="shape">
+            <div class="swiper-container" style="width: 100%; height: 70%;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide active"><img src="assets/images/banner/slide1.jpg" alt="1번"></div>
+                    <div class="swiper-slide"><img src="assets/images/banner/slide2.jpg" alt="test"></div>
+                    <div class="swiper-slide"><img src="assets/images/banner/slide3.jpg" alt="test"></div>
+                    <div class="swiper-slide"><img src="assets/images/banner/slide4.jpg" alt="test"></div>
+                    <div class="swiper-slide"><img src="assets/images/banner/slide5.jpg" alt="test"></div>
+                </div>
+
+                <div class="swiper-pagination"></div> <!--자동이동-->
+                <div class="swiper-button-prev"></div> <!--버튼이전-->
+                <div class="swiper-button-next"></div> <!--버튼다음-->
+            </div>
+        </div>
+    </div>
+
+
+
+
     <!--page4-->
-    <div class="panel panel3" data-section-name="예약페이지기능">
+    <div class="panel panel3" data-section-name="">
         <div class="shape">
             <div class="panel31Img">
                 <img src="assets/images/intro/sulmung.png" alt="대한민국 1등 건강관리 앱">
@@ -101,7 +124,7 @@
     </div>
 
     <!--page5-->
-    <div class="panel panel4" data-section-name="개요">
+    <div class="panel panel4" data-section-name="">
         <div class="shape">
             <div class="panel41Img">
                 <img src="assets/images/intro/final.png" alt="대한민국 1등 건강관리 앱">
