@@ -55,7 +55,8 @@
 <link href="assets/css/demo_1/reserv/templatemo-pod-talk.css"
 	rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+	rel="stylesheet">
 
 
 
@@ -75,45 +76,44 @@
 <!-- ********************  CSS 작업가능 영역 END *************************-->
 <style>
 #my_modal {
-    position: relative; /* 모달 내부의 상대적인 위치 설정 */
-    display: none;
-    width: 650px;
-    height: 900px;
-    padding: 20px 60px;
-    background-color: #fefefe;
-    border: 3px solid #333333;
-    border-radius: 10px;
+	position: relative; /* 모달 내부의 상대적인 위치 설정 */
+	display: none;
+	width: 650px;
+	height: 900px;
+	padding: 20px 60px;
+	background-color: #fefefe;
+	border: 3px solid #333333;
+	border-radius: 10px;
 }
 
 #my_modal .modal_close_btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #333333;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #333333;
 }
 
 .scrollable-section {
-    overflow: auto;
-    max-height: 300px;
+	overflow: auto;
+	max-height: 300px;
 }
 
 #reservation_section {
-    border: 3px solid #333333;
-    padding: 10px;
-    border-radius: 5px;
+	border: 3px solid #333333;
+	padding: 10px;
+	border-radius: 5px;
 }
 
 #vc_border {
-    border: 3px solid #333333;
-    padding: 10px;
-    border-radius: 5px;
+	border: 3px solid #333333;
+	padding: 10px;
+	border-radius: 5px;
 }
 
-#vc_price_modal,
-#rsv_date {
-    border: 3px solid #333333; /* 테두리 추가 */
-    padding: 10px; /* 내부 여백 설정 */
-    border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
+#vc_price_modal, #rsv_date {
+	border: 3px solid #333333; /* 테두리 추가 */
+	padding: 10px; /* 내부 여백 설정 */
+	border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
 }
 
 .custom-block {
@@ -121,15 +121,13 @@
 }
 
 #buy {
-    margin-left: 410px;
-    background-color: #D6D6D6;
+	margin-left: 410px;
+	background-color: #D6D6D6;
 }
 
-#reserve_button{
- margin-left: 410px;
- 
+#reserve_button {
+	margin-left: 410px;
 }
-
 </style>
 
 
@@ -157,21 +155,19 @@
 			<h2 id="modal"></h2>
 			<br>
 			<p id="vc_price_modal"></p>
-			 <br> <br>
-			 <span id="total_price">
+			<br> <br> <span id="total_price">
 		</div>
-		</span><span id="buy"></span>
-		<br> <br>
+		</span><span id="buy"></span> <br> <br>
 		<div id="reservation_section" class="scrollable-section">
 			<h2>PT 예약</h2>
 			<br>
 			<p id='rsv_date'></p>
 			<p id='rsv_date_commit'></p>
 			<input type='hidden' id="pt_commit" name='pt_commit'> <input
-				type='hidden' id="pt_status"> <a class="modal_close_btn" >X</a>
+				type='hidden' id="pt_status"> <a class="modal_close_btn">X</a>
 		</div>
-		
-			<button id="reserve_button" name='pt_commit' class="custom-btn btn-16">예약하기</button>
+
+		<button id="reserve_button" name='pt_commit' class="custom-btn btn-16">예약하기</button>
 
 	</div>
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
@@ -300,6 +296,15 @@
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
+
+								<!-- 변경부분 -->
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="WeightPage.do"> <i
+									class="mdi mdi-poll-box me-3"></i> 나의체중입력
+								</a>
+								<!-- 변경부분 -->
+
+
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
@@ -624,33 +629,36 @@
 						modal('my_modal');
 					});
 		</script>
-				<script>
-				// 클릭 시 트레이너 섹션을 보여주는 함수
-				function showTrainerSection() {
-				    var section = document.getElementById('section_2');
-				    var placeholderDiv = document.getElementById('placeholder_div');
-				    section.style.display = 'block';
-				    placeholderDiv.style.display = 'none';
-				}
+		<script>
+			// 클릭 시 트레이너 섹션을 보여주는 함수
+			function showTrainerSection() {
+				var section = document.getElementById('section_2');
+				var placeholderDiv = document.getElementById('placeholder_div');
+				section.style.display = 'block';
+				placeholderDiv.style.display = 'none';
+			}
 
-				// 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여주고 기본 문구를 숨김
-				var trainerElements = document.querySelectorAll('.owl-carousel-info-wrap.item');
-				trainerElements.forEach(function(element) {
-				    element.addEventListener('click', function() {
-				        showTrainerSection();
-				        var placeholderDiv = document.getElementById('placeholder_div');
-				        placeholderDiv.style.display = 'none';
-				    });
+			// 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여주고 기본 문구를 숨김
+			var trainerElements = document
+					.querySelectorAll('.owl-carousel-info-wrap.item');
+			trainerElements.forEach(function(element) {
+				element.addEventListener('click', function() {
+					showTrainerSection();
+					var placeholderDiv = document
+							.getElementById('placeholder_div');
+					placeholderDiv.style.display = 'none';
 				});
+			});
 
-				// 페이지 로드 시 기본적으로 트레이너를 선택해주세요 문구를 보여줌
-				document.addEventListener('DOMContentLoaded', function() {
-				    var section = document.getElementById('section_2');
-				    var placeholderDiv = document.getElementById('placeholder_div');
-				    section.style.display = 'none';
-				    placeholderDiv.style.display = 'block';
-				});
-
+			// 페이지 로드 시 기본적으로 트레이너를 선택해주세요 문구를 보여줌
+			document.addEventListener('DOMContentLoaded',
+					function() {
+						var section = document.getElementById('section_2');
+						var placeholderDiv = document
+								.getElementById('placeholder_div');
+						section.style.display = 'none';
+						placeholderDiv.style.display = 'block';
+					});
 		</script>
 
 
