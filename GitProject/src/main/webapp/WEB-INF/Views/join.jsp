@@ -97,7 +97,7 @@
 											</div>
 											<div class="col-12">
 												<div class="form-floating">
-													<input type="text" class="form-control bg-light border-0"
+													<input type="password" class="form-control bg-light border-0"
 														id="mem_pw" name="mem_pw" placeholder="Your Email">
 													<label>비밀번호</label>
 												</div>

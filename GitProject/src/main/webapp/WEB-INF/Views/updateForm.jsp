@@ -259,7 +259,7 @@
           </div>
           <div class="row">
             <!--프로필 수정에 대한 정보-->
-            <form class="forms-sample" action="Update.do" method="post">
+            <form class="forms-sample" action="Update.do" method="post" name="profileForm" onsubmit="return validateForm()">
               <!--개인정보 수정에 대한 정보-->
               <div class="col-md-12 grid-margin stretch-card">
                 <div class="card">
@@ -301,18 +301,6 @@
                         </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
                     <!-- 닉네임 변경 -->
 
@@ -457,6 +445,7 @@
 		<!-- endinject -->
 		<!-- Custom js for this page -->
 		<script src="assets/js/dashboard.js"></script>
+		<script src="assets/js/check_update.js"></script>
 		<!-- End custom js for this page -->
 
 
