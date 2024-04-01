@@ -535,7 +535,7 @@
 		});
 	</script>
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<script>
+<script>
 		var calendar;
 		var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 변수
 		(function() {
@@ -729,6 +729,11 @@
 						}
 					});
 				});
+				// 스타일 적용
+		        // myCustomButton 버튼의 스타일을 변경
+		        $(".fc-myCustomButton-button").css("font-size", "0.9em");
+		        // myPlusButton 버튼의 스타일을 변경
+		        $(".fc-myPlusButton-button").css("font-size", "0.9em");
 			});
 		})();
 	</script>
