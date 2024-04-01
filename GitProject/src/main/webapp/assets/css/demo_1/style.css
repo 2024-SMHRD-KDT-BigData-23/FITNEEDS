@@ -113,7 +113,7 @@
     background-color: #333 !important;
 }
 
-.nav-item:hover .nav-link .mdi, 
+.nav-item                  :hover .nav-link .mdi, 
 .nav-item:hover .nav-link .menu-title {
     color: #fff !important;
 }
@@ -129,7 +129,9 @@
     color: #fff !important;
 }
 
-
+.charimg{
+	width:100%
+}
 
 
 

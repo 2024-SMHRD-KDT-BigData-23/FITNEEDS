@@ -24,6 +24,16 @@
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <link rel="stylesheet" href="assets/css/demo_1/join/chartjs.css" />
 <!-- End layout styles -->
+<style>
+
+.card-img{
+width: 100%;
+}
+
+</style>
+
+
+
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
@@ -269,12 +279,12 @@
                <div class="row">
                   <div class="col-lg-4 grid-margin stretch-card">
                      <div class="card">
-                        <div class="card-body" id="diet">
+                        <div class="card-body" id="diet" style="width: 100%; height:100%; object-fit: cover;">
                            <h2>Diet</h2>
                            <a href="#" id="dietLink">
-                              <h4 class="card-title" id="dietTitle">Title</h4> 
-                              <img src="" alt="Diet Image" id="dietImage" class="charimg"  vertical-align: middle;
-   								height:100%; width: 100%;>
+                              <h4 class="card-title " id="dietTitle">Title</h4> 
+                              <img src="" alt="Diet Image" id="dietImage" class="charimg" class="charimg img-fluid" style="max-width: 100%; height: auto;">
+                </a>
                            </a>
                            <canvas id="barChart" style="height: 250px;"></canvas>
                         </div>
@@ -284,12 +294,12 @@
 						<!-- 2행  2열 -->
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
-								<div class="card-body" id="news">
+								<div class="card-body" id="news" style="width: 100%; height:100%; object-fit: cover;">
 									<h2>News</h2>
 									<a href="#" id="newsLink">
-										<h4 class="card-title" id="newsTitle">Title</h4> <img src=""
-										alt="News Image" id="newsImage" vertical-align: middle;
-   								 width: 100%;>
+										<h4 class="card-title " id="newsTitle">Title</h4> <img src=""
+										alt="News Image" id="newsImage" class="charimg img-fluid" style="max-width: 100%; height: auto;">
+                </a>
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
@@ -299,12 +309,12 @@
 						<!-- 2행 3열 -->
 						<div class="col-lg-4 grid-margin stretch-card">
 							<div class="card">
-								<div class="card-body" id="routine">
+								<div class="card-body " id="routine" style="width: 100%; height:100%; object-fit: cover;">
 									<h2>Routine</h2>
 									<a href="#" id="routineLink">
-										<h4 class="card-title" id="routineTitle">Title</h4> <img
-										src="" alt="Routine Image" id="routineImage" vertical-align: middle;
-   								 width: 100%;>
+										<h4 class="card-title" id="routineTitle">Title</h4> 
+										<img
+										src="" alt="Routine Image" id="routineImage"  class="charimg img-fluid" style="max-width: 100%; height: auto;">
 									</a>
 									<canvas id="barChart" style="height: 250px;"></canvas>
 								</div>
