@@ -33,8 +33,14 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 					$('#rsv_date').empty(); // 예약 가능 날짜와 시간을 추가하기 전에 이전 내용 삭제
 					res.forEach(function(item) {
 						// pt_status를 데이터 속성으로 추가하되 화면에는 보이지 않도록 설정
-						$('#rsv_date').append("<p><input type='checkbox' name='pt_date' data-pt-st-dt='" + item.pt_st_dt + "'data-pt-ed-dt='" + item.pt_ed_dt + "' data-pt-date='" + item.pt_date + "' data-pt-idx='" + item.pt_idx + "' data-pt-status='" + item.pt_status + "' value='" + "예약날짜" + item.pt_date + "'>" +"&nbsp" +item.pt_date + " 시작시간 : " + item.pt_st_dt.substring(0, 5) + " 종료시간 : " + item.pt_ed_dt.substring(0, 5) + "</p>");
+						$('#rsv_date').append("<p><input type='checkbox' name='pt_date' data-pt-st-dt='" + item.pt_st_dt + "'data-pt-ed-dt='" + item.pt_ed_dt + "' data-pt-date='" + item.pt_date + "' data-pt-idx='" + item.pt_idx + "' data-pt-status='" + item.pt_status + "' value='" + "예약날짜" + item.pt_date + "'>" + "&nbsp" + item.pt_date + " 시작시간 : " + item.pt_st_dt.substring(0, 5) + " 종료시간 : " + item.pt_ed_dt.substring(0, 5) + "</p>");
 
+					});
+					$('.reservation-item').css({
+						border: '1px solid #333333', // 테두리 추가
+						padding: '10px', // 내부 여백 설정
+						borderRadius: '5px', // 테두리 모서리를 둥글게 만듭니다.
+						marginBottom: '10px' // 아래쪽 여백 추가
 					});
 				},
 				error: function() {
@@ -64,8 +70,8 @@ $('#reserve_button').on('click', function() {
 
 		console.log(endTime);
 		console.log(endDateTime);
-		
-		selectedReservations.push({ created_at: fullDateTime, pt_idx: ptIdx, res_status: ptStatus, endTime : endDateTime});
+
+		selectedReservations.push({ created_at: fullDateTime, pt_idx: ptIdx, res_status: ptStatus, endTime: endDateTime });
 	});
 
 	// 선택된 예약 정보가 없는 경우

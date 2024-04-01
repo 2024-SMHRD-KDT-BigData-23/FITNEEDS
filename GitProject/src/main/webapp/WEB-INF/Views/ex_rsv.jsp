@@ -55,6 +55,7 @@
 <link href="assets/css/demo_1/reserv/templatemo-pod-talk.css"
 	rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
 
 
@@ -74,38 +75,61 @@
 <!-- ********************  CSS 작업가능 영역 END *************************-->
 <style>
 #my_modal {
-	display: none;
-	width: 650px;
-	height: 650px;
-	padding: 20px 60px;
-	background-color: #fefefe;
-	border: 1px solid #888;
-	border-radius: 10px;
-	padding: 20px 60px;
+    position: relative; /* 모달 내부의 상대적인 위치 설정 */
+    display: none;
+    width: 650px;
+    height: 900px;
+    padding: 20px 60px;
+    background-color: #fefefe;
+    border: 3px solid #333333;
+    border-radius: 10px;
 }
 
 #my_modal .modal_close_btn {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #333333;
 }
 
 .scrollable-section {
-	overflow: auto;
-	max-height: 200px; /* 필요한 경우 최대 높이 설정 */
+    overflow: auto;
+    max-height: 300px;
 }
 
 #reservation_section {
-    border: 1px solid #ccc; /* 테두리 추가 */
+    border: 3px solid #333333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#vc_border {
+    border: 3px solid #333333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#vc_price_modal,
+#rsv_date {
+    border: 3px solid #333333; /* 테두리 추가 */
     padding: 10px; /* 내부 여백 설정 */
     border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
 }
 
-#vc_border {
-    border: 1px solid #ccc; /* 테두리 추가 */
-    padding: 10px; /* 내부 여백 설정 */
-    border-radius: 5px; /* 테두리 모서리를 둥글게 만듭니다. */
+.custom-block {
+	border: 2px solid #333333
 }
+
+#buy {
+    margin-left: 410px;
+    background-color: #D6D6D6;
+}
+
+#reserve_button{
+ margin-left: 410px;
+ 
+}
+
 </style>
 
 
@@ -127,28 +151,29 @@
 
 <body>
 
-	<!-- 모달 -->
-		<div id="my_modal">
+	<div id="my_modal">
 
 		<div id="vc_border">
 			<h2 id="modal"></h2>
 			<br>
 			<p id="vc_price_modal"></p>
-			<span id="total_price"></span><span id="buy"></span> <br> <br>
+			 <br> <br>
+			 <span id="total_price">
 		</div>
+		</span><span id="buy"></span>
 		<br> <br>
 		<div id="reservation_section" class="scrollable-section">
-			<h2>예약</h2>
+			<h2>PT 예약</h2>
 			<br>
 			<p id='rsv_date'></p>
-			<button id="reserve_button" name='pt_commit'>예약하기</button>
 			<p id='rsv_date_commit'></p>
 			<input type='hidden' id="pt_commit" name='pt_commit'> <input
-				type='hidden' id="pt_status"> <a class="modal_close_btn">닫기</a>
+				type='hidden' id="pt_status"> <a class="modal_close_btn" >X</a>
 		</div>
+		
+			<button id="reserve_button" name='pt_commit' class="custom-btn btn-16">예약하기</button>
 
 	</div>
-
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 	<!-- ** SIDE BAR SECTION ** -->
 
@@ -275,12 +300,6 @@
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
-								<!-- 변경부분 -->
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="WeightPage.do"> <i
-									class="mdi mdi-poll-box me-3"></i> 나의체중입력
-								</a>
-								<!-- 변경부분 -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
@@ -359,6 +378,12 @@
 
 							<!-- Slide end -->
 
+							<div id="placeholder_div" class="container text-center mt-5">
+								<div class="border p-4">
+									<h4 class="mb-4">트레이너를 선택해주세요</h4>
+									<h5>트레이너 정보, 예약 섹션입니다.</h5>
+								</div>
+							</div>
 
 
 							<!-- 예약권 START -->
@@ -395,10 +420,10 @@
 
 														<div>
 
-															<p id="get_trn"></p>
-															<p id="trn_phone"></p>
-															<p id="trn_info"></p>
-															<p id="trn_career"></p>
+															<p id="get_trn" class="rev_font"></p>
+															<p id="trn_phone" class="rev_font"></p>
+															<p id="trn_info" class="rev_font"></p>
+															<p id="trn_career" class="rev_font"></p>
 															<input type='hidden' id="trn_idx">
 														</div>
 													</div>
@@ -430,10 +455,10 @@
 
 														<div>
 
-															<p id="center_name"></p>
-															<p id="center_tel"></p>
-															<p id="center_addr"></p>
-															<p id="vc_price"></p>
+															<p id="center_name" class="rev_font"></p>
+															<p id="center_tel" class="rev_font"></p>
+															<p id="center_addr" class="rev_font"></p>
+															<p id="vc_price" class="rev_font"></p>
 															<button id="popup_open_btn">이용권 구매하기</button>
 
 														</div>
@@ -470,9 +495,9 @@
 
 						</div>
 					</div>
-					
-			<input type="hidden" name="get_vc_idx" id="get_vc_idx">
-	
+
+					<input type="hidden" name="get_vc_idx" id="get_vc_idx">
+
 					<!-- ** Main Area END ** -->
 					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -599,6 +624,38 @@
 						modal('my_modal');
 					});
 		</script>
+		<script>
+			// 클릭 시 트레이너 섹션을 보여주는 함수
+			function toggleTrainerSection() {
+				var section = document.getElementById('section_2');
+				var placeholderDiv = document.getElementById('placeholder_div');
+				if (section.style.display === 'none') {
+					section.style.display = 'block';
+					placeholderDiv.style.display = 'none';
+				} else {
+					section.style.display = 'none';
+					placeholderDiv.style.display = 'block';
+				}
+			}
+
+			// 페이지 로드 시 기본적으로 트레이너를 선택해주세요 문구를 보여줌
+			window.onload = function() {
+				var section = document.getElementById('section_2');
+				var placeholderDiv = document.getElementById('placeholder_div');
+				section.style.display = 'none';
+				placeholderDiv.style.display = 'block';
+			};
+
+			// 트레이너를 선택하는 요소 클릭 시 트레이너 섹션을 보여줌
+			var trainerElements = document
+					.querySelectorAll('.owl-carousel-info-wrap.item');
+			trainerElements.forEach(function(element) {
+				element.addEventListener('click', function() {
+					toggleTrainerSection();
+				});
+			});
+		</script>
+
 
 
 		<!--  *******************************  JS작업영역 END *******************************  -->
