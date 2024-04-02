@@ -39,7 +39,7 @@
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
 				<li class="nav-item nav-profile border-bottom">
-					<a href="#" class="nav-link flex-column">
+					<a href="UpdatePage.do" class="nav-link flex-column">
 						<div class="nav-profile-image">
 							<img src="${member.mem_img}" alt="profile" />
 							<!--change to offline or busy as needed-->
