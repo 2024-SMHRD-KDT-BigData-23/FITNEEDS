@@ -411,6 +411,8 @@ width: 100%;
 
 	<!-- ** JS AREA START ** -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	
+	
 	<!-- flask에서 url받아오기-->
 	<script type="text/javascript">
       // diet 정보 요청
@@ -442,8 +444,6 @@ width: 100%;
           document.getElementById('routineImage').src = data.thumb_url;
           document.getElementById('routineTitle').textContent = data.title;
         });
-      
-      
     </script>
 
 
