@@ -60,12 +60,16 @@ public class Update implements Command {
 			if (mem_img != null && !mem_img.isEmpty()) {
 				membervo.setMem_img(mem_img);
 			}
+			dao.updateMem(membervo);
+			dao.updateSalt(saltvo);
+			request.getSession().setAttribute("member", membervo);
+			
+			// 개인정보 수정후 개인정보수정 페이지로 이동
+			return "redirect:/fitupdateForm.do";
 		}
-		dao.updateMem(membervo);
-		dao.updateSalt(saltvo);
-		request.getSession().setAttribute("member", membervo);
+		else {
+		    return "redirect:/fitupdateForm.do?error=password";
+		}
 
-		// 개인정보 수정후 개인정보수정 페이지로 이동
-		return "redirect:/fitupdateForm.do";
 	}
 }

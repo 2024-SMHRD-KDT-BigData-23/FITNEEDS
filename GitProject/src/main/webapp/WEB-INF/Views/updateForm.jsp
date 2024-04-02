@@ -472,6 +472,8 @@
 		<script src="assets/js/dashboard.js"></script>
 		<script src="assets/js/check_update.js"></script>
 		<script src="assets/js/check_delete.js"></script>
+		<script src="assets/js/update_fail.js"></script>
+
 		<!-- End custom js for this page -->
 </body>
 </html>
