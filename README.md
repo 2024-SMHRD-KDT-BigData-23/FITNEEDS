@@ -47,7 +47,7 @@
         <td>
             <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
             <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
-            ![mysql](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+            
         </td>
     </tr>
     <tr>
@@ -116,18 +116,18 @@
     <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
   </tr>
   <tr>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
+    <td align="center"><strong>강아람</strong></td>
+    <td align="center"><strong>강우석</strong></td>
+    <td align="center"><strong>우동희</strong></td>
+    <td align="center"><strong>조범수</strong></td>
+    <td align="center"><strong>이지훈</strong></td>
   </tr>
   <tr>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Backend</b></td>
     <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Deep Learning</b></td>
+    <td align="center"><b>Backend</b></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
