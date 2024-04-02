@@ -32,6 +32,7 @@
 <!-- ** 달력CSS END-->
 
 
+
 </head>
 <body>
 
@@ -204,13 +205,13 @@
 									<div class="card card-stat mb-3"
 										style="background-size: cover;">
 										<div class="card-body">
-											<div class="text-color">
+											<div class="text">
 												<div class="flot-bar-wrapper">
 													<h6>WEIGHT CHANGE</h6>
-													<h3 class="font-weight-bold">
+													<h3 class="font-weight-bold" style="background-color: #926168; color: #FFFFFF">
 														${member.mem_nick}<br>
 													</h3>
-													<h3 class="font-weight-bold" id="month_img_content"></h3>
+													<h3 class="font-weight-bold" id="month_img_content" style="background-color: #FFFFFF; color: #926168"></h3>
 												</div>
 											</div>
 										</div>

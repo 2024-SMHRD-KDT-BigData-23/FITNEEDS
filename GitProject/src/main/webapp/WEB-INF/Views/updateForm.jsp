@@ -282,21 +282,21 @@
 														src="assets/images/mem_img/img2.jpg"> <input
 														type="radio" name="mem_img"
 														value="assets/images/mem_img/img2.jpg" id="img2">
-													<label for="img2">냥인간</label>
+													<label for="img2">고양이</label>
 												</div>
 												<div class="image-item">
 													<img class="mem_img_size" alt=""
 														src="assets/images/mem_img/img3.jpg"> <input
 														type="radio" name="mem_img"
 														value="assets/images/mem_img/img3.jpg" id="img3">
-													<label for="img3">수컷</label>
+													<label for="img3">남성</label>
 												</div>
 												<div class="image-item">
 													<img class="mem_img_size" alt=""
 														src="assets/images/mem_img/img4.jpg"> <input
 														type="radio" name="mem_img"
 														value="assets/images/mem_img/img4.jpg" id="img4">
-													<label for="img4">암컷</label>
+													<label for="img4">여성</label>
 												</div>
 												<div class="image-item">
 													<img class="mem_img_size" alt=""
