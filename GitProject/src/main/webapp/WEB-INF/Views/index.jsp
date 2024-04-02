@@ -82,22 +82,22 @@
 
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 				<!--*** side nar > nav >  사용자 Menu start ***-->
-				<li class="nav-item"><a class="nav-link" href="MainPage.do">
+				<li class="nav-item nav-effect"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
 						class="menu-title">나의운동정보</span>
 				</a></li>
 
-				<li class="nav-item"><a class="nav-link" href="ComparePage.do">
+				<li class="nav-item nav-effect"><a class="nav-link" href="ComparePage.do">
 						<i class="mdi mdi-chart-bar menu-icon"></i> <span
 						class="menu-title">나의운동비교</span>
 				</a></li>
 
-				<li class="nav-item"><a class="nav-link" href="InputPage.do">
+				<li class="nav-item nav-effect"><a class="nav-link" href="InputPage.do">
 						<i class="mdi mdi-check-circle menu-icon"></i> <span
 						class="menu-title">나의운동입력</span>
 				</a></li>
 
-				<li class="nav-item"><a class="nav-link" href="ReservePage.do">
+				<li class="nav-item nav-effect"><a class="nav-link" href="ReservePage.do">
 						<i class="mdi mdi-comment-account-outline menu-icon"></i> <span
 						class="menu-title">나의운동예약</span>
 				</a></li>
@@ -249,11 +249,13 @@
 								<div class="card card-calender"
 									style="background-image: url('assets/images/intro/flower.gif'); background-size: cover;">
 									<div class="card-body">
-										<div class="row pt-4">
-											<div class="col-sm-6 text-sm-right pt-3 pt-sm-0">
-												<h3 class="text-white">Clear Sky</h3>
-												<h1 class="text-white m-0">${member.mem_nick}님</h1>
-												<h1 class="text-white m-0" id="change_sentence"></h1>
+										<div class="row pt-4 d-flex">
+											<div class="col-sm-6 text-sm-right pt-3 pt-sm-0 ">
+
+												<h6 class="text" style="background-color: #ffffff; color: #926168; display: inline-block;" >Welcome FitNeeds</h6>
+												<h1 class="text-white m-0 text-center">${member.mem_nick}님,</h1>
+												<h3 class="text-white m-0 text-center" id="change_sentence" style="background-color: #926168; color: #FFFFFF;"></h3>
+									
 											</div>
 										</div>
 									</div>

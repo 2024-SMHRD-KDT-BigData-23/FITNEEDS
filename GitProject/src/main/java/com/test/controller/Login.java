@@ -41,12 +41,13 @@ public class Login implements Command{
 				return "redirect:/fitindex.do"; 
 			} else {
 				// 로그인 실패 시 첫 화면으로 이동
-				return "redirect:/fitjoin.do";
+				return "redirect:/fitjoin.do?error=loginFailed";
+
 			}
 		} else {
 			
 			// salt값이 존재하지 않는다면(로그인 실패 시) 첫 화면으로 이동
-			return "redirect:/fitjoin.do";
+			return "redirect:/fitjoin.do?error=loginFailed";
 		}
 	}
 }

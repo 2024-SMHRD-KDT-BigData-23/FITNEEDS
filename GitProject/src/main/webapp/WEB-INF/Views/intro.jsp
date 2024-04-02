@@ -31,7 +31,7 @@
     </header>
 
     <!--page1-->
-    <div class="panel home active" data-section-name="">
+    <div class="panel panel1 home active" data-section-name="우리의 시작">
         <div class="shape">
             <div class="home1Img">
                  <!-- 텍스트 이미지 교체 구간-->
@@ -49,7 +49,7 @@
     </div>
 
     <!--page2-->
-    <div class="panel panel2" data-section-name="">
+    <div class="panel panel2" data-section-name="대한민국 1등 건강관리 웹&앱">
         <div class="shape">
             <div class="panel21Img">
                  <!-- 텍스트 이미지 교체 구간-->
@@ -67,7 +67,7 @@
     </div>
 
     <!--page3-->
-    <div class="panel panel1" data-section-name="">
+    <div class="panel panel3" data-section-name="FitNeeds 함께">
         <div class="shape">
             <div class="swiper-container" style="width: 100%; height: 70%;">
                 <div class="swiper-wrapper">
@@ -86,8 +86,7 @@
     </div>
 
 
-
-    <div class="panel panel1" data-section-name="">
+    <div class="panel panel1" data-section-name="FitNeeds 둘러보기">
         <div class="shape">
             <div class="swiper-container" style="width: 100%; height: 70%;">
                 <div class="swiper-wrapper">
@@ -105,26 +104,8 @@
         </div>
     </div>
 
-
-
-
-    <!--page4-->
-    <div class="panel panel3" data-section-name="">
-        <div class="shape">
-            <div class="panel31Img">
-                <img src="assets/images/intro/sulmung.png" alt="대한민국 1등 건강관리 앱">
-            </div>
-            <div class="home"></div>
-            <div class="imgzip">
-                <div class="panel32Img">
-                    <img src="assets/images/intro/eximg.png" alt="우리의 마스코트">
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!--page5-->
-    <div class="panel panel4" data-section-name="">
+    <div class="panel panel4" data-section-name="마치며">
         <div class="shape">
             <div class="panel41Img">
                 <img src="assets/images/intro/final.png" alt="대한민국 1등 건강관리 앱">
@@ -162,6 +143,9 @@
             prevEl: '.swiper-button-prev',
         },
     });
+    
+    
+
 </script>
 
 </html>>

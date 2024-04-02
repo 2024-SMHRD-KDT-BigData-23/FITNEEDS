@@ -109,31 +109,26 @@
 
 /* nav hover 오류 수정 */
 
-.nav-item:hover {
+
+.nav-effect:hover {
     background-color: #333 !important;
 }
 
-.nav-item                  :hover .nav-link .mdi, 
-.nav-item:hover .nav-link .menu-title {
+.nav-effect:hover .nav-link .mdi, 
+.nav-effect:hover .nav-link .menu-title {
     color: #fff !important;
 }
 
 
 
-.nav-item.clicked {
+.nav-effect.clicked {
     background-color: #333 !important;
 }
 
-.nav-item.clicked .nav-link .mdi, 
-.nav-item.clicked .nav-link .menu-title {
+.nav-effect.clicked .nav-link .mdi, 
+.nav-effect.clicked .nav-link .menu-title {
     color: #fff !important;
 }
-
-.charimg{
-	width:100%
-}
-
-
 
 
 @-webkit-keyframes flash {
@@ -12229,7 +12224,7 @@ fieldset:disabled .ajax-upload-dragdrop .ajax-file-upload,
 }
 
 .pt-4 {
-  padding-top: 1.5rem !important;
+  padding-top: 6.0rem !important;
 }
 
 .pt-5 {

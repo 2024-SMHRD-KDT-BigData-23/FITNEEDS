@@ -383,10 +383,11 @@
 	<script src="assets/js/join/bootstrap.bundle.js"></script>
 	<script src="assets/js/join_success.js"></script>
 	<script src="assets/js/check_login.js"></script>
-
-	<!-- calendar JS START  -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="assets/js/login_fail.js"></script>
+	
+		    <!-- calendar JS START  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 
 	<!-- html 달력-->
