@@ -26,6 +26,7 @@
             </ul>
         </nav>
     </header>
+    <!-- 페이지구분 -->
     <!--page1-->
     <div class="panel panel1 home active" data-section-name="우리의 시작">
         <div class="shape">
