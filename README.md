@@ -112,12 +112,13 @@
 
 
 
+
+
+
+
 |🎞 서비스 소개 페이지 |
 |:---:|
 | ![image](https://github.com/Eehnodu/Portfolio/assets/155121578/e1f6280f-5398-4ab4-8f67-68d50268344d)|
-
-
-
 
 
 |🎞 회원관리 페이지 |
@@ -129,17 +130,10 @@
 |:---:|
 |![image](https://github.com/Eehnodu/Portfolio/assets/155121578/3f67348a-3090-448a-8f16-307e1c7ac7a6)|
 
-<div align="center">
-	
-|🎞 운동 및 체중 입력 페이지|
-|:---:|
-|![image](https://github.com/Eehnodu/Portfolio/assets/155121578/906efd8b-648d-464c-97e2-9d42f6b2ab82)|
+|🎞 운동 및 체중 입력 페이지|🎞 예약 페이지|
+|:---:|:---:|
+|![image](https://github.com/Eehnodu/Portfolio/assets/155121578/906efd8b-648d-464c-97e2-9d42f6b2ab82)|![image](https://github.com/Eehnodu/Portfolio/assets/155121578/0ed2e567-9a0f-45d9-b166-54c6d5528e11)|
 
-</div>
-
-|🎞 예약 페이지|
-|:---:|
-|![image](https://github.com/Eehnodu/Portfolio/assets/155121578/0ed2e567-9a0f-45d9-b166-54c6d5528e11)|
 
 
 
