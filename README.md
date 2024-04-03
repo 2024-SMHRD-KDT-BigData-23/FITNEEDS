@@ -143,7 +143,7 @@
   <tr>
     <td align="center"><img src="https://i.namu.wiki/i/GirsrnQUH-q5qbVv871h4zLg_H1X25k25qY-Vr5DcO6xV8MWdcENwySAA0M62Xyurjt3ezZUbPm7GoVYJRRXWGIAXpWJ0_zsEH0mxNsLH2S_GX54w9exBaOg6io06JjbYZRHQiPSyUwPoLzRFA5aeQ.webp" width="100" height="100"/></td>
     <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
-    <td align="center"><img src="https://mblogthumb-phinf.pstatic.net/20160127_177/krazymouse_1453865104404DjQIi_PNG/%C4%AB%C4%AB%BF%C0%C7%C1%B7%BB%C1%EE_%B6%F3%C0%CC%BE%F0.png?type=w2" width="100" height="100"/></td>
+    <td align="center">![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/60cfda0f-23f4-4e5d-a953-12565033b91b)</td>
     <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
     <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
   </tr>
