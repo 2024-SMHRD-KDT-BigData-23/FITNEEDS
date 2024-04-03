@@ -1,6 +1,5 @@
 # 📎 운동하러 갈래? 넵..좋아여(팀명: FitNeeds)
-![imgae](https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimg.freepik.com%2Fpremium-vector%2Ffitness-logo_565520-393.jpg&type=sc960_832)
-
+![image](https://github.com/Eehnodu/Portfolio/assets/155121578/f5fee82a-0ffb-4ecf-9b77-43427ebbc4f1)
 
 ## 👀 서비스 소개
 * 서비스명: 사용자 운동상태 기반 반응형 웹
@@ -111,16 +110,24 @@
 
 ## 🖥 화면 구성
 
-### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
-![image](https://user-images.githubusercontent.com/25995055/178401098-95f15a0e-a2de-415e-83d5-883bb4cb0656.png)
+### 서비스 소개 페이지
+![image](https://github.com/Eehnodu/Portfolio/assets/155121578/e1f6280f-5398-4ab4-8f67-68d50268344d)
 <br>
 
-### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
-![image](https://user-images.githubusercontent.com/25995055/178401127-287e6de2-4396-49fc-a107-59c4d5cd55c7.png)
+### 회원관리 페이지
+![image](https://github.com/Eehnodu/Portfolio/assets/155121578/df0c6a8b-13ed-4575-85e6-464859130e81)
 <br>
 
-### 일정/고객센터
-![image](https://user-images.githubusercontent.com/25995055/178401150-861f0e93-0f40-4fae-98c1-2099bf513c8d.png)
+### 메인페이지 및 비교페이지
+![image](https://github.com/Eehnodu/Portfolio/assets/155121578/3f67348a-3090-448a-8f16-307e1c7ac7a6)
+<br>
+
+### 운동 및 체중 입력 페이지
+![image](https://github.com/Eehnodu/Portfolio/assets/155121578/906efd8b-648d-464c-97e2-9d42f6b2ab82)
+<br>
+
+### 예약 페이지
+![image](https://github.com/Eehnodu/Portfolio/assets/155121578/0ed2e567-9a0f-45d9-b166-54c6d5528e11)
 <br>
 
 ## 👨‍👩‍👦‍👦 팀원 역할
