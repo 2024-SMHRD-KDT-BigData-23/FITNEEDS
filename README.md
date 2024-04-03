@@ -189,6 +189,131 @@ $("#date_check").on("click", function() {
 		fetchStartChChart(start_date, end_date);
 	});
 ```
-* 문제2<br>
- 문제점 설명 및 해결방안
+
+* 비밀번호 암호화(SHA-256 + Salt)<br>
+- 문제<br>
+
+  SHA-256은 단방향 알고리즘의 한 종류로, 해시 값을 이용한 암호화 방식.
+  SHA-256을 사용하였을때 같은 비밀번호일 경우 같은 해시 값을 반환함을 확인.
+
+- 원인<br>
+
+  SHA-256은 입력 값에 해당하는 해시 값이 정해져 있음.
+  레인보우 테이블을 이용해 해시 값을 통해 원본 문자열의 유추가 가능해짐.
+  레인보우 테이블이란? => 해시 함수의 모든 입력값에 대한 결과값을 표로 정리한 것.
+ 
+- 해결방안<br>
+
+  무작위 숫자를 바이트 배열로 변환하여 이를 10진수 문자열로 변환한 Salt값을 추가로 생성.
+  로그인 및 개인정보 수정 시 비밀번호의 확인을 위해 해당 Salt값을 알아야하기 때문에
+  Member_id에 해당하는 Salt값을 저장하는 tb_salt 테이블을 생성 및 저장
+ 
+- 코드<br>
+```
+public class Encrypt {
+	/**
+	 * 무작위 문자열 Salt 생성
+	 * 
+	 * @return 생성된 Salt 문자열
+	 */
+	public static String getSalt() {
+		// 1. SecureRandom 객체 생성
+		SecureRandom sr = new SecureRandom();
+		// 2. 무작위 바이트 배열 salt 생성 (길이: 20)
+		byte[] salt = new byte[20];
+		// 3. 무작위 바이트로 salt 배열 채우기
+		sr.nextBytes(salt);
+		// 4. 바이트 배열을 16진수 문자열로 변환하여 반환
+		StringBuffer sb = new StringBuffer();
+		for (byte b : salt) {
+			sb.append(String.format("%02x", b));
+		}
+		return sb.toString();
+	}
+	/**
+	 * 주어진 암호와 Salt를 이용하여 SHA-256 알고리즘을 적용한 결과를 반환
+	 * 
+	 * @param pwd  암호
+	 * @param salt Salt 문자열
+	 * @return 암호와 Salt를 이용하여 적용한 SHA-256 알고리즘 결과
+	 */
+	public static String getEncrypt(String pwd, String salt) {
+		String result = "";
+		try {
+			// 1. SHA-256 알고리즘을 적용할 MessageDigest 객체 생성
+			MessageDigest md = MessageDigest.getInstance("SHA-256");
+			// 2. 암호와 Salt를 이용하여 MessageDigest 업데이트
+			md.update((pwd + salt).getBytes());
+			// 3. 업데이트된 내용으로 해시값 계산
+			byte[] pwdSalt = md.digest();
+			// 4. 해시값을 16진수 문자열로 변환하여 반환
+			StringBuffer sb = new StringBuffer();
+			for (byte b : pwdSalt) {
+				sb.append(String.format("%02x", b));
+			}
+			result = sb.toString();
+		} catch (NoSuchAlgorithmException e) {
+			throw new RuntimeException(e);
+		}
+		return result;
+	}
+}
+```
+
+* 비교차트 데이터의 undefined 값<br>
+- 문제<br>
+
+  회원의 개인 데이터와 표준 데이터를 비교하기 위해 DB에 저장된 값을 ajax를 통해 불러오는 과정에서
+  회원의 개인 데이터가 값을 가져오지만 undefined로 출력되는 문제가 발생
+  
+- 원인<br>
+
+  ajax를 통해서 가져온 회원의 개인 데이터가 success문 안에서만 값을 유지하기 때문에 발생하는 문제라 사료됨.
+ 
+- 해결방안<br>
+
+  처음 가져온 회원의 개인 데이터의 success안에서 표준 데이터를 가져오는 ajax문을 사용함으로써
+  중첩ajax를 통해 회원의 개인 데이터와 표준 데이터의 값을 유지하면서 비교 차트를 화면에 시각화함. 
+ 
+- 코드<br>
+```
+// 개인 및 표준 데이터 비교 차트 그리기
+function fetchCompareChart() {
+		// 개인 데이터 가져오기
+		$.ajax({
+			url: "MyData",
+			type: 'POST',
+			dataType: 'json',
+			success: (res) => {
+				mem_height = res.height;
+				mem_weight = res.weight;
+				mem_bmi = res.bmi;
+				mem_muscle = res.muscle;
+				mem_fat_per = res.fat_per;
+				// success안에서만 값이 유지되기 때문에
+				// 중첩 ajax를 이용하여 차트를 그림
+				// 표준데이터 가져오기
+				$.ajax({
+					url: "StdData",
+					type: 'POST',
+					dataType: 'json',
+					success: (res) => {
+						std_height = res.height;
+						std_weight = res.weight;
+						std_bmi = res.bmi;
+						std_muscle = res.muscle;
+						std_fat_per = res.fat_per;
+						// barChart와 radarChart 그리기
+						drawCompareChart();
+					},
+					error: () => {
+						console.log("실패");
+					}
+				});
+			},
+			error: () => {
+			}
+		});
+	};
+```
 
