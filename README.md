@@ -154,14 +154,14 @@
     <td align="center"><b>Back-end</b></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/zzoorong/ARAM" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/Eehnodu" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
   </tr>
   <tr>
-    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>반응형 웹 세팅<br> UI/UX 디자인 <br> 전체 페이지 제작 <br> Bootstrap/Js 기능구현 <br> HTML/CSS/JS 오류수정 </td>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>DB 설계 및 구축<br>회원관리기능<br>비밀번호 암호화 기능<br>사용자의 운동, 체중 입력 기능<br>신체변화와 운동정보 차트 구현<br>Fullcalendar<br>일정 추가, 수정, 삭제 기능<br>PT예약 일정 연동 기능</b></td>
     <td align="center"><b>Frontend</b></td>
