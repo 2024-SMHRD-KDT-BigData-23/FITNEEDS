@@ -30,7 +30,6 @@ public class MyData implements Command {
 
 			out.print(json);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
