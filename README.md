@@ -110,23 +110,23 @@
 
 ## 🖥 화면 구성
 
-### 서비스 소개 페이지
+### 🎞 서비스 소개 페이지
 ![image](https://github.com/Eehnodu/Portfolio/assets/155121578/e1f6280f-5398-4ab4-8f67-68d50268344d)
 <br>
 
-### 회원관리 페이지
+### 🎞 회원관리 페이지
 ![image](https://github.com/Eehnodu/Portfolio/assets/155121578/df0c6a8b-13ed-4575-85e6-464859130e81)
 <br>
 
-### 메인페이지 및 비교페이지
+### 🎞 메인페이지 및 비교페이지
 ![image](https://github.com/Eehnodu/Portfolio/assets/155121578/3f67348a-3090-448a-8f16-307e1c7ac7a6)
 <br>
 
-### 운동 및 체중 입력 페이지
+### 🎞 운동 및 체중 입력 페이지
 ![image](https://github.com/Eehnodu/Portfolio/assets/155121578/906efd8b-648d-464c-97e2-9d42f6b2ab82)
 <br>
 
-### 예약 페이지
+### 🎞 예약 페이지
 ![image](https://github.com/Eehnodu/Portfolio/assets/155121578/0ed2e567-9a0f-45d9-b166-54c6d5528e11)
 <br>
 
