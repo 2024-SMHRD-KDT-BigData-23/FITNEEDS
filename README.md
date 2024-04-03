@@ -34,6 +34,9 @@
 * 기능6 : 최신뉴스 및 블로그 크롤링
 * 기능7 : 예약 서비스 및 Fullcalendar api
 
+</div>
+</details>
+
 ## ⛏ 기술스택
 <table>
     <tr>
