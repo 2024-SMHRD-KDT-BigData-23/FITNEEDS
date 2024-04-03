@@ -171,7 +171,7 @@
     <td align="center"><b>UI/UX 디자인 <br> 전체적인 프론트영역 구현 <br> 회원가입 페이지 <br> 서비스 소개페이지 구현 <br> 프론트엔드 오류수정 전담 <br> 발표</b></td>
     <td align="center"><b>DB 설계 및 구축<br>회원관리기능<br>비밀번호 암호화 기능<br>사용자의 운동, 체중 입력 기능<br>신체변화와 운동정보 차트 구현<br>Fullcalendar<br>일정 추가, 수정, 삭제 기능<br>PT예약 일정 연동 기능</b></td>
     <td align="center"><b>예약페이지 구현 <br> Chart.js 구현<br> 트레이너 DB 구현 <br> MVC패턴 구체화 <br> 시연 영상 및 편집 </b></td>
-    <td align="center"><b>PM<br>네이버 로그인 api<br> Fullcalendar api <br> 뉴스 및 블로그서비스 <br> 비교페이지 디자인 <br>ppt제작 </b></td>
+    <td align="center"><b>PM<br><br>네이버 로그인 api<br><br> Fullcalendar api <br><br> 뉴스 및 블로그서비스 <br><br> 비교페이지 디자인 <br><br>ppt제작 </b></td>
   </tr>
 </table>
 
