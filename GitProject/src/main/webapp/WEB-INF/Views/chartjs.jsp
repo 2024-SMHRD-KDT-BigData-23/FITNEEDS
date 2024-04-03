@@ -8,39 +8,24 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Plus Admin</title>
-<!-- plugins:css -->
-<!-- plugins:css -->
+
 <link rel="stylesheet"
 	href="assets/vendors/mdi/css/materialdesignicons.min.css">
 <link rel="stylesheet"
 	href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-<!-- endinject -->
-<!-- Plugin css for this page -->
-<!-- End Plugin css for this page -->
-<!-- inject:css -->
-<!-- endinject -->
-<!-- Layout styles -->
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <link rel="stylesheet" href="assets/css/demo_1/join/chartjs.css" />
 <!-- End layout styles -->
 <style>
-
-.card-img{
-width: 100%;
-}
-
 </style>
-
-
-
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
-				<li class="nav-item nav-profile border-bottom"><a href="UpdatePage.do"
-					class="nav-link flex-column">
+				<li class="nav-item nav-profile border-bottom"><a
+					href="UpdatePage.do" class="nav-link flex-column">
 						<div class="nav-profile-image">
 							<img src="${member.mem_img}" alt="profile" />
 							<!--change to offline or busy as needed-->
@@ -67,23 +52,25 @@ width: 100%;
 
 				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 				<!--*** side nar > nav >  사용자 Menu start ***-->
-				<li class="nav-item nav-effect"><a class="nav-link" href="MainPage.do">
-						<i class="mdi mdi-compass-outline menu-icon"></i> <span
+				<li class="nav-item nav-effect"><a class="nav-link"
+					href="MainPage.do"> <i
+						class="mdi mdi-compass-outline menu-icon"></i> <span
 						class="menu-title">나의운동정보</span>
 				</a></li>
 
-				<li class="nav-item nav-effect"><a class="nav-link" href="ComparePage.do">
-						<i class="mdi mdi-chart-bar menu-icon"></i> <span
-						class="menu-title">나의운동비교</span>
+				<li class="nav-item nav-effect"><a class="nav-link"
+					href="ComparePage.do"> <i class="mdi mdi-chart-bar menu-icon"></i>
+						<span class="menu-title">나의운동비교</span>
 				</a></li>
 
-				<li class="nav-item nav-effect"><a class="nav-link" href="InputPage.do">
-						<i class="mdi mdi-check-circle menu-icon"></i> <span
-						class="menu-title">나의운동입력</span>
+				<li class="nav-item nav-effect"><a class="nav-link"
+					href="InputPage.do"> <i class="mdi mdi-check-circle menu-icon"></i>
+						<span class="menu-title">나의운동입력</span>
 				</a></li>
 
-				<li class="nav-item nav-effect"><a class="nav-link" href="ReservePage.do">
-						<i class="mdi mdi-comment-account-outline menu-icon"></i> <span
+				<li class="nav-item nav-effect"><a class="nav-link"
+					href="ReservePage.do"> <i
+						class="mdi mdi-comment-account-outline menu-icon"></i> <span
 						class="menu-title">나의운동예약</span>
 				</a></li>
 				<!--*** 사용자 Menu end ***-->
@@ -166,14 +153,14 @@ width: 100%;
 								<a class="dropdown-item" href="InputPage.do"> <i
 									class="mdi mdi-check-circle me-3"></i> 나의운동입력
 								</a>
-								
-									<!-- 변경부분 -->
+
+								<!-- 변경부분 -->
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="WeightPage.do"> <i
 									class="mdi mdi-poll-box me-3"></i> 나의체중입력
 								</a>
 								<!-- 변경부분 -->
-								
+
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="Logout.do"> <i
 									class="mdi mdi-logout-variant me-3"></i> 로그아웃
@@ -211,210 +198,160 @@ width: 100%;
 				<div class="content-wrapper">
 					<!--  1행 시작 -->
 					<div class="row">
-							<!--  1행 시작 -->
-					<div class="row">
-						<!-- 1행 1열 -->
-                  <div class="col-lg-8 grid-margin stretch-card">
-                     <div class="card">
-                        <div class="card-body">
-                           <div class="row">
-                              <!-- 왼쪽에 차트 배치 -->
-                              <div class="col-md-7">
-                                 <h4 class="card-title"><strong class="chaname">표준데이터 비교</strong></h4>
-                                 <canvas id="barChart"></canvas>
-                              </div>
-                              <!-- 오른쪽에 표 배치 -->
-                              <div class="col-md-4 d-flex flex-column">
-                                 <table class="table">
-                                    <thead>
-                                       <tr>
-                                          <th scope="col"><strong class="chaname">개인 데이터</strong></th>
-                                          <th scope="col"><strong class="chaname">표준 데이터</strong></th>
-                                       </tr>
-                                    </thead>
-                                    <tbody>
-                                       <tr>
-                                          <td id="mem_height"></td>
-                                          <td id="std_height"></td>
-                                       </tr>
-                                       <tr>
-                                          <td id="mem_weight"></td>
-                                          <td id="std_weight"></td>
-                                       </tr>
-                                       <tr>
-                                          <td id="mem_bmi"></td>
-                                          <td id="std_bmi"></td>
-                                       </tr>
-                                       <tr>
-                                          <td id="mem_muscle"></td>
-                                          <td id="std_muscle"></td>
-                                       </tr>
-                                       <tr>
-                                          <td id="mem_fat_per"></td>
-                                          <td id="std_fat_per"></td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-						<!-- 1행 2열 -->
-						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body">
-									<h4 class="card-title"><strong class="chaname">radar 차트로 비교</strong></h4>
+						<!--  1행 시작 -->
+						<div class="row">
+							<!-- 1행 1열 -->
+							<div class="col-lg-8 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<div class="row">
+											<!-- 왼쪽에 차트 배치 -->
+											<div class="col-md-7">
+												<h4 class="card-title">
+													<strong class="chaname">표준데이터 비교</strong>
+												</h4>
+												<canvas id="barChart"></canvas>
+											</div>
+											<!-- 오른쪽에 표 배치 -->
+											<div class="col-md-4 d-flex flex-column">
+												<table class="table">
+													<thead>
+														<tr>
+															<th scope="col"><strong class="chaname">개인
+																	데이터</strong></th>
+															<th scope="col"><strong class="chaname">표준
+																	데이터</strong></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td id="mem_height"></td>
+															<td id="std_height"></td>
+														</tr>
+														<tr>
+															<td id="mem_weight"></td>
+															<td id="std_weight"></td>
+														</tr>
+														<tr>
+															<td id="mem_bmi"></td>
+															<td id="std_bmi"></td>
+														</tr>
+														<tr>
+															<td id="mem_muscle"></td>
+															<td id="std_muscle"></td>
+														</tr>
+														<tr>
+															<td id="mem_fat_per"></td>
+															<td id="std_fat_per"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 1행 2열 -->
+							<div class="col-lg-4 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body">
+										<h4 class="card-title">
+											<strong class="chaname">radar 차트로 비교</strong>
+										</h4>
 										<canvas id="radarChart">
 									</canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 2행 1열 -->
+						<div class="row">
+							<div class="col-lg-4 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body" id="diet"
+										style="width: 100%; height: 100%; object-fit: cover;">
+										<h2>Diet</h2>
+										<a href="#" id="dietLink">
+											<h4 class="card-title " id="dietTitle">Title</h4> <img src=""
+											alt="Diet Image" id="dietImage" class="charimg"
+											class="charimg img-fluid"
+											style="max-width: 100%; height: auto;">
+										</a> </a>
+										<canvas id="barChart" style="height: 250px;"></canvas>
+									</div>
+								</div>
+							</div>
+							<!-- 2행  2열 -->
+							<div class="col-lg-4 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body" id="news"
+										style="width: 100%; height: 100%; object-fit: cover;">
+										<h2>News</h2>
+										<a href="#" id="newsLink">
+											<h4 class="card-title " id="newsTitle">Title</h4> <img src=""
+											alt="News Image" id="newsImage" class="charimg img-fluid"
+											style="max-width: 100%; height: auto;">
+										</a> </a>
+										<canvas id="barChart" style="height: 250px;"></canvas>
+									</div>
+								</div>
+							</div>
+
+							<!-- 2행 3열 -->
+							<div class="col-lg-4 grid-margin stretch-card">
+								<div class="card">
+									<div class="card-body " id="routine"
+										style="width: 100%; height: 100%; object-fit: cover;">
+										<h2>Routine</h2>
+										<a href="#" id="routineLink">
+											<h4 class="card-title" id="routineTitle">Title</h4> <img
+											src="" alt="Routine Image" id="routineImage"
+											class="charimg img-fluid"
+											style="max-width: 100%; height: auto;">
+										</a>
+										<canvas id="barChart" style="height: 250px;"></canvas>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!--  1행 끝 -->
-					
-					
-					<!-- 사용자 다이어트,뉴스,루틴 추천 -->
-					 <!-- 2행 1열 -->
-               <div class="row">
-                  <div class="col-lg-4 grid-margin stretch-card">
-                     <div class="card">
-                        <div class="card-body" id="diet" style="width: 100%; height:100%; object-fit: cover;">
-                           <h2>Diet</h2>
-                           <a href="#" id="dietLink">
-                              <h4 class="card-title " id="dietTitle">Title</h4> 
-                              <img src="" alt="Diet Image" id="dietImage" class="charimg" class="charimg img-fluid" style="max-width: 100%; height: auto;">
-                </a>
-                           </a>
-                           <canvas id="barChart" style="height: 250px;"></canvas>
-                        </div>
-                     </div>
-                  </div>
-
-						<!-- 2행  2열 -->
-						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body" id="news" style="width: 100%; height:100%; object-fit: cover;">
-									<h2>News</h2>
-									<a href="#" id="newsLink">
-										<h4 class="card-title " id="newsTitle">Title</h4> <img src=""
-										alt="News Image" id="newsImage" class="charimg img-fluid" style="max-width: 100%; height: auto;">
-                </a>
-									</a>
-									<canvas id="barChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
+					<!-- ** Footer Area START ** -->
+					<footer class="footer">
+						<div
+							class="d-sm-flex justify-content-center justify-content-sm-between">
+							<span
+								class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
+								© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
+							</span> <span
+								class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+								Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
+							</span>
 						</div>
-
-						<!-- 2행 3열 -->
-						<div class="col-lg-4 grid-margin stretch-card">
-							<div class="card">
-								<div class="card-body " id="routine" style="width: 100%; height:100%; object-fit: cover;">
-									<h2>Routine</h2>
-									<a href="#" id="routineLink">
-										<h4 class="card-title" id="routineTitle">Title</h4> 
-										<img
-										src="" alt="Routine Image" id="routineImage"  class="charimg img-fluid" style="max-width: 100%; height: auto;">
-									</a>
-									<canvas id="barChart" style="height: 250px;"></canvas>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- 사용자 다이어트,뉴스,루틴 추천 끝-->
-
+					</footer>
+					<!-- partial -->
 				</div>
-				<!-- ** Main Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!-- ** Footer Area START ** -->
-
-
-
-				<!-- partial:partials/_footer.html -->
-				<footer class="footer">
-					<div
-						class="d-sm-flex justify-content-center justify-content-sm-between">
-						<span
-							class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright
-							© 2024 <a target="_blank">Fitneeds</a>. All rights reserved.
-						</span> <span
-							class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-							Fitneeds team & smhrd <i class="mdi mdi-heart text-danger"></i>
-						</span>
-					</div>
-				</footer>
-				<!-- partial -->
-
-
-
-				<!-- ** Footer Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-
 			</div>
-			<!-- main-panel ends -->
 		</div>
-		<!-- page-body-wrapper ends -->
-	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-	<!-- ** All AREA END ** -->
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- ** JS AREA START ** -->
-
-	<!-- container-scroller -->
-	<!-- plugins:js -->
-	<script src="assets/vendors/js/vendor.bundle.base.js"></script>
-	<!-- endinject -->
-	<!-- Plugin js for this page -->
-	<script src="assets/vendors/chart.js/Chart.min.js"></script>
-	<!-- End plugin js for this page -->
-	<!-- inject:js -->
-	<script src="assets/js/off-canvas.js"></script>
-	<script src="assets/js/hoverable-collapse.js"></script>
-	<script src="assets/js/misc.js"></script>
-	<script src="assets/js/settings.js"></script>
-	<script src="assets/js/todolist.js"></script>
-	<!-- endinject -->
-	<!-- Custom js for this page -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/chart.js"></script>
-	<!-- End custom js for this page -->
-
-	<!-- ** JS AREA START ** -->
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	
-	
-	<!-- flask에서 url받아오기-->
-	<script type="text/javascript">
+		<!-- container-scroller -->
+		<!-- plugins:js -->
+		<script src="assets/vendors/js/vendor.bundle.base.js"></script>
+		<!-- endinject -->
+		<!-- Plugin js for this page -->
+		<script src="assets/vendors/chart.js/Chart.min.js"></script>
+		<!-- End plugin js for this page -->
+		<!-- inject:js -->
+		<script src="assets/js/off-canvas.js"></script>
+		<script src="assets/js/hoverable-collapse.js"></script>
+		<script src="assets/js/misc.js"></script>
+		<script src="assets/js/settings.js"></script>
+		<script src="assets/js/todolist.js"></script>
+		<!-- endinject -->
+		<!-- Custom js for this page -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/chart.js"></script>
+		<!-- End custom js for this page -->
+		<!-- flask에서 url받아오기-->
+		<script type="text/javascript">
       // diet 정보 요청
       fetch('http://127.0.0.1:5000/diet')
         .then(response => response.json())
@@ -445,11 +382,5 @@ width: 100%;
           document.getElementById('routineTitle').textContent = data.title;
         });
     </script>
-
-
-
-
-
-
 </body>
 </html>

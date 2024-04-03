@@ -14,7 +14,6 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
 
-
 <title>ChariTeam - Free Nonprofit Website Template</title>
 <meta content="" name="keywords">
 <meta content="" name="description">
@@ -36,35 +35,15 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
 	rel="stylesheet">
-
-
-<!-- Libraries Stylesheet -->
 <link href="assets/lib/join/animate.min.css" rel="stylesheet">
-
-
-<!-- Customized Bootstrap Stylesheet -->
 <link href="assets/css/demo_1/join/bootstrap.min.css" rel="stylesheet">
-
-
-<!-- Template Stylesheet -->
 <link href="assets/css/demo_1/join/style.css" rel="stylesheet">
-
-<!-- ** 달력CSS START-->
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
-<!-- ** 달력CSS END-->
-
-
-<!-- background #fff 변경 -->
 <link href="assets/css/demo_1/signup/bootstrap.min.css" rel="stylesheet">
 <link href="assets/css/demo_1/signup/style.css" rel="stylesheet">
 <link href="assets/css/demo_1/signup/animate.min.css" rel="stylesheet">
-
-
-
-
-
 </head>
 
 <body>
@@ -82,9 +61,6 @@
 		<div id="header-carousel" class="carousel slide"
 			data-bs-ride="carousel">
 			<div class="carousel-inner">
-
-
-
 				<!-- 로그인 START -->
 				<div class="carousel-item active" id="carousel-login">
 					<img class="w-100" src="assets/images/join/carousel-bg.jpg"
@@ -97,7 +73,6 @@
 										<h1 class="display-4 text-white mb-3 animated slideInDown">Login</h1>
 										<p class="fs-5 text-white-50 mb-5 animated slideInDown">Fitneeds
 											로그인을 해볼까요 :)</p>
-
 										<!-- 로그인 START -->
 										<div class="row g-3">
 											<div class="col-12">
@@ -105,7 +80,6 @@
 													<input type="text" class="form-control bg-light border-0"
 														id="mem_id" name="mem_id" placeholder="Your Name">
 													<label>아이디</label>
-
 												</div>
 											</div>
 											<div class="col-12">
@@ -116,7 +90,6 @@
 												</div>
 											</div>
 										</div>
-
 										<!-- 로그인input END -->
 
 
@@ -124,10 +97,6 @@
 										<a href="<%=apiURL%>" class="btn animated slideInDown"> <img
 											height="50"
 											src="http://static.nid.naver.com/oauth/small_g_in.PNG" /></a>
-
-
-
-
 										<button type="submit" id="login-form-submit"
 											class="btn btn-primary py-2 px-3 animated slideInDown"
 											href="#">
@@ -153,13 +122,7 @@
 			</div>
 		</div>
 
-
-
-
-
-
-		<!-- ////////////////////////////////////////////////////// page1 start ////////////////////////////////////////////////////////////////////  -->
-
+		<!--page1 start-->
 		<div class="carousel-item second" id="carousel-first">
 			<img class="w-100" src="assets/images/join/carousel-bg.jpg"
 				alt="Image">
@@ -180,7 +143,6 @@
 												<input type="text" class="form-control bg-light border-0"
 													id="mem_id" name="mem_id" placeholder="아이디를 입력해 주세요.">
 												<label>아이디</label>
-
 											</div>
 									</div>
 									<div class="col-12">
@@ -208,7 +170,8 @@
 									class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
 									<i class="fa fa-arrow-left"></i>
 								</div> 로그인
-							</a> <a
+							</a> 
+							<a
 								class="btn btn-primary py-2 px-3 animated slideInDown carousel-control-next"
 								type="button" data-bs-target="#header-carousel" id="1st-next"
 								data-bs-slide="next" disabled> Next Step
@@ -223,8 +186,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- ////////////////////////////////////////////////////// page1 end ////////////////////////////////////////////////////////////////////  -->
-
+		
 		<!-- page2 start -->
 		<div class="carousel-item second">
 			<img class="w-100" src="assets/images/join/carousel-bg.jpg"
@@ -305,9 +267,8 @@
 				</div>
 			</div>
 		</div>
-		<!-- page2 end -->
 
-		<!-- ///////////////////////////////3page start ////////////////////////////////////////////////////////////////////////////-->
+		<!-- 3page start-->
 		<div class="carousel-item third">
 			<img class="w-100" src="assets/images/join/carousel-bg.jpg"
 				alt="Image">
@@ -390,14 +351,12 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 
-	<!-- html 달력-->
 	<script src="assets/js/join/datepick.js"></script>
 
 	<script>
 		$(function() {
 			$("#exampleInputDate").datepicker({
 				dateFormat : "yy-mm-dd",
-				regional : "ko", // 한글로 지역화
 				yearRange : "-100:+0",
 				changeYear : true
 			});

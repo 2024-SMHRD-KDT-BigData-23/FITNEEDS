@@ -11,15 +11,10 @@ li {
 /* 상단바 */
 .menu {
     width: calc(100% - 600px);
-    /* 부모 요소인 nav의 너비를 조정하여 왼쪽과 오른쪽 공간 확보 */
     margin-left: 270px;
-    /* 왼쪽 마진을 추가하여 왼쪽 공간 확보 */
     margin-right: 50px;
-    /* 오른쪽 마진을 추가하여 오른쪽 공간 확보 */
     position: relative;
-    /* 상대적 위치 지정 */
     z-index: 1;
-    /* 다른 요소들 위에 표시되도록 z-index 값 설정 */
 }
 
 .menu * {
@@ -46,7 +41,6 @@ li {
     text-align: center;
     padding-top: 3%;
     position: fixed;
-    /*상단바 이동동하게 하는 정의*/
     top: 0;
     left: 0;
     right: 0;
@@ -54,44 +48,28 @@ li {
 }
 
 .headerfitImg {
-    /*왼쪽 이미지 정의*/
     width: 250px;
-    /* 이미지의 폭 지정 */
     height: auto;
-    /* 이미지 높이 자동 조정 */
     float: left;
-    /* 오른쪽으로 정렬 */
 }
 
 .headerImg {
-    /*오른쪽 이미지 정의*/
     width: 213px;
-    /* 이미지의 폭 지정 */
     height: auto;
-    /* 이미지 높이 자동 조정 */
     float: right;
-    /* 오른쪽으로 정렬 */
     margin-left: 30px;
-    /* 이미지 사이의 간격을 조정합니다. */
 }
 
 
 /*각 페이지 내부 입력 공간*/
 .shape {
     position: absolute;
-    /* tel 요소를 절대 위치로 설정 */
     top: 15%;
-    /* 화면 상단여백 */
     left: 13%;
-    /* 왼쪽 여백  */
     right: 13%;
-    /* 오른쪽 여백 */
     bottom: 0;
-    /* 하단 여백*/
     background-color: #f8f9fb;
-    /* 배경 색상 및 투명도 설정 */
     padding: 10px;
-    /* 내부 여백 설정 */
 }
 
 
@@ -104,43 +82,28 @@ li {
 
 .home1Img img {
     width: 46%;
-    /* 이미지크기 지정 */
     height: auto;
-    /* 가로 너비에 맞게 높이를 자동으로 조절 */
     max-width: 100%;
-    /* 이미지가 부모 요소의 크기를 넘어갈 수 있도록 제한을 없앰 */
     position: absolute;
-    /* 이미지를 절대 위치로 설정 */
     top: 30px;
-    /* 상단 여백 */
     left: 30px;
-    /* 왼쪽 여백 */
-    z-index: 2; /* 다른 이미지 위에 표시되도록 순서 조절 */
+    z-index: 2; 
 }
 
 .home2Img img {
     width: 60%;
-    /* 이미지크기 지정 */
     height: auto;
-    /* 가로 너비에 맞게 높이를 자동으로 조절 */
     max-width: 100%;
-    /* 이미지가 부모 요소의 크기를 넘어갈 수 있도록 제한을 없앰 */
     position: absolute;
-    /* 이미지를 절대 위치로 설정 */
     bottom: 10px;
-    /* 상단 여백 */
     right: 10px;
-    /* 왼쪽 여백 */
     
 }
 
 .hometest {
     position: absolute;
-    /* 문장을 절대 위치로 설정하여 이미지 내에 위치시킴 */
     top: 35%;
-    /* 하단 여백을 0으로 설정하여 이미지 하단에 배치 */
     left: 50px;
-    /* 왼쪽 여백을 50%로 설정하여 가운데 정렬 */
     max-width: 100%;
     color: #333333;
     font-size: 20px;
@@ -249,7 +212,7 @@ li {
 }
 .panel4test {
     position: absolute;
-    bottom: 20%; /* 아래로부터의 거리를 조정합니다. */
+    bottom: 20%; 
     left: 20px;
     max-width: 100%;
     color: #333333;
