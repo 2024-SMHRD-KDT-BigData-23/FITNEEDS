@@ -12,7 +12,6 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 		data: trnData,
 		dataType: "JSON",
 		success: function(res) {
-			console.log(res);
 
 			$('#vc_price').empty();
 			$('#vc_price_modal').empty(); // 모달 내용 초기화
@@ -68,7 +67,6 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 			$('#buy').html('<input type="submit" value="구매하기" class="custom-btn btn-16">'); // 버튼 텍스트 변경
 		},
 		error: function() {
-			console.log('실패');
 		}
 	});
 });
