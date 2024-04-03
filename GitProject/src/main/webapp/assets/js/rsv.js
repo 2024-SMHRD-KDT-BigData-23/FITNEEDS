@@ -12,7 +12,6 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 		data: trnData,
 		dataType: "JSON",
 		success: function(res) {
-			console.log("요청")
 			$('#trn_phone').html("연락처 : " + res.trn_phone);
 			$('#trn_info').text("트레이너 정보 : " + res.trn_info);
 			$('#trn_career').text("트레이너 경력 : " + res.trn_career);
@@ -29,7 +28,6 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 				url: 'Rsv_Date.do',
 				data: get_trn_idx,
 				success: function(res) {
-					console.log('Rsv_Date 요청 성공:', res);
 					$('#rsv_date').empty(); // 예약 가능 날짜와 시간을 추가하기 전에 이전 내용 삭제
 					res.forEach(function(item) {
 						// pt_status를 데이터 속성으로 추가하되 화면에는 보이지 않도록 설정
@@ -44,12 +42,10 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
 					});
 				},
 				error: function() {
-					console.log('Rsv_Date 요청 실패');
 				}
 			});
 		},
 		error: function() {
-			console.log('실패');
 		}
 	});
 });
@@ -68,8 +64,6 @@ $('#reserve_button').on('click', function() {
 		var fullDateTime = date + ' ' + startTime;
 		var endDateTime = date + ' ' + endTime;
 
-		console.log(endTime);
-		console.log(endDateTime);
 
 		selectedReservations.push({ created_at: fullDateTime, pt_idx: ptIdx, res_status: ptStatus, endTime: endDateTime });
 	});
@@ -84,7 +78,6 @@ $('#reserve_button').on('click', function() {
 
 	// JSON.stringify() 함수를 사용하여 JSON 문자열로 변환
 	var jsonData = JSON.stringify(selectedReservations);
-	console.log(jsonData); // 전송할 JSON 데이터를 로그에 출력
 
 	$.ajax({
 		type: 'POST',
@@ -93,10 +86,8 @@ $('#reserve_button').on('click', function() {
 		data: jsonData, // JSON 형식의 데이터 전송
 		success: function(res) {
 			// 예약이 성공적으로 처리되면 예약 완료 메시지를 표시
-			console.log(res);
 		},
 		error: function() {
-			console.log('예약 처리 요청 실패');
 		}
 	});
 });

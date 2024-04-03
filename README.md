@@ -3,21 +3,39 @@
 
 
 ## 👀 서비스 소개
-* 서비스명:  꽃 개화 시기별 우리 지역 근처 데이트/드라이브 추천 장소 및 꽃 축제 추천 
-* 서비스설명: 건강한 인간사화를 살아가기 위해 하는 운동
+* 서비스명: 사용자 운동상태 기반 반응형 웹
+* 서비스설명: 
 <br>
 
+
 ## 📅 프로젝트 기간
-2022.04.22 ~ 2022.06.03 (6주)
+2024.03.18 ~ 2024.04.02 (2주)
 <br>
 
 ## ⭐ 주요 기능
-* 기능1
-* 기능2
-* 기능3
-* 기능4
-* 기능5
+* 기능1 : 반응형 웹
+* 기능2 : 서비스 소개 페이지
+* 기능3 : 네이버 로그인 api
+* 기능4 : 사용자 ui/ux
+* 기능5 : Chart.js를 활용한 다양한 차트 시각화
+* 기능6 : 최신뉴스 및 블로그 크롤링
+* 기능7 : 예약 서비스 및 Fullcalendar api
 <br>
+
+<details>
+<summary><b>주요 기능 설명 펼치기</b></summary>
+<div markdown="1">
+
+* 기능1 : 반응형 웹
+* 기능2 : 서비스 소개 페이지
+* 기능3 : 네이버 로그인 api
+* 기능4 : 사용자 ui/ux
+* 기능5 : Chart.js를 활용한 다양한 차트 시각화
+* 기능6 : 최신뉴스 및 블로그 크롤링
+* 기능7 : 예약 서비스 및 Fullcalendar api
+
+</div>
+</details>
 
 ## ⛏ 기술스택
 <table>
@@ -38,29 +56,27 @@
         <td>라이브러리</td>
         <td>
             <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
-            <img src="https://img.shields.io/badge/KakaoMap-FFCD00?style=for-the-badge&logo=Kakao&logoColor=white"/>
         </td>
     </tr>
     <tr>
         <td>개발도구</td>
         <td>
             <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
-            <img src="https://img.shields.io/badge/RaskpberryPi-A22846?style=for-the-badge&logo=RaskpberryPi&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white"/>
             <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+</tr>
         </td>
     </tr>
     <tr>
         <td>서버환경</td>
         <td>
             <img src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/>
+            <!-- flask 서버 넣기 img-->
         </td>
     </tr>
     <tr>
         <td>데이터베이스</td>
         <td>
-            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Oracle 11g-F80000?style=for-the-badge&logo=Oracle&logoColor=white"/>
+            <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
         </td>
     </tr>
     <tr>
@@ -115,18 +131,18 @@
     <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
   </tr>
   <tr>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
-    <td align="center"><strong>홍O동</strong></td>
+    <td align="center"><strong>강아람</strong></td>
+    <td align="center"><strong>강우석</strong></td>
+    <td align="center"><strong>우동희</strong></td>
+    <td align="center"><strong>조범수</strong></td>
+    <td align="center"><strong>이지훈</strong></td>
   </tr>
   <tr>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Frontend</b></td>
     <td align="center"><b>Backend</b></td>
     <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Deep Learning</b></td>
+    <td align="center"><b>Backend</b></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>

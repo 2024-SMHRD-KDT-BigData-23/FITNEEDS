@@ -49,7 +49,6 @@ public class FetchCalendarEvent implements Command {
 			out = response.getWriter();
 			out.print(json);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

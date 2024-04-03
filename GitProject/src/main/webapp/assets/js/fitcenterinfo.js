@@ -14,14 +14,13 @@ $(".owl-carousel-info-wrap.item").on("click", function() {
         dataType: "JSON",
         success: function(response) {
             // 성공적으로 응답을 받았을 때 센터 정보를 화면에 표시
-            console.log(response);
+            
             $("#center_name").text("센터 이름 : "+response.center_name);
             $("#modal").append(response.center_name+" 이용권");            
             $("#center_addr").text("센터 번호 : "+response.center_tel);
             $("#center_tel").text("센터 주소 : "+response.center_addr);
         },
         error: function() {
-            console.log('AJAX 요청 실패');
         }
     });
 });
