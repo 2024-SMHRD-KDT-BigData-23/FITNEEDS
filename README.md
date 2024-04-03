@@ -25,7 +25,7 @@
 <summary><b>주요 기능 설명 펼치기</b></summary>
 <div markdown="1">
 
-* 기능1 : 반응형 웹
+* 기능1 : 반응형 웹![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/97fa57ab-2eca-4958-9f1f-fe32d6919aba)
 * 기능2 : 서비스 소개 페이지
 * 기능3 : 네이버 로그인 api
 * 기능4 : 사용자 ui/ux
