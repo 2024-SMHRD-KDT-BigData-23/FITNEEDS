@@ -154,12 +154,35 @@
 </table>
 
 ## 🤾‍♂️ 트러블슈팅
-개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
-프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2~5가지 정도)
   
-* 문제1<br>
- 문제점 설명 및 해결방안
- 
+* 차트의 오버랩 문제<br>
+- 문제
+ 메인 페이지 접속시 오늘 날짜를 기준으로 7일전까지의 데이터를 가져와 시각화함.
+ 원하는 날짜로 바꾸어 차트의 값을 업데이트 할 경우 기존의 차트가 사라지지 않고 새로운 차트가 덧씌워지는 문제가 발생.
+- 원인
+ new 연산자를 이용해 새로운 메모리로 할당됨에따라 canvas를 초기화하는게 아닌
+ 새로운 chart가 기존 차트에 덧씌우듯 표시되는 문제라 사료됨.
+- 해결방안
+ update 메소드와 destroy 메소드 사용.
+ update 메소드를 사용하였으나 console.log로 확인하였을때 값의 변경이 일어났지만 기존 차트는 유지됨.
+ destory 메소드를 사용하여 기존의 차트 객체를 삭제하고 다시 설정해주는 방법으로 해결
+- 코드
+```
+$("#date_check").on("click", function() {
+		let start_date = $("#dateFrom").val();
+		let end_date = $("#dateTo").val();
+		
+		// 기존 차트 데이터 삭제
+		if(doughnutChart != undefined){
+			doughnutChart.destroy();
+		}
+		if(lineChart != undefined){
+			lineChart.destroy();
+		}
+		fetchStartExChart(start_date, end_date);
+		fetchStartChChart(start_date, end_date);
+	});
+```
 * 문제2<br>
  문제점 설명 및 해결방안
 
