@@ -54,6 +54,7 @@
     <tr>
         <td>라이브러리</td>
         <td>
+
             <img src="https://img.shields.io/badge/BootStrap-7952B3?style=for-the-badge&logo=BootStrap&logoColor=white"/>
         </td>
     </tr>
@@ -62,6 +63,9 @@
         <td>
             <img src="https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=Eclipse&logoColor=white"/>
             <img src="https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=VisualStudioCode&logoColor=white"/>
+	    <img src="https://img.shields.io/badge/Jupyter%20Notebook-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white"/>
+
+		
 </tr>
         </td>
     </tr>
@@ -69,7 +73,7 @@
         <td>서버환경</td>
         <td>
             <img src="https://img.shields.io/badge/Apache Tomcat-D22128?style=for-the-badge&logo=Apache Tomcat&logoColor=white"/>
-            <!-- flask 서버 넣기 img-->
+            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=Flask&logoColor=white"/> 
         </td>
     </tr>
     <tr>
