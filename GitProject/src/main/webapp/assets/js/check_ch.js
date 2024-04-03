@@ -11,3 +11,12 @@ function validateForm() {
         alert("성공적으로 완료되었습니다.");
         return true;
     }
+    
+    
+    // Calendar
+    
+    		$(function() {
+			$("#exampleInputDate").datepicker({
+				dateFormat : "yy-mm-dd"
+			});
+		});

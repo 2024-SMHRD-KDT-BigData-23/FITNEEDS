@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,70 +9,24 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>Plus Admin</title>
-<!-- plugins:css -->
-<link rel="stylesheet"
-	href="assets/vendors/mdi/css/materialdesignicons.min.css">
-<link rel="stylesheet"
-	href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+
+<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
-<!-- endinject -->
-<!-- Plugin css for this page -->
-<link rel="stylesheet"
-	href="assets/vendors/jquery-bar-rating/css-stars.css" />
-<link rel="stylesheet"
-	href="assets/vendors/font-awesome/css/font-awesome.min.css" />
-<!-- End plugin css for this page -->
-<!-- inject:css -->
-<!-- endinject -->
-<!-- Layout styles -->
+<link rel="stylesheet" href="assets/vendors/jquery-bar-rating/css-stars.css" />
+<link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
-<!-- End layout styles -->
 <link rel="shortcut icon" href="assets/images/favicon.png" />
-<!-- my health style -->
-<link rel="stylesheet" href="assets/css/demo_1/myhealth.css" />
-
-
-
-<!-- ******************** CSS 작업가능 영역 START *************************-->
-
-<!-- *******************************  CSS Link 작업영역 START *******************************  -->
 
 
 <!-- CSS 수정영역 -->
-<link rel="stylesheet"
-	href="1assets/css/demo_1/reserv/bootstrap.min.css">
-
-<link rel="stylesheet"
-	href="assets/css/demo_1/reserv/bootstrap-icons.css">
-
-<link rel="stylesheet"
-	href="assets/css/demo_1/reserv/owl.carousel.min.css">
-
-<link rel="stylesheet"
-	href="assets/css/demo_1/reserv/owl.theme.default.min.css">
-
-<link href="assets/css/demo_1/reserv/templatemo-pod-talk.css"
-	rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-	rel="stylesheet">
+<link rel="stylesheet" href="assets/css/demo_1/reserv/bootstrap-icons.css">
+<link rel="stylesheet" href="assets/css/demo_1/reserv/owl.carousel.min.css">
+<link rel="stylesheet" href="assets/css/demo_1/reserv/owl.theme.default.min.css">
+<link href="assets/css/demo_1/reserv/templatemo-pod-talk.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
 
-
-<!-- *******************************  CSS Link 작업영역 END  ******************************* -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ********************  CSS 작업가능 영역 END *************************-->
 <style>
 #my_modal {
 	position: relative; /* 모달 내부의 상대적인 위치 설정 */
@@ -321,12 +274,7 @@
 				</div>
 			</nav>
 
-			<!-- ** TOP BAR SECTION END ** -->
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
-
-			<!-- partial -->
 			<div class="main-panel">
 				<div class="content-wrapper pb-0">
 
@@ -378,7 +326,7 @@
 								</div>
 							</div>
 
-							<!-- Slide end -->
+
 
 							<div id="placeholder_div" class="container text-center mt-5">
 								<div class="border p-4">
@@ -388,7 +336,7 @@
 							</div>
 
 
-							<!-- 예약권 START -->
+
 
 							<section class="latest-podcast-section section-padding pb-0"
 								id="section_2">
@@ -480,37 +428,11 @@
 							</section>
 
 
-
-
-							<!-- 예약권 END -->
-
-
-
-
-
-
-							<!-- ******************** HTML 작업가능 영역 END *************************-->
-							<!-- ******************** HTML 작업가능 영역 END *************************-->
-
-
-
-
 						</div>
 					</div>
 
 					<input type="hidden" name="get_vc_idx" id="get_vc_idx">
 
-					<!-- ** Main Area END ** -->
-					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-					<!-- ** Footer Area START ** -->
-
-
-
-					<!-- partial:partials/_footer.html -->
 					<footer class="footer">
 						<div
 							class="d-sm-flex justify-content-center justify-content-sm-between">
@@ -523,23 +445,14 @@
 							</span>
 						</div>
 					</footer>
-					<!-- partial -->
 
-
-
-					<!-- ** Footer Area END ** -->
-					<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-					<!-- partial -->
 				</div>
-				<!-- main-panel ends -->
+
 			</div>
-			<!-- page-body-wrapper ends -->
+
 		</div>
-		<!-- container-scroller -->
-		<!-- plugins:js -->
+
 		<script src="assets/vendors/js/vendor.bundle.base.js"></script>
-		<!-- endinject -->
-		<!-- Plugin js for this page -->
 		<script src="assets/vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
 		<script src="assets/vendors/chart.js/Chart.min.js"></script>
 		<script src="assets/vendors/flot/jquery.flot.js"></script>
@@ -548,21 +461,16 @@
 		<script src="assets/vendors/flot/jquery.flot.fillbetween.js"></script>
 		<script src="assets/vendors/flot/jquery.flot.stack.js"></script>
 		<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
-		<!-- End plugin js for this page -->
-		<!-- inject:js -->
 		<script src="assets/js/off-canvas.js"></script>
 		<script src="assets/js/hoverable-collapse.js"></script>
 		<script src="assets/js/misc.js"></script>
 		<script src="assets/js/settings.js"></script>
 		<script src="assets/js/todolist.js"></script>
-		<!-- endinject -->
-		<!-- Custom js for this page -->
 		<script src="assets/js/dashboard.js"></script>
-		<!-- End custom js for this page -->
 
 
-		<!-- ******************** JS 작업가능 영역 START *************************-->
-		<!--  *******************************  JS작업영역 START *******************************  -->
+
+		<!-- modal js영역 -->
 		<script src="assets/js/reserv/jquery.min.js"></script>
 		<script src="assets/js/reserv/owl.carousel.min.js"></script>
 		<script src="assets/js/reserv/custom.js"></script>
@@ -657,11 +565,6 @@
 						placeholderDiv.style.display = 'block';
 					});
 		</script>
-
-
-
-		<!--  *******************************  JS작업영역 END *******************************  -->
-		<!-- ******************** JS 작업가능 영역 END *************************-->
 </body>
 
 </html>

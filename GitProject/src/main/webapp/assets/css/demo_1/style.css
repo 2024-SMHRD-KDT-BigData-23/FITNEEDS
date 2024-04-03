@@ -107,6 +107,60 @@
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
 
+
+/* updateFoam CSS*/
+
+
+
+
+.content-wrapper .row {
+	margin-bottom: 10px;
+}
+
+.comp {
+	margin-top: 20px;
+	justify-content: center;
+	display: flex;
+}
+
+.image-col {
+	display: flex;
+}
+
+.mem_img_size {
+	width: 100px;
+	height: auto;
+}
+
+.image-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.image-item {
+	margin-right: 10px; /* 이미지 간 간격 조정 */
+	margin-bottom: 20px; /* 이미지 아래 여백 조정 */
+}
+
+.image-item img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* nav hover 오류 수정 */
 
 

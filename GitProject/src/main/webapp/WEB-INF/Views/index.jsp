@@ -3,23 +3,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Required meta tags -->
+
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-<!-- fullcalendar CDN -->
+
 <script
 	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
-<!-- fullcalendar 언어 CDN -->
+
 <script
 	src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.min.js'></script>
-<!-- fullcalendar axios라이브러리 -->
+
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
+
 <title>Plus Admin</title>
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!--*** BASIC CSS START ***-->
 <link rel="stylesheet"
 	href="assets/vendors/mdi/css/materialdesignicons.min.css">
 <link rel="stylesheet"
@@ -27,15 +25,11 @@
 <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
 <link rel="stylesheet" href="assets/css/demo_1/style.css" />
 <link rel="stylesheet" href="assets/css/demo_1/indexplus.css" />
-<!--*** BASIC CSS END ***-->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-<!-- ** 달력CSS START-->
+
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="assets/css/demo_1/calendar.css" />
-<!-- ** 달력CSS END-->
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <style>
   .fc-myCustomButton-button {
     width: 80px;
@@ -49,15 +43,16 @@
     font-size : 0.5em;
   }
 </style>
+</head>
 <body>
 	<div class="container-scroller">
 		<!-- partial:partials/_sidebar.html -->
 		<nav class="sidebar sidebar-offcanvas" id="sidebar">
 			<ul class="nav">
-				<li class="nav-item nav-profile border-bottom"><a href="UpdatePage.do"
+				<li class="nav-item nav-profile border-bottom"><a href="#"
 					class="nav-link flex-column">
 						<div class="nav-profile-image">
-							<img src="${member.mem_img}" alt="profile"/>
+							<img src="${member.mem_img}" alt="profile" />
 							<!--change to offline or busy as needed-->
 						</div>
 						<div class="nav-profile-text d-flex ms-0 mb-3 flex-column">
@@ -80,8 +75,6 @@
 
 
 
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!--*** side nar > nav >  사용자 Menu start ***-->
 				<li class="nav-item nav-effect"><a class="nav-link" href="MainPage.do">
 						<i class="mdi mdi-compass-outline menu-icon"></i> <span
 						class="menu-title">나의운동정보</span>
@@ -101,22 +94,12 @@
 						<i class="mdi mdi-comment-account-outline menu-icon"></i> <span
 						class="menu-title">나의운동예약</span>
 				</a></li>
-				<!--*** 사용자 Menu end ***-->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 
 			</ul>
 		</nav>
 
-		<!-- ** SIDE BAR SECTION END ** -->
-		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-		<!-- ** TOP BAR SECTION ** -->
-
-		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
-			<!-- partial:partials/_settings-panel.html -->
 			<div id="settings-trigger">
 				<i class="mdi mdi-settings"></i>
 			</div>
@@ -142,8 +125,6 @@
 					<div class="tiles light"></div>
 				</div>
 			</div>
-			<!-- partial -->
-			<!-- partial:partials/_navbar.html -->
 			<nav
 				class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 				<div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -162,10 +143,7 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
-
-
-
-								<div class="nav-profile-text">MYPAGE</div>
+							<div class="nav-profile-text">MYPAGE</div>
 						</a>
 
 
@@ -183,12 +161,12 @@
 								</a>
 
 
-								<!-- 변경부분 -->
+				
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="WeightPage.do"> <i
 									class="mdi mdi-poll-box me-3"></i> 나의체중입력
 								</a>
-								<!-- 변경부분 -->
+		
 
 
 								<div class="dropdown-divider"></div>
@@ -213,18 +191,6 @@
 				</div>
 			</nav>
 
-			<!-- ** TOP BAR SECTION END ** -->
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			<!-- ** Main Area Start ** -->
-
-			<!-- partial 여기부터-->
-			<!-- partial 여기부터-->
 			<div class="main-panel">
 				<div class="content-wrapper">
 
@@ -424,20 +390,9 @@
 						</div>
 
 					</div>
-					<!-- END -->
+
 				</div>
-				<!-- ** Main Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
-
-
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-				<!-- ** Footer Area START ** -->
-
-
-
-				<!-- partial:partials/_footer.html -->
 				<footer class="footer">
 					<div
 						class="d-sm-flex justify-content-center justify-content-sm-between">
@@ -450,77 +405,29 @@
 						</span>
 					</div>
 				</footer>
-				<!-- partial -->
-
-
-
-				<!-- ** Footer Area END ** -->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-
-
 			</div>
-			<!-- 여기까지~~~~~~ -->
-			<!-- main-panel ends -->
 		</div>
-		<!-- page-body-wrapper ends -->
 	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-	<!-- ** All AREA END ** -->
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- ** JS AREA START ** -->
-
-	<!-- container-scroller -->
-	<!-- plugins:js -->
+	<!-- js -->
 	<script src="assets/vendors/js/vendor.bundle.base.js"></script>
-	<!-- endinject -->
-	<!-- Plugin js for this page -->
+
 	<script src="assets/vendors/chart.js/Chart.min.js"></script>
-	<!-- End plugin js for this page -->
-	<!-- inject:js -->
+
 	<script src="assets/js/off-canvas.js"></script>
 	<script src="assets/js/hoverable-collapse.js"></script>
 	<script src="assets/js/misc.js"></script>
 	<script src="assets/js/settings.js"></script>
 	<script src="assets/js/todolist.js"></script>
-	<!-- endinject -->
-	<!-- Custom js for this page -->
+
+
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/chart.js"></script>
-	<!-- End custom js for this page -->
 
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- ** calendar JS START ** -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="assets/js/change_sentence.js"></script>
-	<!-- ** calendar JS START ** -->
 
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-	<!-- 달력 자바 스크립트 -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script>
@@ -536,7 +443,6 @@
 			});
 		});
 	</script>
-	<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 <script>
 		var calendar;
 		var clickedEvent; // 클릭한 이벤트 정보를 저장하기 위한 전역 변수
