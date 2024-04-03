@@ -161,10 +161,10 @@
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/zzoorong/ARAM" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/fakouho" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/Eehnodu" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
-    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/beomsu-j" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/dlwlgnsrhy" target='_blank'>github</a></td>
   </tr>
   <tr>
     <td align="center"><b>반응형 웹 세팅<br> UI/UX 디자인 <br> 전체 페이지 제작 <br> Bootstrap/Js 기능구현 <br> HTML/CSS/JS 오류수정 </td>
