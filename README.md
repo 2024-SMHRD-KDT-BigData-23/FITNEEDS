@@ -92,19 +92,21 @@
 <br>
 
 ## ⚙ 시스템 아키텍처(구조) 예시 
+#사진 수정해야함
 ![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
 <br>
 
 ## 📌 SW유스케이스
-![image](https://user-images.githubusercontent.com/25995055/178401023-9a015e66-aa6e-4d74-8564-9b1f9d306649.png)
+![SW유스케이스](https://github.com/Eehnodu/Portfolio/assets/155121578/4b2b8080-f20b-4640-a29e-289b082fd6c8)
 <br>
 
 ## 📌 서비스 흐름도
+#사진 수정해야함
 ![image](https://user-images.githubusercontent.com/25995055/178401048-d6484bda-a2d7-40e1-998b-2bd195cd9f89.png)
 <br>
 
 ## 📌 ER다이어그램
-![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
+![FitNeedsERD](https://github.com/Eehnodu/Portfolio/assets/155121578/a013ec85-8ba4-4a8c-bf8d-565984ee2319)
 <br>
 
 ## 🖥 화면 구성
