@@ -170,8 +170,12 @@
 </table>
 
 ## 🤾‍♂️ 트러블슈팅
-  
+
+
+<details>
+<summary>
 ### 🔨 차트의 오버랩 문제<br>
+</summary>
 - 문제<br>
 
   메인 페이지 접속시 오늘 날짜를 기준으로 7일전까지의 데이터를 가져와 시각화함.
@@ -205,8 +209,12 @@ $("#date_check").on("click", function() {
 		fetchStartChChart(start_date, end_date);
 	});
 ```
+</details>
 
+<details>
+<summary>
 ### 🔨 비밀번호 암호화(SHA-256 + Salt)<br>
+</summary>
 - 문제<br>
 
   SHA-256은 단방향 알고리즘의 한 종류로, 해시 값을 이용한 암호화 방식.
@@ -275,8 +283,12 @@ public class Encrypt {
 	}
 }
 ```
+</details>
 
+<details>
+<summary>
 ### 🔨 비교차트 데이터의 undefined 값<br>
+</summary>
 - 문제<br>
 
   회원의 개인 데이터와 표준 데이터를 비교하기 위해 DB에 저장된 값을 ajax를 통해 불러오는 과정에서
@@ -332,4 +344,81 @@ function fetchCompareChart() {
 		});
 	};
 ```
+</details>
+
+</details>
+
+<details>
+<summary>
+### 🔨 VScode에서 Eclipse이동시 JS코드 적용오류<br>
+</summary>
+- 문제<br>
+
+  VSCode에서 작업했던 내용들을 Eclipse로 이동시켜 jsp설정 후 로그인, 회원가입 부분 슬라이드 js가 작동안함.
+  
+- 원인<br>
+
+  form태그로 전체 코드를 감싸 css와 js에 코드순서상 인식이 안되는것으로 파악 됨. 
+ 
+- 해결방안<br>
+
+  form태그로 전송할 코드 전체를 감싸지 않고, 코드 순서를 확인하여 js작동에 이상없는 부분에 적용함. 
+ 
+- 기본코드<br>
+```
+	<form class="join-form" action="Join.do" method="post" onsubmit="showSuccessAlert()">
+		<div class="carousel-item second" id="carousel-first">
+			<img class="w-100" src="assets/images/join/carousel-bg.jpg"
+				alt="Image">
+			<div class="carousel-caption active">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 pt-5">
+							<h1 class="display-4 text-white mb-3 animated slideInDown">Sign
+								up</h1>
+							<p class="fs-5 text-white-50 mb-5 animated slideInDown">Fitneeds
+								회원가입을 도와드릴게요 :)</p>
+							<div>
+								<div class="row g-3">
+									<div class="col-12">
+											<div class="form-floating">
+												<input type="text" class="form-control bg-light border-0"
+													id="mem_id" name="mem_id" placeholder="아이디를 입력해 주세요.">
+												<label>아이디</label>
+											</div>
+									</div>
+
+```
+
+- 개선된 코드<br>
+```
+		<div class="carousel-item second" id="carousel-first">
+			<img class="w-100" src="assets/images/join/carousel-bg.jpg"
+				alt="Image">
+			<div class="carousel-caption active">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-7 pt-5">
+							<h1 class="display-4 text-white mb-3 animated slideInDown">Sign up</h1>
+							<p class="fs-5 text-white-50 mb-5 animated slideInDown">Fitneeds
+								회원가입을 도와드릴게요 :)</p>
+							<div>
+								<div class="row g-3">
+									<div class="col-12">
+										<form class="join-form" action="Join.do" method="post" onsubmit="showSuccessAlert()">
+											<div class="form-floating">
+												<input type="text" class="form-control bg-light border-0"
+													id="mem_id" name="mem_id" placeholder="아이디를 입력해 주세요.">
+												<label>아이디</label>
+											</div>
+									</div>
+									<div class="col-12">
+										<div class="form-floating">
+											<input type="text" class="form-control bg-light border-0"
+												id="mem_pw" name="mem_pw" placeholder="Your Email">
+											<label for="email">비밀번호</label>
+										</div>
+									</div>
+```
+</details>
 
