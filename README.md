@@ -100,8 +100,7 @@
 <br>
 
 ## 📌 서비스 흐름도
-#사진 수정해야함
-![서비스 흐름도](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155061141/1d9d34dd-8ffa-47a3-9dc2-351b205c702b)
+![서비스 흐름도](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155061141/65e87772-bcaa-4644-aab5-a7c8e661cf55)
 <br>
 
 ## 📌 ER다이어그램
