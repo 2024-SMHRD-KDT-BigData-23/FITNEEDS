@@ -22,6 +22,10 @@
 * 기능7 : 예약 서비스 및 Fullcalendar api
 <br>
 
+<details>
+<summary><b>주요 기능 설명 펼치기</b></summary>
+<div markdown="1">
+
 ## ⛏ 기술스택
 <table>
     <tr>
