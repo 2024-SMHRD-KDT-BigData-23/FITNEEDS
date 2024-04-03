@@ -33,7 +33,6 @@ public class AccEx implements Command {
 			String json = gson.toJson(list);
 			out.print(json);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
