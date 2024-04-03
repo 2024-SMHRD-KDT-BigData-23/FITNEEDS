@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class NaverJoinController implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-
+		//token에서 값 불러오기
 		String email = request.getParameter("email");
 		String name = request.getParameter("name");
 		String mobile = request.getParameter("mobile");
@@ -18,6 +18,7 @@ public class NaverJoinController implements Command {
 		String birthyear = request.getParameter("birthyear");
 		String nickName = request.getParameter("nickName");
 
+		//token에서 값 적용하기
 		request.setAttribute("email", email);
 		request.setAttribute("name", name);
 		request.setAttribute("mobile", mobile);
