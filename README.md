@@ -7,6 +7,7 @@
 * 서비스설명: 
 <br>
 
+
 ## 📅 프로젝트 기간
 2024.03.18 ~ 2024.04.02 (2주)
 <br>
@@ -20,6 +21,21 @@
 * 기능6 : 최신뉴스 및 블로그 크롤링
 * 기능7 : 예약 서비스 및 Fullcalendar api
 <br>
+
+<details>
+<summary><b>주요 기능 설명 펼치기</b></summary>
+<div markdown="1">
+
+* 기능1 : 반응형 웹
+* 기능2 : 서비스 소개 페이지
+* 기능3 : 네이버 로그인 api
+* 기능4 : 사용자 ui/ux
+* 기능5 : Chart.js를 활용한 다양한 차트 시각화
+* 기능6 : 최신뉴스 및 블로그 크롤링
+* 기능7 : 예약 서비스 및 Fullcalendar api
+
+</div>
+</details>
 
 ## ⛏ 기술스택
 <table>
@@ -60,8 +76,7 @@
     <tr>
         <td>데이터베이스</td>
         <td>
-            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white"/>
-            <img src="https://img.shields.io/badge/Oracle 11g-F80000?style=for-the-badge&logo=Oracle&logoColor=white"/>
+            <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
         </td>
     </tr>
     <tr>
