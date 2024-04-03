@@ -94,7 +94,7 @@
 <br>
 
 ## ⚙ 시스템 아키텍처
-![완 서비스 아키텍처](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/afec072d-c98c-4b95-9e35-03fc3590a1b9)
+![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/911d56fd-1a63-4e86-a44b-98940a326cba)
 <br>
 
 ## 📌 SW유스케이스
