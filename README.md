@@ -26,12 +26,14 @@
 <div markdown="1">
 
 * 기능1 : 반응형 웹![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/97fa57ab-2eca-4958-9f1f-fe32d6919aba)
-* 기능2 : 서비스 소개 페이지
-* 기능3 : 네이버 로그인 api
-* 기능4 : 사용자 ui/ux
-* 기능5 : Chart.js를 활용한 다양한 차트 시각화
-* 기능6 : 최신뉴스 및 블로그 크롤링
-* 기능7 : 예약 서비스 및 Fullcalendar api
+* 기능2 : 서비스 소개 페이지![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/303d9ae0-d7c9-42e5-9e92-a3c5266d0466)
+* 기능3 : 네이버 로그인 api![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/0c279508-1241-4bcd-af27-2171720d8c2f)
+* 기능4 : 사용자 ui/ux![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/86b0cfa5-908d-4695-859a-7660039b5c3a)
+* 기능5 : Chart.js를 활용한 다양한 차트 시각화![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/ca4ae21d-8973-4e8c-b08e-84624b58d705)
+![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/6ae83fa0-41a3-422a-92e2-eb4b9f986fcd)
+![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/91733c07-bdd0-44cd-897f-053c975be8d9)
+* 기능6 : 최신뉴스 및 블로그 크롤링![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/d7a14b23-f542-4503-9c47-e54b6e6f6f13)
+* 기능7 : 예약 서비스 및 Fullcalendar api![image](https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/8c11627a-59a1-4b5a-a424-50247fec82a3)
 
 </div>
 </details>
