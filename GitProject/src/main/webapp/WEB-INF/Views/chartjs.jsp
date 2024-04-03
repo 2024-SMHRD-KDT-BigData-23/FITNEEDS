@@ -47,10 +47,6 @@
 				<li class="pt-2 pb-1"><span class="nav-item-head">MENU
 						</MENU>
 				</span></li>
-
-
-
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
 				<!--*** side nar > nav >  사용자 Menu start ***-->
 				<li class="nav-item nav-effect"><a class="nav-link"
 					href="MainPage.do"> <i
@@ -73,18 +69,8 @@
 						class="mdi mdi-comment-account-outline menu-icon"></i> <span
 						class="menu-title">나의운동예약</span>
 				</a></li>
-				<!--*** 사용자 Menu end ***-->
-				<!-- ////////////////////////////////////////////////////////////////////////////////////////////// -->
-
 			</ul>
 		</nav>
-
-		<!-- ** SIDE BAR SECTION END ** -->
-		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-		<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-		<!-- ** TOP BAR SECTION ** -->
 
 		<!-- partial -->
 		<div class="container-fluid page-body-wrapper">
@@ -115,7 +101,6 @@
 				</div>
 			</div>
 			<!-- partial -->
-			<!-- partial:partials/_navbar.html -->
 			<nav
 				class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
 				<div class="navbar-menu-wrapper d-flex align-items-stretch">
@@ -134,16 +119,8 @@
 						<li class="nav-item nav-profile dropdown d-none d-md-block">
 							<a class="nav-link dropdown-toggle" id="profileDropdown" href="#"
 							data-bs-toggle="dropdown" aria-expanded="false">
-
-
-
 								<div class="nav-profile-text">MYPAGE</div>
 						</a>
-
-
-
-
-
 							<div class="dropdown-menu center navbar-dropdown"
 								aria-labelledby="profileDropdown">
 								<a class="dropdown-item" href="UpdatePage.do"> <i
@@ -168,8 +145,6 @@
 								<div class="dropdown-divider"></div>
 							</div>
 						</li>
-
-
 						<li class="nav-item nav-logout d-none d-lg-block"><a
 							class="nav-link" href="MainPage.do"> <i
 								class="mdi mdi-home-circle"></i>
@@ -182,16 +157,6 @@
 					</button>
 				</div>
 			</nav>
-
-			<!-- ** TOP BAR SECTION END ** -->
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-
-			<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-			<!-- ** Main Area Start ** -->
 
 			<!-- partial -->
 			<div class="main-panel">
