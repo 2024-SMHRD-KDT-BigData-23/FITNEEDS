@@ -27,6 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
 
+<<<<<<< HEAD
 <style>
 #my_modal {
 	position: relative; /* 모달 내부의 상대적인 위치 설정 */
@@ -94,6 +95,18 @@
 
 
 
+=======
+<link href="assets/css/demo_1/reserv/modal.css"
+	rel="stylesheet">
+<!-- *******************************  CSS Link 작업영역 END  ******************************* -->
+
+
+
+
+
+
+<!-- ********************  CSS 작업가능 영역 END *************************-->
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 
 
 
@@ -477,6 +490,7 @@
 		<script src="assets/js/rsv.js"></script>
 		<script src="assets/js/fitcenterinfo.js"></script>
 		<script src="assets/js/voucher.js"></script>
+<<<<<<< HEAD
 		<script>
 			function modal(id) {
 				var zIndex = 9999;
@@ -565,6 +579,15 @@
 						placeholderDiv.style.display = 'block';
 					});
 		</script>
+=======
+		<script src="assets/js/modal.js"></script>
+	
+
+
+
+		<!--  *******************************  JS작업영역 END *******************************  -->
+		<!-- ******************** JS 작업가능 영역 END *************************-->
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds.git
 </body>
 
 </html>

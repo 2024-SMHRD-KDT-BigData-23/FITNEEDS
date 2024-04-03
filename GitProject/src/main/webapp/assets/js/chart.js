@@ -33,7 +33,6 @@ $(function() {
 		fetchStartChChart(oneWeekAgoFormatted, todayFormatted);
 		countDate();
 	}
-
 	// 출석률 출력
 	function countDate() {
 		$.ajax({
@@ -80,12 +79,10 @@ $(function() {
 						animateScale: true,
 						animateRotate: true
 					},
-
 					// 도넛형 차트를 반으로 자르기 위한 조건
 					rotation: 1 * Math.PI,
 					circumference: 1 * Math.PI
 				};
-
 				// countDateChart 그리기
 				if ($("#countDateChart").length) {
 					var pieChartCanvas = $("#countDateChart").get(0).getContext("2d");
@@ -94,7 +91,6 @@ $(function() {
 						data: countDateData,
 						options: countDateOptions
 					});
-
 					// 캔버스 요소에 동적으로 크기를 지정하여 반응형으로 만듭니다.
 					$("#countDateChart").css({
 						'max-width': '100%',
@@ -108,7 +104,6 @@ $(function() {
 			}
 		})
 	}
-
 	// 운동 종류 데이터 차트 출력
 	function fetchStartExChart(start_date, end_date) {
 		$.ajax({
