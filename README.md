@@ -138,11 +138,11 @@
     <td align="center"><strong>이지훈</strong></td>
   </tr>
   <tr>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Frontend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Backend</b></td>
-    <td align="center"><b>Backend</b></td>
+    <td align="center"><b>Front-end</b></td>
+    <td align="center"><b>Front-end</b></td>
+    <td align="center"><b>Back-end</b></td>
+    <td align="center"><b>Back-end</b></td>
+    <td align="center"><b>Back-end</b></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
@@ -150,6 +150,13 @@
     <td align="center"><a href="https://github.com/Eehnodu" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
     <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>DB 설계 및 구축<br>회원관리기능<br>비밀번호 암호화 기능<br>사용자의 운동, 체중 입력 기능<br>신체변화와 운동정보 차트 구현<br>Fullcalendar<br>일정 추가, 수정, 삭제 기능 및 PT예약 일정 연동 기능</b></td>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Frontend</b></td>
   </tr>
 </table>
 
@@ -170,7 +177,7 @@
 
   update 메소드와 destroy 메소드 사용.
   update 메소드를 사용하였으나 console.log로 확인하였을때 값의 변경이 일어났지만 기존 차트는 유지됨.
-  destory 메소드를 사용하여 기존의 차트 객체를 삭제하고 다시 설정해주는 방법으로 해결
+  destory 메소드를 사용하여 기존의 차트 객체를 삭제하고 다시 설정해주는 방법으로 해결.
  
 - 코드<br>
 ```
@@ -206,7 +213,7 @@ $("#date_check").on("click", function() {
 
   무작위 숫자를 바이트 배열로 변환하여 이를 10진수 문자열로 변환한 Salt값을 추가로 생성.
   로그인 및 개인정보 수정 시 비밀번호의 확인을 위해 해당 Salt값을 알아야하기 때문에
-  Member_id에 해당하는 Salt값을 저장하는 tb_salt 테이블을 생성 및 저장
+  Member_id에 해당하는 Salt값을 저장하는 tb_salt 테이블을 생성 및 저장.
  
 - 코드<br>
 ```
@@ -264,7 +271,7 @@ public class Encrypt {
 - 문제<br>
 
   회원의 개인 데이터와 표준 데이터를 비교하기 위해 DB에 저장된 값을 ajax를 통해 불러오는 과정에서
-  회원의 개인 데이터가 값을 가져오지만 undefined로 출력되는 문제가 발생
+  회원의 개인 데이터가 값을 가져오지만 undefined로 출력되는 문제가 발생.
   
 - 원인<br>
 
