@@ -145,7 +145,7 @@
     <td align="center"><img src="https://mb.ntdtv.kr/assets/uploads/2019/01/Screen-Shot-2019-01-08-at-4.31.55-PM-e1546932545978.png" width="100" height="100"/></td>
     <td align="center"><img src="https://github.com/2024-SMHRD-KDT-BigData-23/FitNeeds/assets/155136709/60cfda0f-23f4-4e5d-a953-12565033b91b" height="100"/></td>
     <td align="center"><img src="https://i.pinimg.com/236x/ed/bb/53/edbb53d4f6dd710431c1140551404af9.jpg" width="100" height="100"/></td>
-    <td align="center"><img src="https://pbs.twimg.com/media/B-n6uPYUUAAZSUx.png" width="100" height="100"/></td>
+    <td align="center" width="25%"><img src="https://github.com/2024-SMHRD-KDT-BigData-23/NTAS/assets/76952340/aaae7886-cce2-4247-84e4-ff1cd435934e" height="250"/></td>
   </tr>
   <tr>
     <td align="center"><strong>강아람</strong></td>
